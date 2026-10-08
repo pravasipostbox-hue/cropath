@@ -1,1 +1,868 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>CROPATH — Your Path to Living and Working in Croatia</title> <meta name="description" content="CROPATH provides practical information and official sources for foreigners living and working in Croatia."> <style> *{ box-sizing:border-box; margin:0; padding:0; } body{ font-family:Arial,Helvetica,sans-serif; background:#f5f7fa; color:#172033; line-height:1.6; } a{ text-decoration:none; color:inherit; } header{ background:#111827; color:white; padding:18px 6%; position:sticky; top:0; z-index:1000; box-shadow:0 3px 15px rgba(0,0,0,.15); } .nav{ max-width:1200px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:20px; } .logo{ font-size:28px; font-weight:800; letter-spacing:1px; } .logo span{ color:#38bdf8; } .language{ padding:9px 12px; border-radius:8px; border:1px solid #475569; background:#1e293b; color:white; cursor:pointer; font-size:14px; } .hero{ background:linear-gradient(135deg,#0f172a,#1e3a5f); color:white; padding:85px 6% 75px; text-align:center; } .hero-content{ max-width:900px; margin:auto; } .hero h1{ font-size:clamp(38px,6vw,64px); line-height:1.1; margin-bottom:22px; } .hero h1 span{ color:#38bdf8; } .hero p{ font-size:20px; color:#dbeafe; max-width:780px; margin:auto; } .search-box{ max-width:720px; margin:35px auto 0; } .search-box input{ width:100%; padding:18px 22px; border:none; border-radius:14px; font-size:17px; outline:none; box-shadow:0 8px 30px rgba(0,0,0,.2); } .search-results{ display:none; background:white; color:#172033; margin-top:8px; border-radius:12px; overflow:hidden; text-align:left; box-shadow:0 10px 30px rgba(0,0,0,.25); } .search-result{ display:block; padding:14px 18px; border-bottom:1px solid #e5e7eb; } .search-result:hover{ background:#f1f5f9; } .search-result strong{ display:block; } .search-result small{ color:#64748b; } .no-result{ padding:16px; color:#64748b; } section{ padding:70px 6%; } .container{ max-width:1200px; margin:auto; } .section-title{ text-align:center; margin-bottom:40px; } .section-title h2{ font-size:36px; margin-bottom:10px; } .section-title p{ color:#64748b; } .cards{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; } .card{ background:white; border-radius:18px; padding:28px; border:1px solid #e2e8f0; box-shadow:0 5px 18px rgba(15,23,42,.06); transition:.25s ease; } .card:hover{ transform:translateY(-5px); box-shadow:0 12px 28px rgba(15,23,42,.12); } .icon{ font-size:38px; margin-bottom:15px; } .card h3{ margin-bottom:10px; font-size:21px; } .card p{ color:#64748b; margin-bottom:18px; } .card-button{ display:inline-block; padding:10px 15px; border-radius:9px; background:#0f172a; color:white; font-weight:600; } .card-button:hover{ background:#2563eb; } .sources{ background:#eaf2f8; } .source-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; } .source{ background:white; padding:20px; border-radius:14px; text-align:center; border:1px solid #dbe3ea; font-weight:700; } .source:hover{ background:#f8fafc; } .emergency{ background:#fff1f2; } .emergency-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; } .emergency-card{ background:white; border-radius:15px; padding:25px; text-align:center; border:1px solid #fecdd3; } .emergency-card .number{ font-size:34px; font-weight:800; margin-bottom:8px; } .emergency-card p{ color:#64748b; } .disclaimer{ background:#f8fafc; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; } .disclaimer-box{ max-width:900px; margin:auto; text-align:center; color:#64748b; } .disclaimer-box strong{ color:#334155; } footer{ background:#0f172a; color:#cbd5e1; padding:45px 6% 25px; } .footer-grid{ max-width:1200px; margin:auto; display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px; } footer h3{ color:white; margin-bottom:15px; } footer a{ display:block; margin-bottom:8px; color:#cbd5e1; } footer a:hover{ color:#38bdf8; } .copyright{ max-width:1200px; margin:35px auto 0; padding-top:20px; border-top:1px solid #334155; text-align:center; font-size:14px; color:#94a3b8; } @media(max-width:1000px){ .cards{ grid-template-columns:repeat(2,1fr); } .source-grid{ grid-template-columns:repeat(2,1fr); } .emergency-grid{ grid-template-columns:repeat(2,1fr); } } @media(max-width:650px){ header{ padding:15px 5%; } .logo{ font-size:23px; } .hero{ padding:65px 5%; } .hero p{ font-size:17px; } section{ padding:55px 5%; } .cards, .source-grid, .emergency-grid, .footer-grid{ grid-template-columns:1fr; } .section-title h2{ font-size:29px; } } </style> </head> <body> <header> <div class="nav"> <a href="index.html" class="logo"> CRO<span>PATH</span> </a> <select id="languageSelect" class="language"> <option value="en">English</option> <option value="ml">മലയാളം</option> <option value="hi">हिन्दी</option> <option value="ne">नेपाली</option> <option value="ta">தமிழ்</option> <option value="te">తెలుగు</option> <option value="bn">বাংলা</option> <option value="ur">اردو</option> <option value="hr">Hrvatski</option> </select> </div> </header> <section class="hero"> <div class="hero-content"> <h1> <span>CROPATH</span> </h1> <p id="heroTitle"> Your Path to Living and Working in Croatia </p> <p id="heroDescription" style="margin-top:12px;"> Clear information, practical guidance and trusted official sources for foreigners in Croatia. </p> <div class="search-box"> <input type="text" id="searchInput" placeholder="🔎 Search CROPATH..." oninput="searchPages()" > <div id="searchResults" class="search-results"></div> </div> </div> </section> <section> <div class="container"> <div class="section-title"> <h2 id="popularTitle"> Popular Help </h2> <p id="popularDescription"> Find practical information about living and working in Croatia. </p> </div> <div class="cards"> <div class="card"> <div class="icon">💼</div> <h3 id="workTitle">Work Permit</h3> <p id="workText"> Information about working in Croatia, permits and important steps before starting a job. </p> <a href="work.html" class="card-button" id="workButton">Explore →</a> </div> <div class="card"> <div class="icon">🏠</div> <h3 id="residenceTitle">Residence</h3> <p id="residenceText"> Learn about temporary residence, documents, applications and important requirements. </p> <a href="residence.html" class="card-button" id="residenceButton">Explore →</a> </div> <div class="card"> <div class="icon">💶</div> <h3 id="salaryTitle">Salary & Work Rights</h3> <p id="salaryText"> Understand salary, employment rights, overtime and important information for workers. </p> <a href="salary.html" class="card-button" id="salaryButton">Explore →</a> </div> <div class="card"> <div class="icon">👮</div> <h3 id="policeTitle">Police & Documents</h3> <p id="policeText"> Useful information about MUP, address registration and common documents. </p> <a href="police.html" class="card-button" id="policeButton">Explore →</a> </div> <div class="card"> <div class="icon">🏥</div> <h3 id="healthTitle">Healthcare</h3> <p id="healthText"> Information about HZZO, doctors, hospitals, pharmacies and emergency medical help. </p> <a href="healthcare.html" class="card-button" id="healthButton">Explore →</a> </div> <div class="card"> <div class="icon">🚗</div> <h3 id="drivingTitle">Driving Licence</h3> <p id="drivingText"> Learn about foreign driving licences, Croatian licences and important documents. </p> <a href="driving.html" class="card-button" id="drivingButton">Explore →</a> </div> <div class="card"> <div class="icon">🏛️</div> <h3 id="governmentTitle">Government Services</h3> <p id="governmentText"> Find official Croatian government services and trusted websites in one place. </p> <a href="government.html" class="card-button" id="governmentButton">Explore →</a> </div> <div class="card"> <div class="icon">🚨</div> <h3 id="emergencyTitle">Emergency Help</h3> <p id="emergencyText"> Important emergency numbers and what to do in an emergency in Croatia. </p> <a href="emergency.html" class="card-button" id="emergencyButton">Get Help →</a> </div> </div> </div> </section> <section class="sources"> <div class="container"> <div class="section-title"> <h2 id="officialTitle"> Official Sources </h2> <p id="officialDescription"> Always check official Croatian authorities for the latest rules. </p> </div> <div class="source-grid"> <a class="source" href="https://mup.gov.hr/" target="_blank" rel="noopener"> 🇭🇷 MUP Croatia </a> <a class="source" href="https://gov.hr/" target="_blank" rel="noopener"> 🏛️ gov.hr </a> <a class="source" href="https://hzzo.hr/" target="_blank" rel="noopener"> 🏥 HZZO </a> <a class="source" href="https://www.hzz.hr/" target="_blank" rel="noopener"> 💼 HZZ </a> <a class="source" href="https://e-porezna.porezna-uprava.hr/" target="_blank" rel="noopener"> 💶 e-Porezna </a> </div> </div> </section> <section class="emergency"> <div class="container"> <div class="section-title"> <h2 id="emergencySectionTitle"> Emergency Numbers </h2> <p id="emergencySectionDescription"> Save these numbers for emergencies in Croatia. </p> </div> <div class="emergency-grid"> <a href="tel:112" class="emergency-card"> <div class="number">112</div> <strong id="generalEmergency"> General Emergency </strong> <p id="allServices"> All emergency services </p> </a> <a href="tel:194" class="emergency-card"> <div class="number">194</div> <strong id="ambulance"> Ambulance </strong> <p id="medicalService"> Emergency medical service </p> </a> <a href="tel:192" class="emergency-card"> <div class="number">192</div> <strong id="policeEmergency"> Police </strong> <p id="policeEmergencyText"> Police emergency </p> </a> <a href="tel:193" class="emergency-card"> <div class="number">193</div> <strong id="fire"> Fire Brigade </strong> <p id="fireText"> Fire emergency </p> </a> </div> </div> </section> <section class="disclaimer"> <div class="disclaimer-box"> <p id="disclaimerText"> <strong>Important:</strong> CROPATH is an independent information website. It is not a Croatian government website and does not replace professional legal, immigration, tax or medical advice. </p> <p id="disclaimerText2" style="margin-top:10px;"> Always check the latest information with the competent Croatian authority or official source. </p> <p id="verifiedText" style="margin-top:12px;font-size:14px;"> Last verified: 7 October 2026 </p> </div> </section> <footer> <div class="footer-grid"> <div> <h3>CROPATH</h3> <p id="footerDescription"> Your practical path to living and working in Croatia. </p> <p id="footerDescription2" style="margin-top:12px;"> Clear information. Practical guidance. Official sources. </p> </div> <div> <h3 id="exploreTitle"> Explore </h3> <a href="work.html" id="footerWork"> Work Permit </a> <a href="residence.html" id="footerResidence"> Residence </a> <a href="salary.html" id="footerSalary"> Salary & Work Rights </a> <a href="police.html" id="footerPolice"> Police & Documents </a> </div> <div> <h3 id="moreTitle"> More </h3> <a href="healthcare.html" id="footerHealth"> Healthcare </a> <a href="driving.html" id="footerDriving"> Driving Licence </a> <a href="government.html" id="footerGovernment"> Government Services </a> <a href="emergency.html" id="footerEmergency"> Emergency Help </a> </div> </div> <div class="copyright"> © 2026 CROPATH. All rights reserved. </div> </footer> <script> const translations = { en: { heroTitle:"Your Path to Living and Working in Croatia", heroDescription:"Clear information, practical guidance and trusted official sources for foreigners in Croatia.", search:"🔎 Search CROPATH...", popularTitle:"Popular Help", popularDescription:"Find practical information about living and working in Croatia.", workTitle:"Work Permit", workText:"Information about working in Croatia, permits and important steps before starting a job.", residenceTitle:"Residence", residenceText:"Learn about temporary residence, documents, applications and important requirements.", salaryTitle:"Salary & Work Rights", salaryText:"Understand salary, employment rights, overtime and important information for workers.", policeTitle:"Police & Documents", policeText:"Useful information about MUP, address registration and common documents.", healthTitle:"Healthcare", healthText:"Information about HZZO, doctors, hospitals, pharmacies and emergency medical help.", drivingTitle:"Driving Licence", drivingText:"Learn about foreign driving licences, Croatian licences and important documents.", governmentTitle:"Government Services", governmentText:"Find official Croatian government services and trusted websites in one place.", emergencyTitle:"Emergency Help", emergencyText:"Important emergency numbers and what to do in an emergency in Croatia.", explore:"Explore →", getHelp:"Get Help →", officialTitle:"Official Sources", officialDescription:"Always check official Croatian authorities for the latest rules.", emergencySectionTitle:"Emergency Numbers", emergencySectionDescription:"Save these numbers for emergencies in Croatia.", generalEmergency:"General Emergency", allServices:"All emergency services", ambulance:"Ambulance", medicalService:"Emergency medical service", policeEmergency:"Police", policeEmergencyText:"Police emergency", fire:"Fire Brigade", fireText:"Fire emergency", disclaimer:"<strong>Important:</strong> CROPATH is an independent information website. It is not a Croatian government website and does not replace professional legal, immigration, tax or medical advice.", disclaimer2:"Always check the latest information with the competent Croatian authority or official source.", verified:"Last verified: 7 October 2026", footerDescription:"Your practical path to living and working in Croatia.", footerDescription2:"Clear information. Practical guidance. Official sources.", exploreTitle:"Explore", moreTitle:"More", footerWork:"Work Permit", footerResidence:"Residence", footerSalary:"Salary & Work Rights", footerPolice:"Police & Documents", footerHealth:"Healthcare", footerDriving:"Driving Licence", footerGovernment:"Government Services", footerEmergency:"Emergency Help" }, ml: { heroTitle:"ക്രൊയേഷ്യയിൽ താമസിക്കാനും ജോലി ചെയ്യാനുമുള്ള നിങ്ങളുടെ വഴി", heroDescription:"ക്രൊയേഷ്യയിൽ താമസിക്കുകയും ജോലി ചെയ്യുകയും ചെയ്യുന്ന വിദേശികൾക്കായി വ്യക്തമായ വിവരങ്ങളും പ്രായോഗിക മാർഗനിർദേശങ്ങളും ഔദ്യോഗിക സ്രോതസ്സുകളും.", search:"🔎 CROPATH-ൽ തിരയുക...", popularTitle:"പ്രധാന സഹായങ്ങൾ", popularDescription:"ക്രൊയേഷ്യയിലെ താമസവും ജോലിയും സംബന്ധിച്ച പ്രായോഗിക വിവരങ്ങൾ കണ്ടെത്തുക.", workTitle:"വർക്ക് പെർമിറ്റ്", workText:"ക്രൊയേഷ്യയിൽ ജോലി ചെയ്യുന്നതിനുള്ള പെർമിറ്റുകളും ജോലി ആരംഭിക്കുന്നതിന് മുമ്പുള്ള പ്രധാന നടപടികളും.", residenceTitle:"താമസ അനുമതി", residenceText:"താൽക്കാലിക താമസം, ആവശ്യമായ രേഖകൾ, അപേക്ഷാ നടപടികൾ എന്നിവയെക്കുറിച്ച് അറിയുക.", salaryTitle:"ശമ്പളവും തൊഴിൽ അവകാശങ്ങളും", salaryText:"ശമ്പളം, തൊഴിൽ അവകാശങ്ങൾ, overtime, തൊഴിലാളികൾക്കുള്ള പ്രധാന വിവരങ്ങൾ എന്നിവ മനസ്സിലാക്കുക.", policeTitle:"പോലീസും രേഖകളും", policeText:"MUP, വിലാസ രജിസ്ട്രേഷൻ, സാധാരണയായി ആവശ്യമായ രേഖകൾ എന്നിവയെക്കുറിച്ചുള്ള വിവരങ്ങൾ.", healthTitle:"ആരോഗ്യ സേവനം", healthText:"HZZO, ഡോക്ടർമാർ, ആശുപത്രികൾ, ഫാർമസികൾ, അടിയന്തര ചികിത്സ എന്നിവയെക്കുറിച്ചുള്ള വിവരങ്ങൾ.", drivingTitle:"ഡ്രൈവിംഗ് ലൈസൻസ്", drivingText:"വിദേശ ഡ്രൈവിംഗ് ലൈസൻസ്, ക്രൊയേഷ്യൻ ലൈസൻസ്, ആവശ്യമായ രേഖകൾ എന്നിവയെക്കുറിച്ച് അറിയുക.", governmentTitle:"സർക്കാർ സേവനങ്ങൾ", governmentText:"ക്രൊയേഷ്യൻ സർക്കാർ സേവനങ്ങളുടെയും ഔദ്യോഗിക വെബ്സൈറ്റുകളുടെയും വിവരങ്ങൾ ഒരിടത്ത്.", emergencyTitle:"അടിയന്തര സഹായം", emergencyText:"ക്രൊയേഷ്യയിലെ പ്രധാന അടിയന്തര നമ്പറുകളും അടിയന്തര സാഹചര്യങ്ങളിൽ ചെയ്യേണ്ട കാര്യങ്ങളും.", explore:"കാണുക →", getHelp:"സഹായം നേടുക →", officialTitle:"ഔദ്യോഗിക സ്രോതസ്സുകൾ", officialDescription:"ഏറ്റവും പുതിയ നിയമങ്ങളും വിവരങ്ങളും ഔദ്യോഗിക ക്രൊയേഷ്യൻ അധികാരികളിൽ നിന്ന് പരിശോധിക്കുക.", emergencySectionTitle:"അടിയന്തര നമ്പറുകൾ", emergencySectionDescription:"ക്രൊയേഷ്യയിൽ അടിയന്തര സാഹചര്യങ്ങൾക്ക് ഈ നമ്പറുകൾ save ചെയ്യുക.", generalEmergency:"പൊതുവായ അടിയന്തര സഹായം", allServices:"എല്ലാ അടിയന്തര സേവനങ്ങളും", ambulance:"ആംബുലൻസ്", medicalService:"അടിയന്തര മെഡിക്കൽ സേവനം", policeEmergency:"പോലീസ്", policeEmergencyText:"പോലീസ് അടിയന്തര സേവനം", fire:"ഫയർ ബ്രിഗേഡ്", fireText:"തീ നിയന്ത്രണ അടിയന്തര സേവനം", disclaimer:"<strong>പ്രധാന അറിയിപ്പ്:</strong> CROPATH ഒരു സ്വതന്ത്ര വിവര വെബ്സൈറ്റാണ്. ഇത് ക്രൊയേഷ്യൻ സർക്കാർ വെബ്സൈറ്റ് അല്ല. നിയമ, ഇമിഗ്രേഷൻ, നികുതി അല്ലെങ്കിൽ മെഡിക്കൽ വിദഗ്ധരുടെ ഉപദേശത്തിന് പകരമല്ല.", disclaimer2:"ഏറ്റവും പുതിയ വിവരങ്ങൾ ബന്ധപ്പെട്ട ക്രൊയേഷ്യൻ അധികാരികളിൽ നിന്നോ ഔദ്യോഗിക സ്രോതസ്സുകളിൽ നിന്നോ പരിശോധിക്കുക.", verified:"അവസാനം പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026", footerDescription:"ക്രൊയേഷ്യയിൽ താമസിക്കാനും ജോലി ചെയ്യാനും സഹായിക്കുന്ന പ്രായോഗിക മാർഗനിർദേശം.", footerDescription2:"വ്യക്തമായ വിവരങ്ങൾ. പ്രായോഗിക മാർഗനിർദേശം. ഔദ്യോഗിക സ്രോതസ്സുകൾ.", exploreTitle:"പര്യവേക്ഷണം", moreTitle:"കൂടുതൽ", footerWork:"വർക്ക് പെർമിറ്റ്", footerResidence:"താമസ അനുമതി", footerSalary:"ശമ്പളവും തൊഴിൽ അവകാശങ്ങളും", footerPolice:"പോലീസും രേഖകളും", footerHealth:"ആരോഗ്യ സേവനം", footerDriving:"ഡ്രൈവിംഗ് ലൈസൻസ്", footerGovernment:"സർക്കാർ സേവനങ്ങൾ", footerEmergency:"അടിയന്തര സഹായം" }, hi: { heroTitle:"क्रोएशिया में रहने और काम करने के लिए आपका मार्गदर्शक", heroDescription:"क्रोएशिया में रहने और काम करने वाले विदेशियों के लिए स्पष्ट जानकारी, व्यावहारिक मार्गदर्शन और आधिकारिक स्रोत।", search:"🔎 CROPATH में खोजें...", popularTitle:"लोकप्रिय सहायता", popularDescription:"क्रोएशिया में रहने और काम करने के बारे में व्यावहारिक जानकारी खोजें।", workTitle:"वर्क परमिट", workText:"क्रोएशिया में काम करने, परमिट और नौकरी शुरू करने से पहले आवश्यक महत्वपूर्ण कदमों की जानकारी।", residenceTitle:"निवास", residenceText:"अस्थायी निवास, दस्तावेज़, आवेदन और महत्वपूर्ण आवश्यकताओं के बारे में जानें।", salaryTitle:"वेतन और कार्य अधिकार", salaryText:"वेतन, रोजगार अधिकार, ओवरटाइम और कर्मचारियों के लिए महत्वपूर्ण जानकारी समझें।", policeTitle:"पुलिस और दस्तावेज़", policeText:"MUP, पता पंजीकरण और सामान्य दस्तावेज़ों के बारे में उपयोगी जानकारी।", healthTitle:"स्वास्थ्य सेवा", healthText:"HZZO, डॉक्टरों, अस्पतालों, फार्मेसियों और आपातकालीन चिकित्सा सहायता की जानकारी।", drivingTitle:"ड्राइविंग लाइसेंस", drivingText:"विदेशी ड्राइविंग लाइसेंस, क्रोएशियाई लाइसेंस और आवश्यक दस्तावेज़ों के बारे में जानें।", governmentTitle:"सरकारी सेवाएं", governmentText:"क्रोएशिया की आधिकारिक सरकारी सेवाओं और विश्वसनीय वेबसाइटों की जानकारी एक जगह।", emergencyTitle:"आपातकालीन सहायता", emergencyText:"क्रोएशिया में महत्वपूर्ण आपातकालीन नंबर और आपात स्थिति में क्या करना है।", explore:"देखें →", getHelp:"सहायता लें →", officialTitle:"आधिकारिक स्रोत", officialDescription:"नवीनतम नियमों के लिए हमेशा आधिकारिक क्रोएशियाई अधिकारियों की जानकारी देखें।", emergencySectionTitle:"आपातकालीन नंबर", emergencySectionDescription:"क्रोएशिया में आपातकाल के लिए इन नंबरों को सेव करें।", generalEmergency:"सामान्य आपातकाल", allServices:"सभी आपातकालीन सेवाएं", ambulance:"एम्बुलेंस", medicalService:"आपातकालीन चिकित्सा सेवा", policeEmergency:"पुलिस", policeEmergencyText:"पुलिस आपातकाल", fire:"फायर ब्रिगेड", fireText:"आग की आपातकालीन सेवा", disclaimer:"<strong>महत्वपूर्ण:</strong> CROPATH एक स्वतंत्र सूचना वेबसाइट है। यह क्रोएशियाई सरकारी वेबसाइट नहीं है और कानूनी, इमिग्रेशन, टैक्स या मेडिकल पेशेवर सलाह का विकल्प नहीं है.", disclaimer2:"नवीनतम जानकारी हमेशा संबंधित क्रोएशियाई प्राधिकरण या आधिकारिक स्रोत से जांचें।", verified:"अंतिम सत्यापन: 7 अक्टूबर 2026", footerDescription:"क्रोएशिया में रहने और काम करने के लिए आपका व्यावहारिक मार्गदर्शक।", footerDescription2:"स्पष्ट जानकारी। व्यावहारिक मार्गदर्शन। आधिकारिक स्रोत।", exploreTitle:"जानकारी", moreTitle:"और", footerWork:"वर्क परमिट", footerResidence:"निवास", footerSalary:"वेतन और कार्य अधिकार", footerPolice:"पुलिस और दस्तावेज़", footerHealth:"स्वास्थ्य सेवा", footerDriving:"ड्राइविंग लाइसेंस", footerGovernment:"सरकारी सेवाएं", footerEmergency:"आपातकालीन सहायता" }, ne: { heroTitle:"क्रोएसियामा बस्न र काम गर्न तपाईंको मार्गदर्शक", heroDescription:"क्रोएसियामा बस्ने र काम गर्ने विदेशीहरूका लागि स्पष्ट जानकारी, व्यावहारिक मार्गदर्शन र आधिकारिक स्रोतहरू।", search:"🔎 CROPATH मा खोज्नुहोस्...", popularTitle:"लोकप्रिय सहायता", popularDescription:"क्रोएसियामा बस्ने र काम गर्ने सम्बन्धी व्यावहारिक जानकारी खोज्नुहोस्।", workTitle:"वर्क परमिट", workText:"क्रोएसियामा काम, परमिट र काम सुरु गर्नुअघि आवश्यक महत्वपूर्ण चरणहरूको जानकारी।", residenceTitle:"बसोबास", residenceText:"अस्थायी बसोबास, कागजात, आवेदन र महत्वपूर्ण आवश्यकताहरूको बारेमा जान्नुहोस्।", salaryTitle:"तलब र कामका अधिकार", salaryText:"तलब, रोजगारी अधिकार, ओभरटाइम र कामदारहरूका लागि महत्वपूर्ण जानकारी बुझ्नुहोस्।", policeTitle:"प्रहरी र कागजात", policeText:"MUP, ठेगाना दर्ता र सामान्य कागजातहरूको उपयोगी जानकारी।", healthTitle:"स्वास्थ्य सेवा", healthText:"HZZO, डाक्टर, अस्पताल, फार्मेसी र आपतकालीन स्वास्थ्य सेवाको जानकारी।", drivingTitle:"ड्राइभिङ लाइसेन्स", drivingText:"विदेशी ड्राइभिङ लाइसेन्स, क्रोएसियाली लाइसेन्स र आवश्यक कागजातहरू बारे जान्नुहोस्।", governmentTitle:"सरकारी सेवाहरू", governmentText:"क्रोएसियाका आधिकारिक सरकारी सेवा र विश्वसनीय वेबसाइटहरू एकै ठाउँमा।", emergencyTitle:"आपतकालीन सहायता", emergencyText:"क्रोएसियाका महत्वपूर्ण आपतकालीन नम्बर र आपतकालमा के गर्ने भन्ने जानकारी।", explore:"हेर्नुहोस् →", getHelp:"सहायता लिनुहोस् →", officialTitle:"आधिकारिक स्रोतहरू", officialDescription:"नवीनतम नियमका लागि आधिकारिक क्रोएसियाली अधिकारीहरूको जानकारी जाँच गर्नुहोस्।", emergencySectionTitle:"आपतकालीन नम्बरहरू", emergencySectionDescription:"क्रोएसियामा आपतकालका लागि यी नम्बरहरू सुरक्षित राख्नुहोस्।", generalEmergency:"सामान्य आपतकाल", allServices:"सबै आपतकालीन सेवाहरू", ambulance:"एम्बुलेन्स", medicalService:"आपतकालीन चिकित्सा सेवा", policeEmergency:"प्रहरी", policeEmergencyText:"प्रहरी आपतकाल", fire:"दमकल", fireText:"आगो आपतकाल", disclaimer:"<strong>महत्वपूर्ण:</strong> CROPATH एक स्वतन्त्र सूचना वेबसाइट हो। यो क्रोएसियाली सरकारी वेबसाइट होइन र कानुनी, अध्यागमन, कर वा चिकित्सा पेशेवर सल्लाहको विकल्प होइन।", disclaimer2:"नवीनतम जानकारी सम्बन्धित क्रोएसियाली अधिकारी वा आधिकारिक स्रोतबाट जाँच गर्नुहोस्।", verified:"अन्तिम जाँच: ७ अक्टोबर २०२६", footerDescription:"क्रोएसियामा बस्न र काम गर्न तपाईंको व्यावहारिक मार्गदर्शक।", footerDescription2:"स्पष्ट जानकारी। व्यावहारिक मार्गदर्शन। आधिकारिक स्रोत।", exploreTitle:"हेर्नुहोस्", moreTitle:"थप", footerWork:"वर्क परमिट", footerResidence:"बसोबास", footerSalary:"तलब र कामका अधिकार", footerPolice:"प्रहरी र कागजात", footerHealth:"स्वास्थ्य सेवा", footerDriving:"ड्राइभिङ लाइसेन्स", footerGovernment:"सरकारी सेवाहरू", footerEmergency:"आपतकालीन सहायता" }, ta: { heroTitle:"குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் வழிகாட்டி", heroDescription:"குரோஷியாவில் வசிக்கும் மற்றும் வேலை செய்யும் வெளிநாட்டவர்களுக்கான தெளிவான தகவல், நடைமுறை வழிகாட்டுதல் மற்றும் அதிகாரப்பூர்வ ஆதாரங்கள்.", search:"🔎 CROPATH-ல் தேடுங்கள்...", popularTitle:"பிரபலமான உதவி", popularDescription:"குரோஷியாவில் வாழ்வது மற்றும் வேலை செய்வது பற்றிய நடைமுறை தகவல்களைக் கண்டறியுங்கள்.", workTitle:"வேலை அனுமதி", workText:"குரோஷியாவில் வேலை, அனுமதி மற்றும் வேலை தொடங்குவதற்கு முன் தேவையான முக்கிய நடவடிக்கைகள் பற்றிய தகவல்.", residenceTitle:"குடியிருப்பு", residenceText:"தற்காலிக குடியிருப்பு, ஆவணங்கள், விண்ணப்பங்கள் மற்றும் முக்கிய தேவைகள் பற்றி அறியுங்கள்.", salaryTitle:"சம்பளம் மற்றும் தொழிலாளர் உரிமைகள்", salaryText:"சம்பளம், வேலை உரிமைகள், கூடுதல் நேர வேலை மற்றும் தொழிலாளர்களுக்கான முக்கிய தகவல்களைப் புரிந்துகொள்ளுங்கள்.", policeTitle:"காவல்துறை மற்றும் ஆவணங்கள்", policeText:"MUP, முகவரி பதிவு மற்றும் பொதுவான ஆவணங்கள் பற்றிய பயனுள்ள தகவல்கள்.", healthTitle:"சுகாதாரம்", healthText:"HZZO, மருத்துவர்கள், மருத்துவமனைகள், மருந்தகங்கள் மற்றும் அவசர மருத்துவ உதவி பற்றிய தகவல்கள்.", drivingTitle:"ஓட்டுநர் உரிமம்", drivingText:"வெளிநாட்டு ஓட்டுநர் உரிமங்கள், குரோஷிய உரிமங்கள் மற்றும் முக்கிய ஆவணங்கள் பற்றி அறியுங்கள்.", governmentTitle:"அரசு சேவைகள்", governmentText:"அதிகாரப்பூர்வ குரோஷிய அரசு சேவைகள் மற்றும் நம்பகமான இணையதளங்களை ஒரே இடத்தில் காணுங்கள்.", emergencyTitle:"அவசர உதவி", emergencyText:"குரோஷியாவின் முக்கிய அவசர எண்கள் மற்றும் அவசரநிலையில் என்ன செய்ய வேண்டும்.", explore:"பார்க்கவும் →", getHelp:"உதவி பெறவும் →", officialTitle:"அதிகாரப்பூர்வ ஆதாரங்கள்", officialDescription:"சமீபத்திய விதிகளுக்காக அதிகாரப்பூர்வ குரோஷிய அதிகாரிகளை எப்போதும் சரிபார்க்கவும்.", emergencySectionTitle:"அவசர எண்கள்", emergencySectionDescription:"குரோஷியாவில் அவசரநிலைகளுக்காக இந்த எண்களை சேமித்து வைக்கவும்.", generalEmergency:"பொது அவசர சேவை", allServices:"அனைத்து அவசர சேவைகள்", ambulance:"ஆம்புலன்ஸ்", medicalService:"அவசர மருத்துவ சேவை", policeEmergency:"காவல்துறை", policeEmergencyText:"காவல்துறை அவசர சேவை", fire:"தீயணைப்பு படை", fireText:"தீ அவசர சேவை", disclaimer:"<strong>முக்கியம்:</strong> CROPATH ஒரு சுயாதீன தகவல் இணையதளம். இது குரோஷிய அரசு இணையதளம் அல்ல மற்றும் சட்ட, குடியேற்ற, வரி அல்லது மருத்துவ நிபுணர் ஆலோசனைக்கு மாற்றாகாது.", disclaimer2:"சமீபத்திய தகவல்களை சம்பந்தப்பட்ட குரோஷிய அதிகாரி அல்லது அதிகாரப்பூர்வ ஆதாரத்துடன் சரிபார்க்கவும்.", verified:"கடைசியாக சரிபார்க்கப்பட்டது: 7 அக்டோபர் 2026", footerDescription:"குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் நடைமுறை வழிகாட்டி.", footerDescription2:"தெளிவான தகவல். நடைமுறை வழிகாட்டுதல். அதிகாரப்பூர்வ ஆதாரங்கள்.", exploreTitle:"ஆராயுங்கள்", moreTitle:"மேலும்", footerWork:"வேலை அனுமதி", footerResidence:"குடியிருப்பு", footerSalary:"சம்பளம் மற்றும் தொழிலாளர் உரிமைகள்", footerPolice:"காவல்துறை மற்றும் ஆவணங்கள்", footerHealth:"சுகாதாரம்", footerDriving:"ஓட்டுநர் உரிமம்", footerGovernment:"அரசு சேவைகள்", footerEmergency:"அவசர உதவி" }, te: { heroTitle:"క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ మార్గదర్శి", heroDescription:"క్రొయేషియాలో నివసించే మరియు పని చేసే విదేశీయుల కోసం స్పష్టమైన సమాచారం, ఆచరణాత్మక మార్గదర్శకత్వం మరియు అధికారిక వనరులు.", search:"🔎 CROPATHలో వెతకండి...", popularTitle:"ప్రధాన సహాయం", popularDescription:"క్రొయేషియాలో నివసించడం మరియు పని చేయడం గురించి ఆచరణాత్మక సమాచారాన్ని కనుగొనండి.", workTitle:"వర్క్ పర్మిట్", workText:"క్రొయేషియాలో పని, పర్మిట్లు మరియు ఉద్యోగం ప్రారంభించే ముందు అవసరమైన ముఖ్యమైన దశల సమాచారం.", residenceTitle:"నివాసం", residenceText:"తాత్కాలిక నివాసం, పత్రాలు, దరఖాస్తులు మరియు ముఖ్యమైన అవసరాల గురించి తెలుసుకోండి.", salaryTitle:"జీతం మరియు పని హక్కులు", salaryText:"జీతం, ఉద్యోగ హక్కులు, ఓవర్‌టైమ్ మరియు కార్మికులకు ముఖ్యమైన సమాచారాన్ని అర్థం చేసుకోండి.", policeTitle:"పోలీసు మరియు పత్రాలు", policeText:"MUP, చిరునామా నమోదు మరియు సాధారణ పత్రాల గురించి ఉపయోగకరమైన సమాచారం.", healthTitle:"ఆరోగ్య సేవలు", healthText:"HZZO, వైద్యులు, ఆసుపత్రులు, ఫార్మసీలు మరియు అత్యవసర వైద్య సహాయం గురించి సమాచారం.", drivingTitle:"డ్రైవింగ్ లైసెన్స్", drivingText:"విదేశీ డ్రైవింగ్ లైసెన్సులు, క్రొయేషియన్ లైసెన్సులు మరియు ముఖ్యమైన పత్రాల గురించి తెలుసుకోండి.", governmentTitle:"ప్రభుత్వ సేవలు", governmentText:"అధికారిక క్రొయేషియన్ ప్రభుత్వ సేవలు మరియు నమ్మకమైన వెబ్‌సైట్‌లను ఒకే చోట కనుగొనండి.", emergencyTitle:"అత్యవసర సహాయం", emergencyText:"క్రొయేషియాలో ముఖ్యమైన అత్యవసర నంబర్లు మరియు అత్యవసర పరిస్థితిలో ఏమి చేయాలో తెలుసుకోండి.", explore:"చూడండి →", getHelp:"సహాయం పొందండి →", officialTitle:"అధికారిక వనరులు", officialDescription:"తాజా నియమాల కోసం అధికారిక క్రొయేషియన్ అధికారులను ఎల్లప్పుడూ తనిఖీ చేయండి.", emergencySectionTitle:"అత్యవసర నంబర్లు", emergencySectionDescription:"క్రొయేషియాలో అత్యవసర పరిస్థితుల కోసం ఈ నంబర్లను సేవ్ చేసుకోండి.", generalEmergency:"సాధారణ అత్యవసర సేవ", allServices:"అన్ని అత్యవసర సేవలు", ambulance:"అంబులెన్స్", medicalService:"అత్యవసర వైద్య సేవ", policeEmergency:"పోలీసు", policeEmergencyText:"పోలీసు అత్యవసర సేవ", fire:"అగ్నిమాపక దళం", fireText:"అగ్ని అత్యవసర సేవ", disclaimer:"<strong>ముఖ్యమైనది:</strong> CROPATH ఒక స్వతంత్ర సమాచార వెబ్‌సైట్. ఇది క్రొయేషియన్ ప్రభుత్వ వెబ్‌సైట్ కాదు మరియు చట్టపరమైన, ఇమ్మిగ్రేషన్, పన్ను లేదా వైద్య నిపుణుల సలహాకు ప్రత్యామ్నాయం కాదు.", disclaimer2:"తాజా సమాచారాన్ని సంబంధిత క్రొయేషియన్ అధికారితో లేదా అధికారిక వనరుతో ఎల్లప్పుడూ తనిఖీ చేయండి.", verified:"చివరిసారి తనిఖీ: 7 అక్టోబర్ 2026", footerDescription:"క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ ఆచరణాత్మక మార్గదర్శి.", footerDescription2:"స్పష్టమైన సమాచారం. ఆచరణాత్మక మార్గదర్శకత్వం. అధికారిక వనరులు.", exploreTitle:"చూడండి", moreTitle:"మరిన్ని", footerWork:"వర్క్ పర్మిట్", footerResidence:"నివాసం", footerSalary:"జీతం మరియు పని హక్కులు", footerPolice:"పోలీసు మరియు పత్రాలు", footerHealth:"ఆరోగ్య సేవలు", footerDriving:"డ్రైవింగ్ లైసెన్స్", footerGovernment:"ప్రభుత్వ సేవలు", footerEmergency:"అత్యవసర సహాయం" }, bn: { heroTitle:"ক্রোয়েশিয়ায় বসবাস ও কাজ করার জন্য আপনার পথপ্রদর্শক", heroDescription:"ক্রোয়েশিয়ায় বসবাস ও কাজ করা বিদেশিদের জন্য পরিষ্কার তথ্য, ব্যবহারিক নির্দেশনা এবং সরকারি উৎস।", search:"🔎 CROPATH-এ খুঁজুন...", popularTitle:"জনপ্রিয় সহায়তা", popularDescription:"ক্রোয়েশিয়ায় বসবাস ও কাজ সম্পর্কে ব্যবহারিক তথ্য খুঁজুন।", workTitle:"ওয়ার্ক পারমিট", workText:"ক্রোয়েশিয়ায় কাজ, পারমিট এবং চাকরি শুরু করার আগে গুরুত্বপূর্ণ ধাপ সম্পর্কে তথ্য।", residenceTitle:"বসবাস", residenceText:"অস্থায়ী বসবাস, নথি, আবেদন এবং গুরুত্বপূর্ণ প্রয়োজনীয়তা সম্পর্কে জানুন।", salaryTitle:"বেতন ও কর্ম অধিকার", salaryText:"বেতন, কর্মসংস্থান অধিকার, ওভারটাইম এবং কর্মীদের জন্য গুরুত্বপূর্ণ তথ্য বুঝুন।", policeTitle:"পুলিশ ও নথি", policeText:"MUP, ঠিকানা নিবন্ধন এবং সাধারণ নথি সম্পর্কে দরকারী তথ্য।", healthTitle:"স্বাস্থ্যসেবা", healthText:"HZZO, ডাক্তার, হাসপাতাল, ফার্মেসি এবং জরুরি চিকিৎসা সহায়তা সম্পর্কে তথ্য।", drivingTitle:"ড্রাইভিং লাইসেন্স", drivingText:"বিদেশি ড্রাইভিং লাইসেন্স, ক্রোয়েশিয়ান লাইসেন্স এবং গুরুত্বপূর্ণ নথি সম্পর্কে জানুন।", governmentTitle:"সরকারি পরিষেবা", governmentText:"অফিসিয়াল ক্রোয়েশিয়ান সরকারি পরিষেবা এবং নির্ভরযোগ্য ওয়েবসাইট এক জায়গায় খুঁজুন।", emergencyTitle:"জরুরি সহায়তা", emergencyText:"ক্রোয়েশিয়ার গুরুত্বপূর্ণ জরুরি নম্বর এবং জরুরি অবস্থায় কী করতে হবে।", explore:"দেখুন →", getHelp:"সহায়তা নিন →", officialTitle:"সরকারি উৎস", officialDescription:"সর্বশেষ নিয়মের জন্য সবসময় অফিসিয়াল ক্রোয়েশিয়ান কর্তৃপক্ষের তথ্য দেখুন।", emergencySectionTitle:"জরুরি নম্বর", emergencySectionDescription:"ক্রোয়েশিয়ায় জরুরি অবস্থার জন্য এই নম্বরগুলো সংরক্ষণ করুন।", generalEmergency:"সাধারণ জরুরি পরিষেবা", allServices:"সব জরুরি পরিষেবা", ambulance:"অ্যাম্বুলেন্স", medicalService:"জরুরি চিকিৎসা পরিষেবা", policeEmergency:"পুলিশ", policeEmergencyText:"পুলিশ জরুরি পরিষেবা", fire:"ফায়ার ব্রিগেড", fireText:"আগুনের জরুরি পরিষেবা", disclaimer:"<strong>গুরুত্বপূর্ণ:</strong> CROPATH একটি স্বাধীন তথ্য ওয়েবসাইট। এটি ক্রোয়েশিয়ান সরকারি ওয়েবসাইট নয় এবং আইন, অভিবাসন, কর বা চিকিৎসা পেশাদার পরামর্শের বিকল্প নয়।", disclaimer2:"সর্বশেষ তথ্য সংশ্লিষ্ট ক্রোয়েশিয়ান কর্তৃপক্ষ বা সরকারি উৎস থেকে যাচাই করুন।", verified:"শেষ যাচাই: ৭ অক্টোবর ২০২৬", footerDescription:"ক্রোয়েশিয়ায় বসবাস ও কাজ করার জন্য আপনার ব্যবহারিক পথপ্রদর্শক।", footerDescription2:"পরিষ্কার তথ্য। ব্যবহারিক নির্দেশনা। সরকারি উৎস।", exploreTitle:"দেখুন", moreTitle:"আরও", footerWork:"ওয়ার্ক পারমিট", footerResidence:"বসবাস", footerSalary:"বেতন ও কর্ম অধিকার", footerPolice:"পুলিশ ও নথি", footerHealth:"স্বাস্থ্যসেবা", footerDriving:"ড্রাইভিং লাইসেন্স", footerGovernment:"সরকারি পরিষেবা", footerEmergency:"জরুরি সহায়তা" }, ur: { heroTitle:"کروشیا میں رہنے اور کام کرنے کے لیے آپ کا رہنما", heroDescription:"کروشیا میں رہنے اور کام کرنے والے غیر ملکیوں کے لیے واضح معلومات، عملی رہنمائی اور سرکاری ذرائع۔", search:"🔎 CROPATH میں تلاش کریں...", popularTitle:"مقبول مدد", popularDescription:"کروشیا میں رہنے اور کام کرنے کے بارے میں عملی معلومات تلاش کریں۔", workTitle:"ورک پرمٹ", workText:"کروشیا میں کام، اجازت ناموں اور ملازمت شروع کرنے سے پہلے اہم اقدامات کے بارے میں معلومات۔", residenceTitle:"رہائش", residenceText:"عارضی رہائش، دستاویزات، درخواستوں اور اہم ضروریات کے بارے میں جانیں۔", salaryTitle:"تنخواہ اور کام کے حقوق", salaryText:"تنخواہ، ملازمت کے حقوق، اوور ٹائم اور کارکنوں کے لیے اہم معلومات سمجھیں۔", policeTitle:"پولیس اور دستاویزات", policeText:"MUP، پتہ رجسٹریشن اور عام دستاویزات کے بارے میں مفید معلومات۔", healthTitle:"صحت کی خدمات", healthText:"HZZO، ڈاکٹروں، ہسپتالوں، فارمیسیوں اور ہنگامی طبی مدد کے بارے میں معلومات۔", drivingTitle:"ڈرائیونگ لائسنس", drivingText:"غیر ملکی ڈرائیونگ لائسنس، کروشیائی لائسنس اور اہم دستاویزات کے بارے میں جانیں۔", governmentTitle:"سرکاری خدمات", governmentText:"کروشیا کی سرکاری خدمات اور قابل اعتماد ویب سائٹس کو ایک جگہ تلاش کریں۔", emergencyTitle:"ہنگامی مدد", emergencyText:"کروشیا میں اہم ہنگامی نمبرز اور ہنگامی صورت حال میں کیا کرنا ہے۔", explore:"دیکھیں →", getHelp:"مدد حاصل کریں →", officialTitle:"سرکاری ذرائع", officialDescription:"تازہ ترین قوانین کے لیے ہمیشہ سرکاری کروشیائی حکام سے معلومات چیک کریں۔", emergencySectionTitle:"ہنگامی نمبرز", emergencySectionDescription:"کروشیا میں ہنگامی حالات کے لیے ان نمبرز کو محفوظ کریں۔", generalEmergency:"عمومی ہنگامی سروس", allServices:"تمام ہنگامی خدمات", ambulance:"ایمبولینس", medicalService:"ہنگامی طبی سروس", policeEmergency:"پولیس", policeEmergencyText:"پولیس ہنگامی سروس", fire:"فائر بریگیڈ", fireText:"آگ کی ہنگامی سروس", disclaimer:"<strong>اہم:</strong> CROPATH ایک آزاد معلوماتی ویب سائٹ ہے۔ یہ کروشیائی سرکاری ویب سائٹ نہیں ہے اور قانونی، امیگریشن، ٹیکس یا طبی پیشہ ورانہ مشورے کا متبادل نہیں ہے۔", disclaimer2:"تازہ ترین معلومات متعلقہ کروشیائی حکام یا سرکاری ذریعہ سے چیک کریں۔", verified:"آخری تصدیق: 7 اکتوبر 2026", footerDescription:"کروشیا میں رہنے اور کام کرنے کے لیے آپ کا عملی رہنما۔", footerDescription2:"واضح معلومات۔ عملی رہنمائی۔ سرکاری ذرائع۔", exploreTitle:"دیکھیں", moreTitle:"مزید", footerWork:"ورک پرمٹ", footerResidence:"رہائش", footerSalary:"تنخواہ اور کام کے حقوق", footerPolice:"پولیس اور دستاویزات", footerHealth:"صحت کی خدمات", footerDriving:"ڈرائیونگ لائسنس", footerGovernment:"سرکاری خدمات", footerEmergency:"ہنگامی مدد" }, hr: { heroTitle:"Vaš put do života i rada u Hrvatskoj", heroDescription:"Jasne informacije, praktične smjernice i pouzdani službeni izvori za strance u Hrvatskoj.", search:"🔎 Pretražite CROPATH...", popularTitle:"Popularne informacije", popularDescription:"Pronađite praktične informacije o životu i radu u Hrvatskoj.", workTitle:"Radna dozvola", workText:"Informacije o radu u Hrvatskoj, dozvolama i važnim koracima prije početka rada.", residenceTitle:"Boravak", residenceText:"Saznajte više o privremenom boravku, dokumentima, zahtjevima i važnim uvjetima.", salaryTitle:"Plaća i radna prava", salaryText:"Saznajte više o plaći, radnim pravima, prekovremenom radu i važnim informacijama za radnike.", policeTitle:"Policija i dokumenti", policeText:"Korisne informacije o MUP-u, prijavi adrese i uobičajenim dokumentima.", healthTitle:"Zdravstvo", healthText:"Informacije o HZZO-u, liječnicima, bolnicama, ljekarnama i hitnoj medicinskoj pomoći.", drivingTitle:"Vozačka dozvola", drivingText:"Saznajte više o stranim vozačkim dozvolama, hrvatskim dozvolama i važnim dokumentima.", governmentTitle:"Državne usluge", governmentText:"Pronađite službene hrvatske državne usluge i pouzdane web-stranice na jednom mjestu.", emergencyTitle:"Hitna pomoć", emergencyText:"Važni hitni brojevi i informacije o tome što učiniti u hitnom slučaju u Hrvatskoj.", explore:"Otvori →", getHelp:"Pomoć →", officialTitle:"Službeni izvori", officialDescription:"Uvijek provjerite najnovije informacije kod službenih hrvatskih tijela.", emergencySectionTitle:"Hitni brojevi", emergencySectionDescription:"Spremite ove brojeve za hitne slučajeve u Hrvatskoj.", generalEmergency:"Opći hitni broj", allServices:"Sve hitne službe", ambulance:"Hitna pomoć", medicalService:"Hitna medicinska služba", policeEmergency:"Policija", policeEmergencyText:"Policijska hitna služba", fire:"Vatrogasci", fireText:"Vatrogasna hitna služba", disclaimer:"<strong>Važno:</strong> CROPATH je neovisna informativna web-stranica. Nije službena web-stranica hrvatske Vlade i ne zamjenjuje stručne pravne, imigracijske, porezne ili medicinske savjete.", disclaimer2:"Najnovije informacije uvijek provjerite kod nadležnog hrvatskog tijela ili u službenom izvoru.", verified:"Zadnja provjera: 7. listopada 2026.", footerDescription:"Vaš praktični vodič za život i rad u Hrvatskoj.", footerDescription2:"Jasne informacije. Praktične smjernice. Službeni izvori.", exploreTitle:"Istražite", moreTitle:"Više", footerWork:"Radna dozvola", footerResidence:"Boravak", footerSalary:"Plaća i radna prava", footerPolice:"Policija i dokumenti", footerHealth:"Zdravstvo", footerDriving:"Vozačka dozvola", footerGovernment:"Državne usluge", footerEmergency:"Hitna pomoć" } }; function setText(id,text){ const element=document.getElementById(id); if(element){ element.textContent=text; } } function changeLanguage(language){ const t=translations[language] || translations.en; setText("heroTitle",t.heroTitle); setText("heroDescription",t.heroDescription); document.getElementById("searchInput").placeholder=t.search; setText("popularTitle",t.popularTitle); setText("popularDescription",t.popularDescription); setText("workTitle",t.workTitle); setText("workText",t.workText); setText("residenceTitle",t.residenceTitle); setText("residenceText",t.residenceText); setText("salaryTitle",t.salaryTitle); setText("salaryText",t.salaryText); setText("policeTitle",t.policeTitle); setText("policeText",t.policeText); setText("healthTitle",t.healthTitle); setText("healthText",t.healthText); setText("drivingTitle",t.drivingTitle); setText("drivingText",t.drivingText); setText("governmentTitle",t.governmentTitle); setText("governmentText",t.governmentText); setText("emergencyTitle",t.emergencyTitle); setText("emergencyText",t.emergencyText); setText("workButton",t.explore); setText("residenceButton",t.explore); setText("salaryButton",t.explore); setText("policeButton",t.explore); setText("healthButton",t.explore); setText("drivingButton",t.explore); setText("governmentButton",t.explore); setText("emergencyButton",t.getHelp); setText("officialTitle",t.officialTitle); setText("officialDescription",t.officialDescription); setText("emergencySectionTitle",t.emergencySectionTitle); setText("emergencySectionDescription",t.emergencySectionDescription); setText("generalEmergency",t.generalEmergency); setText("allServices",t.allServices); setText("ambulance",t.ambulance); setText("medicalService",t.medicalService); setText("policeEmergency",t.policeEmergency); setText("policeEmergencyText",t.policeEmergencyText); setText("fire",t.fire); setText("fireText",t.fireText); document.getElementById("disclaimerText").innerHTML=t.disclaimer; setText("disclaimerText2",t.disclaimer2); setText("verifiedText",t.verified); setText("footerDescription",t.footerDescription); setText("footerDescription2",t.footerDescription2); setText("exploreTitle",t.exploreTitle); setText("moreTitle",t.moreTitle); setText("footerWork",t.footerWork); setText("footerResidence",t.footerResidence); setText("footerSalary",t.footerSalary); setText("footerPolice",t.footerPolice); setText("footerHealth",t.footerHealth); setText("footerDriving",t.footerDriving); setText("footerGovernment",t.footerGovernment); setText("footerEmergency",t.footerEmergency); document.documentElement.lang=language; document.documentElement.dir= language==="ur" ? "rtl" : "ltr"; localStorage.setItem( "cropath-language", language ); document.getElementById("languageSelect").value=language; } /* Load saved language */ const savedLanguage= localStorage.getItem("cropath-language") || "en"; changeLanguage(savedLanguage); /* Language dropdown */ document .getElementById("languageSelect") .addEventListener("change",function(){ changeLanguage(this.value); }); /* Search */ const pages=[ { title:"Work Permit", description:"Work permits, jobs and working in Croatia", keywords:"work permit job employment work foreign worker", url:"work.html" }, { title:"Residence", description:"Temporary residence and residence documents", keywords:"residence temporary residence permit stay documents", url:"residence.html" }, { title:"Salary & Work Rights", description:"Salary, employment rights and overtime", keywords:"salary wages gross net overtime rights employment", url:"salary.html" }, { title:"Police & Documents", description:"MUP, police registration and documents", keywords:"police mup documents address registration certificate", url:"police.html" }, { title:"Healthcare", description:"HZZO, doctors, hospitals and pharmacies", keywords:"health healthcare hzzo doctor hospital pharmacy medical", url:"healthcare.html" }, { title:"Driving Licence", description:"Foreign and Croatian driving licences", keywords:"driving licence driving license car vehicle indian licence", url:"driving.html" }, { title:"Government Services", description:"Official Croatian government websites", keywords:"government gov hr e gradjani e porezna hzz mup", url:"government.html" }, { title:"Emergency Help", description:"Emergency numbers and emergency information", keywords:"emergency 112 194 192 193 ambulance police fire", url:"emergency.html" } ]; function searchPages(){ const input= document.getElementById("searchInput") .value .toLowerCase() .trim(); const results= document.getElementById("searchResults"); if(!input){ results.style.display="none"; results.innerHTML=""; return; } const matches=pages.filter(page=>{ const text= page.title+" "+ page.description+" "+ page.keywords; return text.toLowerCase().includes(input); }); results.style.display="block"; if(matches.length===0){ results.innerHTML= '<div class="no-result">No matching information found.</div>'; return; } results.innerHTML= matches.map(page=>` <a href="${page.url}" class="search-result"> <strong>${page.title}</strong> <small>${page.description}</small> </a> `).join(""); } </script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CROPATH — Croatia Guide for Foreigners</title>
+
+  <meta
+    name="description"
+    content="CROPATH — Your Path to Living and Working in Croatia."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b1f3a;
+      color: white;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .language-box select {
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      background: white;
+      color: #172033;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(11,31,58,0.92), rgba(16,59,103,0.90)),
+        radial-gradient(circle at top right, #2563eb, transparent 45%);
+      color: white;
+      padding: 75px 20px;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .hero h2 {
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      font-size: 18px;
+      color: #e7eef8;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: #0b1f3a;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #5f6b7a;
+      font-size: 16px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 5px 18px rgba(15, 23, 42, 0.07);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      min-height: 225px;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      color: #0b1f3a;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: #5f6b7a;
+      font-size: 15px;
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #2563eb;
+      color: white;
+      padding: 11px 17px;
+      border-radius: 9px;
+      font-weight: 700;
+      text-align: center;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    .info-box {
+      margin-top: 45px;
+      background: #eaf2ff;
+      border-left: 5px solid #2563eb;
+      padding: 24px;
+      border-radius: 10px;
+    }
+
+    .info-box h3 {
+      color: #0b1f3a;
+      margin-bottom: 8px;
+    }
+
+    .info-box p {
+      color: #475569;
+    }
+
+    footer {
+      background: #0b1f3a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 30px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      color: #dbe5f2;
+    }
+
+    .verified {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    [dir="rtl"] {
+      text-align: right;
+    }
+
+    [dir="rtl"] .section-title,
+    [dir="rtl"] footer {
+      text-align: center;
+    }
+
+    [dir="rtl"] .info-box {
+      border-left: none;
+      border-right: 5px solid #2563eb;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+
+      .language-box select {
+        width: 100%;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero h2 {
+        font-size: 21px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 40px 15px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">CROPATH</div>
+
+    <div class="language-box">
+      <select id="languageSelect" onchange="changeLanguage(this.value)">
+        <option value="en">🇬🇧 English</option>
+        <option value="ml">🇮🇳 മലയാളം</option>
+        <option value="hi">🇮🇳 हिन्दी</option>
+        <option value="ne">🇳🇵 नेपाली</option>
+        <option value="ta">🇮🇳 தமிழ்</option>
+        <option value="te">🇮🇳 తెలుగు</option>
+        <option value="bn">🇧🇩 বাংলা</option>
+        <option value="ur">🇵🇰 اردو</option>
+        <option value="hr">🇭🇷 Hrvatski</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>CROPATH</h1>
+    <h2 id="heroTitle">Your Path to Living and Working in Croatia</h2>
+    <p id="heroText">
+      Simple and useful information for foreigners living, working and building
+      their life in Croatia.
+    </p>
+  </div>
+</section>
+
+<main class="container">
+
+  <div class="section-title">
+    <h2 id="guideTitle">Croatia Guide</h2>
+    <p id="guideText">
+      Choose a topic to find useful information, official links and practical guidance.
+    </p>
+  </div>
+
+  <div class="cards">
+
+    <!-- POLICE -->
+    <div class="card">
+      <div class="icon">👮</div>
+      <h3 id="policeTitle">Police & Documents</h3>
+      <p id="policeText">
+        Police procedures, residence registration, certificates and important documents.
+      </p>
+      <a href="police.html" class="btn" id="policeBtn">Open Page →</a>
+    </div>
+
+    <!-- GOVERNMENT -->
+    <div class="card">
+      <div class="icon">🏛️</div>
+      <h3 id="governmentTitle">Government</h3>
+      <p id="governmentText">
+        Croatian government services, e-Građani, tax and employment-related services.
+      </p>
+      <a href="government.html" class="btn" id="governmentBtn">Open Page →</a>
+    </div>
+
+    <!-- DRIVING -->
+    <div class="card">
+      <div class="icon">🚗</div>
+      <h3 id="drivingTitle">Driving</h3>
+      <p id="drivingText">
+        Driving licences, foreign licence rules, documents, medical checks and MUP procedures.
+      </p>
+      <a href="driving.html" class="btn" id="drivingBtn">Open Page →</a>
+    </div>
+
+    <!-- WORK -->
+    <div class="card">
+      <div class="icon">💼</div>
+      <h3 id="workTitle">Work</h3>
+      <p id="workText">
+        Work permits, employment, contracts, workers' rights and useful employment information.
+      </p>
+      <a href="work.html" class="btn" id="workBtn">Open Page →</a>
+    </div>
+
+    <!-- HEALTH -->
+    <div class="card">
+      <div class="icon">🏥</div>
+      <h3 id="healthTitle">Health</h3>
+      <p id="healthText">
+        Health insurance, doctors, hospitals, emergency healthcare and important health information.
+      </p>
+      <a href="health.html" class="btn" id="healthBtn">Open Page →</a>
+    </div>
+
+    <!-- HOUSING -->
+    <div class="card">
+      <div class="icon">🏠</div>
+      <h3 id="housingTitle">Housing</h3>
+      <p id="housingText">
+        Renting a home, contracts, deposits, registration and practical housing information.
+      </p>
+      <a href="housing.html" class="btn" id="housingBtn">Open Page →</a>
+    </div>
+
+    <!-- BANK -->
+    <div class="card">
+      <div class="icon">🏦</div>
+      <h3 id="bankTitle">Bank</h3>
+      <p id="bankText">
+        Bank accounts, payments, cards, online banking and useful banking information.
+      </p>
+      <a href="bank.html" class="btn" id="bankBtn">Open Page →</a>
+    </div>
+
+    <!-- FAMILY -->
+    <div class="card">
+      <div class="icon">👨‍👩‍👧‍👦</div>
+      <h3 id="familyTitle">Family</h3>
+      <p id="familyText">
+        Family residence, children, school, family documents and everyday family services.
+      </p>
+      <a href="family.html" class="btn" id="familyBtn">Open Page →</a>
+    </div>
+
+    <!-- EMERGENCY -->
+    <div class="card">
+      <div class="icon">🚨</div>
+      <h3 id="emergencyTitle">Emergency</h3>
+      <p id="emergencyText">
+        Emergency numbers and what to do when you need urgent help in Croatia.
+      </p>
+      <a href="emergency.html" class="btn" id="emergencyBtn">Open Page →</a>
+    </div>
+
+    <!-- CONTACTS -->
+    <div class="card">
+      <div class="icon">📞</div>
+      <h3 id="contactsTitle">Useful Contacts</h3>
+      <p id="contactsText">
+        Important institutions, official websites, phone numbers and useful contacts.
+      </p>
+      <a href="contacts.html" class="btn" id="contactsBtn">Open Page →</a>
+    </div>
+
+  </div>
+
+  <div class="info-box">
+    <h3 id="infoTitle">Important</h3>
+    <p id="infoText">
+      CROPATH is an independent information guide. Always check the latest
+      requirements directly with the relevant Croatian authority before making
+      important decisions.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <p><strong>CROPATH</strong></p>
+  <p id="footerTagline">Your Path to Living and Working in Croatia.</p>
+  <p class="verified" id="verifiedText">Last verified: 7 October 2026</p>
+</footer>
+
+<script>
+
+const translations = {
+
+  en: {
+    heroTitle: "Your Path to Living and Working in Croatia",
+    heroText: "Simple and useful information for foreigners living, working and building their life in Croatia.",
+    guideTitle: "Croatia Guide",
+    guideText: "Choose a topic to find useful information, official links and practical guidance.",
+
+    policeTitle: "Police & Documents",
+    policeText: "Police procedures, residence registration, certificates and important documents.",
+    governmentTitle: "Government",
+    governmentText: "Croatian government services, e-Građani, tax and employment-related services.",
+    drivingTitle: "Driving",
+    drivingText: "Driving licences, foreign licence rules, documents, medical checks and MUP procedures.",
+    workTitle: "Work",
+    workText: "Work permits, employment, contracts, workers' rights and useful employment information.",
+    healthTitle: "Health",
+    healthText: "Health insurance, doctors, hospitals, emergency healthcare and important health information.",
+    housingTitle: "Housing",
+    housingText: "Renting a home, contracts, deposits, registration and practical housing information.",
+    bankTitle: "Bank",
+    bankText: "Bank accounts, payments, cards, online banking and useful banking information.",
+    familyTitle: "Family",
+    familyText: "Family residence, children, school, family documents and everyday family services.",
+    emergencyTitle: "Emergency",
+    emergencyText: "Emergency numbers and what to do when you need urgent help in Croatia.",
+    contactsTitle: "Useful Contacts",
+    contactsText: "Important institutions, official websites, phone numbers and useful contacts.",
+
+    policeBtn: "Open Page →",
+    governmentBtn: "Open Page →",
+    drivingBtn: "Open Page →",
+    workBtn: "Open Page →",
+    healthBtn: "Open Page →",
+    housingBtn: "Open Page →",
+    bankBtn: "Open Page →",
+    familyBtn: "Open Page →",
+    emergencyBtn: "Open Page →",
+    contactsBtn: "Open Page →",
+
+    infoTitle: "Important",
+    infoText: "CROPATH is an independent information guide. Always check the latest requirements directly with the relevant Croatian authority before making important decisions.",
+    footerTagline: "Your Path to Living and Working in Croatia.",
+    verifiedText: "Last verified: 7 October 2026"
+  },
+
+  ml: {
+    heroTitle: "ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനും നിങ്ങളുടെ വഴികാട്ടി",
+    heroText: "ക്രൊയേഷ്യയിൽ താമസിക്കുകയും ജോലി ചെയ്യുകയും ചെയ്യുന്ന വിദേശികൾക്കായി ലളിതവും ഉപകാരപ്രദവുമായ വിവരങ്ങൾ.",
+    guideTitle: "ക്രൊയേഷ്യ ഗൈഡ്",
+    guideText: "ആവശ്യമായ വിവരങ്ങളും ഔദ്യോഗിക ലിങ്കുകളും പ്രായോഗിക മാർഗനിർദ്ദേശങ്ങളും ലഭിക്കാൻ ഒരു വിഷയം തിരഞ്ഞെടുക്കുക.",
+
+    policeTitle: "പോലീസ് & രേഖകൾ",
+    policeText: "പോലീസ് നടപടികൾ, താമസ രജിസ്ട്രേഷൻ, സർട്ടിഫിക്കറ്റുകൾ, പ്രധാനപ്പെട്ട രേഖകൾ.",
+    governmentTitle: "സർക്കാർ",
+    governmentText: "ക്രൊയേഷ്യൻ സർക്കാർ സേവനങ്ങൾ, e-Građani, നികുതി, തൊഴിൽ സംബന്ധമായ സേവനങ്ങൾ.",
+    drivingTitle: "ഡ്രൈവിംഗ്",
+    drivingText: "ഡ്രൈവിംഗ് ലൈസൻസ്, വിദേശ ലൈസൻസ് നിയമങ്ങൾ, രേഖകൾ, മെഡിക്കൽ പരിശോധന, MUP നടപടികൾ.",
+    workTitle: "ജോലി",
+    workText: "വർക്ക് പെർമിറ്റ്, ജോലി, കരാർ, തൊഴിലാളികളുടെ അവകാശങ്ങൾ, തൊഴിൽ സംബന്ധമായ വിവരങ്ങൾ.",
+    healthTitle: "ആരോഗ്യം",
+    healthText: "ഹെൽത്ത് ഇൻഷുറൻസ്, ഡോക്ടർമാർ, ആശുപത്രികൾ, അടിയന്തര ആരോഗ്യ സേവനങ്ങൾ.",
+    housingTitle: "താമസം",
+    housingText: "വീട് വാടകയ്ക്ക് എടുക്കൽ, കരാർ, ഡെപ്പോസിറ്റ്, രജിസ്ട്രേഷൻ, താമസ വിവരങ്ങൾ.",
+    bankTitle: "ബാങ്ക്",
+    bankText: "ബാങ്ക് അക്കൗണ്ട്, പണമിടപാട്, കാർഡുകൾ, ഓൺലൈൻ ബാങ്കിംഗ്, ബാങ്കിംഗ് വിവരങ്ങൾ.",
+    familyTitle: "കുടുംബം",
+    familyText: "കുടുംബ താമസം, കുട്ടികൾ, സ്കൂൾ, കുടുംബ രേഖകൾ, ദൈനംദിന സേവനങ്ങൾ.",
+    emergencyTitle: "അടിയന്തര സഹായം",
+    emergencyText: "അടിയന്തര നമ്പറുകളും ക്രൊയേഷ്യയിൽ അടിയന്തര സഹായം ആവശ്യമുള്ളപ്പോൾ ചെയ്യേണ്ട കാര്യങ്ങളും.",
+    contactsTitle: "ഉപകാരപ്രദമായ കോൺടാക്ടുകൾ",
+    contactsText: "പ്രധാന സ്ഥാപനങ്ങൾ, ഔദ്യോഗിക വെബ്സൈറ്റുകൾ, ഫോൺ നമ്പറുകൾ, ഉപകാരപ്രദമായ കോൺടാക്ടുകൾ.",
+
+    policeBtn: "പേജ് തുറക്കുക →",
+    governmentBtn: "പേജ് തുറക്കുക →",
+    drivingBtn: "പേജ് തുറക്കുക →",
+    workBtn: "പേജ് തുറക്കുക →",
+    healthBtn: "പേജ് തുറക്കുക →",
+    housingBtn: "പേജ് തുറക്കുക →",
+    bankBtn: "പേജ് തുറക്കുക →",
+    familyBtn: "പേജ് തുറക്കുക →",
+    emergencyBtn: "പേജ് തുറക്കുക →",
+    contactsBtn: "പേജ് തുറക്കുക →",
+
+    infoTitle: "പ്രധാനപ്പെട്ടത്",
+    infoText: "CROPATH ഒരു സ്വതന്ത്ര വിവര ഗൈഡാണ്. പ്രധാനപ്പെട്ട തീരുമാനങ്ങൾ എടുക്കുന്നതിന് മുമ്പ് ബന്ധപ്പെട്ട ക്രൊയേഷ്യൻ അധികാരികളിൽ നിന്ന് ഏറ്റവും പുതിയ ആവശ്യകതകൾ പരിശോധിക്കുക.",
+    footerTagline: "ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനും നിങ്ങളുടെ വഴികാട്ടി.",
+    verifiedText: "അവസാനം പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026"
+  },
+
+  hi: {
+    heroTitle: "क्रोएशिया में रहने और काम करने के लिए आपका मार्गदर्शक",
+    heroText: "क्रोएशिया में रहने और काम करने वाले विदेशियों के लिए सरल और उपयोगी जानकारी।",
+    guideTitle: "क्रोएशिया गाइड",
+    guideText: "उपयोगी जानकारी, आधिकारिक लिंक और व्यावहारिक मार्गदर्शन के लिए एक विषय चुनें।",
+
+    policeTitle: "पुलिस और दस्तावेज़",
+    policeText: "पुलिस प्रक्रियाएं, निवास पंजीकरण, प्रमाणपत्र और महत्वपूर्ण दस्तावेज़।",
+    governmentTitle: "सरकार",
+    governmentText: "क्रोएशियाई सरकारी सेवाएं, e-Građani, टैक्स और रोजगार सेवाएं।",
+    drivingTitle: "ड्राइविंग",
+    drivingText: "ड्राइविंग लाइसेंस, विदेशी लाइसेंस नियम, दस्तावेज़, मेडिकल जांच और MUP प्रक्रियाएं।",
+    workTitle: "काम",
+    workText: "वर्क परमिट, रोजगार, अनुबंध, श्रमिक अधिकार और रोजगार संबंधी जानकारी।",
+    healthTitle: "स्वास्थ्य",
+    healthText: "स्वास्थ्य बीमा, डॉक्टर, अस्पताल और आपातकालीन स्वास्थ्य सेवाएं।",
+    housingTitle: "आवास",
+    housingText: "घर किराए पर लेना, अनुबंध, जमा राशि, पंजीकरण और आवास संबंधी जानकारी।",
+    bankTitle: "बैंक",
+    bankText: "बैंक खाते, भुगतान, कार्ड, ऑनलाइन बैंकिंग और बैंकिंग जानकारी।",
+    familyTitle: "परिवार",
+    familyText: "परिवार का निवास, बच्चे, स्कूल, परिवार के दस्तावेज़ और सेवाएं।",
+    emergencyTitle: "आपातकाल",
+    emergencyText: "आपातकालीन नंबर और क्रोएशिया में तुरंत सहायता की आवश्यकता होने पर क्या करें।",
+    contactsTitle: "उपयोगी संपर्क",
+    contactsText: "महत्वपूर्ण संस्थाएं, आधिकारिक वेबसाइट, फोन नंबर और उपयोगी संपर्क।",
+
+    policeBtn: "पेज खोलें →",
+    governmentBtn: "पेज खोलें →",
+    drivingBtn: "पेज खोलें →",
+    workBtn: "पेज खोलें →",
+    healthBtn: "पेज खोलें →",
+    housingBtn: "पेज खोलें →",
+    bankBtn: "पेज खोलें →",
+    familyBtn: "पेज खोलें →",
+    emergencyBtn: "पेज खोलें →",
+    contactsBtn: "पेज खोलें →",
+
+    infoTitle: "महत्वपूर्ण",
+    infoText: "CROPATH एक स्वतंत्र जानकारी गाइड है। महत्वपूर्ण निर्णय लेने से पहले संबंधित क्रोएशियाई प्राधिकरण से नवीनतम आवश्यकताओं की जांच करें।",
+    footerTagline: "क्रोएशिया में रहने और काम करने के लिए आपका मार्गदर्शक।",
+    verifiedText: "अंतिम सत्यापन: 7 अक्टूबर 2026"
+  },
+
+  ne: {
+    heroTitle: "क्रोएसियामा बस्न र काम गर्न तपाईंको मार्गदर्शक",
+    heroText: "क्रोएसियामा बस्ने र काम गर्ने विदेशीहरूका लागि सरल र उपयोगी जानकारी।",
+    guideTitle: "क्रोएसिया गाइड",
+    guideText: "उपयोगी जानकारी, आधिकारिक लिङ्क र व्यावहारिक मार्गदर्शनका लागि विषय छान्नुहोस्।",
+
+    policeTitle: "प्रहरी र कागजात",
+    policeText: "प्रहरी प्रक्रिया, बसोबास दर्ता, प्रमाणपत्र र महत्वपूर्ण कागजात।",
+    governmentTitle: "सरकार",
+    governmentText: "क्रोएसियाली सरकारी सेवा, e-Građani, कर र रोजगार सेवाहरू।",
+    drivingTitle: "ड्राइभिङ",
+    drivingText: "ड्राइभिङ लाइसेन्स, विदेशी लाइसेन्स नियम, कागजात र MUP प्रक्रिया।",
+    workTitle: "काम",
+    workText: "वर्क परमिट, रोजगार, सम्झौता, कामदार अधिकार र रोजगार जानकारी।",
+    healthTitle: "स्वास्थ्य",
+    healthText: "स्वास्थ्य बीमा, डाक्टर, अस्पताल र आपतकालीन स्वास्थ्य सेवा।",
+    housingTitle: "आवास",
+    housingText: "घर भाडा, सम्झौता, डिपोजिट, दर्ता र आवास सम्बन्धी जानकारी।",
+    bankTitle: "बैंक",
+    bankText: "बैंक खाता, भुक्तानी, कार्ड, अनलाइन बैंकिङ र बैंकिङ जानकारी।",
+    familyTitle: "परिवार",
+    familyText: "परिवारको बसोबास, बच्चा, विद्यालय, परिवारका कागजात र सेवाहरू।",
+    emergencyTitle: "आपतकाल",
+    emergencyText: "आपतकालीन नम्बर र क्रोएसियामा तुरुन्त सहायता चाहिँदा के गर्ने।",
+    contactsTitle: "उपयोगी सम्पर्क",
+    contactsText: "महत्वपूर्ण संस्था, आधिकारिक वेबसाइट, फोन नम्बर र उपयोगी सम्पर्क।",
+
+    policeBtn: "पृष्ठ खोल्नुहोस् →",
+    governmentBtn: "पृष्ठ खोल्नुहोस् →",
+    drivingBtn: "पृष्ठ खोल्नुहोस् →",
+    workBtn: "पृष्ठ खोल्नुहोस् →",
+    healthBtn: "पृष्ठ खोल्नुहोस् →",
+    housingBtn: "पृष्ठ खोल्नुहोस् →",
+    bankBtn: "पृष्ठ खोल्नुहोस् →",
+    familyBtn: "पृष्ठ खोल्नुहोस् →",
+    emergencyBtn: "पृष्ठ खोल्नुहोस् →",
+    contactsBtn: "पृष्ठ खोल्नुहोस् →",
+
+    infoTitle: "महत्वपूर्ण",
+    infoText: "CROPATH स्वतन्त्र जानकारी गाइड हो। महत्वपूर्ण निर्णय लिनुअघि सम्बन्धित क्रोएसियाली अधिकारीसँग नवीनतम आवश्यकताहरू जाँच गर्नुहोस्।",
+    footerTagline: "क्रोएसियामा बस्न र काम गर्न तपाईंको मार्गदर्शक।",
+    verifiedText: "अन्तिम जाँच: ७ अक्टोबर २०२६"
+  },
+
+  ta: {
+    heroTitle: "குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் வழிகாட்டி",
+    heroText: "குரோஷியாவில் வசிக்கும் மற்றும் வேலை செய்யும் வெளிநாட்டவர்களுக்கான எளிய மற்றும் பயனுள்ள தகவல்கள்.",
+    guideTitle: "குரோஷியா வழிகாட்டி",
+    guideText: "பயனுள்ள தகவல்கள், அதிகாரப்பூர்வ இணைப்புகள் மற்றும் நடைமுறை வழிகாட்டுதல்களைப் பெற ஒரு தலைப்பைத் தேர்ந்தெடுக்கவும்.",
+
+    policeTitle: "காவல்துறை & ஆவணங்கள்",
+    policeText: "காவல்துறை நடைமுறைகள், குடியிருப்பு பதிவு, சான்றிதழ்கள் மற்றும் முக்கிய ஆவணங்கள்.",
+    governmentTitle: "அரசு",
+    governmentText: "குரோஷிய அரசு சேவைகள், e-Građani, வரி மற்றும் வேலைவாய்ப்பு சேவைகள்.",
+    drivingTitle: "வாகனம் ஓட்டுதல்",
+    drivingText: "ஓட்டுநர் உரிமம், வெளிநாட்டு உரிம விதிகள், ஆவணங்கள் மற்றும் MUP நடைமுறைகள்.",
+    workTitle: "வேலை",
+    workText: "வேலை அனுமதி, வேலைவாய்ப்பு, ஒப்பந்தங்கள் மற்றும் தொழிலாளர் உரிமைகள்.",
+    healthTitle: "சுகாதாரம்",
+    healthText: "சுகாதார காப்பீடு, மருத்துவர்கள், மருத்துவமனைகள் மற்றும் அவசர சுகாதார சேவைகள்.",
+    housingTitle: "வீடு",
+    housingText: "வீடு வாடகை, ஒப்பந்தம், முன்பணம், பதிவு மற்றும் வீட்டு தகவல்கள்.",
+    bankTitle: "வங்கி",
+    bankText: "வங்கி கணக்குகள், பணப்பரிவர்த்தனை, கார்டுகள் மற்றும் ஆன்லைன் வங்கி.",
+    familyTitle: "குடும்பம்",
+    familyText: "குடும்ப குடியிருப்பு, குழந்தைகள், பள்ளி மற்றும் குடும்ப ஆவணங்கள்.",
+    emergencyTitle: "அவசரம்",
+    emergencyText: "அவசர எண்கள் மற்றும் உடனடி உதவி தேவைப்பட்டால் என்ன செய்ய வேண்டும்.",
+    contactsTitle: "பயனுள்ள தொடர்புகள்",
+    contactsText: "முக்கிய நிறுவனங்கள், அதிகாரப்பூர்வ இணையதளங்கள், தொலைபேசி எண்கள் மற்றும் தொடர்புகள்.",
+
+    policeBtn: "பக்கத்தைத் திறக்கவும் →",
+    governmentBtn: "பக்கத்தைத் திறக்கவும் →",
+    drivingBtn: "பக்கத்தைத் திறக்கவும் →",
+    workBtn: "பக்கத்தைத் திறக்கவும் →",
+    healthBtn: "பக்கத்தைத் திறக்கவும் →",
+    housingBtn: "பக்கத்தைத் திறக்கவும் →",
+    bankBtn: "பக்கத்தைத் திறக்கவும் →",
+    familyBtn: "பக்கத்தைத் திறக்கவும் →",
+    emergencyBtn: "பக்கத்தைத் திறக்கவும் →",
+    contactsBtn: "பக்கத்தைத் திறக்கவும் →",
+
+    infoTitle: "முக்கியம்",
+    infoText: "CROPATH ஒரு சுயாதீன தகவல் வழிகாட்டி. முக்கிய முடிவுகளை எடுப்பதற்கு முன் சம்பந்தப்பட்ட குரோஷிய அதிகாரியிடம் சமீபத்திய தேவைகளைச் சரிபார்க்கவும்.",
+    footerTagline: "குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் வழிகாட்டி.",
+    verifiedText: "கடைசியாக சரிபார்க்கப்பட்டது: 7 அக்டோபர் 2026"
+  },
+
+  te: {
+    heroTitle: "క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ మార్గదర్శి",
+    heroText: "క్రొయేషియాలో నివసించే మరియు పని చేసే విదేశీయుల కోసం సులభమైన మరియు ఉపయోగకరమైన సమాచారం.",
+    guideTitle: "క్రొయేషియా గైడ్",
+    guideText: "ఉపయోగకరమైన సమాచారం, అధికారిక లింకులు మరియు ఆచరణాత్మక మార్గదర్శకత్వం కోసం ఒక అంశాన్ని ఎంచుకోండి.",
+
+    policeTitle: "పోలీస్ & పత్రాలు",
+    policeText: "పోలీస్ విధానాలు, నివాస నమోదు, సర్టిఫికెట్లు మరియు ముఖ్యమైన పత్రాలు.",
+    governmentTitle: "ప్రభుత్వం",
+    governmentText: "క్రొయేషియన్ ప్రభుత్వ సేవలు, e-Građani, పన్ను మరియు ఉద్యోగ సేవలు.",
+    drivingTitle: "డ్రైవింగ్",
+    drivingText: "డ్రైవింగ్ లైసెన్స్, విదేశీ లైసెన్స్ నియమాలు, పత్రాలు మరియు MUP విధానాలు.",
+    workTitle: "పని",
+    workText: "వర్క్ పర్మిట్, ఉద్యోగం, ఒప్పందాలు మరియు కార్మికుల హక్కులు.",
+    healthTitle: "ఆరోగ్యం",
+    healthText: "ఆరోగ్య బీమా, డాక్టర్లు, ఆసుపత్రులు మరియు అత్యవసర ఆరోగ్య సేవలు.",
+    housingTitle: "ఇల్లు",
+    housingText: "ఇల్లు అద్దె, ఒప్పందాలు, డిపాజిట్, నమోదు మరియు గృహ సమాచారం.",
+    bankTitle: "బ్యాంక్",
+    bankText: "బ్యాంక్ ఖాతాలు, చెల్లింపులు, కార్డులు మరియు ఆన్‌లైన్ బ్యాంకింగ్.",
+    familyTitle: "కుటుంబం",
+    familyText: "కుటుంబ నివాసం, పిల్లలు, పాఠశాల, కుటుంబ పత్రాలు మరియు సేవలు.",
+    emergencyTitle: "అత్యవసరం",
+    emergencyText: "అత్యవసర నంబర్లు మరియు క్రొయేషియాలో తక్షణ సహాయం అవసరమైనప్పుడు ఏమి చేయాలి.",
+    contactsTitle: "ఉపయోగకరమైన సంప్రదింపులు",
+    contactsText: "ముఖ్యమైన సంస్థలు, అధికారిక వెబ్‌సైట్లు, ఫోన్ నంబర్లు మరియు ఉపయోగకరమైన సంప్రదింపులు.",
+
+    policeBtn: "పేజీ తెరవండి →",
+    governmentBtn: "పేజీ తెరవండి →",
+    drivingBtn: "పేజీ తెరవండి →",
+    workBtn: "పేజీ తెరవండి →",
+    healthBtn: "పేజీ తెరవండి →",
+    housingBtn: "పేజీ తెరవండి →",
+    bankBtn: "పేజీ తెరవండి →",
+    familyBtn: "పేజీ తెరవండి →",
+    emergencyBtn: "పేజీ తెరవండి →",
+    contactsBtn: "పేజీ తెరవండి →",
+
+    infoTitle: "ముఖ్యమైనది",
+    infoText: "CROPATH ఒక స్వతంత్ర సమాచార గైడ్. ముఖ్యమైన నిర్ణయాలు తీసుకునే ముందు సంబంధిత క్రొయేషియన్ అధికారులతో తాజా అవసరాలను తనిఖీ చేయండి.",
+    footerTagline: "క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ మార్గదర్శి.",
+    verifiedText: "చివరిగా ధృవీకరించబడింది: 7 అక్టోబర్ 2026"
+  },
+
+  bn: {
+    heroTitle: "ক্রোয়েশিয়ায় বসবাস ও কাজের জন্য আপনার গাইড",
+    heroText: "ক্রোয়েশিয়ায় বসবাস ও কাজ করা বিদেশিদের জন্য সহজ এবং দরকারী তথ্য।",
+    guideTitle: "ক্রোয়েশিয়া গাইড",
+    guideText: "দরকারী তথ্য, অফিসিয়াল লিংক এবং ব্যবহারিক নির্দেশনার জন্য একটি বিষয় নির্বাচন করুন।",
+
+    policeTitle: "পুলিশ ও নথিপত্র",
+    policeText: "পুলিশের প্রক্রিয়া, বসবাসের নিবন্ধন, সার্টিফিকেট এবং গুরুত্বপূর্ণ নথি।",
+    governmentTitle: "সরকার",
+    governmentText: "ক্রোয়েশিয়ান সরকারি পরিষেবা, e-Građani, কর এবং কর্মসংস্থান পরিষেবা।",
+    drivingTitle: "ড্রাইভিং",
+    drivingText: "ড্রাইভিং লাইসেন্স, বিদেশি লাইসেন্সের নিয়ম, নথি এবং MUP প্রক্রিয়া।",
+    workTitle: "কাজ",
+    workText: "ওয়ার্ক পারমিট, চাকরি, চুক্তি এবং শ্রমিকদের অধিকার।",
+    healthTitle: "স্বাস্থ্য",
+    healthText: "স্বাস্থ্য বীমা, ডাক্তার, হাসপাতাল এবং জরুরি স্বাস্থ্য পরিষেবা।",
+    housingTitle: "বাসস্থান",
+    housingText: "বাড়ি ভাড়া, চুক্তি, ডিপোজিট, নিবন্ধন এবং বাসস্থান সংক্রান্ত তথ্য।",
+    bankTitle: "ব্যাংক",
+    bankText: "ব্যাংক অ্যাকাউন্ট, পেমেন্ট, কার্ড এবং অনলাইন ব্যাংকিং।",
+    familyTitle: "পরিবার",
+    familyText: "পারিবারিক বাসস্থান, শিশু, স্কুল, পারিবারিক নথি এবং পরিষেবা।",
+    emergencyTitle: "জরুরি অবস্থা",
+    emergencyText: "জরুরি নম্বর এবং ক্রোয়েশিয়ায় জরুরি সাহায্য প্রয়োজন হলে কী করবেন।",
+    contactsTitle: "দরকারী যোগাযোগ",
+    contactsText: "গুরুত্বপূর্ণ প্রতিষ্ঠান, অফিসিয়াল ওয়েবসাইট, ফোন নম্বর এবং দরকারী যোগাযোগ।",
+
+    policeBtn: "পৃষ্ঠা খুলুন →",
+    governmentBtn: "পৃষ্ঠা খুলুন →",
+    drivingBtn: "পৃষ্ঠা খুলুন →",
+    workBtn: "পৃষ্ঠা খুলুন →",
+    healthBtn: "পৃষ্ঠা খুলুন →",
+    housingBtn: "পৃষ্ঠা খুলুন →",
+    bankBtn: "পৃষ্ঠা খুলুন →",
+    familyBtn: "পৃষ্ঠা খুলুন →",
+    emergencyBtn: "পৃষ্ঠা খুলুন →",
+    contactsBtn: "পৃষ্ঠা খুলুন →",
+
+    infoTitle: "গুরুত্বপূর্ণ",
+    infoText: "CROPATH একটি স্বাধীন তথ্য গাইড। গুরুত্বপূর্ণ সিদ্ধান্ত নেওয়ার আগে সংশ্লিষ্ট ক্রোয়েশিয়ান কর্তৃপক্ষের কাছ থেকে সর্বশেষ প্রয়োজনীয়তা যাচাই করুন।",
+    footerTagline: "ক্রোয়েশিয়ায় বসবাস ও কাজের জন্য আপনার গাইড।",
+    verifiedText: "শেষ যাচাই: ৭ অক্টোবর ২০২৬"
+  },
+
+  ur: {
+    heroTitle: "کروشیا میں رہنے اور کام کرنے کے لیے آپ کی رہنمائی",
+    heroText: "کروشیا میں رہنے اور کام کرنے والے غیر ملکیوں کے لیے آسان اور مفید معلومات۔",
+    guideTitle: "کروشیا گائیڈ",
+    guideText: "مفید معلومات، سرکاری لنکس اور عملی رہنمائی کے لیے ایک موضوع منتخب کریں۔",
+
+    policeTitle: "پولیس اور دستاویزات",
+    policeText: "پولیس کے طریقہ کار، رہائش کا اندراج، سرٹیفکیٹس اور اہم دستاویزات۔",
+    governmentTitle: "حکومت",
+    governmentText: "کروشیا کی سرکاری خدمات، e-Građani، ٹیکس اور روزگار کی خدمات۔",
+    drivingTitle: "ڈرائیونگ",
+    drivingText: "ڈرائیونگ لائسنس، غیر ملکی لائسنس کے قوانین، دستاویزات اور MUP کے طریقہ کار۔",
+    workTitle: "کام",
+    workText: "ورک پرمٹ، ملازمت، معاہدے اور کارکنوں کے حقوق۔",
+    healthTitle: "صحت",
+    healthText: "ہیلتھ انشورنس، ڈاکٹرز، ہسپتال اور ہنگامی صحت کی خدمات۔",
+    housingTitle: "رہائش",
+    housingText: "گھر کرائے پر لینا، معاہدے، ڈپازٹ، رجسٹریشن اور رہائش کی معلومات۔",
+    bankTitle: "بینک",
+    bankText: "بینک اکاؤنٹس، ادائیگیاں، کارڈز اور آن لائن بینکنگ۔",
+    familyTitle: "خاندان",
+    familyText: "خاندانی رہائش، بچے، اسکول، خاندانی دستاویزات اور خدمات۔",
+    emergencyTitle: "ہنگامی صورتحال",
+    emergencyText: "ہنگامی نمبر اور کروشیا میں فوری مدد کی ضرورت ہونے پر کیا کرنا ہے۔",
+    contactsTitle: "مفید رابطے",
+    contactsText: "اہم ادارے، سرکاری ویب سائٹس، فون نمبرز اور مفید رابطے۔",
+
+    policeBtn: "صفحہ کھولیں ←",
+    governmentBtn: "صفحہ کھولیں ←",
+    drivingBtn: "صفحہ کھولیں ←",
+    workBtn: "صفحہ کھولیں ←",
+    healthBtn: "صفحہ کھولیں ←",
+    housingBtn: "صفحہ کھولیں ←",
+    bankBtn: "صفحہ کھولیں ←",
+    familyBtn: "صفحہ کھولیں ←",
+    emergencyBtn: "صفحہ کھولیں ←",
+    contactsBtn: "صفحہ کھولیں ←",
+
+    infoTitle: "اہم",
+    infoText: "CROPATH ایک آزاد معلوماتی گائیڈ ہے۔ اہم فیصلے کرنے سے پہلے متعلقہ کروشین حکام سے تازہ ترین ضروریات کی تصدیق کریں۔",
+    footerTagline: "کروشیا میں رہنے اور کام کرنے کے لیے آپ کی رہنمائی۔",
+    verifiedText: "آخری تصدیق: 7 اکتوبر 2026"
+  },
+
+  hr: {
+    heroTitle: "Vaš vodič za život i rad u Hrvatskoj",
+    heroText: "Jednostavne i korisne informacije za strance koji žive, rade i grade svoj život u Hrvatskoj.",
+    guideTitle: "Vodič kroz Hrvatsku",
+    guideText: "Odaberite temu za korisne informacije, službene poveznice i praktične upute.",
+
+    policeTitle: "Policija i dokumenti",
+    policeText: "Policijski postupci, prijava boravišta, potvrde i važni dokumenti.",
+    governmentTitle: "Državne službe",
+    governmentText: "Hrvatske državne službe, e-Građani, porezi i usluge povezane sa zapošljavanjem.",
+    drivingTitle: "Vožnja",
+    drivingText: "Vozačke dozvole, pravila za strane dozvole, dokumenti, liječnički pregled i MUP postupci.",
+    workTitle: "Posao",
+    workText: "Dozvole za rad, zaposlenje, ugovori, prava radnika i korisne informacije o radu.",
+    healthTitle: "Zdravlje",
+    healthText: "Zdravstveno osiguranje, liječnici, bolnice i hitna zdravstvena pomoć.",
+    housingTitle: "Stanovanje",
+    housingText: "Najam stana, ugovori, polog, prijava adrese i korisne informacije o stanovanju.",
+    bankTitle: "Banka",
+    bankText: "Bankovni računi, plaćanja, kartice, internetsko bankarstvo i korisne bankarske informacije.",
+    familyTitle: "Obitelj",
+    familyText: "Boravak obitelji, djeca, škole, obiteljski dokumenti i svakodnevne usluge.",
+    emergencyTitle: "Hitne situacije",
+    emergencyText: "Brojevi za hitne slučajeve i što učiniti kada vam je potrebna hitna pomoć u Hrvatskoj.",
+    contactsTitle: "Korisni kontakti",
+    contactsText: "Važne institucije, službene web stranice, telefonski brojevi i korisni kontakti.",
+
+    policeBtn: "Otvori stranicu →",
+    governmentBtn: "Otvori stranicu →",
+    drivingBtn: "Otvori stranicu →",
+    workBtn: "Otvori stranicu →",
+    healthBtn: "Otvori stranicu →",
+    housingBtn: "Otvori stranicu →",
+    bankBtn: "Otvori stranicu →",
+    familyBtn: "Otvori stranicu →",
+    emergencyBtn: "Otvori stranicu →",
+    contactsBtn: "Otvori stranicu →",
+
+    infoTitle: "Važno",
+    infoText: "CROPATH je neovisni informativni vodič. Prije donošenja važnih odluka uvijek provjerite najnovije zahtjeve kod nadležnog hrvatskog tijela.",
+    footerTagline: "Vaš vodič za život i rad u Hrvatskoj.",
+    verifiedText: "Zadnja provjera: 7. listopada 2026."
+  }
+
+};
+
+function changeLanguage(language) {
+
+  const t = translations[language];
+
+  if (!t) return;
+
+  Object.keys(t).forEach(function(key) {
+
+    const element = document.getElementById(key);
+
+    if (element) {
+      element.textContent = t[key];
+    }
+
+  });
+
+  document.documentElement.lang = language;
+
+  if (language === "ur") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+
+  localStorage.setItem("cropath-language", language);
+
+  document.getElementById("languageSelect").value = language;
+}
+
+const savedLanguage =
+  localStorage.getItem("cropath-language") || "en";
+
+changeLanguage(savedLanguage);
+
+</script>
+
+</body>
+</html>

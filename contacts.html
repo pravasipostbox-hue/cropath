@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CROPATH — Useful Contacts in Croatia</title>
+
+<meta name="description" content="Useful official contacts, government services and important organisations for foreigners in Croatia.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f8fafc;
+  color:#17202a;
+  line-height:1.6;
+}
+
+header{
+  background:#0f172a;
+  color:white;
+  padding:18px 20px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.home{
+  color:white;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.35);
+  padding:9px 14px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+.home:hover{
+  background:rgba(255,255,255,0.1);
+}
+
+.language{
+  background:#1e293b;
+  color:white;
+  border:1px solid rgba(255,255,255,0.35);
+  padding:9px 10px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+.hero{
+  background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+  color:white;
+  padding:70px 20px;
+}
+
+.hero-inner{
+  max-width:1100px;
+  margin:auto;
+}
+
+.badge{
+  display:inline-block;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  padding:7px 13px;
+  border-radius:20px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:clamp(40px,7vw,62px);
+  line-height:1.05;
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:780px;
+  font-size:18px;
+  color:#dbeafe;
+}
+
+main{
+  max-width:1100px;
+  margin:auto;
+  padding:45px 20px 70px;
+}
+
+section{
+  margin-bottom:48px;
+}
+
+h2{
+  font-size:30px;
+  color:#0f172a;
+  margin-bottom:15px;
+}
+
+.intro{
+  color:#64748b;
+  font-size:17px;
+  max-width:850px;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  margin-top:25px;
+}
+
+.contact-card{
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:18px;
+  padding:27px;
+  box-shadow:0 6px 20px rgba(15,23,42,0.06);
+}
+
+.icon{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.contact-card h3{
+  font-size:21px;
+  margin-bottom:8px;
+  color:#0f172a;
+}
+
+.contact-card p{
+  color:#64748b;
+  margin-bottom:17px;
+}
+
+.contact-link{
+  display:inline-block;
+  background:#2563eb;
+  color:white;
+  text-decoration:none;
+  padding:10px 16px;
+  border-radius:9px;
+  font-weight:700;
+  margin-top:4px;
+}
+
+.contact-link:hover{
+  background:#1d4ed8;
+}
+
+.info-box{
+  background:#eff6ff;
+  border:1px solid #bfdbfe;
+  border-radius:15px;
+  padding:22px;
+}
+
+.info-box strong{
+  color:#1e3a8a;
+}
+
+.steps{
+  display:grid;
+  gap:15px;
+  margin-top:22px;
+}
+
+.step{
+  background:white;
+  border:1px solid #e2e8f0;
+  border-radius:13px;
+  padding:20px;
+}
+
+.step strong{
+  color:#0f172a;
+}
+
+.warning{
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  border-radius:15px;
+  padding:22px;
+  color:#7c2d12;
+}
+
+footer{
+  background:#0f172a;
+  color:#cbd5e1;
+  padding:38px 20px;
+}
+
+.footer-inner{
+  max-width:1100px;
+  margin:auto;
+}
+
+footer h3{
+  color:white;
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+footer p{
+  margin-bottom:8px;
+}
+
+.verified{
+  margin-top:18px;
+  color:#94a3b8;
+  font-size:13px;
+}
+
+@media(max-width:700px){
+
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding:55px 20px;
+  }
+
+  h2{
+    font-size:27px;
+  }
+
+  .nav{
+    align-items:flex-start;
+  }
+
+  .nav-right{
+    flex-wrap:wrap;
+    justify-content:flex-end;
+  }
+
+  .language{
+    max-width:125px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <div class="logo">CROPATH</div>
+
+    <div class="nav-right">
+
+      <select id="languageSelect" class="language" aria-label="Language">
+        <option value="en">English</option>
+        <option value="ml">മലയാളം</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ne">नेपाली</option>
+        <option value="ta">தமிழ்</option>
+        <option value="te">తెలుగు</option>
+        <option value="bn">বাংলা</option>
+        <option value="ur">اردو</option>
+        <option value="hr">Hrvatski</option>
+      </select>
+
+      <a href="index.html" class="home" id="homeLink">← Home</a>
+
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="badge" id="badge">
+      📞 Useful Contacts — Croatia
+    </div>
+
+    <h1 id="heroTitle">
+      Useful Contacts in Croatia
+    </h1>
+
+    <p id="heroDescription">
+      Important official websites, public services and useful organisations for foreigners living, working or travelling in Croatia.
+    </p>
+
+  </div>
+</section>
+
+<main>
+
+<section>
+
+  <h2 id="officialTitle">
+    Official Croatian Services
+  </h2>
+
+  <p class="intro" id="officialIntro">
+    Use official government websites whenever you need information about residence, documents, work, healthcare, taxes or public services.
+  </p>
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+
+      <div class="icon">👮</div>
+
+      <h3 id="mupTitle">
+        Ministry of the Interior — MUP
+      </h3>
+
+      <p id="mupText">
+        Information about foreigners, residence permits, documents, police services and administrative procedures.
+      </p>
+
+      <a
+        href="https://mup.gov.hr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+        id="mupButton">
+        Open MUP
+      </a>
+
+    </div>
+
+    <div class="contact-card">
+
+      <div class="icon">🏛️</div>
+
+      <h3 id="govTitle">
+        Government of Croatia
+      </h3>
+
+      <p id="govText">
+        Central Croatian government portal with information about public services and government institutions.
+      </p>
+
+      <a
+        href="https://gov.hr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+        id="govButton">
+        Open gov.hr
+      </a>
+
+    </div>
+
+    <div class="contact-card">
+
+      <div class="icon">💻</div>
+
+      <h3 id="egTitle">
+        e-Građani
+      </h3>
+
+      <p id="egText">
+        Croatian electronic public services and online access to many government services.
+      </p>
+
+      <a
+        href="https://gov.hr/hr/e-gradjani/125"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+        id="egButton">
+        Open e-Građani
+      </a>
+
+    </div>
+
+    <div class="contact-card">
+
+      <div class="icon">💶</div>
+
+      <h3 id="taxTitle">
+        e-Porezna
+      </h3>
+
+      <p id="taxText">
+        Online tax services provided by the Croatian Tax Administration.
+      </p>
+
+      <a
+        href="https://e-porezna.porezna-uprava.hr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+        id="taxButton">
+        Open e-Porezna
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 id="workServicesTitle">
+    Work & Social Services
+  </h2>
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+
+      <div class="icon">💼</div>
+
+      <h3 id="hzzTitle">
+        Croatian Employment Service — HZZ
+      </h3>
+
+      <p id="hzzText">
+        Employment services, job information, unemployment registration and labour-market information.
+      </p>
+
+      <a
+        href="https://www.hzz.hr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+        id="hzzButton">
+        Open HZZ
+      </a>
+
+    </div>
+
+    <div class="contact-card">
+
+      <div class="icon">🏥</div>
+
+      <h3 id="hzzoTitle">
+        Croatian Health Insurance Fund — HZZO
+      </h3>
+
+      <p id="hzzoText">
+        Information about health insurance, healthcare rights and HZZO services.
+      </p>
+
+      <a
+        href="https://hzzo.hr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+        id="hzzoButton">
+        Open HZZO
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 id="centralBankTitle">
+    Banking & Financial Information
+  </h2>
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+
+      <div class="icon">🏦</div>
+
+      <h3 id="hnbTitle">
+        Croatian National Bank — HNB
+      </h3>
+
+      <p id="hnbText">
+        Official information about banking, financial institutions, payment systems and consumer information.
+      </p>
+
+      <a
+        href="https://www.hnb.hr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+        id="hnbButton">
+        Open HNB
+      </a>
+
+    </div>
+
+    <div class="contact-card">
+
+      <div class="icon">📄</div>
+
+      <h3 id="generalGovTitle">
+        Government Information
+      </h3>
+
+      <p id="generalGovText">
+        Find official information about Croatian public administration and government services.
+      </p>
+
+      <a
+        href="https://gov.hr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-link"
+        id="generalGovButton">
+        Visit gov.hr
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <h2 id="whenNeedTitle">
+    When You Need Help
+  </h2>
+
+  <div class="steps">
+
+    <div class="step">
+      <strong id="step1Title">
+        1. Residence or foreigners' documents
+      </strong>
+      <br>
+      <span id="step1Text">
+        Contact MUP or the appropriate police administration/station.
+      </span>
+    </div>
+
+    <div class="step">
+      <strong id="step2Title">
+        2. Employment
+      </strong>
+      <br>
+      <span id="step2Text">
+        Contact HZZ for employment-related information and services.
+      </span>
+    </div>
+
+    <div class="step">
+      <strong id="step3Title">
+        3. Health insurance
+      </strong>
+      <br>
+      <span id="step3Text">
+        Contact HZZO for health-insurance information and rights.
+      </span>
+    </div>
+
+    <div class="step">
+      <strong id="step4Title">
+        4. Taxes
+      </strong>
+      <br>
+      <span id="step4Text">
+        Use e-Porezna or contact the Croatian Tax Administration.
+      </span>
+    </div>
+
+    <div class="step">
+      <strong id="step5Title">
+        5. Emergency
+      </strong>
+      <br>
+      <span id="step5Text">
+        In an actual emergency, use the appropriate Croatian emergency number. For general emergencies, call 112.
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <div class="info-box">
+
+    <strong id="languageHelpTitle">
+      🌍 Language Help
+    </strong>
+
+    <p id="languageHelpText">
+      If you have difficulty understanding an official procedure, ask the institution whether language assistance or an interpreter is available. Keep important documents and translations with you when visiting an office.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section>
+
+  <div class="warning">
+
+    <strong id="importantTitle">
+      ⚠️ Important
+    </strong>
+
+    <p id="importantText">
+      CROPATH provides general information and links to official sources. Always check the relevant official Croatian website for the latest requirements, contact details, opening hours and procedures.
+    </p>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-inner">
+
+    <h3>CROPATH</h3>
+
+    <p id="footerTagline">
+      Your Path to Living and Working in Croatia.
+    </p>
+
+    <p id="footerDescription">
+      Clear information, practical guidance and trusted official sources for foreigners in Croatia.
+    </p>
+
+    <p class="verified" id="footerVerified">
+      Last verified: 7 October 2026
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+const translations = {
+
+en:{
+
+home:"← Home",
+
+badge:"📞 Useful Contacts — Croatia",
+
+heroTitle:"Useful Contacts in Croatia",
+
+heroDescription:"Important official websites, public services and useful organisations for foreigners living, working or travelling in Croatia.",
+
+officialTitle:"Official Croatian Services",
+
+officialIntro:"Use official government websites whenever you need information about residence, documents, work, healthcare, taxes or public services.",
+
+mupTitle:"Ministry of the Interior — MUP",
+mupText:"Information about foreigners, residence permits, documents, police services and administrative procedures.",
+mupButton:"Open MUP",
+
+govTitle:"Government of Croatia",
+govText:"Central Croatian government portal with information about public services and government institutions.",
+govButton:"Open gov.hr",
+
+egTitle:"e-Građani",
+egText:"Croatian electronic public services and online access to many government services.",
+egButton:"Open e-Građani",
+
+taxTitle:"e-Porezna",
+taxText:"Online tax services provided by the Croatian Tax Administration.",
+taxButton:"Open e-Porezna",
+
+workServicesTitle:"Work & Social Services",
+
+hzzTitle:"Croatian Employment Service — HZZ",
+hzzText:"Employment services, job information, unemployment registration and labour-market information.",
+hzzButton:"Open HZZ",
+
+hzzoTitle:"Croatian Health Insurance Fund — HZZO",
+hzzoText:"Information about health insurance, healthcare rights and HZZO services.",
+hzzoButton:"Open HZZO",
+
+centralBankTitle:"Banking & Financial Information",
+
+hnbTitle:"Croatian National Bank — HNB",
+hnbText:"Official information about banking, financial institutions, payment systems and consumer information.",
+hnbButton:"Open HNB",
+
+generalGovTitle:"Government Information",
+generalGovText:"Find official information about Croatian public administration and government services.",
+generalGovButton:"Visit gov.hr",
+
+whenNeedTitle:"When You Need Help",
+
+step1Title:"1. Residence or foreigners' documents",
+step1Text:"Contact MUP or the appropriate police administration/station.",
+
+step2Title:"2. Employment",
+step2Text:"Contact HZZ for employment-related information and services.",
+
+step3Title:"3. Health insurance",
+step3Text:"Contact HZZO for health-insurance information and rights.",
+
+step4Title:"4. Taxes",
+step4Text:"Use e-Porezna or contact the Croatian Tax Administration.",
+
+step5Title:"5. Emergency",
+step5Text:"In an actual emergency, use the appropriate Croatian emergency number. For general emergencies, call 112.",
+
+languageHelpTitle:"🌍 Language Help",
+languageHelpText:"If you have difficulty understanding an official procedure, ask the institution whether language assistance or an interpreter is available. Keep important documents and translations with you when visiting an office.",
+
+importantTitle:"⚠️ Important",
+importantText:"CROPATH provides general information and links to official sources. Always check the relevant official Croatian website for the latest requirements, contact details, opening hours and procedures.",
+
+footerTagline:"Your Path to Living and Working in Croatia.",
+footerDescription:"Clear information, practical guidance and trusted official sources for foreigners in Croatia.",
+footerVerified:"Last verified: 7 October 2026"
+
+},
+
+ml:{
+
+home:"← ഹോം",
+
+badge:"📞 ഉപയോഗപ്രദമായ ബന്ധപ്പെടേണ്ട വിവരങ്ങൾ — ക്രൊയേഷ്യ",
+
+heroTitle:"ക്രൊയേഷ്യയിലെ ഉപയോഗപ്രദമായ ബന്ധപ്പെടേണ്ട വിവരങ്ങൾ",
+
+heroDescription:"ക്രൊയേഷ്യയിൽ താമസിക്കുന്ന, ജോലി ചെയ്യുന്ന അല്ലെങ്കിൽ യാത്ര ചെയ്യുന്ന വിദേശികൾക്കായി പ്രധാനപ്പെട്ട ഔദ്യോഗിക വെബ്സൈറ്റുകളും പൊതുസേവനങ്ങളും.",
+
+officialTitle:"ക്രൊയേഷ്യയിലെ ഔദ്യോഗിക സേവനങ്ങൾ",
+
+officialIntro:"താമസം, രേഖകൾ, ജോലി, ആരോഗ്യസംരക്ഷണം, നികുതി അല്ലെങ്കിൽ പൊതുസേവനങ്ങൾ സംബന്ധിച്ച വിവരങ്ങൾക്ക് ഔദ്യോഗിക സർക്കാർ വെബ്സൈറ്റുകൾ ഉപയോഗിക്കുക.",
+
+mupTitle:"ആഭ്യന്തര മന്ത്രാലയം — MUP",
+mupText:"വിദേശികൾ, താമസാനുമതി, രേഖകൾ, പോലീസ് സേവനങ്ങൾ, ഭരണനടപടികൾ എന്നിവ സംബന്ധിച്ച വിവരങ്ങൾ.",
+mupButton:"MUP തുറക്കുക",
+
+govTitle:"ക്രൊയേഷ്യ സർക്കാർ",
+govText:"പൊതുസേവനങ്ങളും സർക്കാർ സ്ഥാപനങ്ങളും സംബന്ധിച്ച വിവരങ്ങളുള്ള കേന്ദ്ര സർക്കാർ പോർട്ടൽ.",
+govButton:"gov.hr തുറക്കുക",
+
+egTitle:"e-Građani",
+egText:"ക്രൊയേഷ്യയിലെ ഇലക്ട്രോണിക് പൊതുസേവനങ്ങളും നിരവധി സർക്കാർ സേവനങ്ങളിലേക്കുള്ള ഓൺലൈൻ പ്രവേശനവും.",
+egButton:"e-Građani തുറക്കുക",
+
+taxTitle:"e-Porezna",
+taxText:"ക്രൊയേഷ്യൻ നികുതി ഭരണകൂടം നൽകുന്ന ഓൺലൈൻ നികുതി സേവനങ്ങൾ.",
+taxButton:"e-Porezna തുറക്കുക",
+
+workServicesTitle:"തൊഴിൽ & സാമൂഹിക സേവനങ്ങൾ",
+
+hzzTitle:"ക്രൊയേഷ്യൻ എംപ്ലോയ്മെന്റ് സർവീസ് — HZZ",
+hzzText:"തൊഴിൽ സേവനങ്ങൾ, ജോലി വിവരങ്ങൾ, തൊഴിലില്ലായ്മ രജിസ്ട്രേഷൻ, തൊഴിൽ വിപണി വിവരങ്ങൾ.",
+hzzButton:"HZZ തുറക്കുക",
+
+hzzoTitle:"ക്രൊയേഷ്യൻ ഹെൽത്ത് ഇൻഷുറൻസ് ഫണ്ട് — HZZO",
+hzzoText:"ആരോഗ്യ ഇൻഷുറൻസ്, ആരോഗ്യപരിചരണ അവകാശങ്ങൾ, HZZO സേവനങ്ങൾ എന്നിവ സംബന്ധിച്ച വിവരങ്ങൾ.",
+hzzoButton:"HZZO തുറക്കുക",
+
+centralBankTitle:"ബാങ്കിംഗ് & സാമ്പത്തിക വിവരങ്ങൾ",
+
+hnbTitle:"ക്രൊയേഷ്യൻ നാഷണൽ ബാങ്ക് — HNB",
+hnbText:"ബാങ്കിംഗ്, സാമ്പത്തിക സ്ഥാപനങ്ങൾ, പേയ്മെന്റ് സംവിധാനങ്ങൾ, ഉപഭോക്തൃ വിവരങ്ങൾ എന്നിവ സംബന്ധിച്ച ഔദ്യോഗിക വിവരങ്ങൾ.",
+hnbButton:"HNB തുറക്കുക",
+
+generalGovTitle:"സർക്കാർ വിവരങ്ങൾ",
+generalGovText:"ക്രൊയേഷ്യൻ പൊതുഭരണവും സർക്കാർ സേവനങ്ങളും സംബന്ധിച്ച ഔദ്യോഗിക വിവരങ്ങൾ കണ്ടെത്തുക.",
+generalGovButton:"gov.hr സന്ദർശിക്കുക",
+
+whenNeedTitle:"സഹായം ആവശ്യമുള്ളപ്പോൾ",
+
+step1Title:"1. താമസം അല്ലെങ്കിൽ വിദേശികളുടെ രേഖകൾ",
+step1Text:"MUP അല്ലെങ്കിൽ ബന്ധപ്പെട്ട പോലീസ് അഡ്മിനിസ്ട്രേഷൻ/സ്റ്റേഷനുമായി ബന്ധപ്പെടുക.",
+
+step2Title:"2. തൊഴിൽ",
+step2Text:"തൊഴിൽ സംബന്ധമായ വിവരങ്ങൾക്കും സേവനങ്ങൾക്കും HZZ-യുമായി ബന്ധപ്പെടുക.",
+
+step3Title:"3. ആരോഗ്യ ഇൻഷുറൻസ്",
+step3Text:"ആരോഗ്യ ഇൻഷുറൻസ് വിവരങ്ങൾക്കും അവകാശങ്ങൾക്കും HZZO-യുമായി ബന്ധപ്പെടുക.",
+
+step4Title:"4. നികുതി",
+step4Text:"e-Porezna ഉപയോഗിക്കുക അല്ലെങ്കിൽ ക്രൊയേഷ്യൻ നികുതി ഭരണകൂടവുമായി ബന്ധപ്പെടുക.",
+
+step5Title:"5. അടിയന്തര സാഹചര്യം",
+step5Text:"യഥാർത്ഥ അടിയന്തര സാഹചര്യത്തിൽ ബന്ധപ്പെട്ട ക്രൊയേഷ്യൻ എമർജൻസി നമ്പർ ഉപയോഗിക്കുക. പൊതുവായ അടിയന്തര സാഹചര്യങ്ങൾക്ക് 112 വിളിക്കുക.",
+
+languageHelpTitle:"🌍 ഭാഷാ സഹായം",
+languageHelpText:"ഔദ്യോഗിക നടപടിക്രമം മനസ്സിലാക്കാൻ ബുദ്ധിമുട്ടുണ്ടെങ്കിൽ ഭാഷാ സഹായമോ വിവർത്തകനെയോ ലഭ്യമാണോ എന്ന് സ്ഥാപനത്തോട് ചോദിക്കുക. ഓഫീസിൽ പോകുമ്പോൾ പ്രധാന രേഖകളും വിവർത്തനങ്ങളും കൈവശം വയ്ക്കുക.",
+
+importantTitle:"⚠️ പ്രധാന അറിയിപ്പ്",
+importantText:"CROPATH പൊതുവായ വിവരങ്ങളും ഔദ്യോഗിക ഉറവിടങ്ങളിലേക്കുള്ള ലിങ്കുകളും നൽകുന്നു. ഏറ്റവും പുതിയ ആവശ്യകതകൾ, ബന്ധപ്പെടാനുള്ള വിവരങ്ങൾ, പ്രവർത്തന സമയം, നടപടിക്രമങ്ങൾ എന്നിവയ്ക്കായി ബന്ധപ്പെട്ട ഔദ്യോഗിക ക്രൊയേഷ്യൻ വെബ്സൈറ്റ് പരിശോധിക്കുക.",
+
+footerTagline:"ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനുമുള്ള നിങ്ങളുടെ വഴികാട്ടി.",
+footerDescription:"ക്രൊയേഷ്യയിലെ വിദേശികൾക്കായി വ്യക്തമായ വിവരങ്ങളും പ്രായോഗിക മാർഗ്ഗനിർദ്ദേശങ്ങളും വിശ്വസനീയമായ ഔദ്യോഗിക ഉറവിടങ്ങളും.",
+footerVerified:"അവസാനം പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026"
+
+},
+
+hi:{
+
+home:"← होम",
+badge:"📞 उपयोगी संपर्क — क्रोएशिया",
+heroTitle:"क्रोएशिया में उपयोगी संपर्क",
+heroDescription:"क्रोएशिया में रहने, काम करने या यात्रा करने वाले विदेशियों के लिए महत्वपूर्ण सरकारी वेबसाइटें और सार्वजनिक सेवाएं।",
+
+officialTitle:"क्रोएशिया की आधिकारिक सेवाएं",
+officialIntro:"निवास, दस्तावेज़, काम, स्वास्थ्य, कर या सार्वजनिक सेवाओं की जानकारी के लिए आधिकारिक सरकारी वेबसाइटों का उपयोग करें।",
+
+mupTitle:"आंतरिक मंत्रालय — MUP",
+mupText:"विदेशियों, निवास परमिट, दस्तावेज़, पुलिस सेवाओं और प्रशासनिक प्रक्रियाओं की जानकारी।",
+mupButton:"MUP खोलें",
+
+govTitle:"क्रोएशिया सरकार",
+govText:"सार्वजनिक सेवाओं और सरकारी संस्थानों की जानकारी वाला केंद्रीय सरकारी पोर्टल।",
+govButton:"gov.hr खोलें",
+
+egTitle:"e-Građani",
+egText:"क्रोएशिया की इलेक्ट्रॉनिक सार्वजनिक सेवाएं और कई सरकारी सेवाओं तक ऑनलाइन पहुंच।",
+egButton:"e-Građani खोलें",
+
+taxTitle:"e-Porezna",
+taxText:"क्रोएशियाई कर प्रशासन द्वारा प्रदान की जाने वाली ऑनलाइन कर सेवाएं।",
+taxButton:"e-Porezna खोलें",
+
+workServicesTitle:"रोजगार और सामाजिक सेवाएं",
+
+hzzTitle:"क्रोएशियाई रोजगार सेवा — HZZ",
+hzzText:"रोजगार सेवाएं, नौकरी की जानकारी, बेरोजगारी पंजीकरण और श्रम बाजार की जानकारी।",
+hzzButton:"HZZ खोलें",
+
+hzzoTitle:"क्रोएशियाई स्वास्थ्य बीमा फंड — HZZO",
+hzzoText:"स्वास्थ्य बीमा, स्वास्थ्य सेवाओं के अधिकार और HZZO सेवाओं की जानकारी।",
+hzzoButton:"HZZO खोलें",
+
+centralBankTitle:"बैंकिंग और वित्तीय जानकारी",
+
+hnbTitle:"क्रोएशियाई राष्ट्रीय बैंक — HNB",
+hnbText:"बैंकिंग, वित्तीय संस्थानों, भुगतान प्रणालियों और उपभोक्ता जानकारी के बारे में आधिकारिक जानकारी।",
+hnbButton:"HNB खोलें",
+
+generalGovTitle:"सरकारी जानकारी",
+generalGovText:"क्रोएशियाई सार्वजनिक प्रशासन और सरकारी सेवाओं की आधिकारिक जानकारी प्राप्त करें।",
+generalGovButton:"gov.hr देखें",
+
+whenNeedTitle:"जब आपको सहायता चाहिए",
+
+step1Title:"1. निवास या विदेशियों के दस्तावेज़",
+step1Text:"MUP या संबंधित पुलिस प्रशासन/स्टेशन से संपर्क करें।",
+
+step2Title:"2. रोजगार",
+step2Text:"रोजगार से संबंधित जानकारी और सेवाओं के लिए HZZ से संपर्क करें।",
+
+step3Title:"3. स्वास्थ्य बीमा",
+step3Text:"स्वास्थ्य बीमा की जानकारी और अधिकारों के लिए HZZO से संपर्क करें।",
+
+step4Title:"4. कर",
+step4Text:"e-Porezna का उपयोग करें या क्रोएशियाई कर प्रशासन से संपर्क करें।",
+
+step5Title:"5. आपातकाल",
+step5Text:"वास्तविक आपातकाल में उचित क्रोएशियाई आपातकालीन नंबर का उपयोग करें। सामान्य आपातकाल के लिए 112 पर कॉल करें।",
+
+languageHelpTitle:"🌍 भाषा सहायता",
+languageHelpText:"यदि आपको आधिकारिक प्रक्रिया समझने में कठिनाई हो तो संस्था से पूछें कि भाषा सहायता या दुभाषिया उपलब्ध है या नहीं। कार्यालय जाते समय महत्वपूर्ण दस्तावेज़ और अनुवाद साथ रखें।",
+
+importantTitle:"⚠️ महत्वपूर्ण",
+importantText:"CROPATH सामान्य जानकारी और आधिकारिक स्रोतों के लिंक प्रदान करता है। नवीनतम आवश्यकताओं, संपर्क विवरण, कार्यालय समय और प्रक्रियाओं के लिए संबंधित आधिकारिक क्रोएशियाई वेबसाइट देखें।",
+
+footerTagline:"क्रोएशिया में रहने और काम करने के लिए आपका मार्गदर्शक।",
+footerDescription:"क्रोएशिया में विदेशियों के लिए स्पष्ट जानकारी, व्यावहारिक मार्गदर्शन और विश्वसनीय आधिकारिक स्रोत।",
+footerVerified:"अंतिम सत्यापन: 7 अक्टूबर 2026"
+
+},
+
+ne:{
+
+home:"← होम",
+badge:"📞 उपयोगी सम्पर्क — क्रोएसिया",
+heroTitle:"क्रोएसियामा उपयोगी सम्पर्कहरू",
+heroDescription:"क्रोएसियामा बस्ने, काम गर्ने वा यात्रा गर्ने विदेशीहरूका लागि महत्वपूर्ण सरकारी वेबसाइटहरू र सार्वजनिक सेवाहरू।",
+
+officialTitle:"क्रोएसियाका आधिकारिक सेवाहरू",
+officialIntro:"बसोबास, कागजात, काम, स्वास्थ्य, कर वा सार्वजनिक सेवाहरूको जानकारीका लागि आधिकारिक सरकारी वेबसाइट प्रयोग गर्नुहोस्।",
+
+mupTitle:"आन्तरिक मन्त्रालय — MUP",
+mupText:"विदेशीहरू, बसोबास अनुमति, कागजात, प्रहरी सेवा र प्रशासनिक प्रक्रियासम्बन्धी जानकारी।",
+mupButton:"MUP खोल्नुहोस्",
+
+govTitle:"क्रोएसिया सरकार",
+govText:"सार्वजनिक सेवा र सरकारी संस्थासम्बन्धी जानकारी भएको केन्द्रीय सरकारी पोर्टल।",
+govButton:"gov.hr खोल्नुहोस्",
+
+egTitle:"e-Građani",
+egText:"क्रोएसियाका इलेक्ट्रोनिक सार्वजनिक सेवाहरू र धेरै सरकारी सेवाहरूमा अनलाइन पहुँच।",
+egButton:"e-Građani खोल्नुहोस्",
+
+taxTitle:"e-Porezna",
+taxText:"क्रोएसियाली कर प्रशासनले प्रदान गर्ने अनलाइन कर सेवाहरू।",
+taxButton:"e-Porezna खोल्नुहोस्",
+
+workServicesTitle:"रोजगार र सामाजिक सेवाहरू",
+
+hzzTitle:"क्रोएसियाली रोजगार सेवा — HZZ",
+hzzText:"रोजगार सेवा, जागिरसम्बन्धी जानकारी, बेरोजगारी दर्ता र श्रम बजारसम्बन्धी जानकारी।",
+hzzButton:"HZZ खोल्नुहोस्",
+
+hzzoTitle:"क्रोएसियाली स्वास्थ्य बीमा कोष — HZZO",
+hzzoText:"स्वास्थ्य बीमा, स्वास्थ्य सेवा अधिकार र HZZO सेवासम्बन्धी जानकारी।",
+hzzoButton:"HZZO खोल्नुहोस्",
+
+centralBankTitle:"बैंकिङ र वित्तीय जानकारी",
+
+hnbTitle:"क्रोएसियाली राष्ट्रिय बैंक — HNB",
+hnbText:"बैंकिङ, वित्तीय संस्था, भुक्तानी प्रणाली र उपभोक्ता जानकारीसम्बन्धी आधिकारिक जानकारी।",
+hnbButton:"HNB खोल्नुहोस्",
+
+generalGovTitle:"सरकारी जानकारी",
+generalGovText:"क्रोएसियाली सार्वजनिक प्रशासन र सरकारी सेवासम्बन्धी आधिकारिक जानकारी प्राप्त गर्नुहोस्।",
+generalGovButton:"gov.hr हेर्नुहोस्",
+
+whenNeedTitle:"सहायता चाहिँदा",
+
+step1Title:"1. बसोबास वा विदेशीका कागजात",
+step1Text:"MUP वा सम्बन्धित प्रहरी प्रशासन/स्टेशनमा सम्पर्क गर्नुहोस्।",
+
+step2Title:"2. रोजगार",
+step2Text:"रोजगारसम्बन्धी जानकारी र सेवाका लागि HZZ मा सम्पर्क गर्नुहोस्।",
+
+step3Title:"3. स्वास्थ्य बीमा",
+step3Text:"स्वास्थ्य बीमा जानकारी र अधिकारका लागि HZZO मा सम्पर्क गर्नुहोस्।",
+
+step4Title:"4. कर",
+step4Text:"e-Porezna प्रयोग गर्नुहोस् वा क्रोएसियाली कर प्रशासनमा सम्पर्क गर्नुहोस्।",
+
+step5Title:"5. आपतकाल",
+step5Text:"वास्तविक आपतकालमा उचित क्रोएसियाली आपतकालीन नम्बर प्रयोग गर्नुहोस्। सामान्य आपतकालका लागि 112 मा फोन गर्नुहोस्।",
+
+languageHelpTitle:"🌍 भाषा सहायता",
+languageHelpText:"आधिकारिक प्रक्रिया बुझ्न कठिन भएमा संस्था वा कार्यालयमा भाषा सहायता वा दोभाषे उपलब्ध छ कि छैन सोध्नुहोस्। कार्यालय जाँदा महत्वपूर्ण कागजात र अनुवाद साथमा राख्नुहोस्।",
+
+importantTitle:"⚠️ महत्वपूर्ण",
+importantText:"CROPATH ले सामान्य जानकारी र आधिकारिक स्रोतहरूको लिंक प्रदान गर्दछ। नयाँ आवश्यकताहरू, सम्पर्क विवरण, कार्यालय समय र प्रक्रियाका लागि सम्बन्धित आधिकारिक क्रोएसियाली वेबसाइट जाँच गर्नुहोस्।",
+
+footerTagline:"क्रोएसियामा बस्न र काम गर्न तपाईंको मार्गदर्शक।",
+footerDescription:"क्रोएसियामा विदेशीहरूका लागि स्पष्ट जानकारी, व्यावहारिक मार्गदर्शन र विश्वसनीय आधिकारिक स्रोतहरू।",
+footerVerified:"अन्तिम जाँच: 7 अक्टोबर 2026"
+
+},
+
+ta:{
+
+home:"← முகப்பு",
+badge:"📞 பயனுள்ள தொடர்புகள் — குரோஷியா",
+heroTitle:"குரோஷியாவில் பயனுள்ள தொடர்புகள்",
+heroDescription:"குரோஷியாவில் வசிக்கும், வேலை செய்யும் அல்லது பயணம் செய்யும் வெளிநாட்டவர்களுக்கான முக்கியமான அரசு இணையதளங்கள் மற்றும் பொது சேவைகள்.",
+
+officialTitle:"குரோஷியாவின் அதிகாரப்பூர்வ சேவைகள்",
+officialIntro:"குடியிருப்பு, ஆவணங்கள், வேலை, சுகாதாரம், வரி அல்லது பொது சேவைகள் பற்றிய தகவல்களுக்கு அதிகாரப்பூர்வ அரசு இணையதளங்களைப் பயன்படுத்துங்கள்.",
+
+mupTitle:"உள்துறை அமைச்சகம் — MUP",
+mupText:"வெளிநாட்டவர்கள், குடியிருப்பு அனுமதி, ஆவணங்கள், காவல்துறை சேவைகள் மற்றும் நிர்வாக நடைமுறைகள் பற்றிய தகவல்கள்.",
+mupButton:"MUP திறக்கவும்",
+
+govTitle:"குரோஷியா அரசு",
+govText:"பொது சேவைகள் மற்றும் அரசு நிறுவனங்கள் பற்றிய தகவல்களைக் கொண்ட மத்திய அரசு இணையதளம்.",
+govButton:"gov.hr திறக்கவும்",
+
+egTitle:"e-Građani",
+egText:"குரோஷியாவின் மின்னணு பொது சேவைகள் மற்றும் பல அரசு சேவைகளுக்கான ஆன்லைன் அணுகல்.",
+egButton:"e-Građani திறக்கவும்",
+
+taxTitle:"e-Porezna",
+taxText:"குரோஷிய வரி நிர்வாகம் வழங்கும் ஆன்லைன் வரி சேவைகள்.",
+taxButton:"e-Porezna திறக்கவும்",
+
+workServicesTitle:"வேலை & சமூக சேவைகள்",
+
+hzzTitle:"குரோஷிய வேலைவாய்ப்பு சேவை — HZZ",
+hzzText:"வேலைவாய்ப்பு சேவைகள், வேலை தகவல்கள், வேலைஇல்லாமை பதிவு மற்றும் தொழிலாளர் சந்தை தகவல்கள்.",
+hzzButton:"HZZ திறக்கவும்",
+
+hzzoTitle:"குரோஷிய சுகாதார காப்பீட்டு நிதியம் — HZZO",
+hzzoText:"சுகாதார காப்பீடு, சுகாதார உரிமைகள் மற்றும் HZZO சேவைகள் பற்றிய தகவல்கள்.",
+hzzoButton:"HZZO திறக்கவும்",
+
+centralBankTitle:"வங்கி & நிதி தகவல்கள்",
+
+hnbTitle:"குரோஷிய தேசிய வங்கி — HNB",
+hnbText:"வங்கி, நிதி நிறுவனங்கள், பணப்பரிவர்த்தனை அமைப்புகள் மற்றும் நுகர்வோர் தகவல்கள் பற்றிய அதிகாரப்பூர்வ தகவல்கள்.",
+hnbButton:"HNB திறக்கவும்",
+
+generalGovTitle:"அரசு தகவல்கள்",
+generalGovText:"குரோஷிய பொது நிர்வாகம் மற்றும் அரசு சேவைகள் பற்றிய அதிகாரப்பூர்வ தகவல்களைப் பெறுங்கள்.",
+generalGovButton:"gov.hr பார்க்கவும்",
+
+whenNeedTitle:"உங்களுக்கு உதவி தேவைப்படும் போது",
+
+step1Title:"1. குடியிருப்பு அல்லது வெளிநாட்டவர் ஆவணங்கள்",
+step1Text:"MUP அல்லது சம்பந்தப்பட்ட காவல் நிர்வாகம்/நிலையத்தை தொடர்பு கொள்ளுங்கள்.",
+
+step2Title:"2. வேலைவாய்ப்பு",
+step2Text:"வேலைவாய்ப்பு தகவல்கள் மற்றும் சேவைகளுக்கு HZZ-ஐ தொடர்பு கொள்ளுங்கள்.",
+
+step3Title:"3. சுகாதார காப்பீடு",
+step3Text:"சுகாதார காப்பீட்டு தகவல்கள் மற்றும் உரிமைகளுக்கு HZZO-ஐ தொடர்பு கொள்ளுங்கள்.",
+
+step4Title:"4. வரி",
+step4Text:"e-Porezna பயன்படுத்தவும் அல்லது குரோஷிய வரி நிர்வாகத்தை தொடர்பு கொள்ளவும்.",
+
+step5Title:"5. அவசரநிலை",
+step5Text:"உண்மையான அவசரநிலையில் பொருத்தமான குரோஷிய அவசர எண்ணைப் பயன்படுத்துங்கள். பொதுவான அவசரநிலைக்கு 112 அழைக்கவும்.",
+
+languageHelpTitle:"🌍 மொழி உதவி",
+languageHelpText:"அதிகாரப்பூர்வ நடைமுறையைப் புரிந்துகொள்வதில் சிரமம் இருந்தால் மொழி உதவி அல்லது மொழிபெயர்ப்பாளர் உள்ளாரா என்று நிறுவனத்திடம் கேளுங்கள். அலுவலகத்திற்குச் செல்லும்போது முக்கிய ஆவணங்கள் மற்றும் மொழிபெயர்ப்புகளை எடுத்துச் செல்லுங்கள்.",
+
+importantTitle:"⚠️ முக்கியம்",
+importantText:"CROPATH பொதுவான தகவல்களையும் அதிகாரப்பூர்வ ஆதாரங்களுக்கான இணைப்புகளையும் வழங்குகிறது. சமீபத்திய தேவைகள், தொடர்பு விவரங்கள், வேலை நேரம் மற்றும் நடைமுறைகளுக்கு தொடர்புடைய அதிகாரப்பூர்வ குரோஷிய இணையதளத்தை சரிபார்க்கவும்.",
+
+footerTagline:"குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் வழிகாட்டி.",
+footerDescription:"குரோஷியாவில் வெளிநாட்டவர்களுக்கான தெளிவான தகவல், நடைமுறை வழிகாட்டுதல் மற்றும் நம்பகமான அதிகாரப்பூர்வ ஆதாரங்கள்.",
+footerVerified:"கடைசியாக சரிபார்க்கப்பட்டது: 7 அக்டோபர் 2026"
+
+},
+
+te:{
+
+home:"← హోమ్",
+badge:"📞 ఉపయోగకరమైన సంప్రదింపులు — క్రొయేషియా",
+heroTitle:"క్రొయేషియాలో ఉపయోగకరమైన సంప్రదింపులు",
+heroDescription:"క్రొయేషియాలో నివసించే, పని చేసే లేదా ప్రయాణించే విదేశీయుల కోసం ముఖ్యమైన ప్రభుత్వ వెబ్‌సైట్లు మరియు ప్రజా సేవలు.",
+
+officialTitle:"క్రొయేషియా అధికారిక సేవలు",
+officialIntro:"నివాసం, పత్రాలు, పని, ఆరోగ్యం, పన్నులు లేదా ప్రజా సేవల సమాచారం కోసం అధికారిక ప్రభుత్వ వెబ్‌సైట్లను ఉపయోగించండి.",
+
+mupTitle:"అంతర్గత వ్యవహారాల మంత్రిత్వ శాఖ — MUP",
+mupText:"విదేశీయులు, నివాస అనుమతులు, పత్రాలు, పోలీసు సేవలు మరియు పరిపాలనా విధానాల గురించి సమాచారం.",
+mupButton:"MUP తెరవండి",
+
+govTitle:"క్రొయేషియా ప్రభుత్వం",
+govText:"ప్రజా సేవలు మరియు ప్రభుత్వ సంస్థల గురించి సమాచారాన్ని అందించే కేంద్ర ప్రభుత్వ పోర్టల్.",
+govButton:"gov.hr తెరవండి",
+
+egTitle:"e-Građani",
+egText:"క్రొయేషియా ఎలక్ట్రానిక్ ప్రజా సేవలు మరియు అనేక ప్రభుత్వ సేవలకు ఆన్‌లైన్ యాక్సెస్.",
+egButton:"e-Građani తెరవండి",
+
+taxTitle:"e-Porezna",
+taxText:"క్రొయేషియన్ పన్ను పరిపాలన అందించే ఆన్‌లైన్ పన్ను సేవలు.",
+taxButton:"e-Porezna తెరవండి",
+
+workServicesTitle:"ఉద్యోగం & సామాజిక సేవలు",
+
+hzzTitle:"క్రొయేషియన్ ఎంప్లాయ్‌మెంట్ సర్వీస్ — HZZ",
+hzzText:"ఉద్యోగ సేవలు, ఉద్యోగ సమాచారం, నిరుద్యోగ నమోదు మరియు కార్మిక మార్కెట్ సమాచారం.",
+hzzButton:"HZZ తెరవండి",
+
+hzzoTitle:"క్రొయేషియన్ హెల్త్ ఇన్సూరెన్స్ ఫండ్ — HZZO",
+hzzoText:"ఆరోగ్య బీమా, ఆరోగ్య సేవల హక్కులు మరియు HZZO సేవల గురించి సమాచారం.",
+hzzoButton:"HZZO తెరవండి",
+
+centralBankTitle:"బ్యాంకింగ్ & ఆర్థిక సమాచారం",
+
+hnbTitle:"క్రొయేషియన్ నేషనల్ బ్యాంక్ — HNB",
+hnbText:"బ్యాంకింగ్, ఆర్థిక సంస్థలు, చెల్లింపు వ్యవస్థలు మరియు వినియోగదారుల సమాచారం గురించి అధికారిక సమాచారం.",
+hnbButton:"HNB తెరవండి",
+
+generalGovTitle:"ప్రభుత్వ సమాచారం",
+generalGovText:"క్రొయేషియన్ ప్రజా పరిపాలన మరియు ప్రభుత్వ సేవల గురించి అధికారిక సమాచారాన్ని కనుగొనండి.",
+generalGovButton:"gov.hr చూడండి",
+
+whenNeedTitle:"మీకు సహాయం అవసరమైనప్పుడు",
+
+step1Title:"1. నివాసం లేదా విదేశీయుల పత్రాలు",
+step1Text:"MUP లేదా సంబంధిత పోలీసు పరిపాలన/స్టేషన్‌ను సంప్రదించండి.",
+
+step2Title:"2. ఉద్యోగం",
+step2Text:"ఉద్యోగ సంబంధిత సమాచారం మరియు సేవల కోసం HZZని సంప్రదించండి.",
+
+step3Title:"3. ఆరోగ్య బీమా",
+step3Text:"ఆరోగ్య బీమా సమాచారం మరియు హక్కుల కోసం HZZOని సంప్రదించండి.",
+
+step4Title:"4. పన్నులు",
+step4Text:"e-Porezna ఉపయోగించండి లేదా క్రొయేషియన్ పన్ను పరిపాలనను సంప్రదించండి.",
+
+step5Title:"5. అత్యవసర పరిస్థితి",
+step5Text:"నిజమైన అత్యవసర పరిస్థితిలో సరైన క్రొయేషియన్ అత్యవసర నంబర్‌ను ఉపయోగించండి. సాధారణ అత్యవసర పరిస్థితులకు 112కు కాల్ చేయండి.",
+
+languageHelpTitle:"🌍 భాషా సహాయం",
+languageHelpText:"అధికారిక విధానాన్ని అర్థం చేసుకోవడంలో ఇబ్బంది ఉంటే భాషా సహాయం లేదా అనువాదకుడు అందుబాటులో ఉన్నారా అని సంస్థను అడగండి. కార్యాలయానికి వెళ్లేటప్పుడు ముఖ్యమైన పత్రాలు మరియు అనువాదాలను వెంట తీసుకెళ్లండి.",
+
+importantTitle:"⚠️ ముఖ్యమైన సమాచారం",
+importantText:"CROPATH సాధారణ సమాచారాన్ని మరియు అధికారిక వనరులకు లింకులను అందిస్తుంది. తాజా అవసరాలు, సంప్రదింపు వివరాలు, కార్యాలయ సమయాలు మరియు విధానాల కోసం సంబంధిత అధికారిక క్రొయేషియన్ వెబ్‌సైట్‌ను తనిఖీ చేయండి.",
+
+footerTagline:"క్రొయేషియాలో జీవించడానికి మరియు పని చేయడానికి మీ మార్గదర్శి.",
+footerDescription:"క్రొయేషియాలో విదేశీయుల కోసం స్పష్టమైన సమాచారం, ఆచరణాత్మక మార్గదర్శకత్వం మరియు విశ్వసనీయ అధికారిక వనరులు.",
+footerVerified:"చివరిసారి తనిఖీ: 7 అక్టోబర్ 2026"
+
+},
+
+bn:{
+
+home:"← হোম",
+badge:"📞 দরকারি যোগাযোগ — ক্রোয়েশিয়া",
+heroTitle:"ক্রোয়েশিয়ায় দরকারি যোগাযোগ",
+heroDescription:"ক্রোয়েশিয়ায় বসবাস, কাজ বা ভ্রমণকারী বিদেশিদের জন্য গুরুত্বপূর্ণ সরকারি ও জনসেবা যোগাযোগ।",
+
+officialTitle:"ক্রোয়েশিয়ার সরকারি সেবা",
+officialIntro:"বাসস্থান, নথি, কাজ, স্বাস্থ্য, কর বা সরকারি সেবার তথ্যের জন্য সরকারি ওয়েবসাইট ব্যবহার করুন।",
+
+mupTitle:"স্বরাষ্ট্র মন্ত্রণালয় — MUP",
+mupText:"বিদেশি নাগরিক, রেসিডেন্স পারমিট, নথি, পুলিশ সেবা এবং প্রশাসনিক প্রক্রিয়ার তথ্য।",
+mupButton:"MUP খুলুন",
+
+govTitle:"ক্রোয়েশিয়া সরকার",
+govText:"সরকারি পরিষেবা এবং সরকারি প্রতিষ্ঠানের তথ্যের কেন্দ্রীয় সরকারি পোর্টাল।",
+govButton:"gov.hr খুলুন",
+
+egTitle:"e-Građani",
+egText:"ক্রোয়েশিয়ার ইলেকট্রনিক সরকারি পরিষেবা এবং বিভিন্ন সরকারি সেবায় অনলাইন প্রবেশাধিকার।",
+egButton:"e-Građani খুলুন",
+
+taxTitle:"e-Porezna",
+taxText:"ক্রোয়েশিয়ান কর প্রশাসনের অনলাইন কর পরিষেবা।",
+taxButton:"e-Porezna খুলুন",
+
+workServicesTitle:"কাজ ও সামাজিক সেবা",
+
+hzzTitle:"ক্রোয়েশিয়ান এমপ্লয়মেন্ট সার্ভিস — HZZ",
+hzzText:"চাকরি, কর্মসংস্থান সেবা, বেকারত্ব নিবন্ধন এবং শ্রমবাজারের তথ্য।",
+hzzButton:"HZZ খুলুন",
+
+hzzoTitle:"ক্রোয়েশিয়ান হেলথ ইন্স্যুরেন্স ফান্ড — HZZO",
+hzzoText:"স্বাস্থ্য বীমা, স্বাস্থ্যসেবার অধিকার এবং HZZO পরিষেবার তথ্য।",
+hzzoButton:"HZZO খুলুন",
+
+centralBankTitle:"ব্যাংকিং ও আর্থিক তথ্য",
+
+hnbTitle:"ক্রোয়েশিয়ান ন্যাশনাল ব্যাংক — HNB",
+hnbText:"ব্যাংকিং, আর্থিক প্রতিষ্ঠান, পেমেন্ট সিস্টেম এবং গ্রাহক তথ্য সম্পর্কে সরকারি তথ্য।",
+hnbButton:"HNB খুলুন",
+
+generalGovTitle:"সরকারি তথ্য",
+generalGovText:"ক্রোয়েশিয়ার সরকারি প্রশাসন এবং সরকারি পরিষেবা সম্পর্কে তথ্য খুঁজুন।",
+generalGovButton:"gov.hr দেখুন",
+
+whenNeedTitle:"যখন আপনার সাহায্য দরকার",
+
+step1Title:"1. বসবাস বা বিদেশিদের নথি",
+step1Text:"MUP বা সংশ্লিষ্ট পুলিশ প্রশাসন/স্টেশনে যোগাযোগ করুন।",
+
+step2Title:"2. কর্মসংস্থান",
+step2Text:"চাকরি ও কর্মসংস্থান সম্পর্কিত তথ্যের জন্য HZZ-এর সঙ্গে যোগাযোগ করুন।",
+
+step3Title:"3. স্বাস্থ্য বীমা",
+step3Text:"স্বাস্থ্য বীমা ও অধিকার সম্পর্কে HZZO-এর সঙ্গে যোগাযোগ করুন।",
+
+step4Title:"4. কর",
+step4Text:"e-Porezna ব্যবহার করুন অথবা ক্রোয়েশিয়ান কর প্রশাসনের সঙ্গে যোগাযোগ করুন।",
+
+step5Title:"5. জরুরি অবস্থা",
+step5Text:"প্রকৃত জরুরি অবস্থায় উপযুক্ত ক্রোয়েশিয়ান জরুরি নম্বর ব্যবহার করুন। সাধারণ জরুরি অবস্থায় 112 নম্বরে কল করুন।",
+
+languageHelpTitle:"🌍 ভাষা সহায়তা",
+languageHelpText:"সরকারি প্রক্রিয়া বুঝতে সমস্যা হলে ভাষা সহায়তা বা অনুবাদক পাওয়া যায় কি না তা প্রতিষ্ঠানের কাছে জিজ্ঞাসা করুন। অফিসে যাওয়ার সময় গুরুত্বপূর্ণ নথি ও অনুবাদ সঙ্গে রাখুন।",
+
+importantTitle:"⚠️ গুরুত্বপূর্ণ",
+importantText:"CROPATH সাধারণ তথ্য এবং সরকারি উৎসের লিঙ্ক প্রদান করে। সর্বশেষ প্রয়োজনীয়তা, যোগাযোগের তথ্য, অফিস সময় এবং প্রক্রিয়ার জন্য সংশ্লিষ্ট সরকারি ক্রোয়েশিয়ান ওয়েবসাইট যাচাই করুন।",
+
+footerTagline:"ক্রোয়েশিয়ায় বসবাস ও কাজ করার জন্য আপনার পথপ্রদর্শক।",
+footerDescription:"ক্রোয়েশিয়ায় বিদেশিদের জন্য পরিষ্কার তথ্য, ব্যবহারিক নির্দেশনা এবং নির্ভরযোগ্য সরকারি উৎস।",
+footerVerified:"শেষ যাচাই: ৭ অক্টোবর ২০২৬"
+
+},
+
+ur:{
+
+home:"← ہوم",
+badge:"📞 مفید رابطے — کروشیا",
+heroTitle:"کروشیا میں مفید رابطے",
+heroDescription:"کروشیا میں رہنے، کام کرنے یا سفر کرنے والے غیر ملکیوں کے لیے اہم سرکاری ویب سائٹس اور عوامی خدمات۔",
+
+officialTitle:"کروشیا کی سرکاری خدمات",
+officialIntro:"رہائش، دستاویزات، کام، صحت، ٹیکس یا عوامی خدمات کے بارے میں معلومات کے لیے سرکاری ویب سائٹس استعمال کریں۔",
+
+mupTitle:"وزارت داخلہ — MUP",
+mupText:"غیر ملکیوں، رہائشی اجازت ناموں، دستاویزات، پولیس خدمات اور انتظامی طریقہ کار کے بارے میں معلومات۔",
+mupButton:"MUP کھولیں",
+
+govTitle:"کروشیا کی حکومت",
+govText:"عوامی خدمات اور سرکاری اداروں کے بارے میں معلومات فراہم کرنے والا مرکزی سرکاری پورٹل۔",
+govButton:"gov.hr کھولیں",
+
+egTitle:"e-Građani",
+egText:"کروشیا کی الیکٹرانک عوامی خدمات اور کئی سرکاری خدمات تک آن لائن رسائی۔",
+egButton:"e-Građani کھولیں",
+
+taxTitle:"e-Porezna",
+taxText:"کروشین ٹیکس انتظامیہ کی آن لائن ٹیکس خدمات۔",
+taxButton:"e-Porezna کھولیں",
+
+workServicesTitle:"ملازمت اور سماجی خدمات",
+
+hzzTitle:"کروشین ایمپلائمنٹ سروس — HZZ",
+hzzText:"ملازمت کی خدمات، نوکری کی معلومات، بے روزگاری رجسٹریشن اور لیبر مارکیٹ کی معلومات۔",
+hzzButton:"HZZ کھولیں",
+
+hzzoTitle:"کروشین ہیلتھ انشورنس فنڈ — HZZO",
+hzzoText:"صحت بیمہ، صحت کی سہولیات کے حقوق اور HZZO خدمات کے بارے میں معلومات۔",
+hzzoButton:"HZZO کھولیں",
+
+centralBankTitle:"بینکنگ اور مالی معلومات",
+
+hnbTitle:"کروشین نیشنل بینک — HNB",
+hnbText:"بینکنگ، مالیاتی اداروں، ادائیگی کے نظام اور صارفین کے بارے میں سرکاری معلومات۔",
+hnbButton:"HNB کھولیں",
+
+generalGovTitle:"سرکاری معلومات",
+generalGovText:"کروشین عوامی انتظامیہ اور سرکاری خدمات کے بارے میں سرکاری معلومات حاصل کریں۔",
+generalGovButton:"gov.hr دیکھیں",
+
+whenNeedTitle:"جب آپ کو مدد کی ضرورت ہو",
+
+step1Title:"1. رہائش یا غیر ملکیوں کی دستاویزات",
+step1Text:"MUP یا متعلقہ پولیس انتظامیہ/اسٹیشن سے رابطہ کریں۔",
+
+step2Title:"2. ملازمت",
+step2Text:"ملازمت سے متعلق معلومات اور خدمات کے لیے HZZ سے رابطہ کریں۔",
+
+step3Title:"3. صحت بیمہ",
+step3Text:"صحت بیمہ کی معلومات اور حقوق کے لیے HZZO سے رابطہ کریں۔",
+
+step4Title:"4. ٹیکس",
+step4Text:"e-Porezna استعمال کریں یا کروشین ٹیکس انتظامیہ سے رابطہ کریں۔",
+
+step5Title:"5. ہنگامی صورتحال",
+step5Text:"حقیقی ہنگامی صورتحال میں مناسب کروشین ہنگامی نمبر استعمال کریں۔ عام ہنگامی صورتحال کے لیے 112 پر کال کریں۔",
+
+languageHelpTitle:"🌍 زبان کی مدد",
+languageHelpText:"اگر آپ کو سرکاری طریقہ کار سمجھنے میں مشکل ہو تو ادارے سے پوچھیں کہ زبان کی مدد یا مترجم دستیاب ہے یا نہیں۔ دفتر جاتے وقت اہم دستاویزات اور ترجمے ساتھ رکھیں۔",
+
+importantTitle:"⚠️ اہم",
+importantText:"CROPATH عمومی معلومات اور سرکاری ذرائع کے لنکس فراہم کرتا ہے۔ تازہ ترین تقاضوں، رابطے کی تفصیلات، اوقات کار اور طریقہ کار کے لیے متعلقہ سرکاری کروشین ویب سائٹ ضرور دیکھیں۔",
+
+footerTagline:"کروشیا میں رہنے اور کام کرنے کے لیے آپ کا رہنما۔",
+footerDescription:"کروشیا میں غیر ملکیوں کے لیے واضح معلومات، عملی رہنمائی اور قابل اعتماد سرکاری ذرائع۔",
+footerVerified:"آخری تصدیق: 7 اکتوبر 2026"
+
+},
+
+hr:{
+
+home:"← Početna",
+badge:"📞 Korisni kontakti — Hrvatska",
+heroTitle:"Korisni kontakti u Hrvatskoj",
+heroDescription:"Važne službene web stranice, javne službe i korisne organizacije za strance koji žive, rade ili putuju u Hrvatskoj.",
+
+officialTitle:"Službene hrvatske službe",
+officialIntro:"Koristite službene državne web stranice kada trebate informacije o boravku, dokumentima, radu, zdravstvu, porezima ili javnim uslugama.",
+
+mupTitle:"Ministarstvo unutarnjih poslova — MUP",
+mupText:"Informacije o strancima, dozvolama boravka, dokumentima, policijskim uslugama i upravnim postupcima.",
+mupButton:"Otvori MUP",
+
+govTitle:"Vlada Republike Hrvatske",
+govText:"Središnji državni portal s informacijama o javnim uslugama i državnim institucijama.",
+govButton:"Otvori gov.hr",
+
+egTitle:"e-Građani",
+egText:"Hrvatske elektroničke javne usluge i online pristup mnogim državnim uslugama.",
+egButton:"Otvori e-Građani",
+
+taxTitle:"e-Porezna",
+taxText:"Online porezne usluge koje pruža Porezna uprava.",
+taxButton:"Otvori e-Porezna",
+
+workServicesTitle:"Rad i socijalne usluge",
+
+hzzTitle:"Hrvatski zavod za zapošljavanje — HZZ",
+hzzText:"Usluge zapošljavanja, informacije o poslovima, prijava nezaposlenosti i informacije o tržištu rada.",
+hzzButton:"Otvori HZZ",
+
+hzzoTitle:"Hrvatski zavod za zdravstveno osiguranje — HZZO",
+hzzoText:"Informacije o zdravstvenom osiguranju, pravima iz zdravstvene zaštite i uslugama HZZO-a.",
+hzzoButton:"Otvori HZZO",
+
+centralBankTitle:"Bankarske i financijske informacije",
+
+hnbTitle:"Hrvatska narodna banka — HNB",
+hnbText:"Službene informacije o bankama, financijskim institucijama, platnim sustavima i potrošačima.",
+hnbButton:"Otvori HNB",
+
+generalGovTitle:"Državne informacije",
+generalGovText:"Pronađite službene informacije o hrvatskoj javnoj upravi i državnim uslugama.",
+generalGovButton:"Posjeti gov.hr",
+
+whenNeedTitle:"Kada trebate pomoć",
+
+step1Title:"1. Boravak ili dokumenti za strance",
+step1Text:"Kontaktirajte MUP ili nadležnu policijsku upravu/postaju.",
+
+step2Title:"2. Zapošljavanje",
+step2Text:"Za informacije i usluge vezane uz zapošljavanje kontaktirajte HZZ.",
+
+step3Title:"3. Zdravstveno osiguranje",
+step3Text:"Za informacije o zdravstvenom osiguranju i pravima kontaktirajte HZZO.",
+
+step4Title:"4. Porezi",
+step4Text:"Koristite e-Poreznu ili kontaktirajte Poreznu upravu.",
+
+step5Title:"5. Hitni slučaj",
+step5Text:"U stvarnom hitnom slučaju koristite odgovarajući hrvatski hitni broj. Za opće hitne situacije nazovite 112.",
+
+languageHelpTitle:"🌍 Jezična pomoć",
+languageHelpText:"Ako imate poteškoća s razumijevanjem službenog postupka, pitajte instituciju postoji li jezična pomoć ili prevoditelj. Prilikom odlaska u ured ponesite važne dokumente i prijevode.",
+
+importantTitle:"⚠️ Važno",
+importantText:"CROPATH pruža opće informacije i poveznice na službene izvore. Za najnovije zahtjeve, kontakte, radno vrijeme i postupke uvijek provjerite odgovarajuću službenu hrvatsku web stranicu.",
+
+footerTagline:"Vaš vodič za život i rad u Hrvatskoj.",
+footerDescription:"Jasne informacije, praktične smjernice i pouzdani službeni izvori za strance u Hrvatskoj.",
+footerVerified:"Zadnja provjera: 7. listopada 2026."
+
+}
+
+};
+
+
+function applyLanguage(language){
+
+  const t = translations[language] || translations.en;
+
+  Object.keys(t).forEach(function(id){
+
+    const element = document.getElementById(id);
+
+    if(element){
+      element.textContent = t[id];
+    }
+
+  });
+
+  document.documentElement.lang = language;
+
+  document.documentElement.dir =
+    language === "ur" ? "rtl" : "ltr";
+
+  localStorage.setItem("cropath-language", language);
+
+  const selector =
+    document.getElementById("languageSelect");
+
+  if(selector){
+    selector.value = language;
+  }
+
+}
+
+
+const savedLanguage =
+  localStorage.getItem("cropath-language") || "en";
+
+applyLanguage(savedLanguage);
+
+
+document
+  .getElementById("languageSelect")
+  .addEventListener("change", function(){
+
+    applyLanguage(this.value);
+
+  });
+
+</script>
+
+</body>
+</html>

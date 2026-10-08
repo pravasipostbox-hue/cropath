@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CROPATH — Housing in Croatia</title>
+<meta name="description" content="Housing information for foreigners in Croatia, including renting, contracts, deposits, address registration and practical tips.">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.6;
+}
+
+header{
+  background:#0f172a;
+  color:white;
+  padding:18px 20px;
+}
+
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.language-select{
+  min-width:190px;
+  min-height:50px;
+  padding:12px 16px;
+  border-radius:12px;
+  border:2px solid #64748b;
+  background:white;
+  color:#111827;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600;
+}
+
+.back{
+  color:white;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.3);
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+.hero{
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
+  color:white;
+  padding:55px 20px;
+}
+
+.hero-inner{
+  max-width:1100px;
+  margin:auto;
+}
+
+.badge{
+  display:inline-block;
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.25);
+  padding:7px 12px;
+  border-radius:30px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:42px;
+  line-height:1.15;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:760px;
+  font-size:18px;
+  opacity:.94;
+}
+
+.container{
+  max-width:1100px;
+  margin:35px auto;
+  padding:0 20px;
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  padding:28px;
+  margin-bottom:22px;
+  box-shadow:0 8px 25px rgba(15,23,42,.07);
+  border:1px solid #e5e7eb;
+}
+
+h2{
+  font-size:25px;
+  margin-bottom:14px;
+  color:#0f172a;
+}
+
+h3{
+  font-size:19px;
+  margin:20px 0 8px;
+  color:#1d4ed8;
+}
+
+p{
+  margin-bottom:12px;
+}
+
+ul{
+  padding-left:22px;
+  margin:10px 0;
+}
+
+li{
+  margin:8px 0;
+}
+
+.info{
+  background:#eff6ff;
+  border-left:5px solid #2563eb;
+  padding:18px;
+  border-radius:10px;
+  margin-top:15px;
+}
+
+.warning{
+  background:#fff7ed;
+  border-left:5px solid #f97316;
+  padding:18px;
+  border-radius:10px;
+  margin-top:15px;
+}
+
+.danger{
+  background:#fef2f2;
+  border-left:5px solid #dc2626;
+  padding:18px;
+  border-radius:10px;
+  margin-top:15px;
+}
+
+.links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:18px;
+}
+
+.links a{
+  display:inline-block;
+  background:#2563eb;
+  color:white;
+  text-decoration:none;
+  padding:11px 16px;
+  border-radius:9px;
+  font-weight:600;
+}
+
+.links a:hover{
+  background:#1d4ed8;
+}
+
+.verified{
+  font-size:14px;
+  color:#166534;
+  background:#f0fdf4;
+  display:inline-block;
+  padding:7px 11px;
+  border-radius:8px;
+  margin-top:10px;
+}
+
+footer{
+  background:#0f172a;
+  color:#cbd5e1;
+  margin-top:45px;
+  padding:30px 20px;
+}
+
+.footer-inner{
+  max-width:1100px;
+  margin:auto;
+}
+
+footer p{
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+@media(max-width:700px){
+  h1{
+    font-size:32px;
+  }
+
+  .hero{
+    padding:40px 20px;
+  }
+
+  .card{
+    padding:22px;
+  }
+
+  .header-inner{
+    align-items:flex-start;
+  }
+
+  .header-right{
+    flex-direction:column;
+    align-items:flex-end;
+  }
+
+  .language-select{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-inner">
+
+<div class="logo">CROPATH</div>
+
+<div class="header-right">
+
+<select id="languageSelect" class="language-select" aria-label="Language">
+<option value="en">English</option>
+<option value="ml">മലയാളം</option>
+<option value="hi">हिन्दी</option>
+<option value="ne">नेपाली</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="bn">বাংলা</option>
+<option value="ur">اردو</option>
+<option value="hr">Hrvatski</option>
+</select>
+
+<a class="back" href="index.html" id="backHome">
+← Back to Home
+</a>
+
+</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-inner">
+
+<div class="badge" id="badge">
+🇭🇷 Housing Information Guide
+</div>
+
+<h1 id="pageTitle">
+Housing in Croatia
+</h1>
+
+<p id="heroText">
+Practical information about renting a home, contracts, deposits, address registration and common housing issues in Croatia.
+</p>
+
+<div class="verified" id="verified">
+✓ Information checked: 7 October 2026
+</div>
+
+</div>
+</section>
+
+<main class="container">
+
+<section class="card">
+
+<h2 id="s1title">🏠 Finding a Home</h2>
+
+<p id="s1p1">
+Foreigners in Croatia can find accommodation through property websites, real-estate agencies, local advertisements and personal contacts.
+</p>
+
+<p id="s1p2">
+Before paying money or signing an agreement, check the property, landlord and rental conditions carefully.
+</p>
+
+<div class="info">
+<strong id="s1strong">Tip:</strong>
+<span id="s1info">
+Always visit the property or verify the accommodation before making a significant payment.
+</span>
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s2title">🔑 Renting an Apartment</h2>
+
+<p id="s2p1">
+When renting a home, discuss the monthly rent, deposit, utilities, contract period and notice period before moving in.
+</p>
+
+<h3 id="s2h3">Check these points</h3>
+
+<ul>
+<li id="s2li1">Monthly rent amount</li>
+<li id="s2li2">Security deposit</li>
+<li id="s2li3">Utility and service costs</li>
+<li id="s2li4">Contract duration</li>
+<li id="s2li5">Notice period</li>
+<li id="s2li6">Furniture and equipment included</li>
+</ul>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s3title">📄 Rental Contract</h2>
+
+<p id="s3p1">
+A written rental agreement is important because it records the conditions agreed between the landlord and tenant.
+</p>
+
+<h3 id="s3h3">The contract should clearly state</h3>
+
+<ul>
+<li id="s3li1">Landlord and tenant information</li>
+<li id="s3li2">Property address</li>
+<li id="s3li3">Monthly rent</li>
+<li id="s3li4">Deposit amount</li>
+<li id="s3li5">Payment arrangements</li>
+<li id="s3li6">Contract period</li>
+<li id="s3li7">Termination or notice conditions</li>
+</ul>
+
+<div class="warning">
+<strong id="s3strong">Important:</strong>
+<span id="s3warning">
+Read the contract carefully before signing. Keep a copy of the signed agreement.
+</span>
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s4title">💶 Deposit and Payments</h2>
+
+<p id="s4p1">
+Landlords may request a security deposit. The amount and conditions should be agreed before payment.
+</p>
+
+<ul>
+<li id="s4li1">Ask for a receipt or proof of payment.</li>
+<li id="s4li2">Keep records of rent payments.</li>
+<li id="s4li3">Clarify when the deposit will be returned.</li>
+<li id="s4li4">Check whether unpaid bills can be deducted from the deposit.</li>
+</ul>
+
+<div class="warning">
+<strong id="s4strong">Be careful:</strong>
+<span id="s4warning">
+Do not transfer a large amount of money without verifying the property and the person receiving the payment.
+</span>
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s5title">💡 Utilities and Bills</h2>
+
+<p id="s5p1">
+Housing costs can include electricity, water, heating, gas, internet, building charges and other services.
+</p>
+
+<h3 id="s5h3">Before moving in</h3>
+
+<ul>
+<li id="s5li1">Ask which bills are included in the rent.</li>
+<li id="s5li2">Ask which bills must be paid separately.</li>
+<li id="s5li3">Check the condition and meter readings when appropriate.</li>
+<li id="s5li4">Keep copies of important bills and payments.</li>
+</ul>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s6title">📍 Address Registration</h2>
+
+<p id="s6p1">
+Foreigners staying in Croatia may have obligations related to reporting or registering their address depending on their residence and stay status.
+</p>
+
+<p id="s6p2">
+If you need to register your address for residence purposes, check the current requirements with the competent police administration or police station.
+</p>
+
+<div class="info">
+<strong id="s6strong">Important:</strong>
+<span id="s6info">
+Do not assume that signing a rental contract automatically completes any required residence registration.
+</span>
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s7title">🛋️ Moving Into a New Home</h2>
+
+<p id="s7p">
+Before moving your belongings into the apartment, check the condition of the property.
+</p>
+
+<ul>
+<li id="s7li1">Take photos of existing damage.</li>
+<li id="s7li2">Check furniture and appliances.</li>
+<li id="s7li3">Check electricity, water and heating.</li>
+<li id="s7li4">Check keys and access cards.</li>
+<li id="s7li5">Keep copies of important documents.</li>
+</ul>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s8title">⚠️ Common Problems</h2>
+
+<ul>
+<li id="s8li1">Unexpected additional charges</li>
+<li id="s8li2">Unclear deposit conditions</li>
+<li id="s8li3">No written rental agreement</li>
+<li id="s8li4">Problems with utilities</li>
+<li id="s8li5">Disagreement about property damage</li>
+<li id="s8li6">Unclear address-registration responsibilities</li>
+</ul>
+
+<div class="danger">
+<strong id="s8strong">If there is a serious dispute:</strong>
+<span id="s8danger">
+Keep documents, payment records, messages and photographs. Consider obtaining appropriate legal or professional advice.
+</span>
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s9title">🌍 Housing for Foreign Workers</h2>
+
+<p id="s9p1">
+If accommodation is provided by an employer, carefully check whether it is free, deducted from salary or subject to a separate agreement.
+</p>
+
+<ul>
+<li id="s9li1">Ask where the accommodation is located.</li>
+<li id="s9li2">Ask how many people share the accommodation.</li>
+<li id="s9li3">Ask whether utilities are included.</li>
+<li id="s9li4">Ask whether accommodation costs are deducted from salary.</li>
+<li id="s9li5">Keep written information about the accommodation arrangement.</li>
+</ul>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s10title">🔗 Official Information</h2>
+
+<p id="s10p">
+For residence and address-registration matters, use official Croatian government and police sources.
+</p>
+
+<div class="links">
+
+<a href="https://mup.gov.hr/" target="_blank" rel="noopener">
+MUP
+</a>
+
+<a href="https://gov.hr/" target="_blank" rel="noopener">
+gov.hr
+</a>
+
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s11title">⚠️ Important Disclaimer</h2>
+
+<p id="s11p1">
+CROPATH provides general information and practical guidance. It is not a government website and does not replace professional legal, immigration, housing or other professional advice.
+</p>
+
+<p id="s11p2">
+Housing rules, rental conditions and residence procedures can change. Always check official sources for your individual situation.
+</p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="footer-inner">
+
+<p>
+<strong>CROPATH</strong> —
+<span id="footerTitle">
+Your Path to Living and Working in Croatia
+</span>
+</p>
+
+<p id="footerText">
+General information and practical guidance for foreigners in Croatia.
+</p>
+
+<p id="footerDate">
+Last verified: 7 October 2026
+</p>
+
+</div>
+
+</footer>
+
+
+<script>
+
+const translations = {
+
+en:{
+backHome:"← Back to Home",
+badge:"🇭🇷 Housing Information Guide",
+pageTitle:"Housing in Croatia",
+heroText:"Practical information about renting a home, contracts, deposits, address registration and common housing issues in Croatia.",
+verified:"✓ Information checked: 7 October 2026",
+
+s1title:"🏠 Finding a Home",
+s1p1:"Foreigners in Croatia can find accommodation through property websites, real-estate agencies, local advertisements and personal contacts.",
+s1p2:"Before paying money or signing an agreement, check the property, landlord and rental conditions carefully.",
+s1strong:"Tip:",
+s1info:"Always visit the property or verify the accommodation before making a significant payment.",
+
+s2title:"🔑 Renting an Apartment",
+s2p1:"When renting a home, discuss the monthly rent, deposit, utilities, contract period and notice period before moving in.",
+s2h3:"Check these points",
+s2li1:"Monthly rent amount",
+s2li2:"Security deposit",
+s2li3:"Utility and service costs",
+s2li4:"Contract duration",
+s2li5:"Notice period",
+s2li6:"Furniture and equipment included",
+
+s3title:"📄 Rental Contract",
+s3p1:"A written rental agreement is important because it records the conditions agreed between the landlord and tenant.",
+s3h3:"The contract should clearly state",
+s3li1:"Landlord and tenant information",
+s3li2:"Property address",
+s3li3:"Monthly rent",
+s3li4:"Deposit amount",
+s3li5:"Payment arrangements",
+s3li6:"Contract period",
+s3li7:"Termination or notice conditions",
+s3strong:"Important:",
+s3warning:"Read the contract carefully before signing. Keep a copy of the signed agreement.",
+
+s4title:"💶 Deposit and Payments",
+s4p1:"Landlords may request a security deposit. The amount and conditions should be agreed before payment.",
+s4li1:"Ask for a receipt or proof of payment.",
+s4li2:"Keep records of rent payments.",
+s4li3:"Clarify when the deposit will be returned.",
+s4li4:"Check whether unpaid bills can be deducted from the deposit.",
+s4strong:"Be careful:",
+s4warning:"Do not transfer a large amount of money without verifying the property and the person receiving the payment.",
+
+s5title:"💡 Utilities and Bills",
+s5p1:"Housing costs can include electricity, water, heating, gas, internet, building charges and other services.",
+s5h3:"Before moving in",
+s5li1:"Ask which bills are included in the rent.",
+s5li2:"Ask which bills must be paid separately.",
+s5li3:"Check the condition and meter readings when appropriate.",
+s5li4:"Keep copies of important bills and payments.",
+
+s6title:"📍 Address Registration",
+s6p1:"Foreigners staying in Croatia may have obligations related to reporting or registering their address depending on their residence and stay status.",
+s6p2:"If you need to register your address for residence purposes, check the current requirements with the competent police administration or police station.",
+s6strong:"Important:",
+s6info:"Do not assume that signing a rental contract automatically completes any required residence registration.",
+
+s7title:"🛋️ Moving Into a New Home",
+s7p:"Before moving your belongings into the apartment, check the condition of the property.",
+s7li1:"Take photos of existing damage.",
+s7li2:"Check furniture and appliances.",
+s7li3:"Check electricity, water and heating.",
+s7li4:"Check keys and access cards.",
+s7li5:"Keep copies of important documents.",
+
+s8title:"⚠️ Common Problems",
+s8li1:"Unexpected additional charges",
+s8li2:"Unclear deposit conditions",
+s8li3:"No written rental agreement",
+s8li4:"Problems with utilities",
+s8li5:"Disagreement about property damage",
+s8li6:"Unclear address-registration responsibilities",
+s8strong:"If there is a serious dispute:",
+s8danger:"Keep documents, payment records, messages and photographs. Consider obtaining appropriate legal or professional advice.",
+
+s9title:"🌍 Housing for Foreign Workers",
+s9p1:"If accommodation is provided by an employer, carefully check whether it is free, deducted from salary or subject to a separate agreement.",
+s9li1:"Ask where the accommodation is located.",
+s9li2:"Ask how many people share the accommodation.",
+s9li3:"Ask whether utilities are included.",
+s9li4:"Ask whether accommodation costs are deducted from salary.",
+s9li5:"Keep written information about the accommodation arrangement.",
+
+s10title:"🔗 Official Information",
+s10p:"For residence and address-registration matters, use official Croatian government and police sources.",
+
+s11title:"⚠️ Important Disclaimer",
+s11p1:"CROPATH provides general information and practical guidance. It is not a government website and does not replace professional legal, immigration, housing or other professional advice.",
+s11p2:"Housing rules, rental conditions and residence procedures can change. Always check official sources for your individual situation.",
+
+footerTitle:"Your Path to Living and Working in Croatia",
+footerText:"General information and practical guidance for foreigners in Croatia.",
+footerDate:"Last verified: 7 October 2026"
+},
+
+ml:{
+backHome:"← ഹോം പേജിലേക്ക്",
+badge:"🇭🇷 താമസ സൗകര്യ വിവര ഗൈഡ്",
+pageTitle:"ക്രൊയേഷ്യയിലെ താമസം",
+heroText:"വീട് വാടകയ്ക്ക് എടുക്കൽ, കരാർ, ഡെപ്പോസിറ്റ്, വിലാസ രജിസ്ട്രേഷൻ, സാധാരണ ഹൗസിംഗ് പ്രശ്നങ്ങൾ എന്നിവയെക്കുറിച്ചുള്ള പ്രായോഗിക വിവരങ്ങൾ.",
+verified:"✓ വിവരങ്ങൾ പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026",
+
+s1title:"🏠 വീട് കണ്ടെത്തൽ",
+s1p1:"ക്രൊയേഷ്യയിൽ വിദേശികൾക്ക് property websites, real-estate agencies, local advertisements, personal contacts എന്നിവ വഴി താമസസ്ഥലം കണ്ടെത്താം.",
+s1p2:"പണം നൽകുന്നതിനോ കരാറിൽ ഒപ്പിടുന്നതിനോ മുമ്പ് വീട്, landlord, വാടക നിബന്ധനകൾ എന്നിവ ശ്രദ്ധാപൂർവ്വം പരിശോധിക്കുക.",
+s1strong:"ടിപ്പ്:",
+s1info:"വലിയ തുക നൽകുന്നതിന് മുമ്പ് വീട് നേരിട്ട് കാണുകയോ താമസസ്ഥലം ശരിയാണെന്ന് ഉറപ്പാക്കുകയോ ചെയ്യുക.",
+
+s2title:"🔑 Apartment വാടകയ്ക്ക് എടുക്കൽ",
+s2p1:"വീട് വാടകയ്ക്ക് എടുക്കുമ്പോൾ monthly rent, deposit, utilities, contract period, notice period എന്നിവ മുൻകൂട്ടി വ്യക്തമായി സംസാരിക്കുക.",
+s2h3:"ഇവ പരിശോധിക്കുക",
+s2li1:"മാസ വാടക",
+s2li2:"Security deposit",
+s2li3:"Utility, service ചെലവുകൾ",
+s2li4:"കരാറിന്റെ കാലാവധി",
+s2li5:"Notice period",
+s2li6:"Furniture, equipment എന്നിവ ഉൾപ്പെടുന്നുണ്ടോ",
+
+s3title:"📄 Rental Contract",
+s3p1:"Landlord-നും tenant-നും തമ്മിലുള്ള നിബന്ധനകൾ രേഖപ്പെടുത്തുന്നതിനാൽ written rental agreement വളരെ പ്രധാനമാണ്.",
+s3h3:"കരാറിൽ വ്യക്തമായി ഉണ്ടായിരിക്കേണ്ടത്",
+s3li1:"Landlord, tenant വിവരങ്ങൾ",
+s3li2:"വീടിന്റെ വിലാസം",
+s3li3:"മാസ വാടക",
+s3li4:"Deposit തുക",
+s3li5:"Payment നിബന്ധനകൾ",
+s3li6:"കരാർ കാലാവധി",
+s3li7:"Termination / notice നിബന്ധനകൾ",
+s3strong:"പ്രധാനപ്പെട്ടത്:",
+s3warning:"ഒപ്പിടുന്നതിന് മുമ്പ് കരാർ ശ്രദ്ധാപൂർവ്വം വായിക്കുക. Signed copy സൂക്ഷിക്കുക.",
+
+s4title:"💶 Deposit & Payments",
+s4p1:"Landlord security deposit ആവശ്യപ്പെടാം. തുകയും നിബന്ധനകളും പണം നൽകുന്നതിന് മുമ്പ് വ്യക്തമായിരിക്കണം.",
+s4li1:"Receipt അല്ലെങ്കിൽ payment proof ചോദിക്കുക.",
+s4li2:"Rent payments രേഖകൾ സൂക്ഷിക്കുക.",
+s4li3:"Deposit എപ്പോൾ തിരികെ ലഭിക്കും എന്ന് ചോദിക്കുക.",
+s4li4:"Unpaid bills deposit-ൽ നിന്ന് കുറയ്ക്കുമോ എന്ന് ചോദിക്കുക.",
+s4strong:"ശ്രദ്ധിക്കുക:",
+s4warning:"വീട്, പണം സ്വീകരിക്കുന്ന വ്യക്തി എന്നിവ ഉറപ്പാക്കാതെ വലിയ തുക transfer ചെയ്യരുത്.",
+
+s5title:"💡 Utilities & Bills",
+s5p1:"Electricity, water, heating, gas, internet, building charges തുടങ്ങിയവ housing costs-ൽ ഉൾപ്പെടാം.",
+s5h3:"വീട്ടിലേക്ക് മാറുന്നതിന് മുമ്പ്",
+s5li1:"ഏത് bills rent-ൽ ഉൾപ്പെടുന്നു എന്ന് ചോദിക്കുക.",
+s5li2:"ഏത് bills വേറെ അടയ്ക്കണം എന്ന് ചോദിക്കുക.",
+s5li3:"ആവശ്യമായാൽ meter readings പരിശോധിക്കുക.",
+s5li4:"പ്രധാന bills, payments എന്നിവയുടെ copies സൂക്ഷിക്കുക.",
+
+s6title:"📍 വിലാസ രജിസ്ട്രേഷൻ",
+s6p1:"ക്രൊയേഷ്യയിൽ താമസിക്കുന്ന വിദേശികൾക്ക് അവരുടെ residence/stay status അനുസരിച്ച് വിലാസം report/register ചെയ്യേണ്ട ബാധ്യത ഉണ്ടായേക്കാം.",
+s6p2:"Residence ആവശ്യത്തിനായി വിലാസം രജിസ്റ്റർ ചെയ്യേണ്ടതുണ്ടെങ്കിൽ ബന്ധപ്പെട്ട police administration അല്ലെങ്കിൽ police station-ൽ നിലവിലെ ആവശ്യകതകൾ പരിശോധിക്കുക.",
+s6strong:"പ്രധാനപ്പെട്ടത്:",
+s6info:"Rental contract ഒപ്പിട്ടാൽ മാത്രം ആവശ്യമായ residence registration പൂർത്തിയായെന്ന് കരുതരുത്.",
+
+s7title:"🛋️ പുതിയ വീട്ടിലേക്ക് മാറുമ്പോൾ",
+s7p:"വീട്ടിലേക്ക് സാധനങ്ങൾ കൊണ്ടുവരുന്നതിന് മുമ്പ് property condition പരിശോധിക്കുക.",
+s7li1:"നിലവിലുള്ള damage-ന്റെ photos എടുക്കുക.",
+s7li2:"Furniture, appliances പരിശോധിക്കുക.",
+s7li3:"Electricity, water, heating പരിശോധിക്കുക.",
+s7li4:"Keys, access cards പരിശോധിക്കുക.",
+s7li5:"പ്രധാന documents-ന്റെ copies സൂക്ഷിക്കുക.",
+
+s8title:"⚠️ സാധാരണ പ്രശ്നങ്ങൾ",
+s8li1:"Unexpected additional charges",
+s8li2:"വ്യക്തമല്ലാത്ത deposit നിബന്ധനകൾ",
+s8li3:"Written rental agreement ഇല്ലാത്തത്",
+s8li4:"Utilities സംബന്ധിച്ച പ്രശ്നങ്ങൾ",
+s8li5:"Property damage സംബന്ധിച്ച തർക്കം",
+s8li6:"Address registration ആരുടെ ഉത്തരവാദിത്വമാണെന്ന് വ്യക്തമല്ലാത്തത്",
+s8strong:"ഗുരുതരമായ തർക്കമുണ്ടെങ്കിൽ:",
+s8danger:"Documents, payment records, messages, photographs എന്നിവ സൂക്ഷിക്കുക. ആവശ്യമായാൽ legal/professional advice തേടുക.",
+
+s9title:"🌍 വിദേശ തൊഴിലാളികൾക്കുള്ള താമസം",
+s9p1:"Employer accommodation നൽകുന്നുണ്ടെങ്കിൽ അത് free ആണോ, salary-ൽ നിന്ന് deduct ചെയ്യുന്നുണ്ടോ, separate agreement ആണോ എന്ന് വ്യക്തമായി പരിശോധിക്കുക.",
+s9li1:"Accommodation എവിടെയാണെന്ന് ചോദിക്കുക.",
+s9li2:"എത്ര പേർ ഒരുമിച്ച് താമസിക്കും എന്ന് ചോദിക്കുക.",
+s9li3:"Utilities ഉൾപ്പെടുന്നുണ്ടോ എന്ന് ചോദിക്കുക.",
+s9li4:"Accommodation cost salary-ൽ നിന്ന് deduct ചെയ്യുന്നുണ്ടോ എന്ന് ചോദിക്കുക.",
+s9li5:"Accommodation arrangement സംബന്ധിച്ച written information സൂക്ഷിക്കുക.",
+
+s10title:"🔗 ഔദ്യോഗിക വിവരങ്ങൾ",
+s10p:"Residence, address registration സംബന്ധിച്ച കാര്യങ്ങൾക്ക് Croatian government, police official sources ഉപയോഗിക്കുക.",
+
+s11title:"⚠️ പ്രധാന അറിയിപ്പ്",
+s11p1:"CROPATH പൊതുവായ വിവരങ്ങളും പ്രായോഗിക മാർഗനിർദ്ദേശങ്ങളും നൽകുന്നു. ഇത് സർക്കാർ വെബ്സൈറ്റ് അല്ല, professional legal, immigration, housing advice-ന് പകരമല്ല.",
+s11p2:"Housing rules, rental conditions, residence procedures എന്നിവ മാറാം. നിങ്ങളുടെ സാഹചര്യത്തിന് ഔദ്യോഗിക sources പരിശോധിക്കുക.",
+
+footerTitle:"ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനുമുള്ള നിങ്ങളുടെ വഴി",
+footerText:"ക്രൊയേഷ്യയിലെ വിദേശികൾക്കായുള്ള പൊതുവായ വിവരങ്ങളും പ്രായോഗിക മാർഗനിർദ്ദേശങ്ങളും.",
+footerDate:"അവസാനം പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026"
+},
+
+hi:{
+backHome:"← होम पर वापस जाएँ",
+badge:"🇭🇷 आवास जानकारी गाइड",
+pageTitle:"क्रोएशिया में आवास",
+heroText:"घर किराए पर लेने, अनुबंध, जमा राशि, पता पंजीकरण और सामान्य आवास समस्याओं के बारे में व्यावहारिक जानकारी।",
+verified:"✓ जानकारी जाँची गई: 7 अक्टूबर 2026",
+
+s1title:"🏠 घर ढूँढना",
+s1p1:"क्रोएशिया में विदेशी लोग property websites, real-estate agencies, स्थानीय विज्ञापनों और व्यक्तिगत संपर्कों के माध्यम से घर ढूँढ सकते हैं।",
+s1p2:"पैसे देने या अनुबंध पर हस्ताक्षर करने से पहले घर, landlord और rental conditions को ध्यान से जाँचें.",
+s1strong:"सुझाव:",
+s1info:"बड़ी राशि देने से पहले property को देखें या accommodation की पुष्टि करें।",
+
+s2title:"🔑 Apartment किराए पर लेना",
+s2p1:"घर किराए पर लेते समय monthly rent, deposit, utilities, contract period और notice period पहले स्पष्ट करें।",
+s2h3:"इन चीज़ों की जाँच करें",
+s2li1:"मासिक किराया",
+s2li2:"Security deposit",
+s2li3:"Utility और service costs",
+s2li4:"Contract duration",
+s2li5:"Notice period",
+s2li6:"Furniture और equipment",
+
+s3title:"📄 Rental Contract",
+s3p1:"Written rental agreement landlord और tenant के बीच सहमति की शर्तों को रिकॉर्ड करता है।",
+s3h3:"अनुबंध में होना चाहिए",
+s3li1:"Landlord और tenant की जानकारी",
+s3li2:"Property address",
+s3li3:"Monthly rent",
+s3li4:"Deposit amount",
+s3li5:"Payment arrangements",
+s3li6:"Contract period",
+s3li7:"Termination / notice conditions",
+s3strong:"महत्वपूर्ण:",
+s3warning:"हस्ताक्षर करने से पहले अनुबंध ध्यान से पढ़ें और signed copy रखें।",
+
+s4title:"💶 Deposit और Payments",
+s4p1:"Landlord security deposit माँग सकता है। राशि और conditions पहले तय करें।",
+s4li1:"Receipt या payment proof माँगें।",
+s4li2:"Rent payments का रिकॉर्ड रखें।",
+s4li3:"Deposit कब वापस मिलेगा पूछें।",
+s4li4:"Unpaid bills deposit से काटे जाएँगे या नहीं पूछें।",
+s4strong:"सावधान:",
+s4warning:"Property और payment receiver की पुष्टि किए बिना बड़ी राशि transfer न करें।",
+
+s5title:"💡 Utilities और Bills",
+s5p1:"Electricity, water, heating, gas, internet और building charges housing costs में शामिल हो सकते हैं।",
+s5h3:"घर में जाने से पहले",
+s5li1:"पूछें कौन से bills rent में शामिल हैं।",
+s5li2:"पूछें कौन से bills अलग से देने हैं।",
+s5li3:"ज़रूरत हो तो meter readings जाँचें।",
+s5li4:"महत्वपूर्ण bills और payments की copies रखें।",
+
+s6title:"📍 पता पंजीकरण",
+s6p1:"क्रोएशिया में रहने वाले विदेशियों पर उनके residence/stay status के अनुसार address reporting या registration की जिम्मेदारी हो सकती है।",
+s6p2:"Residence के लिए address register करना हो तो competent police administration या police station से current requirements जाँचें।",
+s6strong:"महत्वपूर्ण:",
+s6info:"Rental contract sign करने से यह जरूरी नहीं कि residence registration अपने आप पूरा हो गया हो।",
+
+s7title:"🛋️ नए घर में जाना",
+s7p:"सामान ले जाने से पहले property की condition जाँचें।",
+s7li1:"Existing damage की photos लें।",
+s7li2:"Furniture और appliances जाँचें।",
+s7li3:"Electricity, water और heating जाँचें।",
+s7li4:"Keys और access cards जाँचें।",
+s7li5:"Important documents की copies रखें।",
+
+s8title:"⚠️ सामान्य समस्याएँ",
+s8li1:"Unexpected additional charges",
+s8li2:"Unclear deposit conditions",
+s8li3:"Written rental agreement नहीं होना",
+s8li4:"Utilities की समस्याएँ",
+s8li5:"Property damage पर विवाद",
+s8li6:"Address registration responsibility अस्पष्ट होना",
+s8strong:"गंभीर विवाद होने पर:",
+s8danger:"Documents, payment records, messages और photos सुरक्षित रखें। जरूरत होने पर legal/professional advice लें।",
+
+s9title:"🌍 विदेशी कर्मचारियों के लिए आवास",
+s9p1:"यदि employer accommodation देता है, तो जाँचें कि यह free है, salary से deduct होता है या separate agreement है।",
+s9li1:"Accommodation कहाँ है पूछें।",
+s9li2:"कितने लोग साथ रहेंगे पूछें।",
+s9li3:"Utilities शामिल हैं या नहीं पूछें।",
+s9li4:"Accommodation cost salary से deduct होती है या नहीं पूछें।",
+s9li5:"Accommodation arrangement की written information रखें।",
+
+s10title:"🔗 आधिकारिक जानकारी",
+s10p:"Residence और address registration के लिए Croatian government और police official sources का उपयोग करें।",
+
+s11title:"⚠️ महत्वपूर्ण Disclaimer",
+s11p1:"CROPATH सामान्य जानकारी और व्यावहारिक मार्गदर्शन देता है। यह सरकारी वेबसाइट नहीं है और professional legal, immigration या housing advice का विकल्प नहीं है।",
+s11p2:"Housing rules और residence procedures बदल सकते हैं। अपनी स्थिति के लिए official sources जाँचें।",
+
+footerTitle:"क्रोएशिया में रहने और काम करने का आपका मार्ग",
+footerText:"क्रोएशिया में विदेशियों के लिए सामान्य जानकारी और व्यावहारिक मार्गदर्शन।",
+footerDate:"अंतिम जाँच: 7 अक्टूबर 2026"
+},
+
+ne:{
+backHome:"← गृह पृष्ठमा फर्कनुहोस्",
+badge:"🇭🇷 आवास जानकारी गाइड",
+pageTitle:"क्रोएसियामा आवास",
+heroText:"घर भाडामा लिने, सम्झौता, डिपोजिट, ठेगाना दर्ता र सामान्य आवास समस्याबारे व्यावहारिक जानकारी।",
+verified:"✓ जानकारी जाँच गरिएको: ७ अक्टोबर २०२६",
+
+s1title:"🏠 घर खोज्ने",
+s1p1:"क्रोएसियामा विदेशीहरूले property websites, real-estate agencies, स्थानीय विज्ञापन र व्यक्तिगत सम्पर्कमार्फत आवास खोज्न सक्छन्।",
+s1p2:"पैसा तिर्नुअघि वा सम्झौतामा हस्ताक्षर गर्नुअघि घर, landlord र rental conditions ध्यानपूर्वक जाँच गर्नुहोस्।",
+s1strong:"सुझाव:",
+s1info:"ठूलो रकम तिर्नुअघि property हेर्नुहोस् वा accommodation प्रमाणित गर्नुहोस्।",
+
+s2title:"🔑 Apartment भाडामा लिने",
+s2p1:"घर भाडामा लिँदा monthly rent, deposit, utilities, contract period र notice period पहिले स्पष्ट गर्नुहोस्।",
+s2h3:"यी कुरा जाँच गर्नुहोस्",
+s2li1:"मासिक भाडा",
+s2li2:"Security deposit",
+s2li3:"Utility र service costs",
+s2li4:"Contract duration",
+s2li5:"Notice period",
+s2li6:"Furniture र equipment",
+
+s3title:"📄 Rental Contract",
+s3p1:"Written rental agreement ले landlord र tenant बीचको सहमति र शर्तहरू स्पष्ट गर्छ।",
+s3h3:"सम्झौतामा स्पष्ट हुनुपर्ने कुरा",
+s3li1:"Landlord र tenant जानकारी",
+s3li2:"Property address",
+s3li3:"Monthly rent",
+s3li4:"Deposit amount",
+s3li5:"Payment arrangements",
+s3li6:"Contract period",
+s3li7:"Termination / notice conditions",
+s3strong:"महत्त्वपूर्ण:",
+s3warning:"हस्ताक्षर गर्नुअघि सम्झौता ध्यानपूर्वक पढ्नुहोस् र signed copy राख्नुहोस्।",
+
+s4title:"💶 Deposit र Payments",
+s4p1:"Landlord ले security deposit माग्न सक्छ। रकम र conditions पहिले तय गर्नुहोस्।",
+s4li1:"Receipt वा payment proof माग्नुहोस्।",
+s4li2:"Rent payment records राख्नुहोस्।",
+s4li3:"Deposit कहिले फिर्ता हुन्छ सोध्नुहोस्।",
+s4li4:"Unpaid bills deposit बाट काटिन्छ कि छैन सोध्नुहोस्।",
+s4strong:"सावधान:",
+s4warning:"Property र पैसा लिने व्यक्तिको पुष्टि नगरी ठूलो रकम transfer नगर्नुहोस्।",
+
+s5title:"💡 Utilities र Bills",
+s5p1:"Electricity, water, heating, gas, internet र building charges housing costs मा पर्न सक्छन्।",
+s5h3:"सर्नुअघि",
+s5li1:"कुन bills rent मा समावेश छन् सोध्नुहोस्।",
+s5li2:"कुन bills अलगै तिर्नुपर्छ सोध्नुहोस्।",
+s5li3:"आवश्यक भए meter readings जाँच गर्नुहोस्।",
+s5li4:"महत्त्वपूर्ण bills र payments का copies राख्नुहोस्।",
+
+s6title:"📍 ठेगाना दर्ता",
+s6p1:"क्रोएसियामा बस्ने विदेशीहरूको residence/stay status अनुसार address reporting वा registration सम्बन्धी जिम्मेवारी हुन सक्छ।",
+s6p2:"Residence का लागि address register गर्नुपरेमा competent police administration वा police station मा हालका requirements जाँच गर्नुहोस्।",
+s6strong:"महत्त्वपूर्ण:",
+s6info:"Rental contract मा हस्ताक्षर गर्दैमा residence registration स्वतः पूरा हुन्छ भनेर नमान्नुहोस्।",
+
+s7title:"🛋️ नयाँ घरमा सर्दा",
+s7p:"सामान सार्नुअघि property को अवस्था जाँच गर्नुहोस्।",
+s7li1:"Existing damage का photos लिनुहोस्।",
+s7li2:"Furniture र appliances जाँच गर्नुहोस्।",
+s7li3:"Electricity, water र heating जाँच गर्नुहोस्।",
+s7li4:"Keys र access cards जाँच गर्नुहोस्।",
+s7li5:"महत्त्वपूर्ण documents का copies राख्नुहोस्।",
+
+s8title:"⚠️ सामान्य समस्याहरू",
+s8li1:"Unexpected additional charges",
+s8li2:"Unclear deposit conditions",
+s8li3:"Written rental agreement नहुनु",
+s8li4:"Utilities समस्या",
+s8li5:"Property damage सम्बन्धी विवाद",
+s8li6:"Address registration responsibility स्पष्ट नहुनु",
+s8strong:"गम्भीर विवाद भए:",
+s8danger:"Documents, payment records, messages र photos सुरक्षित राख्नुहोस्। आवश्यक भए legal/professional advice लिनुहोस्।",
+
+s9title:"🌍 विदेशी कामदारका लागि आवास",
+s9p1:"Employer ले accommodation दिएमा यो free हो कि salary बाट deduct हुन्छ वा separate agreement हो भनेर स्पष्ट जाँच गर्नुहोस्।",
+s9li1:"Accommodation कहाँ छ सोध्नुहोस्।",
+s9li2:"कति जना सँगै बस्छन् सोध्नुहोस्।",
+s9li3:"Utilities समावेश छन् कि छैनन् सोध्नुहोस्।",
+s9li4:"Accommodation cost salary बाट deduct हुन्छ कि हुँदैन सोध्नुहोस्।",
+s9li5:"Accommodation arrangement को written information राख्नुहोस्।",
+
+s10title:"🔗 आधिकारिक जानकारी",
+s10p:"Residence र address registration का लागि Croatian government र police official sources प्रयोग गर्नुहोस्।",
+
+s11title:"⚠️ महत्त्वपूर्ण Disclaimer",
+s11p1:"CROPATH ले सामान्य जानकारी र व्यावहारिक मार्गदर्शन दिन्छ। यो सरकारी वेबसाइट होइन र professional legal, immigration वा housing advice को विकल्प होइन।",
+s11p2:"Housing rules र residence procedures परिवर्तन हुन सक्छन्। आफ्नो अवस्थाका लागि official sources जाँच गर्नुहोस्।",
+
+footerTitle:"क्रोएसियामा बस्ने र काम गर्ने तपाईंको बाटो",
+footerText:"क्रोएसियामा विदेशीहरूका लागि सामान्य जानकारी र व्यावहारिक मार्गदर्शन।",
+footerDate:"अन्तिम जाँच: ७ अक्टोबर २०२६"
+},
+
+ta:{
+backHome:"← முகப்புக்குத் திரும்பு",
+badge:"🇭🇷 வீட்டு தகவல் வழிகாட்டி",
+pageTitle:"குரோஷியாவில் வீடு",
+heroText:"வீடு வாடகைக்கு எடுப்பது, ஒப்பந்தம், டெபாசிட், முகவரி பதிவு மற்றும் பொதுவான வீட்டு பிரச்சினைகள் பற்றிய நடைமுறை தகவல்கள்.",
+verified:"✓ தகவல் சரிபார்க்கப்பட்டது: 7 அக்டோபர் 2026",
+
+s1title:"🏠 வீடு தேடுதல்",
+s1p1:"குரோஷியாவில் வெளிநாட்டவர்கள் property websites, real-estate agencies, உள்ளூர் விளம்பரங்கள் மற்றும் தனிப்பட்ட தொடர்புகள் மூலம் வீடு தேடலாம்.",
+s1p2:"பணம் செலுத்துவதற்கு அல்லது ஒப்பந்தத்தில் கையெழுத்திடுவதற்கு முன் வீடு மற்றும் landlord நிபந்தனைகளை சரிபார்க்கவும்.",
+s1strong:"ஆலோசனை:",
+s1info:"பெரிய தொகை செலுத்துவதற்கு முன் property-ஐ நேரில் பார்க்கவும் அல்லது accommodation-ஐ உறுதி செய்யவும்.",
+
+s2title:"🔑 Apartment வாடகைக்கு எடுப்பது",
+s2p1:"வீடு வாடகைக்கு எடுக்கும்போது monthly rent, deposit, utilities, contract period மற்றும் notice period ஆகியவற்றை முன்கூட்டியே தெளிவுபடுத்தவும்.",
+s2h3:"இவற்றை சரிபார்க்கவும்",
+s2li1:"மாத வாடகை",
+s2li2:"Security deposit",
+s2li3:"Utility மற்றும் service செலவுகள்",
+s2li4:"Contract duration",
+s2li5:"Notice period",
+s2li6:"Furniture மற்றும் equipment",
+
+s3title:"📄 Rental Contract",
+s3p1:"Written rental agreement landlord மற்றும் tenant இடையிலான ஒப்பந்த நிபந்தனைகளை பதிவு செய்கிறது.",
+s3h3:"ஒப்பந்தத்தில் இருக்க வேண்டியது",
+s3li1:"Landlord மற்றும் tenant தகவல்",
+s3li2:"Property address",
+s3li3:"Monthly rent",
+s3li4:"Deposit amount",
+s3li5:"Payment arrangements",
+s3li6:"Contract period",
+s3li7:"Termination / notice conditions",
+s3strong:"முக்கியம்:",
+s3warning:"கையெழுத்திடுவதற்கு முன் ஒப்பந்தத்தை கவனமாக படித்து signed copy வைத்திருக்கவும்.",
+
+s4title:"💶 Deposit மற்றும் Payments",
+s4p1:"Landlord security deposit கேட்கலாம். தொகை மற்றும் நிபந்தனைகளை முன்கூட்டியே ஒப்புக்கொள்ளவும்.",
+s4li1:"Receipt அல்லது payment proof கேட்கவும்.",
+s4li2:"Rent payment records வைத்திருக்கவும்.",
+s4li3:"Deposit எப்போது திரும்பும் என்று கேட்கவும்.",
+s4li4:"Unpaid bills deposit-ல் இருந்து கழிக்கப்படுமா என்று கேட்கவும்.",
+s4strong:"கவனம்:",
+s4warning:"Property மற்றும் பணம் பெறும் நபரை உறுதி செய்யாமல் பெரிய தொகையை transfer செய்ய வேண்டாம்.",
+
+s5title:"💡 Utilities மற்றும் Bills",
+s5p1:"Electricity, water, heating, gas, internet மற்றும் building charges housing costs-ல் இருக்கலாம்.",
+s5h3:"வீட்டுக்கு செல்லும் முன்",
+s5li1:"எந்த bills rent-ல் சேர்க்கப்பட்டுள்ளன என்று கேட்கவும்.",
+s5li2:"எந்த bills தனியாக செலுத்த வேண்டும் என்று கேட்கவும்.",
+s5li3:"தேவைப்பட்டால் meter readings சரிபார்க்கவும்.",
+s5li4:"முக்கிய bills மற்றும் payments copies வைத்திருக்கவும்.",
+
+s6title:"📍 முகவரி பதிவு",
+s6p1:"குரோஷியாவில் வசிக்கும் வெளிநாட்டவர்களுக்கு residence/stay status அடிப்படையில் முகவரி பதிவு அல்லது தகவல் தெரிவிக்கும் பொறுப்பு இருக்கலாம்.",
+s6p2:"Residence காரணமாக address பதிவு செய்ய வேண்டுமெனில் competent police administration அல்லது police station-ல் தற்போதைய requirements சரிபார்க்கவும்.",
+s6strong:"முக்கியம்:",
+s6info:"Rental contract கையெழுத்திட்டால் மட்டும் residence registration தானாக முடிந்துவிடும் என்று நினைக்க வேண்டாம்.",
+
+s7title:"🛋️ புதிய வீட்டிற்கு செல்லும்போது",
+s7p:"பொருட்களை கொண்டு செல்லும் முன் property condition சரிபார்க்கவும்.",
+s7li1:"Existing damage photos எடுக்கவும்.",
+s7li2:"Furniture மற்றும் appliances சரிபார்க்கவும்.",
+s7li3:"Electricity, water மற்றும் heating சரிபார்க்கவும்.",
+s7li4:"Keys மற்றும் access cards சரிபார்க்கவும்.",
+s7li5:"முக்கிய documents copies வைத்திருக்கவும்.",
+
+s8title:"⚠️ பொதுவான பிரச்சினைகள்",
+s8li1:"Unexpected additional charges",
+s8li2:"Unclear deposit conditions",
+s8li3:"Written rental agreement இல்லாதது",
+s8li4:"Utilities பிரச்சினைகள்",
+s8li5:"Property damage தொடர்பான dispute",
+s8li6:"Address registration responsibility தெளிவில்லாதது",
+s8strong:"கடுமையான dispute இருந்தால்:",
+s8danger:"Documents, payment records, messages மற்றும் photographs பாதுகாப்பாக வைத்திருக்கவும். தேவையானால் legal/professional advice பெறவும்.",
+
+s9title:"🌍 வெளிநாட்டு தொழிலாளர்களுக்கான வீடு",
+s9p1:"Employer accommodation வழங்கினால் அது free-ஆ, salary-ல் இருந்து deduct செய்யப்படுகிறதா அல்லது separate agreement-ஆ என்பதை சரிபார்க்கவும்.",
+s9li1:"Accommodation எங்கு உள்ளது என்று கேட்கவும்.",
+s9li2:"எத்தனை பேர் பகிர்ந்து கொள்கிறார்கள் என்று கேட்கவும்.",
+s9li3:"Utilities சேர்க்கப்பட்டுள்ளதா என்று கேட்கவும்.",
+s9li4:"Accommodation cost salary-ல் இருந்து deduct செய்யப்படுகிறதா என்று கேட்கவும்.",
+s9li5:"Accommodation arrangement பற்றிய written information வைத்திருக்கவும்.",
+
+s10title:"🔗 அதிகாரப்பூர்வ தகவல்",
+s10p:"Residence மற்றும் address registration தொடர்பான விஷயங்களுக்கு Croatian government மற்றும் police official sources பயன்படுத்தவும்.",
+
+s11title:"⚠️ முக்கிய Disclaimer",
+s11p1:"CROPATH பொதுவான தகவல் மற்றும் நடைமுறை வழிகாட்டுதலை வழங்குகிறது. இது அரசு இணையதளம் அல்ல.",
+s11p2:"Housing rules மற்றும் residence procedures மாறலாம். உங்கள் நிலைக்கு official sources சரிபார்க்கவும்.",
+
+footerTitle:"குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் பாதை",
+footerText:"குரோஷியாவில் உள்ள வெளிநாட்டவர்களுக்கான பொதுவான தகவல் மற்றும் நடைமுறை வழிகாட்டுதல்.",
+footerDate:"கடைசியாக சரிபார்க்கப்பட்டது: 7 அக்டோபர் 2026"
+},
+
+te:{
+backHome:"← హోమ్‌కు తిరిగి వెళ్లండి",
+badge:"🇭🇷 హౌసింగ్ సమాచార గైడ్",
+pageTitle:"క్రొయేషియాలో నివాసం",
+heroText:"ఇల్లు అద్దెకు తీసుకోవడం, ఒప్పందం, డిపాజిట్, చిరునామా నమోదు మరియు సాధారణ హౌసింగ్ సమస్యల గురించి ప్రాక్టికల్ సమాచారం.",
+verified:"✓ సమాచారం తనిఖీ చేయబడింది: 7 అక్టోబర్ 2026",
+
+s1title:"🏠 ఇల్లు వెతకడం",
+s1p1:"క్రొయేషియాలో విదేశీయులు property websites, real-estate agencies, local advertisements మరియు personal contacts ద్వారా accommodation కనుగొనవచ్చు.",
+s1p2:"డబ్బు చెల్లించే ముందు లేదా agreement sign చేసే ముందు property, landlord మరియు rental conditions జాగ్రత్తగా తనిఖీ చేయండి.",
+s1strong:"చిట్కా:",
+s1info:"పెద్ద మొత్తంలో డబ్బు చెల్లించే ముందు property చూడండి లేదా accommodation verify చేయండి.",
+
+s2title:"🔑 Apartment అద్దెకు తీసుకోవడం",
+s2p1:"ఇల్లు అద్దెకు తీసుకునేటప్పుడు monthly rent, deposit, utilities, contract period మరియు notice period ముందుగానే స్పష్టంగా తెలుసుకోండి.",
+s2h3:"ఇవన్నీ తనిఖీ చేయండి",
+s2li1:"Monthly rent",
+s2li2:"Security deposit",
+s2li3:"Utility మరియు service costs",
+s2li4:"Contract duration",
+s2li5:"Notice period",
+s2li6:"Furniture మరియు equipment",
+
+s3title:"📄 Rental Contract",
+s3p1:"Written rental agreement landlord మరియు tenant మధ్య అంగీకరించిన నిబంధనలను నమోదు చేస్తుంది.",
+s3h3:"Contract లో ఉండాల్సినవి",
+s3li1:"Landlord మరియు tenant సమాచారం",
+s3li2:"Property address",
+s3li3:"Monthly rent",
+s3li4:"Deposit amount",
+s3li5:"Payment arrangements",
+s3li6:"Contract period",
+s3li7:"Termination / notice conditions",
+s3strong:"ముఖ్యమైనది:",
+s3warning:"Sign చేసే ముందు contract జాగ్రత్తగా చదవండి. Signed copy ఉంచుకోండి.",
+
+s4title:"💶 Deposit మరియు Payments",
+s4p1:"Landlord security deposit అడగవచ్చు. Amount మరియు conditions ముందే అంగీకరించండి.",
+s4li1:"Receipt లేదా payment proof అడగండి.",
+s4li2:"Rent payment records ఉంచుకోండి.",
+s4li3:"Deposit ఎప్పుడు తిరిగి వస్తుందో అడగండి.",
+s4li4:"Unpaid bills deposit నుంచి deduct చేస్తారా అడగండి.",
+s4strong:"జాగ్రత్త:",
+s4warning:"Property మరియు payment receiver verify చేయకుండా పెద్ద మొత్తాన్ని transfer చేయవద్దు.",
+
+s5title:"💡 Utilities మరియు Bills",
+s5p1:"Electricity, water, heating, gas, internet మరియు building charges housing costs లో ఉండవచ్చు.",
+s5h3:"Move-in ముందు",
+s5li1:"ఏ bills rent లో included ఉన్నాయో అడగండి.",
+s5li2:"ఏ bills separate గా చెల్లించాలో అడగండి.",
+s5li3:"అవసరమైతే meter readings తనిఖీ చేయండి.",
+s5li4:"ముఖ్యమైన bills మరియు payments copies ఉంచుకోండి.",
+
+s6title:"📍 చిరునామా నమోదు",
+s6p1:"క్రొయేషియాలో ఉండే విదేశీయులకు residence/stay status ఆధారంగా address reporting లేదా registration బాధ్యత ఉండవచ్చు.",
+s6p2:"Residence కోసం address register చేయాల్సి ఉంటే competent police administration లేదా police station వద్ద current requirements తనిఖీ చేయండి.",
+s6strong:"ముఖ్యమైనది:",
+s6info:"Rental contract sign చేసినంత మాత్రాన residence registration పూర్తయిందని అనుకోకండి.",
+
+s7title:"🛋️ కొత్త ఇంటికి మారేటప్పుడు",
+s7p:"సామాను తీసుకురాక ముందు property condition తనిఖీ చేయండి.",
+s7li1:"Existing damage photos తీసుకోండి.",
+s7li2:"Furniture మరియు appliances తనిఖీ చేయండి.",
+s7li3:"Electricity, water మరియు heating తనిఖీ చేయండి.",
+s7li4:"Keys మరియు access cards తనిఖీ చేయండి.",
+s7li5:"ముఖ్యమైన documents copies ఉంచుకోండి.",
+
+s8title:"⚠️ సాధారణ సమస్యలు",
+s8li1:"Unexpected additional charges",
+s8li2:"Unclear deposit conditions",
+s8li3:"Written rental agreement లేకపోవడం",
+s8li4:"Utilities సమస్యలు",
+s8li5:"Property damage పై dispute",
+s8li6:"Address registration responsibility స్పష్టంగా లేకపోవడం",
+s8strong:"Serious dispute ఉంటే:",
+s8danger:"Documents, payment records, messages మరియు photographs ఉంచుకోండి. అవసరమైతే legal/professional advice తీసుకోండి.",
+
+s9title:"🌍 విదేశీ కార్మికుల కోసం హౌసింగ్",
+s9p1:"Employer accommodation ఇస్తే అది freeనా, salary నుంచి deduct అవుతుందా లేదా separate agreementనా అని స్పష్టంగా తనిఖీ చేయండి.",
+s9li1:"Accommodation ఎక్కడ ఉందో అడగండి.",
+s9li2:"ఎంత మంది share చేస్తారో అడగండి.",
+s9li3:"Utilities included ఉన్నాయా అడగండి.",
+s9li4:"Accommodation cost salary నుంచి deduct అవుతుందా అడగండి.",
+s9li5:"Accommodation arrangement యొక్క written information ఉంచుకోండి.",
+
+s10title:"🔗 అధికారిక సమాచారం",
+s10p:"Residence మరియు address registration కోసం Croatian government మరియు police official sources ఉపయోగించండి.",
+
+s11title:"⚠️ ముఖ్యమైన Disclaimer",
+s11p1:"CROPATH సాధారణ సమాచారం మరియు practical guidance అందిస్తుంది. ఇది ప్రభుత్వ వెబ్‌సైట్ కాదు.",
+s11p2:"Housing rules మరియు residence procedures మారవచ్చు. మీ పరిస్థితికి official sources తనిఖీ చేయండి.",
+
+footerTitle:"క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ మార్గం",
+footerText:"క్రొయేషియాలోని విదేశీయుల కోసం సాధారణ సమాచారం మరియు practical guidance.",
+footerDate:"చివరిగా తనిఖీ: 7 అక్టోబర్ 2026"
+},
+
+bn:{
+backHome:"← হোমে ফিরে যান",
+badge:"🇭🇷 আবাসন তথ্য গাইড",
+pageTitle:"ক্রোয়েশিয়ায় আবাসন",
+heroText:"বাড়ি ভাড়া, চুক্তি, ডিপোজিট, ঠিকানা নিবন্ধন এবং সাধারণ আবাসন সমস্যা সম্পর্কে ব্যবহারিক তথ্য।",
+verified:"✓ তথ্য যাচাই করা হয়েছে: ৭ অক্টোবর ২০২৬",
+
+s1title:"🏠 বাড়ি খোঁজা",
+s1p1:"ক্রোয়েশিয়ায় বিদেশিরা property websites, real-estate agencies, স্থানীয় বিজ্ঞাপন এবং ব্যক্তিগত যোগাযোগের মাধ্যমে বাসা খুঁজতে পারেন।",
+s1p2:"টাকা দেওয়ার বা চুক্তিতে স্বাক্ষর করার আগে বাড়ি, landlord এবং rental conditions ভালোভাবে যাচাই করুন।",
+s1strong:"পরামর্শ:",
+s1info:"বড় অঙ্কের টাকা দেওয়ার আগে property দেখে নিন বা accommodation যাচাই করুন।",
+
+s2title:"🔑 Apartment ভাড়া নেওয়া",
+s2p1:"বাড়ি ভাড়া নেওয়ার সময় monthly rent, deposit, utilities, contract period এবং notice period আগে পরিষ্কার করুন।",
+s2h3:"এই বিষয়গুলো যাচাই করুন",
+s2li1:"মাসিক ভাড়া",
+s2li2:"Security deposit",
+s2li3:"Utility ও service costs",
+s2li4:"Contract duration",
+s2li5:"Notice period",
+s2li6:"Furniture ও equipment",
+
+s3title:"📄 Rental Contract",
+s3p1:"Written rental agreement landlord এবং tenant-এর মধ্যে সম্মত শর্তগুলো লিখিতভাবে রাখে।",
+s3h3:"চুক্তিতে থাকা উচিত",
+s3li1:"Landlord ও tenant-এর তথ্য",
+s3li2:"Property address",
+s3li3:"Monthly rent",
+s3li4:"Deposit amount",
+s3li5:"Payment arrangements",
+s3li6:"Contract period",
+s3li7:"Termination / notice conditions",
+s3strong:"গুরুত্বপূর্ণ:",
+s3warning:"স্বাক্ষরের আগে চুক্তি ভালোভাবে পড়ুন এবং signed copy রাখুন।",
+
+s4title:"💶 Deposit ও Payments",
+s4p1:"Landlord security deposit চাইতে পারেন। পরিমাণ ও শর্ত আগে ঠিক করুন।",
+s4li1:"Receipt বা payment proof চান।",
+s4li2:"Rent payment records রাখুন।",
+s4li3:"Deposit কখন ফেরত পাবেন জিজ্ঞাসা করুন।",
+s4li4:"Unpaid bills deposit থেকে কাটা হবে কিনা জিজ্ঞাসা করুন।",
+s4strong:"সতর্ক থাকুন:",
+s4warning:"Property এবং payment receiver যাচাই না করে বড় অঙ্কের টাকা transfer করবেন না।",
+
+s5title:"💡 Utilities ও Bills",
+s5p1:"Electricity, water, heating, gas, internet এবং building charges housing costs-এর অংশ হতে পারে।",
+s5h3:"বাসায় ওঠার আগে",
+s5li1:"কোন bills rent-এর মধ্যে আছে জিজ্ঞাসা করুন।",
+s5li2:"কোন bills আলাদাভাবে দিতে হবে জিজ্ঞাসা করুন।",
+s5li3:"প্রয়োজন হলে meter readings যাচাই করুন।",
+s5li4:"গুরুত্বপূর্ণ bills ও payments-এর copies রাখুন।",
+
+s6title:"📍 ঠিকানা নিবন্ধন",
+s6p1:"ক্রোয়েশিয়ায় থাকা বিদেশিদের residence/stay status অনুযায়ী address reporting বা registration-এর দায়িত্ব থাকতে পারে।",
+s6p2:"Residence-এর জন্য address register করতে হলে competent police administration বা police station-এ current requirements যাচাই করুন।",
+s6strong:"গুরুত্বপূর্ণ:",
+s6info:"Rental contract sign করলেই residence registration স্বয়ংক্রিয়ভাবে সম্পন্ন হয়েছে ধরে নেবেন না।",
+
+s7title:"🛋️ নতুন বাড়িতে ওঠার সময়",
+s7p:"জিনিসপত্র নেওয়ার আগে property-এর condition যাচাই করুন।",
+s7li1:"Existing damage-এর photos নিন।",
+s7li2:"Furniture ও appliances যাচাই করুন।",
+s7li3:"Electricity, water ও heating যাচাই করুন।",
+s7li4:"Keys ও access cards যাচাই করুন।",
+s7li5:"গুরুত্বপূর্ণ documents-এর copies রাখুন।",
+
+s8title:"⚠️ সাধারণ সমস্যা",
+s8li1:"Unexpected additional charges",
+s8li2:"Unclear deposit conditions",
+s8li3:"Written rental agreement না থাকা",
+s8li4:"Utilities সমস্যা",
+s8li5:"Property damage নিয়ে dispute",
+s8li6:"Address registration responsibility পরিষ্কার না থাকা",
+s8strong:"গুরুতর dispute হলে:",
+s8danger:"Documents, payment records, messages এবং photographs রাখুন। প্রয়োজন হলে legal/professional advice নিন।",
+
+s9title:"🌍 বিদেশি কর্মীদের জন্য আবাসন",
+s9p1:"Employer accommodation দিলে এটি free কিনা, salary থেকে deduct হয় কিনা বা separate agreement কিনা যাচাই করুন।",
+s9li1:"Accommodation কোথায় জিজ্ঞাসা করুন।",
+s9li2:"কতজন একসঙ্গে থাকবেন জিজ্ঞাসা করুন।",
+s9li3:"Utilities included কিনা জিজ্ঞাসা করুন।",
+s9li4:"Accommodation cost salary থেকে deduct হয় কিনা জিজ্ঞাসা করুন।",
+s9li5:"Accommodation arrangement-এর written information রাখুন।",
+
+s10title:"🔗 সরকারি তথ্য",
+s10p:"Residence এবং address registration-এর জন্য Croatian government ও police official sources ব্যবহার করুন।",
+
+s11title:"⚠️ গুরুত্বপূর্ণ Disclaimer",
+s11p1:"CROPATH সাধারণ তথ্য ও ব্যবহারিক নির্দেশনা দেয়। এটি সরকারি ওয়েবসাইট নয়।",
+s11p2:"Housing rules এবং residence procedures পরিবর্তিত হতে পারে। আপনার অবস্থার জন্য official sources যাচাই করুন।",
+
+footerTitle:"ক্রোয়েশিয়ায় বসবাস ও কাজের আপনার পথ",
+footerText:"ক্রোয়েশিয়ায় বিদেশিদের জন্য সাধারণ তথ্য ও ব্যবহারিক নির্দেশনা।",
+footerDate:"শেষ যাচাই: ৭ অক্টোবর ২০২৬"
+},
+
+ur:{
+backHome:"← ہوم پر واپس جائیں",
+badge:"🇭🇷 رہائش کی معلومات گائیڈ",
+pageTitle:"کروشیا میں رہائش",
+heroText:"گھر کرائے پر لینے، معاہدے، ڈپازٹ، ایڈریس رجسٹریشن اور عام رہائشی مسائل کے بارے میں عملی معلومات۔",
+verified:"✓ معلومات کی جانچ: 7 اکتوبر 2026",
+
+s1title:"🏠 گھر تلاش کرنا",
+s1p1:"کروشیا میں غیر ملکی property websites، real-estate agencies، مقامی اشتہارات اور ذاتی رابطوں کے ذریعے رہائش تلاش کر سکتے ہیں۔",
+s1p2:"رقم دینے یا معاہدے پر دستخط کرنے سے پہلے property، landlord اور rental conditions کو احتیاط سے چیک کریں۔",
+s1strong:"مشورہ:",
+s1info:"بڑی رقم ادا کرنے سے پہلے property دیکھیں یا accommodation کی تصدیق کریں۔",
+
+s2title:"🔑 Apartment کرائے پر لینا",
+s2p1:"گھر کرائے پر لیتے وقت monthly rent، deposit، utilities، contract period اور notice period پہلے واضح کریں۔",
+s2h3:"یہ چیزیں چیک کریں",
+s2li1:"ماہانہ کرایہ",
+s2li2:"Security deposit",
+s2li3:"Utility اور service costs",
+s2li4:"Contract duration",
+s2li5:"Notice period",
+s2li6:"Furniture اور equipment",
+
+s3title:"📄 Rental Contract",
+s3p1:"Written rental agreement landlord اور tenant کے درمیان طے شدہ شرائط کو واضح کرتا ہے۔",
+s3h3:"معاہدے میں ہونا چاہیے",
+s3li1:"Landlord اور tenant کی معلومات",
+s3li2:"Property address",
+s3li3:"Monthly rent",
+s3li4:"Deposit amount",
+s3li5:"Payment arrangements",
+s3li6:"Contract period",
+s3li7:"Termination / notice conditions",
+s3strong:"اہم:",
+s3warning:"دستخط کرنے سے پہلے معاہدہ غور سے پڑھیں اور signed copy رکھیں۔",
+
+s4title:"💶 Deposit اور Payments",
+s4p1:"Landlord security deposit مانگ سکتا ہے۔ رقم اور شرائط پہلے طے کریں۔",
+s4li1:"Receipt یا payment proof مانگیں۔",
+s4li2:"Rent payments کا record رکھیں۔",
+s4li3:"Deposit کب واپس ملے گا پوچھیں۔",
+s4li4:"پوچھیں کہ unpaid bills deposit سے کم کیے جائیں گے یا نہیں۔",
+s4strong:"احتیاط:",
+s4warning:"Property اور payment receiver کی تصدیق کیے بغیر بڑی رقم transfer نہ کریں۔",
+
+s5title:"💡 Utilities اور Bills",
+s5p1:"Electricity، water، heating، gas، internet اور building charges housing costs میں شامل ہو سکتے ہیں۔",
+s5h3:"منتقل ہونے سے پہلے",
+s5li1:"پوچھیں کون سے bills rent میں شامل ہیں۔",
+s5li2:"پوچھیں کون سے bills الگ ادا کرنے ہیں۔",
+s5li3:"ضرورت ہو تو meter readings چیک کریں۔",
+s5li4:"اہم bills اور payments کی copies رکھیں۔",
+
+s6title:"📍 ایڈریس رجسٹریشن",
+s6p1:"کروشیا میں رہنے والے غیر ملکیوں پر residence/stay status کے مطابق address reporting یا registration کی ذمہ داری ہو سکتی ہے۔",
+s6p2:"اگر residence کے لیے address register کرنا ضروری ہو تو competent police administration یا police station سے موجودہ requirements چیک کریں۔",
+s6strong:"اہم:",
+s6info:"Rental contract پر دستخط کرنے کا مطلب یہ نہیں کہ residence registration خود بخود مکمل ہو گئی ہے۔",
+
+s7title:"🛋️ نئے گھر میں منتقل ہونا",
+s7p:"سامان منتقل کرنے سے پہلے property کی حالت چیک کریں۔",
+s7li1:"موجودہ damage کی photos لیں۔",
+s7li2:"Furniture اور appliances چیک کریں۔",
+s7li3:"Electricity، water اور heating چیک کریں۔",
+s7li4:"Keys اور access cards چیک کریں۔",
+s7li5:"اہم documents کی copies رکھیں۔",
+
+s8title:"⚠️ عام مسائل",
+s8li1:"Unexpected additional charges",
+s8li2:"Unclear deposit conditions",
+s8li3:"Written rental agreement نہ ہونا",
+s8li4:"Utilities کے مسائل",
+s8li5:"Property damage پر dispute",
+s8li6:"Address registration responsibility واضح نہ ہونا",
+s8strong:"سنگین dispute کی صورت میں:",
+s8danger:"Documents، payment records، messages اور photographs محفوظ رکھیں۔ ضرورت ہو تو legal/professional advice حاصل کریں۔",
+
+s9title:"🌍 غیر ملکی کارکنوں کے لیے رہائش",
+s9p1:"اگر employer accommodation فراہم کرتا ہے تو چیک کریں کہ یہ free ہے، salary سے deduct ہوتی ہے یا separate agreement ہے۔",
+s9li1:"Accommodation کہاں ہے پوچھیں۔",
+s9li2:"کتنے لوگ accommodation share کرتے ہیں پوچھیں۔",
+s9li3:"Utilities شامل ہیں یا نہیں پوچھیں۔",
+s9li4:"Accommodation cost salary سے deduct ہوتی ہے یا نہیں پوچھیں۔",
+s9li5:"Accommodation arrangement کی written information رکھیں۔",
+
+s10title:"🔗 سرکاری معلومات",
+s10p:"Residence اور address registration کے لیے Croatian government اور police official sources استعمال کریں۔",
+
+s11title:"⚠️ اہم Disclaimer",
+s11p1:"CROPATH عمومی معلومات اور عملی رہنمائی فراہم کرتا ہے۔ یہ سرکاری ویب سائٹ نہیں ہے۔",
+s11p2:"Housing rules اور residence procedures تبدیل ہو سکتے ہیں۔ اپنی صورتحال کے لیے official sources چیک کریں۔",
+
+footerTitle:"کروشیا میں رہنے اور کام کرنے کا آپ کا راستہ",
+footerText:"کروشیا میں غیر ملکیوں کے لیے عمومی معلومات اور عملی رہنمائی۔",
+footerDate:"آخری بار تصدیق: 7 اکتوبر 2026"
+},
+
+hr:{
+backHome:"← Povratak na početnu",
+badge:"🇭🇷 Vodič kroz stanovanje",
+pageTitle:"Stanovanje u Hrvatskoj",
+heroText:"Praktične informacije o najmu stana, ugovorima, pologu, prijavi adrese i uobičajenim problemima sa stanovanjem u Hrvatskoj.",
+verified:"✓ Informacije provjerene: 7. listopada 2026.",
+
+s1title:"🏠 Pronalaženje stana",
+s1p1:"Stranci u Hrvatskoj mogu pronaći smještaj putem internetskih oglasa, agencija za nekretnine, lokalnih oglasa i osobnih kontakata.",
+s1p2:"Prije plaćanja ili potpisivanja ugovora pažljivo provjerite nekretninu, najmodavca i uvjete najma.",
+s1strong:"Savjet:",
+s1info:"Prije veće uplate uvijek pogledajte nekretninu ili provjerite smještaj.",
+
+s2title:"🔑 Najam stana",
+s2p1:"Prije useljenja dogovorite mjesečnu najamninu, polog, režije, trajanje ugovora i otkazni rok.",
+s2h3:"Provjerite",
+s2li1:"Mjesečnu najamninu",
+s2li2:"Polog",
+s2li3:"Troškove režija i usluga",
+s2li4:"Trajanje ugovora",
+s2li5:"Otkazni rok",
+s2li6:"Namještaj i opremu",
+
+s3title:"📄 Ugovor o najmu",
+s3p1:"Pisani ugovor o najmu važan je jer određuje dogovorene uvjete između najmodavca i najmoprimca.",
+s3h3:"U ugovoru treba jasno pisati",
+s3li1:"Podaci o najmodavcu i najmoprimcu",
+s3li2:"Adresa nekretnine",
+s3li3:"Mjesečna najamnina",
+s3li4:"Iznos pologa",
+s3li5:"Način plaćanja",
+s3li6:"Trajanje ugovora",
+s3li7:"Uvjeti raskida ili otkazivanja",
+s3strong:"Važno:",
+s3warning:"Pažljivo pročitajte ugovor prije potpisivanja i sačuvajte kopiju.",
+
+s4title:"💶 Polog i plaćanja",
+s4p1:"Najmodavac može tražiti polog. Iznos i uvjeti trebaju biti dogovoreni prije plaćanja.",
+s4li1:"Zatražite potvrdu o uplati.",
+s4li2:"Čuvajte evidenciju plaćanja najamnine.",
+s4li3:"Provjerite kada se polog vraća.",
+s4li4:"Provjerite mogu li se neplaćeni računi odbiti od pologa.",
+s4strong:"Budite oprezni:",
+s4warning:"Ne uplaćujte veliki iznos bez provjere nekretnine i osobe koja prima novac.",
+
+s5title:"💡 Režije i računi",
+s5p1:"Troškovi stanovanja mogu uključivati struju, vodu, grijanje, plin, internet, pričuvu i druge usluge.",
+s5h3:"Prije useljenja",
+s5li1:"Provjerite koje su režije uključene u najamninu.",
+s5li2:"Provjerite koje se režije plaćaju zasebno.",
+s5li3:"Po potrebi provjerite stanje brojila.",
+s5li4:"Čuvajte važne račune i potvrde o plaćanju.",
+
+s6title:"📍 Prijava adrese",
+s6p1:"Stranci koji borave u Hrvatskoj mogu imati obvezu prijave adrese ovisno o svom statusu boravka.",
+s6p2:"Ako trebate prijaviti adresu zbog boravka, provjerite aktualne zahtjeve kod nadležne policijske uprave ili policijske postaje.",
+s6strong:"Važno:",
+s6info:"Potpisivanje ugovora o najmu ne znači automatski da je prijava boravka završena.",
+
+s7title:"🛋️ Useljenje u novi dom",
+s7p:"Prije unošenja stvari provjerite stanje nekretnine.",
+s7li1:"Fotografirajte postojeća oštećenja.",
+s7li2:"Provjerite namještaj i uređaje.",
+s7li3:"Provjerite struju, vodu i grijanje.",
+s7li4:"Provjerite ključeve i pristupne kartice.",
+s7li5:"Sačuvajte kopije važnih dokumenata.",
+
+s8title:"⚠️ Uobičajeni problemi",
+s8li1:"Neočekivani dodatni troškovi",
+s8li2:"Nejasni uvjeti pologa",
+s8li3:"Nema pisanog ugovora o najmu",
+s8li4:"Problemi s režijama",
+s8li5:"Spor oko oštećenja nekretnine",
+s8li6:"Nejasne obveze u vezi s prijavom adrese",
+s8strong:"Ako postoji ozbiljan spor:",
+s8danger:"Sačuvajte dokumente, dokaze o plaćanju, poruke i fotografije. Po potrebi zatražite pravni ili stručni savjet.",
+
+s9title:"🌍 Smještaj za strane radnike",
+s9p1:"Ako smještaj osigurava poslodavac, provjerite je li besplatan, odbija li se od plaće ili postoji poseban dogovor.",
+s9li1:"Pitajte gdje se smještaj nalazi.",
+s9li2:"Pitajte koliko osoba dijeli smještaj.",
+s9li3:"Pitajte jesu li režije uključene.",
+s9li4:"Pitajte odbija li se trošak smještaja od plaće.",
+s9li5:"Sačuvajte pisane informacije o smještaju.",
+
+s10title:"🔗 Službene informacije",
+s10p:"Za pitanja o boravku i prijavi adrese koristite službene izvore hrvatske policije i državne uprave.",
+
+s11title:"⚠️ Važna napomena",
+s11p1:"CROPATH pruža opće informacije i praktične smjernice. Nije službena državna web stranica i ne zamjenjuje stručni pravni, imigracijski, stambeni ili drugi savjet.",
+s11p2:"Pravila najma i postupci prijave boravka mogu se promijeniti. Uvijek provjerite službene izvore za svoju situaciju.",
+
+footerTitle:"Vaš put do života i rada u Hrvatskoj",
+footerText:"Opće informacije i praktične smjernice za strance u Hrvatskoj.",
+footerDate:"Zadnja provjera: 7. listopada 2026."
+}
+
+};
+
+
+function applyLanguage(language){
+
+const t=translations[language]||translations.en;
+
+Object.keys(t).forEach(function(id){
+
+const element=document.getElementById(id);
+
+if(element){
+element.textContent=t[id];
+}
+
+});
+
+document.documentElement.lang=language;
+
+document.documentElement.dir=language==="ur"?"rtl":"ltr";
+
+localStorage.setItem("cropath-language",language);
+
+const selector=document.getElementById("languageSelect");
+
+if(selector){
+selector.value=language;
+}
+
+}
+
+
+const savedLanguage=
+localStorage.getItem("cropath-language")||"en";
+
+applyLanguage(savedLanguage);
+
+
+document
+.getElementById("languageSelect")
+.addEventListener("change",function(){
+
+applyLanguage(this.value);
+
+});
+
+</script>
+
+</body>
+</html>

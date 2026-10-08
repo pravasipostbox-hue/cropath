@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CROPATH — Banking in Croatia</title>
+  <meta name="description" content="Banking, bank accounts, cards, payments and useful banking information for foreigners in Croatia.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    select {
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 14px;
+      background: white;
+      color: #111827;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 25px 20px 60px;
+    }
+
+    .back {
+      display: inline-block;
+      margin: 10px 0 25px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1d4ed8, #0f172a);
+      color: white;
+      padding: 50px 30px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 800px;
+    }
+
+    .section {
+      background: white;
+      padding: 28px;
+      margin-bottom: 22px;
+      border-radius: 16px;
+      box-shadow: 0 5px 18px rgba(15, 23, 42, 0.07);
+    }
+
+    .section h2 {
+      color: #1d4ed8;
+      margin-bottom: 14px;
+      font-size: 25px;
+    }
+
+    .section p {
+      margin-bottom: 12px;
+    }
+
+    .section ul {
+      padding-left: 24px;
+      margin-bottom: 10px;
+    }
+
+    .section li {
+      margin-bottom: 8px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 9px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: #1d4ed8;
+    }
+
+    .notice {
+      background: #eff6ff;
+      border-left: 5px solid #2563eb;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 28px 20px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    [dir="rtl"] {
+      text-align: right;
+    }
+
+    [dir="rtl"] ul {
+      padding-left: 0;
+      padding-right: 24px;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .logo {
+        text-align: center;
+      }
+
+      select {
+        width: 100%;
+      }
+
+      .hero {
+        padding: 35px 22px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .section {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">CROPATH</a>
+
+    <select id="languageSelect" aria-label="Language">
+      <option value="en">English</option>
+      <option value="ml">മലയാളം</option>
+      <option value="hi">हिन्दी</option>
+      <option value="ne">नेपाली</option>
+      <option value="ta">தமிழ்</option>
+      <option value="te">తెలుగు</option>
+      <option value="bn">বাংলা</option>
+      <option value="ur">اردو</option>
+      <option value="hr">Hrvatski</option>
+    </select>
+  </div>
+</header>
+
+<main class="container">
+
+  <a href="index.html" class="back" id="backHome">← Back to Home</a>
+
+  <section class="hero">
+    <h1 id="heroTitle">Banking in Croatia</h1>
+    <p id="heroText">
+      Understand bank accounts, cards, payments, ATMs and basic banking services in Croatia.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 id="s1title">1. Opening a bank account</h2>
+
+    <p id="s1p">
+      Foreigners living or working in Croatia may be able to open a bank account, depending on their residence status and the bank's requirements.
+    </p>
+
+    <ul id="s1list">
+      <li>Passport or valid identity document</li>
+      <li>Residence permit or other proof of legal stay, when required</li>
+      <li>OIB (Croatian Personal Identification Number)</li>
+      <li>Proof of address may be requested</li>
+      <li>Additional documents may be requested by the bank</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 id="s2title">2. OIB</h2>
+
+    <p id="s2p">
+      OIB is the Croatian Personal Identification Number. It is commonly used for banking, employment, tax and many other official procedures.
+    </p>
+
+    <div class="notice" id="s2notice">
+      Keep your OIB information safely because you may need it for many services in Croatia.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="s3title">3. Bank card</h2>
+
+    <p id="s3p">
+      After opening an account, the bank may provide a debit card. Your bank will explain how to activate and use the card.
+    </p>
+
+    <ul id="s3list">
+      <li>ATM withdrawals</li>
+      <li>Card payments in shops</li>
+      <li>Online payments</li>
+      <li>Contactless payments</li>
+      <li>Mobile banking, if available</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 id="s4title">4. ATM use</h2>
+
+    <p id="s4p">
+      You can use ATMs to withdraw cash and perform other services supported by your bank.
+    </p>
+
+    <ul id="s4list">
+      <li>Check the withdrawal amount before confirming.</li>
+      <li>Read any fee information shown on the screen.</li>
+      <li>Keep your PIN private.</li>
+      <li>Do not give your card or PIN to another person.</li>
+      <li>Contact your bank immediately if your card is lost or stolen.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 id="s5title">5. Mobile and internet banking</h2>
+
+    <p id="s5p">
+      Croatian banks commonly provide mobile or internet banking services. Availability and features depend on the bank.
+    </p>
+
+    <ul id="s5list">
+      <li>Check account balance</li>
+      <li>View transactions</li>
+      <li>Make payments</li>
+      <li>Manage cards</li>
+      <li>Receive banking notifications</li>
+    </ul>
+
+    <div class="notice" id="s5notice">
+      Never share your banking password, PIN, one-time security code or authentication details with another person.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="s6title">6. Salary payments</h2>
+
+    <p id="s6p">
+      If you work in Croatia, your employer may pay your salary into your Croatian bank account according to your employment arrangements.
+    </p>
+
+    <p id="s6p2">
+      Check your employment contract and bank account details carefully.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 id="s7title">7. Bank fees</h2>
+
+    <p id="s7p">
+      Banks can charge fees for certain services. Fees depend on the bank, account type and service.
+    </p>
+
+    <ul id="s7list">
+      <li>Account maintenance</li>
+      <li>Cash withdrawals</li>
+      <li>Transfers</li>
+      <li>Cards and additional services</li>
+      <li>Other banking services</li>
+    </ul>
+
+    <p id="s7p2">
+      Always check the current fee schedule of your bank.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 id="s8title">8. If your card is lost or stolen</h2>
+
+    <p id="s8p">
+      Contact your bank as soon as possible and ask them to block the card. If necessary, follow the bank's instructions for replacing it.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 id="s9title">9. Useful banking habits</h2>
+
+    <ul id="s9list">
+      <li>Keep your bank contact details saved.</li>
+      <li>Check transactions regularly.</li>
+      <li>Keep your PIN confidential.</li>
+      <li>Use official banking applications.</li>
+      <li>Be careful with suspicious messages and links.</li>
+      <li>Keep important banking documents safely.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 id="s10title">10. Official information</h2>
+
+    <p id="s10p">
+      For current banking information, always check the official website of your bank and relevant Croatian institutions.
+    </p>
+
+    <div class="buttons">
+      <a class="button" href="https://www.hnb.hr/" target="_blank" rel="noopener noreferrer">
+        Croatian National Bank (HNB)
+      </a>
+
+      <a class="button" href="https://gov.hr/" target="_blank" rel="noopener noreferrer">
+        gov.hr
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="s11title">11. Important</h2>
+
+    <p id="s11p">
+      Banking rules, fees, documents and requirements can change. Always confirm the latest information directly with your bank or the relevant official institution.
+    </p>
+
+    <div class="notice" id="disclaimer">
+      CROPATH provides general information for foreigners in Croatia. It is not legal, financial or banking advice.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>CROPATH</strong></p>
+  <p id="footerText">Your Path to Living and Working in Croatia.</p>
+  <p>Last verified: 7 October 2026</p>
+</footer>
+
+<script>
+  const translations = {
+
+    en: {
+      back: "← Back to Home",
+      heroTitle: "Banking in Croatia",
+      heroText: "Understand bank accounts, cards, payments, ATMs and basic banking services in Croatia.",
+
+      s1title: "1. Opening a bank account",
+      s1p: "Foreigners living or working in Croatia may be able to open a bank account, depending on their residence status and the bank's requirements.",
+      s1list: [
+        "Passport or valid identity document",
+        "Residence permit or other proof of legal stay, when required",
+        "OIB (Croatian Personal Identification Number)",
+        "Proof of address may be requested",
+        "Additional documents may be requested by the bank"
+      ],
+
+      s2title: "2. OIB",
+      s2p: "OIB is the Croatian Personal Identification Number. It is commonly used for banking, employment, tax and many other official procedures.",
+      s2notice: "Keep your OIB information safely because you may need it for many services in Croatia.",
+
+      s3title: "3. Bank card",
+      s3p: "After opening an account, the bank may provide a debit card. Your bank will explain how to activate and use the card.",
+      s3list: [
+        "ATM withdrawals",
+        "Card payments in shops",
+        "Online payments",
+        "Contactless payments",
+        "Mobile banking, if available"
+      ],
+
+      s4title: "4. ATM use",
+      s4p: "You can use ATMs to withdraw cash and perform other services supported by your bank.",
+      s4list: [
+        "Check the withdrawal amount before confirming.",
+        "Read any fee information shown on the screen.",
+        "Keep your PIN private.",
+        "Do not give your card or PIN to another person.",
+        "Contact your bank immediately if your card is lost or stolen."
+      ],
+
+      s5title: "5. Mobile and internet banking",
+      s5p: "Croatian banks commonly provide mobile or internet banking services. Availability and features depend on the bank.",
+      s5list: [
+        "Check account balance",
+        "View transactions",
+        "Make payments",
+        "Manage cards",
+        "Receive banking notifications"
+      ],
+      s5notice: "Never share your banking password, PIN, one-time security code or authentication details with another person.",
+
+      s6title: "6. Salary payments",
+      s6p: "If you work in Croatia, your employer may pay your salary into your Croatian bank account according to your employment arrangements.",
+      s6p2: "Check your employment contract and bank account details carefully.",
+
+      s7title: "7. Bank fees",
+      s7p: "Banks can charge fees for certain services. Fees depend on the bank, account type and service.",
+      s7list: [
+        "Account maintenance",
+        "Cash withdrawals",
+        "Transfers",
+        "Cards and additional services",
+        "Other banking services"
+      ],
+      s7p2: "Always check the current fee schedule of your bank.",
+
+      s8title: "8. If your card is lost or stolen",
+      s8p: "Contact your bank as soon as possible and ask them to block the card. If necessary, follow the bank's instructions for replacing it.",
+
+      s9title: "9. Useful banking habits",
+      s9list: [
+        "Keep your bank contact details saved.",
+        "Check transactions regularly.",
+        "Keep your PIN confidential.",
+        "Use official banking applications.",
+        "Be careful with suspicious messages and links.",
+        "Keep important banking documents safely."
+      ],
+
+      s10title: "10. Official information",
+      s10p: "For current banking information, always check the official website of your bank and relevant Croatian institutions.",
+
+      s11title: "11. Important",
+      s11p: "Banking rules, fees, documents and requirements can change. Always confirm the latest information directly with your bank or the relevant official institution.",
+      disclaimer: "CROPATH provides general information for foreigners in Croatia. It is not legal, financial or banking advice.",
+      footer: "Your Path to Living and Working in Croatia."
+    },
+
+    ml: {
+      back: "← ഹോം പേജിലേക്ക്",
+      heroTitle: "ക്രൊയേഷ്യയിലെ ബാങ്കിംഗ്",
+      heroText: "ബാങ്ക് അക്കൗണ്ട്, കാർഡ്, പണമിടപാട്, ATM, മൊബൈൽ ബാങ്കിംഗ് എന്നിവയെക്കുറിച്ചുള്ള അടിസ്ഥാന വിവരങ്ങൾ.",
+
+      s1title: "1. ബാങ്ക് അക്കൗണ്ട് തുറക്കുന്നത്",
+      s1p: "ക്രൊയേഷ്യയിൽ താമസിക്കുന്നതോ ജോലി ചെയ്യുന്നതോ ആയ വിദേശികൾക്ക് അവരുടെ residence status-നും ബാങ്കിന്റെ ആവശ്യകതകൾക്കും അനുസരിച്ച് ബാങ്ക് അക്കൗണ്ട് തുറക്കാൻ കഴിയും.",
+      s1list: [
+        "Passport അല്ലെങ്കിൽ valid identity document",
+        "ആവശ്യപ്പെട്ടാൽ Residence permit അല്ലെങ്കിൽ legal stay തെളിയിക്കുന്ന രേഖ",
+        "OIB (Croatian Personal Identification Number)",
+        "Address proof ആവശ്യപ്പെടാം",
+        "ബാങ്ക് അധിക രേഖകൾ ആവശ്യപ്പെടാം"
+      ],
+
+      s2title: "2. OIB",
+      s2p: "OIB എന്നത് ക്രൊയേഷ്യൻ Personal Identification Number ആണ്. ബാങ്കിംഗ്, ജോലി, tax തുടങ്ങിയ പല ഔദ്യോഗിക കാര്യങ്ങൾക്കും ഇത് ഉപയോഗിക്കുന്നു.",
+      s2notice: "നിങ്ങളുടെ OIB വിവരങ്ങൾ സുരക്ഷിതമായി സൂക്ഷിക്കുക. ക്രൊയേഷ്യയിലെ പല സേവനങ്ങൾക്കും ഇത് ആവശ്യമായി വരാം.",
+
+      s3title: "3. ബാങ്ക് കാർഡ്",
+      s3p: "അക്കൗണ്ട് തുറന്ന ശേഷം ബാങ്ക് debit card നൽകാം. കാർഡ് എങ്ങനെ activate ചെയ്യണമെന്നും ഉപയോഗിക്കണമെന്നും ബാങ്ക് അറിയിക്കും.",
+      s3list: [
+        "ATM-ൽ നിന്ന് പണം എടുക്കാം",
+        "കടകളിൽ കാർഡ് ഉപയോഗിച്ച് പണമടയ്ക്കാം",
+        "Online payment ചെയ്യാം",
+        "Contactless payment ഉപയോഗിക്കാം",
+        "Mobile banking ലഭ്യമാണെങ്കിൽ ഉപയോഗിക്കാം"
+      ],
+
+      s4title: "4. ATM ഉപയോഗം",
+      s4p: "പണം എടുക്കാനും ബാങ്ക് നൽകുന്ന മറ്റ് സേവനങ്ങൾ ഉപയോഗിക്കാനും ATM ഉപയോഗിക്കാം.",
+      s4list: [
+        "Confirm ചെയ്യുന്നതിന് മുമ്പ് amount പരിശോധിക്കുക.",
+        "Screen-ൽ കാണിക്കുന്ന fee വിവരങ്ങൾ വായിക്കുക.",
+        "PIN രഹസ്യമായി സൂക്ഷിക്കുക.",
+        "Card അല്ലെങ്കിൽ PIN മറ്റൊരാൾക്ക് നൽകരുത്.",
+        "Card നഷ്ടപ്പെട്ടാൽ അല്ലെങ്കിൽ മോഷണം പോയാൽ ഉടൻ ബാങ്കുമായി ബന്ധപ്പെടുക."
+      ],
+
+      s5title: "5. Mobile & Internet Banking",
+      s5p: "ക്രൊയേഷ്യയിലെ പല ബാങ്കുകളും mobile banking അല്ലെങ്കിൽ internet banking നൽകുന്നു. സേവനങ്ങൾ ബാങ്ക് അനുസരിച്ച് മാറാം.",
+      s5list: [
+        "Account balance പരിശോധിക്കുക",
+        "Transactions കാണുക",
+        "Payments നടത്തുക",
+        "Cards manage ചെയ്യുക",
+        "Bank notifications ലഭിക്കുക"
+      ],
+      s5notice: "Bank password, PIN, one-time security code അല്ലെങ്കിൽ authentication details മറ്റൊരാളുമായി ഒരിക്കലും share ചെയ്യരുത്.",
+
+      s6title: "6. Salary payment",
+      s6p: "നിങ്ങൾ ക്രൊയേഷ്യയിൽ ജോലി ചെയ്യുകയാണെങ്കിൽ employment arrangements അനുസരിച്ച് employer നിങ്ങളുടെ salary Croatian bank account-ലേക്ക് നൽകാം.",
+      s6p2: "Employment contract-ലെയും bank account details-ലെയും വിവരങ്ങൾ ശ്രദ്ധിച്ച് പരിശോധിക്കുക.",
+
+      s7title: "7. ബാങ്ക് ഫീസ്",
+      s7p: "ചില banking services-ന് ബാങ്കുകൾ fee ഈടാക്കാം. Fee ബാങ്കിനും account type-നും service-നും അനുസരിച്ച് മാറാം.",
+      s7list: [
+        "Account maintenance",
+        "Cash withdrawal",
+        "Transfers",
+        "Cards, additional services",
+        "മറ്റ് banking services"
+      ],
+      s7p2: "നിങ്ങളുടെ ബാങ്കിന്റെ നിലവിലെ fee schedule എപ്പോഴും പരിശോധിക്കുക.",
+
+      s8title: "8. Card നഷ്ടപ്പെട്ടാൽ",
+      s8p: "Card നഷ്ടപ്പെടുകയോ മോഷണം പോകുകയോ ചെയ്താൽ ഉടൻ ബാങ്കുമായി ബന്ധപ്പെടുകയും card block ചെയ്യാൻ ആവശ്യപ്പെടുകയും ചെയ്യുക.",
+
+      s9title: "9. നല്ല Banking ശീലങ്ങൾ",
+      s9list: [
+        "ബാങ്കിന്റെ contact details സൂക്ഷിക്കുക.",
+        "Transactions സ്ഥിരമായി പരിശോധിക്കുക.",
+        "PIN രഹസ്യമായി സൂക്ഷിക്കുക.",
+        "Official banking applications മാത്രം ഉപയോഗിക്കുക.",
+        "സംശയാസ്പദമായ messages, links എന്നിവ ശ്രദ്ധിക്കുക.",
+        "പ്രധാനപ്പെട്ട banking documents സുരക്ഷിതമായി സൂക്ഷിക്കുക."
+      ],
+
+      s10title: "10. ഔദ്യോഗിക വിവരങ്ങൾ",
+      s10p: "നിലവിലെ banking വിവരങ്ങൾക്കായി നിങ്ങളുടെ ബാങ്കിന്റെ official website-യും ബന്ധപ്പെട്ട Croatian official institutions-ഉം പരിശോധിക്കുക.",
+
+      s11title: "11. പ്രധാന അറിയിപ്പ്",
+      s11p: "Banking rules, fees, documents, requirements എന്നിവ മാറാം. ഏറ്റവും പുതിയ വിവരങ്ങൾ ബാങ്കിൽ നിന്നോ ബന്ധപ്പെട്ട ഔദ്യോഗിക സ്ഥാപനത്തിൽ നിന്നോ നേരിട്ട് സ്ഥിരീകരിക്കുക.",
+      disclaimer: "CROPATH ക്രൊയേഷ്യയിലെ വിദേശികൾക്കായി പൊതുവായ വിവരങ്ങൾ നൽകുന്നു. ഇത് legal, financial അല്ലെങ്കിൽ banking advice അല്ല.",
+      footer: "ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനും നിങ്ങളുടെ വഴി."
+    },
+
+    hi: {
+      back: "← होम पर वापस जाएँ",
+      heroTitle: "क्रोएशिया में बैंकिंग",
+      heroText: "बैंक खाते, कार्ड, भुगतान, ATM और बैंकिंग सेवाओं की मूल जानकारी।",
+      s1title: "1. बैंक खाता खोलना",
+      s1p: "क्रोएशिया में रहने या काम करने वाले विदेशी बैंक की आवश्यकताओं और अपने निवास की स्थिति के अनुसार बैंक खाता खोल सकते हैं।",
+      s1list: ["पासपोर्ट या वैध पहचान पत्र", "Residence permit, यदि आवश्यक हो", "OIB", "पते का प्रमाण माँगा जा सकता है", "बैंक अतिरिक्त दस्तावेज माँग सकता है"],
+      s2title: "2. OIB",
+      s2p: "OIB क्रोएशिया का Personal Identification Number है। इसका उपयोग बैंकिंग, नौकरी, टैक्स और अन्य आधिकारिक कार्यों में होता है।",
+      s2notice: "अपना OIB सुरक्षित रखें।",
+      s3title: "3. बैंक कार्ड",
+      s3p: "खाता खोलने के बाद बैंक debit card दे सकता है।",
+      s3list: ["ATM से पैसे निकालना", "दुकानों में भुगतान", "Online payment", "Contactless payment", "Mobile banking"],
+      s4title: "4. ATM का उपयोग",
+      s4p: "ATM से पैसे निकाल सकते हैं और बैंक की अन्य उपलब्ध सेवाएँ इस्तेमाल कर सकते हैं।",
+      s4list: ["राशि जाँचें", "Fees पढ़ें", "PIN गोपनीय रखें", "Card/PIN किसी को न दें", "Card खोने पर बैंक से तुरंत संपर्क करें"],
+      s5title: "5. Mobile और Internet Banking",
+      s5p: "कई Croatian banks mobile या internet banking देते हैं।",
+      s5list: ["Balance देखें", "Transactions देखें", "Payments करें", "Cards manage करें", "Notifications प्राप्त करें"],
+      s5notice: "Password, PIN और security codes कभी किसी के साथ साझा न करें।",
+      s6title: "6. Salary payment",
+      s6p: "Croatia में काम करने पर employer आपके Croatian bank account में salary भेज सकता है।",
+      s6p2: "Employment contract और bank details जाँचें।",
+      s7title: "7. Bank fees",
+      s7p: "कुछ banking services के लिए fees हो सकती हैं।",
+      s7list: ["Account maintenance", "Cash withdrawal", "Transfers", "Cards", "अन्य banking services"],
+      s7p2: "अपने बैंक की current fee schedule देखें।",
+      s8title: "8. Card खो जाए तो",
+      s8p: "बैंक से तुरंत संपर्क करके card block करवाएँ।",
+      s9title: "9. अच्छी banking आदतें",
+      s9list: ["Bank contact details रखें", "Transactions जाँचें", "PIN गोपनीय रखें", "Official apps इस्तेमाल करें", "Suspicious links से सावधान रहें", "Documents सुरक्षित रखें"],
+      s10title: "10. Official information",
+      s10p: "Current information के लिए अपने bank और Croatian official institutions की websites देखें।",
+      s11title: "11. महत्वपूर्ण",
+      s11p: "Banking rules और fees बदल सकती हैं। हमेशा latest information सीधे bank या official institution से confirm करें।",
+      disclaimer: "CROPATH सामान्य जानकारी देता है। यह legal, financial या banking advice नहीं है।",
+      footer: "क्रोएशिया में रहने और काम करने का आपका रास्ता।"
+    },
+
+    ne: {
+      back: "← गृहपृष्ठमा फर्कनुहोस्",
+      heroTitle: "क्रोएसियामा बैंकिङ",
+      heroText: "बैंक खाता, कार्ड, भुक्तानी, ATM र बैंकिङ सेवाको आधारभूत जानकारी।",
+      s1title: "1. बैंक खाता खोल्ने",
+      s1p: "क्रोएसियामा बस्ने वा काम गर्ने विदेशीहरूले बैंकको आवश्यकताअनुसार खाता खोल्न सक्छन्।",
+      s1list: ["पासपोर्ट वा वैध परिचयपत्र", "आवश्यक भए Residence permit", "OIB", "ठेगानाको प्रमाण", "बैंकले थप कागजात माग्न सक्छ"],
+      s2title: "2. OIB",
+      s2p: "OIB क्रोएसियाको Personal Identification Number हो।",
+      s2notice: "आफ्नो OIB सुरक्षित राख्नुहोस्।",
+      s3title: "3. बैंक कार्ड",
+      s3p: "खाता खोलेपछि बैंकले debit card दिन सक्छ।",
+      s3list: ["ATM बाट पैसा निकाल्ने", "पसलमा भुक्तानी", "Online payment", "Contactless payment", "Mobile banking"],
+      s4title: "4. ATM प्रयोग",
+      s4p: "ATM बाट नगद निकाल्न र उपलब्ध बैंकिङ सेवाहरू प्रयोग गर्न सकिन्छ।",
+      s4list: ["रकम जाँच गर्नुहोस्", "Fee जानकारी पढ्नुहोस्", "PIN गोप्य राख्नुहोस्", "Card/PIN अरूलाई नदिनुहोस्", "Card हराएमा बैंकलाई तुरुन्त सम्पर्क गर्नुहोस्"],
+      s5title: "5. Mobile र Internet Banking",
+      s5p: "धेरै Croatian banks ले mobile वा internet banking प्रदान गर्छन्।",
+      s5list: ["Balance हेर्ने", "Transactions हेर्ने", "Payments गर्ने", "Cards manage गर्ने", "Notifications प्राप्त गर्ने"],
+      s5notice: "Password, PIN वा security code अरूसँग साझा नगर्नुहोस्।",
+      s6title: "6. Salary payment",
+      s6p: "Croatia मा काम गर्दा employer ले Croatian bank account मा salary पठाउन सक्छ।",
+      s6p2: "Employment contract र bank details जाँच गर्नुहोस्।",
+      s7title: "7. Bank fees",
+      s7p: "केही बैंकिङ सेवामा शुल्क लाग्न सक्छ।",
+      s7list: ["Account maintenance", "Cash withdrawal", "Transfers", "Cards", "अन्य सेवाहरू"],
+      s7p2: "हालको fee schedule जाँच गर्नुहोस्।",
+      s8title: "8. Card हराएमा",
+      s8p: "बैंकलाई तुरुन्त सम्पर्क गरेर card block गर्नुहोस्।",
+      s9title: "9. राम्रो बैंकिङ बानी",
+      s9list: ["Bank contact details राख्नुहोस्", "Transactions जाँच्नुहोस्", "PIN गोप्य राख्नुहोस्", "Official apps प्रयोग गर्नुहोस्", "Suspicious links बाट सावधान हुनुहोस्", "Documents सुरक्षित राख्नुहोस्"],
+      s10title: "10. Official information",
+      s10p: "हालको जानकारीका लागि आफ्नो bank र Croatian official institutions हेर्नुहोस्।",
+      s11title: "11. महत्वपूर्ण",
+      s11p: "Banking rules र fees परिवर्तन हुन सक्छन्। Latest information bank वा official institution बाट confirm गर्नुहोस्।",
+      disclaimer: "CROPATH सामान्य जानकारी हो। यो legal, financial वा banking advice होइन।",
+      footer: "क्रोएसियामा बस्न र काम गर्न तपाईंको बाटो।"
+    },
+
+    ta: {
+      back: "← முகப்புக்குத் திரும்பு",
+      heroTitle: "குரோஷியாவில் வங்கி சேவைகள்",
+      heroText: "வங்கி கணக்கு, அட்டை, பணம் செலுத்துதல், ATM மற்றும் வங்கி சேவைகள் பற்றிய அடிப்படை தகவல்கள்.",
+      s1title: "1. வங்கி கணக்கு திறத்தல்",
+      s1p: "குரோஷியாவில் வசிக்கும் அல்லது வேலை செய்யும் வெளிநாட்டவர்கள் வங்கியின் தேவைகளுக்கு ஏற்ப கணக்கு திறக்கலாம்.",
+      s1list: ["Passport அல்லது valid ID", "தேவைப்பட்டால் Residence permit", "OIB", "முகவரி சான்று", "வங்கி கூடுதல் ஆவணங்கள் கேட்கலாம்"],
+      s2title: "2. OIB",
+      s2p: "OIB என்பது குரோஷிய Personal Identification Number ஆகும்.",
+      s2notice: "OIB தகவலை பாதுகாப்பாக வைத்திருங்கள்.",
+      s3title: "3. வங்கி அட்டை",
+      s3p: "கணக்கு திறந்த பிறகு debit card கிடைக்கலாம்.",
+      s3list: ["ATM பணம் எடுப்பது", "கடைகளில் payment", "Online payment", "Contactless payment", "Mobile banking"],
+      s4title: "4. ATM பயன்பாடு",
+      s4p: "ATM மூலம் பணம் எடுக்கலாம் மற்றும் கிடைக்கும் வங்கி சேவைகளை பயன்படுத்தலாம்.",
+      s4list: ["தொகையை சரிபார்க்கவும்", "Fee தகவலை படிக்கவும்", "PIN ரகசியமாக வைத்திருங்கள்", "Card/PIN பகிர வேண்டாம்", "Card தொலைந்தால் வங்கியை தொடர்பு கொள்ளுங்கள்"],
+      s5title: "5. Mobile மற்றும் Internet Banking",
+      s5p: "பல Croatian banks mobile அல்லது internet banking வழங்குகின்றன.",
+      s5list: ["Balance பார்க்க", "Transactions பார்க்க", "Payments செய்ய", "Cards manage செய்ய", "Notifications பெற"],
+      s5notice: "Password, PIN அல்லது security code யாருடனும் பகிர வேண்டாம்.",
+      s6title: "6. சம்பளப் பணம்",
+      s6p: "குரோஷியாவில் வேலை செய்தால் employer உங்கள் Croatian bank account-க்கு சம்பளம் அனுப்பலாம்.",
+      s6p2: "Employment contract மற்றும் bank details சரிபார்க்கவும்.",
+      s7title: "7. வங்கி கட்டணங்கள்",
+      s7p: "சில வங்கி சேவைகளுக்கு fees இருக்கலாம்.",
+      s7list: ["Account maintenance", "Cash withdrawal", "Transfers", "Cards", "மற்ற சேவைகள்"],
+      s7p2: "வங்கியின் தற்போதைய fee schedule-ஐ பார்க்கவும்.",
+      s8title: "8. Card தொலைந்தால்",
+      s8p: "உடனடியாக வங்கியை தொடர்பு கொண்டு card-ஐ block செய்யவும்.",
+      s9title: "9. நல்ல வங்கி பழக்கங்கள்",
+      s9list: ["Bank contact details வைத்திருங்கள்", "Transactions சரிபார்க்கவும்", "PIN ரகசியமாக வைத்திருங்கள்", "Official apps பயன்படுத்துங்கள்", "Suspicious links கவனமாக இருங்கள்", "Documents பாதுகாப்பாக வைத்திருங்கள்"],
+      s10title: "10. Official information",
+      s10p: "தற்போதைய தகவல்களுக்கு உங்கள் bank மற்றும் Croatian official institutions websites பார்க்கவும்.",
+      s11title: "11. முக்கியம்",
+      s11p: "Banking rules மற்றும் fees மாறலாம். Latest information-ஐ bank அல்லது official institution மூலம் உறுதி செய்யவும்.",
+      disclaimer: "CROPATH பொதுவான தகவலை வழங்குகிறது. இது legal, financial அல்லது banking advice அல்ல.",
+      footer: "குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் பாதை."
+    },
+
+    te: {
+      back: "← హోమ్‌కు తిరిగి వెళ్ళండి",
+      heroTitle: "క్రొయేషియాలో బ్యాంకింగ్",
+      heroText: "బ్యాంక్ ఖాతాలు, కార్డులు, చెల్లింపులు, ATM మరియు బ్యాంకింగ్ సేవల ప్రాథమిక సమాచారం.",
+      s1title: "1. బ్యాంక్ ఖాతా తెరవడం",
+      s1p: "క్రొయేషియాలో నివసించే లేదా పని చేసే విదేశీయులు బ్యాంక్ అవసరాలకు అనుగుణంగా ఖాతా తెరవవచ్చు.",
+      s1list: ["Passport లేదా valid ID", "అవసరమైతే Residence permit", "OIB", "Address proof", "బ్యాంక్ అదనపు పత్రాలు అడగవచ్చు"],
+      s2title: "2. OIB",
+      s2p: "OIB అనేది Croatian Personal Identification Number.",
+      s2notice: "మీ OIB సమాచారాన్ని సురక్షితంగా ఉంచండి.",
+      s3title: "3. బ్యాంక్ కార్డ్",
+      s3p: "ఖాతా తెరిచిన తర్వాత debit card ఇవ్వవచ్చు.",
+      s3list: ["ATM నుండి డబ్బు తీసుకోవడం", "Shop payments", "Online payments", "Contactless payments", "Mobile banking"],
+      s4title: "4. ATM ఉపయోగం",
+      s4p: "ATM ద్వారా నగదు తీసుకోవచ్చు మరియు అందుబాటులో ఉన్న బ్యాంకింగ్ సేవలను ఉపయోగించవచ్చు.",
+      s4list: ["Amount check చేయండి", "Fee information చదవండి", "PIN రహస్యంగా ఉంచండి", "Card/PIN share చేయవద్దు", "Card పోతే వెంటనే బ్యాంక్‌ను సంప్రదించండి"],
+      s5title: "5. Mobile మరియు Internet Banking",
+      s5p: "చాలా Croatian banks mobile లేదా internet banking అందిస్తాయి.",
+      s5list: ["Balance చూడటం", "Transactions చూడటం", "Payments చేయడం", "Cards manage చేయడం", "Notifications పొందడం"],
+      s5notice: "Password, PIN లేదా security code ఎవరితోనూ share చేయవద్దు.",
+      s6title: "6. Salary payment",
+      s6p: "క్రొయేషియాలో పని చేస్తే employer మీ Croatian bank account కు salary పంపవచ్చు.",
+      s6p2: "Employment contract మరియు bank details తనిఖీ చేయండి.",
+      s7title: "7. Bank fees",
+      s7p: "కొన్ని banking services కు fees ఉండవచ్చు.",
+      s7list: ["Account maintenance", "Cash withdrawal", "Transfers", "Cards", "ఇతర services"],
+      s7p2: "మీ bank యొక్క current fee schedule చూడండి.",
+      s8title: "8. Card పోయినప్పుడు",
+      s8p: "వెంటనే బ్యాంక్‌ను సంప్రదించి card block చేయించండి.",
+      s9title: "9. మంచి banking అలవాట్లు",
+      s9list: ["Bank contact details ఉంచండి", "Transactions తనిఖీ చేయండి", "PIN రహస్యంగా ఉంచండి", "Official apps ఉపయోగించండి", "Suspicious links జాగ్రత్త", "Documents సురక్షితంగా ఉంచండి"],
+      s10title: "10. Official information",
+      s10p: "తాజా సమాచారం కోసం మీ bank మరియు Croatian official institutions websites చూడండి.",
+      s11title: "11. ముఖ్యమైనది",
+      s11p: "Banking rules మరియు fees మారవచ్చు. Latest information ను bank లేదా official institution నుండి నిర్ధారించండి.",
+      disclaimer: "CROPATH సాధారణ సమాచారం అందిస్తుంది. ఇది legal, financial లేదా banking advice కాదు.",
+      footer: "క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ మార్గం."
+    },
+
+    bn: {
+      back: "← হোমে ফিরে যান",
+      heroTitle: "ক্রোয়েশিয়ায় ব্যাংকিং",
+      heroText: "ব্যাংক অ্যাকাউন্ট, কার্ড, পেমেন্ট, ATM এবং ব্যাংকিং পরিষেবা সম্পর্কে মৌলিক তথ্য।",
+      s1title: "1. ব্যাংক অ্যাকাউন্ট খোলা",
+      s1p: "ক্রোয়েশিয়ায় বসবাস বা কাজ করা বিদেশিরা ব্যাংকের প্রয়োজনীয়তা অনুযায়ী অ্যাকাউন্ট খুলতে পারেন।",
+      s1list: ["Passport বা valid ID", "প্রয়োজন হলে Residence permit", "OIB", "ঠিকানার প্রমাণ", "ব্যাংক অতিরিক্ত নথি চাইতে পারে"],
+      s2title: "2. OIB",
+      s2p: "OIB হলো Croatian Personal Identification Number.",
+      s2notice: "আপনার OIB নিরাপদে রাখুন।",
+      s3title: "3. ব্যাংক কার্ড",
+      s3p: "অ্যাকাউন্ট খোলার পরে debit card পাওয়া যেতে পারে।",
+      s3list: ["ATM থেকে টাকা তোলা", "দোকানে payment", "Online payment", "Contactless payment", "Mobile banking"],
+      s4title: "4. ATM ব্যবহার",
+      s4p: "ATM থেকে নগদ টাকা তোলা এবং অন্যান্য উপলব্ধ ব্যাংকিং পরিষেবা ব্যবহার করা যায়।",
+      s4list: ["Amount পরীক্ষা করুন", "Fee তথ্য পড়ুন", "PIN গোপন রাখুন", "Card/PIN শেয়ার করবেন না", "Card হারালে ব্যাংকের সাথে যোগাযোগ করুন"],
+      s5title: "5. Mobile এবং Internet Banking",
+      s5p: "অনেক Croatian bank mobile বা internet banking প্রদান করে।",
+      s5list: ["Balance দেখা", "Transactions দেখা", "Payments করা", "Cards manage করা", "Notifications পাওয়া"],
+      s5notice: "Password, PIN বা security code কারও সাথে শেয়ার করবেন না।",
+      s6title: "6. Salary payment",
+      s6p: "ক্রোয়েশিয়ায় কাজ করলে employer আপনার Croatian bank account-এ salary পাঠাতে পারেন।",
+      s6p2: "Employment contract এবং bank details পরীক্ষা করুন।",
+      s7title: "7. Bank fees",
+      s7p: "কিছু banking service-এর জন্য fee থাকতে পারে।",
+      s7list: ["Account maintenance", "Cash withdrawal", "Transfers", "Cards", "অন্যান্য services"],
+      s7p2: "ব্যাংকের current fee schedule দেখুন।",
+      s8title: "8. Card হারিয়ে গেলে",
+      s8p: "তৎক্ষণাৎ ব্যাংকের সাথে যোগাযোগ করে card block করুন।",
+      s9title: "9. ভালো banking অভ্যাস",
+      s9list: ["Bank contact details রাখুন", "Transactions পরীক্ষা করুন", "PIN গোপন রাখুন", "Official apps ব্যবহার করুন", "Suspicious links থেকে সতর্ক থাকুন", "Documents নিরাপদে রাখুন"],
+      s10title: "10. Official information",
+      s10p: "বর্তমান তথ্যের জন্য আপনার bank এবং Croatian official institutions-এর website দেখুন।",
+      s11title: "11. গুরুত্বপূর্ণ",
+      s11p: "Banking rules এবং fees পরিবর্তন হতে পারে। Latest information bank বা official institution থেকে নিশ্চিত করুন।",
+      disclaimer: "CROPATH সাধারণ তথ্য প্রদান করে। এটি legal, financial বা banking advice নয়।",
+      footer: "ক্রোয়েশিয়ায় বসবাস ও কাজ করার আপনার পথ।"
+    },
+
+    ur: {
+      back: "← ہوم پر واپس جائیں",
+      heroTitle: "کروشیا میں بینکنگ",
+      heroText: "بینک اکاؤنٹس، کارڈز، ادائیگی، ATM اور بنیادی بینکنگ خدمات کے بارے میں معلومات۔",
+      s1title: "1. بینک اکاؤنٹ کھولنا",
+      s1p: "کروشیا میں رہنے یا کام کرنے والے غیر ملکی بینک کی ضروریات کے مطابق اکاؤنٹ کھول سکتے ہیں۔",
+      s1list: ["پاسپورٹ یا درست شناختی دستاویز", "ضرورت کے مطابق Residence permit", "OIB", "پتے کا ثبوت", "بینک اضافی دستاویزات مانگ سکتا ہے"],
+      s2title: "2. OIB",
+      s2p: "OIB کروشیا کا Personal Identification Number ہے۔",
+      s2notice: "اپنا OIB محفوظ رکھیں۔",
+      s3title: "3. بینک کارڈ",
+      s3p: "اکاؤنٹ کھولنے کے بعد بینک debit card فراہم کر سکتا ہے۔",
+      s3list: ["ATM سے رقم نکالنا", "دکانوں میں ادائیگی", "Online payment", "Contactless payment", "Mobile banking"],
+      s4title: "4. ATM استعمال",
+      s4p: "ATM سے رقم نکالی جا سکتی ہے اور دستیاب بینکنگ خدمات استعمال کی جا سکتی ہیں۔",
+      s4list: ["رقم چیک کریں", "Fee کی معلومات پڑھیں", "PIN خفیہ رکھیں", "Card/PIN کسی کو نہ دیں", "Card گم ہونے پر فوراً بینک سے رابطہ کریں"],
+      s5title: "5. Mobile اور Internet Banking",
+      s5p: "بہت سے Croatian banks mobile یا internet banking فراہم کرتے ہیں۔",
+      s5list: ["Balance دیکھنا", "Transactions دیکھنا", "Payments کرنا", "Cards manage کرنا", "Notifications حاصل کرنا"],
+      s5notice: "Password، PIN یا security code کسی کے ساتھ شیئر نہ کریں۔",
+      s6title: "6. Salary payment",
+      s6p: "کروشیا میں کام کرنے پر employer آپ کے Croatian bank account میں salary بھیج سکتا ہے۔",
+      s6p2: "Employment contract اور bank details چیک کریں۔",
+      s7title: "7. Bank fees",
+      s7p: "کچھ banking services کے لیے fees ہو سکتی ہیں۔",
+      s7list: ["Account maintenance", "Cash withdrawal", "Transfers", "Cards", "دیگر services"],
+      s7p2: "اپنے bank کی current fee schedule چیک کریں۔",
+      s8title: "8. Card گم یا چوری ہو جائے",
+      s8p: "فوراً بینک سے رابطہ کریں اور card block کروائیں۔",
+      s9title: "9. اچھی banking عادات",
+      s9list: ["Bank contact details محفوظ رکھیں", "Transactions چیک کریں", "PIN خفیہ رکھیں", "Official apps استعمال کریں", "Suspicious links سے محتاط رہیں", "Documents محفوظ رکھیں"],
+      s10title: "10. Official information",
+      s10p: "تازہ معلومات کے لیے اپنے bank اور Croatian official institutions کی websites دیکھیں۔",
+      s11title: "11. اہم",
+      s11p: "Banking rules اور fees تبدیل ہو سکتی ہیں۔ Latest information bank یا official institution سے confirm کریں۔",
+      disclaimer: "CROPATH عمومی معلومات فراہم کرتا ہے۔ یہ legal، financial یا banking advice نہیں ہے۔",
+      footer: "کروشیا میں رہنے اور کام کرنے کا آپ کا راستہ۔"
+    },
+
+    hr: {
+      back: "← Natrag na početnu",
+      heroTitle: "Bankarstvo u Hrvatskoj",
+      heroText: "Osnovne informacije o bankovnim računima, karticama, plaćanjima, bankomatima i bankarskim uslugama.",
+      s1title: "1. Otvaranje bankovnog računa",
+      s1p: "Stranci koji žive ili rade u Hrvatskoj mogu otvoriti bankovni račun, ovisno o svom statusu i zahtjevima banke.",
+      s1list: ["Putovnica ili važeći identifikacijski dokument", "Dozvola boravka, kada je potrebna", "OIB", "Dokaz adrese može biti zatražen", "Banka može zatražiti dodatne dokumente"],
+      s2title: "2. OIB",
+      s2p: "OIB je hrvatski osobni identifikacijski broj. Koristi se za bankarstvo, zaposlenje, poreze i mnoge druge službene postupke.",
+      s2notice: "Čuvajte svoje podatke o OIB-u na sigurnom.",
+      s3title: "3. Bankovna kartica",
+      s3p: "Nakon otvaranja računa banka može izdati debitnu karticu.",
+      s3list: ["Podizanje novca na bankomatu", "Plaćanje u trgovinama", "Online plaćanja", "Beskontaktno plaćanje", "Mobilno bankarstvo"],
+      s4title: "4. Korištenje bankomata",
+      s4p: "Bankomate možete koristiti za podizanje gotovine i druge dostupne usluge.",
+      s4list: ["Provjerite iznos", "Pročitajte informacije o naknadama", "Čuvajte PIN", "Ne dajte karticu ili PIN drugoj osobi", "Ako izgubite karticu, odmah kontaktirajte banku"],
+      s5title: "5. Mobilno i internetsko bankarstvo",
+      s5p: "Mnoge banke u Hrvatskoj nude mobilno ili internetsko bankarstvo.",
+      s5list: ["Provjera stanja", "Pregled transakcija", "Plaćanja", "Upravljanje karticama", "Bankovne obavijesti"],
+      s5notice: "Nikada ne dijelite lozinku, PIN ili sigurnosne kodove s drugom osobom.",
+      s6title: "6. Isplata plaće",
+      s6p: "Ako radite u Hrvatskoj, poslodavac može isplaćivati plaću na vaš hrvatski bankovni račun.",
+      s6p2: "Pažljivo provjerite ugovor o radu i podatke bankovnog računa.",
+      s7title: "7. Bankovne naknade",
+      s7p: "Banke mogu naplaćivati određene usluge. Naknade ovise o banci, vrsti računa i usluzi.",
+      s7list: ["Održavanje računa", "Podizanje gotovine", "Transakcije", "Kartice", "Ostale bankarske usluge"],
+      s7p2: "Uvijek provjerite aktualni cjenik svoje banke.",
+      s8title: "8. Ako izgubite karticu",
+      s8p: "Što prije kontaktirajte banku i zatražite blokiranje kartice.",
+      s9title: "9. Korisne bankarske navike",
+      s9list: ["Sačuvajte kontakt banke", "Redovito provjeravajte transakcije", "Čuvajte PIN", "Koristite službene aplikacije", "Budite oprezni sa sumnjivim porukama i poveznicama", "Čuvajte važne dokumente"],
+      s10title: "10. Službene informacije",
+      s10p: "Za aktualne informacije provjerite službenu stranicu svoje banke i relevantne hrvatske institucije.",
+      s11title: "11. Važno",
+      s11p: "Bankarska pravila, naknade i zahtjevi mogu se promijeniti. Najnovije informacije uvijek provjerite izravno kod banke ili nadležne institucije.",
+      disclaimer: "CROPATH pruža opće informacije za strance u Hrvatskoj. Ovo nije pravni, financijski niti bankarski savjet.",
+      footer: "Vaš put za život i rad u Hrvatskoj."
+    }
+  };
+
+  function setText(id, value) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.textContent = value;
+    }
+  }
+
+  function setList(id, items) {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    element.innerHTML = "";
+
+    items.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      element.appendChild(li);
+    });
+  }
+
+  function applyLanguage(lang) {
+    const t = translations[lang] || translations.en;
+
+    setText("backHome", t.back);
+    setText("heroTitle", t.heroTitle);
+    setText("heroText", t.heroText);
+
+    setText("s1title", t.s1title);
+    setText("s1p", t.s1p);
+    setList("s1list", t.s1list);
+
+    setText("s2title", t.s2title);
+    setText("s2p", t.s2p);
+    setText("s2notice", t.s2notice);
+
+    setText("s3title", t.s3title);
+    setText("s3p", t.s3p);
+    setList("s3list", t.s3list);
+
+    setText("s4title", t.s4title);
+    setText("s4p", t.s4p);
+    setList("s4list", t.s4list);
+
+    setText("s5title", t.s5title);
+    setText("s5p", t.s5p);
+    setList("s5list", t.s5list);
+    setText("s5notice", t.s5notice);
+
+    setText("s6title", t.s6title);
+    setText("s6p", t.s6p);
+    setText("s6p2", t.s6p2);
+
+    setText("s7title", t.s7title);
+    setText("s7p", t.s7p);
+    setList("s7list", t.s7list);
+    setText("s7p2", t.s7p2);
+
+    setText("s8title", t.s8title);
+    setText("s8p", t.s8p);
+
+    setText("s9title", t.s9title);
+    setList("s9list", t.s9list);
+
+    setText("s10title", t.s10title);
+    setText("s10p", t.s10p);
+
+    setText("s11title", t.s11title);
+    setText("s11p", t.s11p);
+    setText("disclaimer", t.disclaimer);
+
+    setText("footerText", t.footer);
+
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ur" ? "rtl" : "ltr";
+
+    localStorage.setItem("cropath-language", lang);
+  }
+
+  const languageSelect = document.getElementById("languageSelect");
+
+  const savedLanguage = localStorage.getItem("cropath-language") || "en";
+
+  languageSelect.value = savedLanguage;
+  applyLanguage(savedLanguage);
+
+  languageSelect.addEventListener("change", function () {
+    applyLanguage(this.value);
+  });
+</script>
+
+</body>
+</html>
