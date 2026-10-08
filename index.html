@@ -172,6 +172,124 @@
       background: #1d4ed8;
     }
 
+    /* CONNECT SECTION */
+
+    .connect-section {
+      margin-top: 50px;
+      background: white;
+      border-radius: 20px;
+      padding: 35px 25px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+      text-align: center;
+    }
+
+    .connect-section h2 {
+      color: #0b1f3a;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .connect-section > p {
+      color: #64748b;
+      margin-bottom: 28px;
+      font-size: 16px;
+    }
+
+    .connect-logo {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      border: 2px solid #e2e8f0;
+    }
+
+    .connect-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .connect-card {
+      text-decoration: none;
+      color: #172033;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px 12px;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 125px;
+    }
+
+    .connect-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+    }
+
+    .connect-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .whatsapp-icon {
+      background: #25D366;
+    }
+
+    .email-icon {
+      background: #EA4335;
+    }
+
+    .website-icon {
+      background: #2563eb;
+    }
+
+    .instagram-icon {
+      background: linear-gradient(135deg, #833AB4, #E1306C, #FCAF45);
+    }
+
+    .connect-card strong {
+      font-size: 15px;
+      color: #0b1f3a;
+    }
+
+    .join-button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 32px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 17px;
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .join-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+    }
+
     .info-box {
       margin-top: 45px;
       background: #eaf2ff;
@@ -212,7 +330,8 @@
     }
 
     [dir="rtl"] .section-title,
-    [dir="rtl"] footer {
+    [dir="rtl"] footer,
+    [dir="rtl"] .connect-section {
       text-align: center;
     }
 
@@ -263,6 +382,18 @@
       .card {
         min-height: auto;
       }
+
+      .connect-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .connect-section {
+        padding: 28px 15px;
+      }
+
+      .connect-section h2 {
+        font-size: 25px;
+      }
     }
   </style>
 </head>
@@ -272,7 +403,9 @@
 <header>
   <div class="nav">
 
-    <div class="logo">MALAYALIS IN CROATIA</div>
+    <div class="logo">
+      MALAYALIS IN CROATIA
+    </div>
 
     <div class="language-box">
       <select id="languageSelect" onchange="changeLanguage(this.value)">
@@ -343,7 +476,6 @@
       </a>
     </div>
 
-
     <!-- GOVERNMENT -->
     <div class="card">
       <div class="icon">🏛️</div>
@@ -360,7 +492,6 @@
         Open Page →
       </a>
     </div>
-
 
     <!-- DRIVING -->
     <div class="card">
@@ -379,7 +510,6 @@
       </a>
     </div>
 
-
     <!-- WORK -->
     <div class="card">
       <div class="icon">💼</div>
@@ -396,7 +526,6 @@
         Open Page →
       </a>
     </div>
-
 
     <!-- HEALTH -->
     <div class="card">
@@ -415,7 +544,6 @@
       </a>
     </div>
 
-
     <!-- HOUSING -->
     <div class="card">
       <div class="icon">🏠</div>
@@ -432,7 +560,6 @@
         Open Page →
       </a>
     </div>
-
 
     <!-- BANK -->
     <div class="card">
@@ -451,7 +578,6 @@
       </a>
     </div>
 
-
     <!-- FAMILY -->
     <div class="card">
       <div class="icon">👨‍👩‍👧‍👦</div>
@@ -469,7 +595,6 @@
       </a>
     </div>
 
-
     <!-- EMERGENCY -->
     <div class="card">
       <div class="icon">🚨</div>
@@ -486,7 +611,6 @@
         Open Page →
       </a>
     </div>
-
 
     <!-- CONTACTS -->
     <div class="card">
@@ -507,6 +631,110 @@
 
   </div>
 
+
+  <!-- CONNECT SECTION -->
+
+  <section class="connect-section">
+
+    <!-- LOGO PLACEHOLDER -->
+    <div class="connect-logo">
+      🌍
+    </div>
+
+    <h2 id="connectTitle">
+      Join & Connect
+    </h2>
+
+    <p id="connectText">
+      Follow MALAYALIS IN CROATIA and stay connected with our community.
+    </p>
+
+    <div class="connect-grid">
+
+      <!-- WHATSAPP -->
+      <a
+        href="https://whatsapp.com/channel/0029VbDKLO4BVJkvHdxKjO1p"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="connect-card"
+      >
+        <div class="connect-icon whatsapp-icon">
+          WA
+        </div>
+
+        <strong id="whatsappText">
+          WhatsApp Channel
+        </strong>
+      </a>
+
+
+      <!-- EMAIL -->
+      <a
+        href="mailto:malayalisincroatia@gmail.com"
+        class="connect-card"
+      >
+        <div class="connect-icon email-icon">
+          @
+        </div>
+
+        <strong id="emailText">
+          Email Us
+        </strong>
+      </a>
+
+
+      <!-- WEBSITE -->
+      <a
+        href="https://sites.google.com/view/malayalisincroatia/home"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="connect-card"
+      >
+        <div class="connect-icon website-icon">
+          🌐
+        </div>
+
+        <strong id="websiteText">
+          Website
+        </strong>
+      </a>
+
+
+      <!-- INSTAGRAM -->
+      <a
+        href="https://www.instagram.com/malayali_from_croatia?stkn=OHpxc2Fqejgwc2Jt&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="connect-card"
+      >
+        <div class="connect-icon instagram-icon">
+          ◎
+        </div>
+
+        <strong id="instagramText">
+          Instagram
+        </strong>
+      </a>
+
+    </div>
+
+
+    <!-- JOIN BUTTON -->
+
+    <a
+      href="https://whatsapp.com/channel/0029VbDKLO4BVJkvHdxKjO1p"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="join-button"
+      id="joinButton"
+    >
+      📱 JOIN OUR WHATSAPP CHANNEL
+    </a>
+
+  </section>
+
+
+  <!-- IMPORTANT -->
 
   <div class="info-box">
 
@@ -619,6 +847,21 @@ const translations = {
     emergencyBtn: "Open Page →",
     contactsBtn: "Open Page →",
 
+    connectTitle: "Join & Connect",
+
+    connectText:
+      "Follow MALAYALIS IN CROATIA and stay connected with our community.",
+
+    whatsappText: "WhatsApp Channel",
+
+    emailText: "Email Us",
+
+    websiteText: "Website",
+
+    instagramText: "Instagram",
+
+    joinButton: "📱 JOIN OUR WHATSAPP CHANNEL",
+
     infoTitle: "Important",
 
     infoText:
@@ -629,7 +872,6 @@ const translations = {
 
     verifiedText:
       "Last verified: 7 October 2026"
-
   },
 
 
@@ -718,6 +960,21 @@ const translations = {
     emergencyBtn: "പേജ് തുറക്കുക →",
     contactsBtn: "പേജ് തുറക്കുക →",
 
+    connectTitle: "ചേരൂ & ബന്ധപ്പെടൂ",
+
+    connectText:
+      "MALAYALIS IN CROATIA-യുമായി ബന്ധപ്പെട്ടു നമ്മുടെ കമ്മ്യൂണിറ്റിയുടെ അപ്ഡേറ്റുകൾ അറിയൂ.",
+
+    whatsappText: "WhatsApp Channel",
+
+    emailText: "Email അയയ്ക്കുക",
+
+    websiteText: "Website",
+
+    instagramText: "Instagram",
+
+    joinButton: "📱 ഞങ്ങളുടെ WhatsApp Channel-ൽ ചേരൂ",
+
     infoTitle:
       "പ്രധാനപ്പെട്ടത്",
 
@@ -729,7 +986,6 @@ const translations = {
 
     verifiedText:
       "അവസാനം പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026"
-
   },
 
 
@@ -818,6 +1074,27 @@ const translations = {
     emergencyBtn: "पेज खोलें →",
     contactsBtn: "पेज खोलें →",
 
+    connectTitle:
+      "जुड़ें और संपर्क करें",
+
+    connectText:
+      "MALAYALIS IN CROATIA को फॉलो करें और हमारी कम्युनिटी से जुड़े रहें।",
+
+    whatsappText:
+      "WhatsApp Channel",
+
+    emailText:
+      "Email करें",
+
+    websiteText:
+      "Website",
+
+    instagramText:
+      "Instagram",
+
+    joinButton:
+      "📱 हमारे WhatsApp Channel से जुड़ें",
+
     infoTitle:
       "महत्वपूर्ण",
 
@@ -829,7 +1106,6 @@ const translations = {
 
     verifiedText:
       "अंतिम सत्यापन: 7 अक्टूबर 2026"
-
   },
 
 
@@ -918,6 +1194,27 @@ const translations = {
     emergencyBtn: "पृष्ठ खोल्नुहोस् →",
     contactsBtn: "पृष्ठ खोल्नुहोस् →",
 
+    connectTitle:
+      "जोडिनुहोस् र सम्पर्क गर्नुहोस्",
+
+    connectText:
+      "MALAYALIS IN CROATIA लाई फलो गर्नुहोस् र हाम्रो समुदायसँग जोडिनुहोस्।",
+
+    whatsappText:
+      "WhatsApp Channel",
+
+    emailText:
+      "Email",
+
+    websiteText:
+      "Website",
+
+    instagramText:
+      "Instagram",
+
+    joinButton:
+      "📱 हाम्रो WhatsApp Channel मा जोडिनुहोस्",
+
     infoTitle:
       "महत्वपूर्ण",
 
@@ -929,7 +1226,6 @@ const translations = {
 
     verifiedText:
       "अन्तिम जाँच: ७ अक्टोबर २०२६"
-
   },
 
 
@@ -1018,6 +1314,27 @@ const translations = {
     emergencyBtn: "பக்கத்தைத் திறக்கவும் →",
     contactsBtn: "பக்கத்தைத் திறக்கவும் →",
 
+    connectTitle:
+      "இணைந்து தொடர்பில் இருங்கள்",
+
+    connectText:
+      "MALAYALIS IN CROATIA-வை பின்தொடர்ந்து எங்கள் சமூகத்துடன் இணைந்திருங்கள்.",
+
+    whatsappText:
+      "WhatsApp Channel",
+
+    emailText:
+      "Email",
+
+    websiteText:
+      "Website",
+
+    instagramText:
+      "Instagram",
+
+    joinButton:
+      "📱 எங்கள் WhatsApp Channel-ல் சேருங்கள்",
+
     infoTitle:
       "முக்கியம்",
 
@@ -1029,7 +1346,6 @@ const translations = {
 
     verifiedText:
       "கடைசியாக சரிபார்க்கப்பட்டது: 7 அக்டோபர் 2026"
-
   },
 
 
@@ -1118,6 +1434,27 @@ const translations = {
     emergencyBtn: "పేజీ తెరవండి →",
     contactsBtn: "పేజీ తెరవండి →",
 
+    connectTitle:
+      "చేరండి & కనెక్ట్ అవ్వండి",
+
+    connectText:
+      "MALAYALIS IN CROATIA ను ఫాలో అవుతూ మా కమ్యూనిటీతో కనెక్ట్ అవ్వండి.",
+
+    whatsappText:
+      "WhatsApp Channel",
+
+    emailText:
+      "Email",
+
+    websiteText:
+      "Website",
+
+    instagramText:
+      "Instagram",
+
+    joinButton:
+      "📱 మా WhatsApp Channel లో చేరండి",
+
     infoTitle:
       "ముఖ్యమైనది",
 
@@ -1129,7 +1466,6 @@ const translations = {
 
     verifiedText:
       "చివరిగా ధృవీకరించబడింది: 7 అక్టోబర్ 2026"
-
   },
 
 
@@ -1218,6 +1554,27 @@ const translations = {
     emergencyBtn: "পৃষ্ঠা খুলুন →",
     contactsBtn: "পৃষ্ঠা খুলুন →",
 
+    connectTitle:
+      "যোগ দিন ও যোগাযোগ রাখুন",
+
+    connectText:
+      "MALAYALIS IN CROATIA ফলো করুন এবং আমাদের কমিউনিটির সাথে যুক্ত থাকুন।",
+
+    whatsappText:
+      "WhatsApp Channel",
+
+    emailText:
+      "Email",
+
+    websiteText:
+      "Website",
+
+    instagramText:
+      "Instagram",
+
+    joinButton:
+      "📱 আমাদের WhatsApp Channel-এ যোগ দিন",
+
     infoTitle:
       "গুরুত্বপূর্ণ",
 
@@ -1229,7 +1586,6 @@ const translations = {
 
     verifiedText:
       "শেষ যাচাই: ৭ অক্টোবর ২০২৬"
-
   },
 
 
@@ -1318,6 +1674,27 @@ const translations = {
     emergencyBtn: "صفحہ کھولیں ←",
     contactsBtn: "صفحہ کھولیں ←",
 
+    connectTitle:
+      "شامل ہوں اور رابطے میں رہیں",
+
+    connectText:
+      "MALAYALIS IN CROATIA کو فالو کریں اور ہماری کمیونٹی سے جڑے رہیں۔",
+
+    whatsappText:
+      "WhatsApp Channel",
+
+    emailText:
+      "Email",
+
+    websiteText:
+      "Website",
+
+    instagramText:
+      "Instagram",
+
+    joinButton:
+      "📱 ہمارے WhatsApp Channel میں شامل ہوں",
+
     infoTitle:
       "اہم",
 
@@ -1329,7 +1706,6 @@ const translations = {
 
     verifiedText:
       "آخری تصدیق: 7 اکتوبر 2026"
-
   },
 
 
@@ -1418,6 +1794,27 @@ const translations = {
     emergencyBtn: "Otvori stranicu →",
     contactsBtn: "Otvori stranicu →",
 
+    connectTitle:
+      "Pridružite se i povežite se",
+
+    connectText:
+      "Pratite MALAYALIS IN CROATIA i ostanite povezani s našom zajednicom.",
+
+    whatsappText:
+      "WhatsApp Channel",
+
+    emailText:
+      "Email",
+
+    websiteText:
+      "Web stranica",
+
+    instagramText:
+      "Instagram",
+
+    joinButton:
+      "📱 PRIDRUŽITE SE NAŠEM WHATSAPP KANALU",
+
     infoTitle:
       "Važno",
 
@@ -1429,7 +1826,6 @@ const translations = {
 
     verifiedText:
       "Zadnja provjera: 7. listopada 2026."
-
   }
 
 };
