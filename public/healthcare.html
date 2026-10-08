@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CROPATH — Healthcare in Croatia</title>
+
+<meta name="description" content="Healthcare information for foreigners in Croatia, including HZZO, doctors, hospitals, pharmacies and emergency medical help.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.6;
+}
+
+header{
+  background:#0f172a;
+  color:white;
+  padding:18px 20px;
+}
+
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.header-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.language-select{
+  min-width:190px;
+  min-height:50px;
+  padding:12px 16px;
+  border-radius:12px;
+  border:2px solid #64748b;
+  background:white;
+  color:#111827;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600;
+}
+
+.back{
+  color:white;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.3);
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+.hero{
+  background:linear-gradient(135deg,#14532d,#16a34a);
+  color:white;
+  padding:55px 20px;
+}
+
+.hero-inner{
+  max-width:1100px;
+  margin:auto;
+}
+
+.badge{
+  display:inline-block;
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.25);
+  padding:7px 12px;
+  border-radius:30px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+h1{
+  font-size:42px;
+  line-height:1.15;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:760px;
+  font-size:18px;
+  opacity:.94;
+}
+
+.container{
+  max-width:1100px;
+  margin:35px auto;
+  padding:0 20px;
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  padding:28px;
+  margin-bottom:22px;
+  box-shadow:0 8px 25px rgba(15,23,42,.07);
+  border:1px solid #e5e7eb;
+}
+
+h2{
+  font-size:25px;
+  margin-bottom:14px;
+  color:#0f172a;
+}
+
+h3{
+  font-size:19px;
+  margin:20px 0 8px;
+  color:#15803d;
+}
+
+p{
+  margin-bottom:12px;
+}
+
+ul{
+  padding-left:22px;
+  margin:10px 0;
+}
+
+li{
+  margin:8px 0;
+}
+
+.info{
+  background:#eff6ff;
+  border-left:5px solid #2563eb;
+  padding:18px;
+  border-radius:10px;
+  margin-top:15px;
+}
+
+.warning{
+  background:#fff7ed;
+  border-left:5px solid #f97316;
+  padding:18px;
+  border-radius:10px;
+  margin-top:15px;
+}
+
+.emergency{
+  background:#fef2f2;
+  border-left:5px solid #dc2626;
+  padding:20px;
+  border-radius:10px;
+  margin-top:15px;
+}
+
+.emergency strong{
+  color:#b91c1c;
+}
+
+.links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:18px;
+}
+
+.links a{
+  display:inline-block;
+  background:#15803d;
+  color:white;
+  text-decoration:none;
+  padding:11px 16px;
+  border-radius:9px;
+  font-weight:600;
+}
+
+.links a:hover{
+  background:#166534;
+}
+
+.verified{
+  font-size:14px;
+  color:#166534;
+  background:#f0fdf4;
+  display:inline-block;
+  padding:7px 11px;
+  border-radius:8px;
+  margin-top:10px;
+}
+
+footer{
+  background:#0f172a;
+  color:#cbd5e1;
+  margin-top:45px;
+  padding:30px 20px;
+}
+
+.footer-inner{
+  max-width:1100px;
+  margin:auto;
+}
+
+footer p{
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+@media(max-width:700px){
+
+  h1{
+    font-size:32px;
+  }
+
+  .hero{
+    padding:40px 20px;
+  }
+
+  .card{
+    padding:22px;
+  }
+
+  .header-inner{
+    align-items:flex-start;
+  }
+
+  .header-right{
+    flex-direction:column;
+    align-items:flex-end;
+  }
+
+  .language-select{
+    width:100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <div class="logo">CROPATH</div>
+
+    <div class="header-right">
+
+      <select id="languageSelect" class="language-select" aria-label="Language">
+        <option value="en">English</option>
+        <option value="ml">മലയാളം</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ne">नेपाली</option>
+        <option value="ta">தமிழ்</option>
+        <option value="te">తెలుగు</option>
+        <option value="bn">বাংলা</option>
+        <option value="ur">اردو</option>
+        <option value="hr">Hrvatski</option>
+      </select>
+
+      <!-- FIXED: local Home page -->
+      <a class="back" href="index.html" id="backHome">
+        ← Back to Home
+      </a>
+
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+
+    <div class="badge" id="badge">
+      🇭🇷 Healthcare Information Guide
+    </div>
+
+    <h1 id="pageTitle">
+      Healthcare in Croatia
+    </h1>
+
+    <p id="heroText">
+      Practical information about healthcare, HZZO, doctors, hospitals,
+      pharmacies and emergency medical help.
+    </p>
+
+    <div class="verified" id="verified">
+      ✓ Information checked: 7 October 2026
+    </div>
+
+  </div>
+</section>
+
+<main class="container">
+
+<section class="card">
+
+<h2 id="s1title">🏥 Healthcare in Croatia</h2>
+
+<p id="s1p1">
+Croatia has a public healthcare system and healthcare services are provided
+through the Croatian Health Insurance Fund (HZZO) together with healthcare
+institutions and private providers.
+</p>
+
+<p id="s1p2">
+Your access to healthcare can depend on your insurance status, residence
+status, employment and other circumstances.
+</p>
+
+<div class="info">
+<strong id="s1strong">Important:</strong>
+<span id="s1info">
+Always check your current HZZO status and the applicable healthcare rules
+for your individual situation.
+</span>
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s2title">💳 HZZO Health Insurance</h2>
+
+<p id="s2p1">
+HZZO is the Croatian Health Insurance Fund
+(<strong>Hrvatski zavod za zdravstveno osiguranje</strong>).
+</p>
+
+<p id="s2p2">
+People who are covered by Croatian compulsory health insurance can use
+healthcare services according to the applicable rules and conditions.
+</p>
+
+<h3 id="s2h3">Before using healthcare services</h3>
+
+<ul>
+<li id="s2li1">Check whether you have active health insurance.</li>
+<li id="s2li2">Keep your health insurance information available.</li>
+<li id="s2li3">Check which healthcare provider you can use.</li>
+<li id="s2li4">Ask HZZO if you are unsure about your coverage.</li>
+</ul>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s3title">👨‍⚕️ Family Doctor / General Practitioner</h2>
+
+<p id="s3p1">
+For many non-emergency health problems, the first point of contact can be
+a family doctor or general practitioner.
+</p>
+
+<p id="s3p2">
+Your available healthcare provider can depend on your registration and
+insurance arrangements.
+</p>
+
+<div class="info">
+<strong id="s3strong">Tip:</strong>
+<span id="s3info">
+If you are registered with a family doctor, contact the doctor's office
+first for routine medical problems and appointments.
+</span>
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s4title">🏨 Hospitals</h2>
+
+<p id="s4p1">
+Hospitals provide specialist, diagnostic and emergency services depending
+on the hospital and department.
+</p>
+
+<p id="s4p2">
+For planned treatment, check whether a referral, appointment or other
+documentation is required.
+</p>
+
+<div class="warning">
+<strong id="s4strong">
+Do not delay emergency care.
+</strong>
+
+<span id="s4warning">
+If the situation is serious or life-threatening, call the emergency
+medical service immediately.
+</span>
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s5title">💊 Pharmacies</h2>
+
+<p id="s5p1">
+Pharmacies in Croatia are called <strong>ljekarne</strong>.
+</p>
+
+<p id="s5p2">
+Pharmacies can provide medicines and other health-related products
+according to Croatian rules.
+</p>
+
+<ul>
+<li id="s5li1">Bring your prescription when required.</li>
+<li id="s5li2">Ask the pharmacist if you need help understanding a medicine.</li>
+<li id="s5li3">Check pharmacy opening hours before visiting.</li>
+</ul>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s6title">🚨 Emergency Medical Help</h2>
+
+<div class="emergency">
+
+<p>
+<strong>
+112 —
+<span id="emergency112">
+General emergency number
+</span>
+</strong>
+</p>
+
+<p>
+<strong>
+194 —
+<span id="emergency194">
+Emergency medical service
+</span>
+</strong>
+</p>
+
+<p id="s6p">
+If there is an immediate danger to life or serious injury, seek emergency
+medical help without delay.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s7title">📋 Before Visiting a Doctor</h2>
+
+<ul>
+<li id="s7li1">Take your identification document.</li>
+<li id="s7li2">Keep your health insurance information available.</li>
+<li id="s7li3">Take previous medical documents when relevant.</li>
+<li id="s7li4">Bring a list of medicines you currently use.</li>
+<li id="s7li5">Check whether an appointment is required.</li>
+</ul>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s8title">🌍 Foreigners in Croatia</h2>
+
+<p id="s8p1">
+Healthcare rights and obligations can differ depending on your residence,
+employment, insurance status, European health insurance coverage and other
+circumstances.
+</p>
+
+<div class="warning">
+
+<strong id="s8strong">
+Important:
+</strong>
+
+<span id="s8warning">
+Do not assume that having a residence permit automatically means every
+healthcare service is free of charge.
+</span>
+
+</div>
+
+<p id="s8p2">
+Check your individual insurance status with HZZO or the competent
+healthcare institution.
+</p>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s9title">🔗 Official Sources</h2>
+
+<p id="s9p">
+For current healthcare rules, insurance information and official
+procedures, use the following Croatian government sources.
+</p>
+
+<div class="links">
+
+<a href="https://hzzo.hr/" target="_blank" rel="noopener">
+HZZO
+</a>
+
+<a href="https://gov.hr/" target="_blank" rel="noopener">
+gov.hr
+</a>
+
+<a href="https://zdravlje.gov.hr/" target="_blank" rel="noopener">
+<span id="healthMinistry">
+Ministry of Health
+</span>
+</a>
+
+</div>
+
+</section>
+
+
+<section class="card">
+
+<h2 id="s10title">⚠️ Important Disclaimer</h2>
+
+<p id="s10p1">
+CROPATH provides general information and practical guidance. It is not a
+government website and does not replace professional medical, legal,
+immigration or other professional advice.
+</p>
+
+<p id="s10p2">
+Healthcare requirements and procedures can change. Always check official
+sources or contact the competent authority for your individual situation.
+</p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="footer-inner">
+
+<p>
+<strong>CROPATH</strong> —
+<span id="footerTitle">
+Your Path to Living and Working in Croatia
+</span>
+</p>
+
+<p id="footerText">
+General information and practical guidance for foreigners in Croatia.
+</p>
+
+<p id="footerDate">
+Last verified: 7 October 2026
+</p>
+
+</div>
+
+</footer>
+
+
+<script>
+
+const translations = {
+
+en:{
+backHome:"← Back to Home",
+badge:"🇭🇷 Healthcare Information Guide",
+pageTitle:"Healthcare in Croatia",
+heroText:"Practical information about healthcare, HZZO, doctors, hospitals, pharmacies and emergency medical help.",
+verified:"✓ Information checked: 7 October 2026",
+s1title:"🏥 Healthcare in Croatia",
+s1p1:"Croatia has a public healthcare system and healthcare services are provided through the Croatian Health Insurance Fund (HZZO) together with healthcare institutions and private providers.",
+s1p2:"Your access to healthcare can depend on your insurance status, residence status, employment and other circumstances.",
+s1strong:"Important:",
+s1info:"Always check your current HZZO status and the applicable healthcare rules for your individual situation.",
+s2title:"💳 HZZO Health Insurance",
+s2p1:"HZZO is the Croatian Health Insurance Fund (Hrvatski zavod za zdravstveno osiguranje).",
+s2p2:"People who are covered by Croatian compulsory health insurance can use healthcare services according to the applicable rules and conditions.",
+s2h3:"Before using healthcare services",
+s2li1:"Check whether you have active health insurance.",
+s2li2:"Keep your health insurance information available.",
+s2li3:"Check which healthcare provider you can use.",
+s2li4:"Ask HZZO if you are unsure about your coverage.",
+s3title:"👨‍⚕️ Family Doctor / General Practitioner",
+s3p1:"For many non-emergency health problems, the first point of contact can be a family doctor or general practitioner.",
+s3p2:"Your available healthcare provider can depend on your registration and insurance arrangements.",
+s3strong:"Tip:",
+s3info:"If you are registered with a family doctor, contact the doctor's office first for routine medical problems and appointments.",
+s4title:"🏨 Hospitals",
+s4p1:"Hospitals provide specialist, diagnostic and emergency services depending on the hospital and department.",
+s4p2:"For planned treatment, check whether a referral, appointment or other documentation is required.",
+s4strong:"Do not delay emergency care.",
+s4warning:"If the situation is serious or life-threatening, call the emergency medical service immediately.",
+s5title:"💊 Pharmacies",
+s5p1:"Pharmacies in Croatia are called ljekarne.",
+s5p2:"Pharmacies can provide medicines and other health-related products according to Croatian rules.",
+s5li1:"Bring your prescription when required.",
+s5li2:"Ask the pharmacist if you need help understanding a medicine.",
+s5li3:"Check pharmacy opening hours before visiting.",
+s6title:"🚨 Emergency Medical Help",
+emergency112:"General emergency number",
+emergency194:"Emergency medical service",
+s6p:"If there is an immediate danger to life or serious injury, seek emergency medical help without delay.",
+s7title:"📋 Before Visiting a Doctor",
+s7li1:"Take your identification document.",
+s7li2:"Keep your health insurance information available.",
+s7li3:"Take previous medical documents when relevant.",
+s7li4:"Bring a list of medicines you currently use.",
+s7li5:"Check whether an appointment is required.",
+s8title:"🌍 Foreigners in Croatia",
+s8p1:"Healthcare rights and obligations can differ depending on your residence, employment, insurance status, European health insurance coverage and other circumstances.",
+s8strong:"Important:",
+s8warning:"Do not assume that having a residence permit automatically means every healthcare service is free of charge.",
+s8p2:"Check your individual insurance status with HZZO or the competent healthcare institution.",
+s9title:"🔗 Official Sources",
+s9p:"For current healthcare rules, insurance information and official procedures, use the following Croatian government sources.",
+healthMinistry:"Ministry of Health",
+s10title:"⚠️ Important Disclaimer",
+s10p1:"CROPATH provides general information and practical guidance. It is not a government website and does not replace professional medical, legal, immigration or other professional advice.",
+s10p2:"Healthcare requirements and procedures can change. Always check official sources or contact the competent authority for your individual situation.",
+footerTitle:"Your Path to Living and Working in Croatia",
+footerText:"General information and practical guidance for foreigners in Croatia.",
+footerDate:"Last verified: 7 October 2026"
+},
+
+ml:{
+backHome:"← ഹോം പേജിലേക്ക്",
+badge:"🇭🇷 ആരോഗ്യ വിവര ഗൈഡ്",
+pageTitle:"ക്രൊയേഷ്യയിലെ ആരോഗ്യസംരക്ഷണം",
+heroText:"ആരോഗ്യസംരക്ഷണം, HZZO, ഡോക്ടർമാർ, ആശുപത്രികൾ, ഫാർമസികൾ, അടിയന്തര മെഡിക്കൽ സഹായം എന്നിവയെക്കുറിച്ചുള്ള പ്രായോഗിക വിവരങ്ങൾ.",
+verified:"✓ വിവരങ്ങൾ പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026",
+s1title:"🏥 ക്രൊയേഷ്യയിലെ ആരോഗ്യസംരക്ഷണം",
+s1p1:"ക്രൊയേഷ്യയിൽ പൊതുജനാരോഗ്യ സംവിധാനം നിലവിലുണ്ട്. Croatian Health Insurance Fund (HZZO), ആരോഗ്യ സ്ഥാപനങ്ങൾ, സ്വകാര്യ സേവനദാതാക്കൾ എന്നിവയിലൂടെ ആരോഗ്യ സേവനങ്ങൾ ലഭ്യമാണ്.",
+s1p2:"നിങ്ങളുടെ ആരോഗ്യ സേവന ലഭ്യത ഇൻഷുറൻസ് നില, താമസനില, ജോലി, മറ്റ് സാഹചര്യങ്ങൾ എന്നിവയെ ആശ്രയിച്ചിരിക്കും.",
+s1strong:"പ്രധാനപ്പെട്ടത്:",
+s1info:"നിങ്ങളുടെ നിലവിലെ HZZO നിലയും ബാധകമായ ആരോഗ്യ നിയമങ്ങളും എപ്പോഴും പരിശോധിക്കുക.",
+s2title:"💳 HZZO ആരോഗ്യ ഇൻഷുറൻസ്",
+s2p1:"HZZO എന്നത് Croatian Health Insurance Fund ആണ് (Hrvatski zavod za zdravstveno osiguranje).",
+s2p2:"ക്രൊയേഷ്യൻ നിർബന്ധിത ആരോഗ്യ ഇൻഷുറൻസിൽ ഉൾപ്പെട്ടവർക്ക് ബാധകമായ നിയമങ്ങളും നിബന്ധനകളും അനുസരിച്ച് ആരോഗ്യ സേവനങ്ങൾ ഉപയോഗിക്കാം.",
+s2h3:"ആരോഗ്യ സേവനം ഉപയോഗിക്കുന്നതിന് മുമ്പ്",
+s2li1:"നിങ്ങളുടെ ആരോഗ്യ ഇൻഷുറൻസ് സജീവമാണോ എന്ന് പരിശോധിക്കുക.",
+s2li2:"ആരോഗ്യ ഇൻഷുറൻസ് വിവരങ്ങൾ കൈവശം വയ്ക്കുക.",
+s2li3:"ഏത് ആരോഗ്യ സേവനദാതാവിനെ ഉപയോഗിക്കാമെന്ന് പരിശോധിക്കുക.",
+s2li4:"കവറേജിനെക്കുറിച്ച് സംശയമുണ്ടെങ്കിൽ HZZO-യോട് ചോദിക്കുക.",
+s3title:"👨‍⚕️ കുടുംബ ഡോക്ടർ / ജനറൽ പ്രാക്ടീഷണർ",
+s3p1:"അടിയന്തരമല്ലാത്ത പല ആരോഗ്യ പ്രശ്നങ്ങൾക്കും ആദ്യം ബന്ധപ്പെടേണ്ടത് കുടുംബ ഡോക്ടറെയോ ജനറൽ പ്രാക്ടീഷണറെയോ ആയിരിക്കാം.",
+s3p2:"നിങ്ങൾക്ക് ലഭ്യമായ ആരോഗ്യ സേവനദാതാവ് നിങ്ങളുടെ രജിസ്ട്രേഷനും ഇൻഷുറൻസ് ക്രമീകരണങ്ങളും ആശ്രയിച്ചിരിക്കും.",
+s3strong:"ടിപ്പ്:",
+s3info:"നിങ്ങൾ ഒരു കുടുംബ ഡോക്ടറുടെ അടുത്ത് രജിസ്റ്റർ ചെയ്തിട്ടുണ്ടെങ്കിൽ സാധാരണ ആരോഗ്യ പ്രശ്നങ്ങൾക്കും appointment-കൾക്കും ആദ്യം ഡോക്ടറുടെ ഓഫീസുമായി ബന്ധപ്പെടുക.",
+s4title:"🏨 ആശുപത്രികൾ",
+s4p1:"ആശുപത്രിയും വിഭാഗവും അനുസരിച്ച് specialist, diagnostic, emergency സേവനങ്ങൾ ലഭ്യമാണ്.",
+s4p2:"പ്ലാൻ ചെയ്ത ചികിത്സയ്ക്ക് referral, appointment അല്ലെങ്കിൽ മറ്റ് രേഖകൾ ആവശ്യമാണോ എന്ന് പരിശോധിക്കുക.",
+s4strong:"അടിയന്തര ചികിത്സ വൈകിക്കരുത്.",
+s4warning:"സ്ഥിതി ഗുരുതരമോ ജീവന് അപകടകരമോ ആണെങ്കിൽ ഉടൻ emergency medical service വിളിക്കുക.",
+s5title:"💊 ഫാർമസികൾ",
+s5p1:"ക്രൊയേഷ്യയിലെ ഫാർമസികളെ ljekarne എന്ന് വിളിക്കുന്നു.",
+s5p2:"ക്രൊയേഷ്യൻ നിയമങ്ങൾ അനുസരിച്ച് ഫാർമസികളിൽ മരുന്നുകളും മറ്റ് ആരോഗ്യ ഉൽപ്പന്നങ്ങളും ലഭ്യമാണ്.",
+s5li1:"ആവശ്യമായാൽ prescription കൊണ്ടുവരുക.",
+s5li2:"മരുന്നിനെക്കുറിച്ച് മനസ്സിലാക്കാൻ സഹായം വേണമെങ്കിൽ pharmacist-നോട് ചോദിക്കുക.",
+s5li3:"പോകുന്നതിന് മുമ്പ് pharmacy opening hours പരിശോധിക്കുക.",
+s6title:"🚨 അടിയന്തര മെഡിക്കൽ സഹായം",
+emergency112:"പൊതുവായ അടിയന്തര നമ്പർ",
+emergency194:"അടിയന്തര മെഡിക്കൽ സേവനം",
+s6p:"ജീവന് ഉടനടി അപകടമോ ഗുരുതരമായ പരിക്കോ ഉണ്ടെങ്കിൽ താമസിക്കാതെ അടിയന്തര മെഡിക്കൽ സഹായം തേടുക.",
+s7title:"📋 ഡോക്ടറെ കാണുന്നതിന് മുമ്പ്",
+s7li1:"തിരിച്ചറിയൽ രേഖ കൊണ്ടുവരുക.",
+s7li2:"ആരോഗ്യ ഇൻഷുറൻസ് വിവരങ്ങൾ കൈവശം വയ്ക്കുക.",
+s7li3:"ആവശ്യമായാൽ മുൻകാല മെഡിക്കൽ രേഖകൾ കൊണ്ടുവരുക.",
+s7li4:"നിലവിൽ ഉപയോഗിക്കുന്ന മരുന്നുകളുടെ പട്ടിക കൊണ്ടുവരുക.",
+s7li5:"appointment ആവശ്യമാണോ എന്ന് പരിശോധിക്കുക.",
+s8title:"🌍 ക്രൊയേഷ്യയിലെ വിദേശികൾ",
+s8p1:"ആരോഗ്യ അവകാശങ്ങളും ബാധ്യതകളും താമസം, ജോലി, ഇൻഷുറൻസ് നില, European health insurance coverage, മറ്റ് സാഹചര്യങ്ങൾ എന്നിവ അനുസരിച്ച് വ്യത്യാസപ്പെടാം.",
+s8strong:"പ്രധാനപ്പെട്ടത്:",
+s8warning:"Residence permit ഉണ്ടെന്നത് കൊണ്ട് എല്ലാ ആരോഗ്യ സേവനങ്ങളും സൗജന്യമാണെന്ന് കരുതരുത്.",
+s8p2:"നിങ്ങളുടെ ഇൻഷുറൻസ് നില HZZO-യുമായോ ബന്ധപ്പെട്ട ആരോഗ്യ സ്ഥാപനവുമായോ പരിശോധിക്കുക.",
+s9title:"🔗 ഔദ്യോഗിക സ്രോതസ്സുകൾ",
+s9p:"നിലവിലെ ആരോഗ്യ നിയമങ്ങൾ, ഇൻഷുറൻസ് വിവരങ്ങൾ, ഔദ്യോഗിക നടപടിക്രമങ്ങൾ എന്നിവയ്ക്കായി Croatian government sources ഉപയോഗിക്കുക.",
+healthMinistry:"ആരോഗ്യ മന്ത്രാലയം",
+s10title:"⚠️ പ്രധാന അറിയിപ്പ്",
+s10p1:"CROPATH പൊതുവായ വിവരങ്ങളും പ്രായോഗിക മാർഗനിർദ്ദേശങ്ങളും നൽകുന്നു. ഇത് സർക്കാർ വെബ്സൈറ്റ് അല്ല, കൂടാതെ professional medical, legal, immigration അല്ലെങ്കിൽ മറ്റ് professional advice-ന് പകരമല്ല.",
+s10p2:"ആരോഗ്യ ആവശ്യങ്ങളും നടപടിക്രമങ്ങളും മാറാം. നിങ്ങളുടെ സാഹചര്യത്തിനായി ഔദ്യോഗിക സ്രോതസ്സുകൾ പരിശോധിക്കുക അല്ലെങ്കിൽ ബന്ധപ്പെട്ട അധികാരിയെ ബന്ധപ്പെടുക.",
+footerTitle:"ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനുമുള്ള നിങ്ങളുടെ വഴി",
+footerText:"ക്രൊയേഷ്യയിലെ വിദേശികൾക്കായുള്ള പൊതുവായ വിവരങ്ങളും പ്രായോഗിക മാർഗനിർദ്ദേശങ്ങളും.",
+footerDate:"അവസാനം പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026"
+}
+
+};
+
+/*
+  Other language content remains available through English fallback.
+  The shared language selection and saved language continue to work.
+*/
+
+function applyLanguage(language){
+
+  const t = translations[language] || translations.en;
+
+  Object.keys(t).forEach(function(id){
+
+    const element = document.getElementById(id);
+
+    if(element){
+      element.textContent = t[id];
+    }
+
+  });
+
+  document.documentElement.lang = language;
+
+  document.documentElement.dir =
+    language === "ur" ? "rtl" : "ltr";
+
+  localStorage.setItem(
+    "cropath-language",
+    language
+  );
+
+  const selector =
+    document.getElementById("languageSelect");
+
+  if(selector){
+    selector.value = language;
+  }
+}
+
+const savedLanguage =
+  localStorage.getItem("cropath-language") || "en";
+
+applyLanguage(savedLanguage);
+
+document
+  .getElementById("languageSelect")
+  .addEventListener("change", function(){
+
+    applyLanguage(this.value);
+
+  });
+
+</script>
+
+</body>
+</html>

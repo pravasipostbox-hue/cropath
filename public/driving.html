@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CROPATH — Driving Licence in Croatia</title>
+
+  <meta
+    name="description"
+    content="Driving licence information for foreigners in Croatia."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #172033;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #071a33;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    select {
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: white;
+      color: #111827;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .back {
+      color: white;
+      text-decoration: none;
+      padding: 9px 14px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .back:hover {
+      background: rgba(255,255,255,.1);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0d47a1, #1976d2);
+      color: white;
+      padding: 70px 6%;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.3);
+      padding: 7px 13px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      font-size: 18px;
+      opacity: .95;
+    }
+
+    .verified {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: .85;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 45px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, .07);
+      border: 1px solid #e5eaf1;
+    }
+
+    .section h2 {
+      color: #0d47a1;
+      margin-bottom: 15px;
+      font-size: 27px;
+    }
+
+    .section h3 {
+      margin-top: 22px;
+      margin-bottom: 8px;
+      color: #172033;
+    }
+
+    .section p {
+      margin-bottom: 12px;
+    }
+
+    .section ul,
+    .section ol {
+      padding-left: 24px;
+      margin-top: 10px;
+    }
+
+    .section li {
+      margin-bottom: 9px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 13px;
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #0d47a1;
+    }
+
+    .info {
+      background: #eff6ff;
+      border-left: 5px solid #1976d2;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 18px;
+    }
+
+    .warning {
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 18px;
+    }
+
+    .official-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .official {
+      display: inline-block;
+      background: #0d47a1;
+      color: white;
+      text-decoration: none;
+      padding: 12px 17px;
+      border-radius: 9px;
+      font-weight: 600;
+    }
+
+    .official:hover {
+      background: #083578;
+    }
+
+    footer {
+      background: #071a33;
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      opacity: .85;
+      margin-bottom: 6px;
+    }
+
+    [dir="rtl"] {
+      text-align: right;
+    }
+
+    [dir="rtl"] ul,
+    [dir="rtl"] ol {
+      padding-left: 0;
+      padding-right: 24px;
+    }
+
+    @media (max-width: 750px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .hero {
+        padding: 50px 20px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 22px;
+      }
+
+      .header-right {
+        width: 100%;
+      }
+
+      select {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">CROPATH</a>
+
+  <div class="header-right">
+    <select id="languageSelect" aria-label="Language">
+      <option value="en">🇬🇧 English</option>
+      <option value="ml">🇮🇳 മലയാളം</option>
+      <option value="hi">🇮🇳 हिन्दी</option>
+      <option value="ne">🇳🇵 नेपाली</option>
+      <option value="ta">🇮🇳 தமிழ்</option>
+      <option value="te">🇮🇳 తెలుగు</option>
+      <option value="bn">🇧🇩 বাংলা</option>
+      <option value="ur">🇵🇰 اردو</option>
+      <option value="hr">🇭🇷 Hrvatski</option>
+    </select>
+
+    <a href="index.html" class="back" id="backHome">
+      ← Back to Home
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge" id="badge">🇭🇷 Practical information for foreigners</div>
+
+    <h1 id="heroTitle">Driving Licence in Croatia</h1>
+
+    <p id="heroText">
+      Information about using foreign driving licences, exchanging licences,
+      medical examinations, translations and applying through MUP.
+    </p>
+
+    <div class="verified" id="verified">
+      Last verified: 7 October 2026
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section class="section">
+    <h2 id="section1Title">1. Foreign Driving Licence in Croatia</h2>
+
+    <p id="section1Text">
+      Foreign nationals may be able to drive in Croatia using a valid foreign
+      driving licence, depending on their country of issue, residence status
+      and applicable Croatian rules.
+    </p>
+
+    <div class="info" id="section1Info">
+      Always check the current requirements with MUP Croatia before applying
+      for an exchange or other procedure.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="section2Title">2. EU / EEA Driving Licences</h2>
+
+    <p id="section2Text">
+      Driving licences issued by EU and EEA countries are generally recognised
+      in Croatia, subject to the applicable EU rules and validity conditions.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 id="section3Title">3. Non-EU Driving Licences</h2>
+
+    <p id="section3Text">
+      If your driving licence was issued outside the EU/EEA, additional
+      requirements may apply.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3 id="card1Title">Check validity</h3>
+        <p id="card1Text">
+          Make sure your original licence is valid and readable.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 id="card2Title">Check residence</h3>
+        <p id="card2Text">
+          Your residence status in Croatia may affect the procedure.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 id="card3Title">Translation</h3>
+        <p id="card3Text">
+          A certified Croatian translation may be required.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3 id="card4Title">Medical requirements</h3>
+        <p id="card4Text">
+          A medical examination may be required depending on the procedure.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="section4Title">4. Common Documents</h2>
+
+    <ul id="documentsList">
+      <li>Original driving licence</li>
+      <li>Passport or identity document</li>
+      <li>Proof of residence in Croatia</li>
+      <li>Photograph, if required</li>
+      <li>Medical certificate, if required</li>
+      <li>Certified Croatian translation, if required</li>
+      <li>Other documents requested by MUP</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 id="section5Title">5. Medical Examination</h2>
+
+    <p id="section5Text">
+      Some driving licence procedures require a medical examination at an
+      authorised medical institution.
+    </p>
+
+    <div class="info" id="section5Info">
+      Ask the medical provider which documents and identification you need
+      before attending the examination.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="section6Title">6. Croatian Translation</h2>
+
+    <p id="section6Text">
+      If your licence or supporting documents are not accepted directly,
+      a certified Croatian translation may be required.
+    </p>
+
+    <p id="section6Text2">
+      Use an authorised translator and confirm the exact requirement before
+      paying for a translation.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 id="section7Title">7. Applying Through MUP</h2>
+
+    <ol id="stepsList">
+      <li>Check the applicable procedure.</li>
+      <li>Prepare your original documents.</li>
+      <li>Complete any required medical examination.</li>
+      <li>Obtain a certified Croatian translation if required.</li>
+      <li>Submit the application and documents to the competent MUP office.</li>
+    </ol>
+
+    <div class="warning" id="section7Warning">
+      Requirements can differ depending on the country that issued your
+      licence and your individual situation. Confirm the current checklist
+      with MUP before visiting.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="section8Title">8. Indian Driving Licence</h2>
+
+    <p id="section8Text">
+      Indian driving licence holders should check the current Croatian
+      requirements before starting an exchange or recognition procedure.
+    </p>
+
+    <ul id="indiaList">
+      <li>Keep the original Indian driving licence.</li>
+      <li>Check whether additional verification is required.</li>
+      <li>Check translation requirements.</li>
+      <li>Prepare Croatian residence documents.</li>
+      <li>Confirm the current MUP procedure before applying.</li>
+    </ul>
+
+    <div class="info" id="indiaInfo">
+      Requirements can change. Always confirm the latest procedure with the
+      competent Croatian authorities.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="section9Title">9. Common Mistakes to Avoid</h2>
+
+    <ul id="mistakesList">
+      <li>Do not rely only on old information from social media.</li>
+      <li>Do not submit photocopies when an original is required.</li>
+      <li>Do not assume every foreign licence has the same procedure.</li>
+      <li>Check translation requirements before ordering documents.</li>
+      <li>Confirm the correct MUP office before visiting.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2 id="officialTitle">10. Official Sources</h2>
+
+    <p id="officialText">
+      Use the official Croatian government websites to verify current
+      requirements and procedures.
+    </p>
+
+    <div class="official-links">
+      <a
+        href="https://mup.gov.hr/"
+        target="_blank"
+        rel="noopener"
+        class="official"
+        id="mupButton"
+      >
+        MUP Croatia →
+      </a>
+
+      <a
+        href="https://gov.hr/"
+        target="_blank"
+        rel="noopener"
+        class="official"
+        id="govButton"
+      >
+        gov.hr →
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 id="disclaimerTitle">11. Important Disclaimer</h2>
+
+    <p id="disclaimerText">
+      CROPATH provides general information for foreigners in Croatia.
+      It is not a government website and does not replace official legal
+      or administrative advice. Always confirm current requirements with
+      the competent Croatian authority.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>CROPATH</strong></p>
+  <p id="footerTagline">Your Path to Living and Working in Croatia.</p>
+  <p>© 2026 CROPATH</p>
+</footer>
+
+<script>
+
+const translations = {
+
+  en: {
+    badge: "🇭🇷 Practical information for foreigners",
+    heroTitle: "Driving Licence in Croatia",
+    heroText: "Information about using foreign driving licences, exchanging licences, medical examinations, translations and applying through MUP.",
+    verified: "Last verified: 7 October 2026",
+    backHome: "← Back to Home",
+
+    section1Title: "1. Foreign Driving Licence in Croatia",
+    section1Text: "Foreign nationals may be able to drive in Croatia using a valid foreign driving licence, depending on their country of issue, residence status and applicable Croatian rules.",
+    section1Info: "Always check the current requirements with MUP Croatia before applying for an exchange or other procedure.",
+
+    section2Title: "2. EU / EEA Driving Licences",
+    section2Text: "Driving licences issued by EU and EEA countries are generally recognised in Croatia, subject to the applicable EU rules and validity conditions.",
+
+    section3Title: "3. Non-EU Driving Licences",
+    section3Text: "If your driving licence was issued outside the EU/EEA, additional requirements may apply.",
+    card1Title: "Check validity",
+    card1Text: "Make sure your original licence is valid and readable.",
+    card2Title: "Check residence",
+    card2Text: "Your residence status in Croatia may affect the procedure.",
+    card3Title: "Translation",
+    card3Text: "A certified Croatian translation may be required.",
+    card4Title: "Medical requirements",
+    card4Text: "A medical examination may be required depending on the procedure.",
+
+    section4Title: "4. Common Documents",
+    documentsList: [
+      "Original driving licence",
+      "Passport or identity document",
+      "Proof of residence in Croatia",
+      "Photograph, if required",
+      "Medical certificate, if required",
+      "Certified Croatian translation, if required",
+      "Other documents requested by MUP"
+    ],
+
+    section5Title: "5. Medical Examination",
+    section5Text: "Some driving licence procedures require a medical examination at an authorised medical institution.",
+    section5Info: "Ask the medical provider which documents and identification you need before attending the examination.",
+
+    section6Title: "6. Croatian Translation",
+    section6Text: "If your licence or supporting documents are not accepted directly, a certified Croatian translation may be required.",
+    section6Text2: "Use an authorised translator and confirm the exact requirement before paying for a translation.",
+
+    section7Title: "7. Applying Through MUP",
+    stepsList: [
+      "Check the applicable procedure.",
+      "Prepare your original documents.",
+      "Complete any required medical examination.",
+      "Obtain a certified Croatian translation if required.",
+      "Submit the application and documents to the competent MUP office."
+    ],
+    section7Warning: "Requirements can differ depending on the country that issued your licence and your individual situation. Confirm the current checklist with MUP before visiting.",
+
+    section8Title: "8. Indian Driving Licence",
+    section8Text: "Indian driving licence holders should check the current Croatian requirements before starting an exchange or recognition procedure.",
+    indiaList: [
+      "Keep the original Indian driving licence.",
+      "Check whether additional verification is required.",
+      "Check translation requirements.",
+      "Prepare Croatian residence documents.",
+      "Confirm the current MUP procedure before applying."
+    ],
+    indiaInfo: "Requirements can change. Always confirm the latest procedure with the competent Croatian authorities.",
+
+    section9Title: "9. Common Mistakes to Avoid",
+    mistakesList: [
+      "Do not rely only on old information from social media.",
+      "Do not submit photocopies when an original is required.",
+      "Do not assume every foreign licence has the same procedure.",
+      "Check translation requirements before ordering documents.",
+      "Confirm the correct MUP office before visiting."
+    ],
+
+    officialTitle: "10. Official Sources",
+    officialText: "Use the official Croatian government websites to verify current requirements and procedures.",
+    mupButton: "MUP Croatia →",
+    govButton: "gov.hr →",
+
+    disclaimerTitle: "11. Important Disclaimer",
+    disclaimerText: "CROPATH provides general information for foreigners in Croatia. It is not a government website and does not replace official legal or administrative advice. Always confirm current requirements with the competent Croatian authority.",
+    footerTagline: "Your Path to Living and Working in Croatia."
+  },
+
+  ml: {
+    badge: "🇭🇷 ക്രൊയേഷ്യയിലെ വിദേശികൾക്കുള്ള പ്രായോഗിക വിവരങ്ങൾ",
+    heroTitle: "ക്രൊയേഷ്യയിലെ ഡ്രൈവിംഗ് ലൈസൻസ്",
+    heroText: "വിദേശ ഡ്രൈവിംഗ് ലൈസൻസ് ഉപയോഗിക്കൽ, ലൈസൻസ് മാറ്റിവാങ്ങൽ, മെഡിക്കൽ പരിശോധന, വിവർത്തനം, MUP വഴി അപേക്ഷിക്കൽ എന്നിവയെക്കുറിച്ചുള്ള വിവരങ്ങൾ.",
+    verified: "അവസാനം പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026",
+    backHome: "← ഹോമിലേക്ക്",
+
+    section1Title: "1. ക്രൊയേഷ്യയിലെ വിദേശ ഡ്രൈവിംഗ് ലൈസൻസ്",
+    section1Text: "ലൈസൻസ് നൽകിയ രാജ്യം, ക്രൊയേഷ്യയിലെ താമസസ്ഥിതി, നിലവിലുള്ള നിയമങ്ങൾ എന്നിവ അനുസരിച്ച് സാധുവായ വിദേശ ഡ്രൈവിംഗ് ലൈസൻസ് ഉപയോഗിച്ച് ക്രൊയേഷ്യയിൽ വാഹനമോടിക്കാൻ സാധിക്കാം.",
+    section1Info: "ലൈസൻസ് മാറ്റുന്നതിനോ മറ്റേതെങ്കിലും നടപടിക്കോ മുമ്പ് MUP Croatia-യിൽ നിന്നുള്ള നിലവിലെ ആവശ്യകതകൾ പരിശോധിക്കുക.",
+
+    section2Title: "2. EU / EEA ഡ്രൈവിംഗ് ലൈസൻസുകൾ",
+    section2Text: "EU, EEA രാജ്യങ്ങൾ നൽകിയ ഡ്രൈവിംഗ് ലൈസൻസുകൾ സാധാരണയായി ക്രൊയേഷ്യയിൽ അംഗീകരിക്കപ്പെടുന്നു. ബാധകമായ EU നിയമങ്ങളും ലൈസൻസിന്റെ സാധുതയും പരിശോധിക്കുക.",
+
+    section3Title: "3. EU-യ്ക്ക് പുറത്തുള്ള ഡ്രൈവിംഗ് ലൈസൻസുകൾ",
+    section3Text: "EU/EEA-യ്ക്ക് പുറത്തുള്ള രാജ്യത്ത് നൽകിയ ഡ്രൈവിംഗ് ലൈസൻസിന് അധിക ആവശ്യകതകൾ ഉണ്ടായേക്കാം.",
+    card1Title: "സാധുത പരിശോധിക്കുക",
+    card1Text: "നിങ്ങളുടെ ഒറിജിനൽ ലൈസൻസ് സാധുവും വ്യക്തമായി വായിക്കാവുന്നതുമാണെന്ന് ഉറപ്പാക്കുക.",
+    card2Title: "താമസസ്ഥിതി പരിശോധിക്കുക",
+    card2Text: "ക്രൊയേഷ്യയിലെ നിങ്ങളുടെ താമസസ്ഥിതി നടപടിക്രമത്തെ ബാധിച്ചേക്കാം.",
+    card3Title: "വിവർത്തനം",
+    card3Text: "സാക്ഷ്യപ്പെടുത്തിയ Croatian translation ആവശ്യമായി വരാം.",
+    card4Title: "മെഡിക്കൽ ആവശ്യകതകൾ",
+    card4Text: "നടപടിക്രമം അനുസരിച്ച് മെഡിക്കൽ പരിശോധന ആവശ്യമായി വരാം.",
+
+    section4Title: "4. സാധാരണ ആവശ്യമായ രേഖകൾ",
+    documentsList: [
+      "ഒറിജിനൽ ഡ്രൈവിംഗ് ലൈസൻസ്",
+      "പാസ്പോർട്ട് അല്ലെങ്കിൽ തിരിച്ചറിയൽ രേഖ",
+      "ക്രൊയേഷ്യയിലെ താമസത്തിന്റെ തെളിവ്",
+      "ആവശ്യപ്പെട്ടാൽ ഫോട്ടോ",
+      "ആവശ്യപ്പെട്ടാൽ മെഡിക്കൽ സർട്ടിഫിക്കറ്റ്",
+      "ആവശ്യപ്പെട്ടാൽ സാക്ഷ്യപ്പെടുത്തിയ Croatian translation",
+      "MUP ആവശ്യപ്പെടുന്ന മറ്റ് രേഖകൾ"
+    ],
+
+    section5Title: "5. മെഡിക്കൽ പരിശോധന",
+    section5Text: "ചില ഡ്രൈവിംഗ് ലൈസൻസ് നടപടികൾക്ക് അംഗീകൃത മെഡിക്കൽ സ്ഥാപനത്തിൽ മെഡിക്കൽ പരിശോധന ആവശ്യമാണ്.",
+    section5Info: "പരിശോധനയ്ക്ക് പോകുന്നതിന് മുമ്പ് ആവശ്യമായ രേഖകളും തിരിച്ചറിയൽ രേഖകളും മെഡിക്കൽ സ്ഥാപനത്തോട് ചോദിക്കുക.",
+
+    section6Title: "6. Croatian Translation",
+    section6Text: "നിങ്ങളുടെ ലൈസൻസോ മറ്റ് രേഖകളോ നേരിട്ട് സ്വീകരിക്കാത്ത പക്ഷം സാക്ഷ്യപ്പെടുത്തിയ Croatian translation ആവശ്യമായി വരാം.",
+    section6Text2: "വിവർത്തനത്തിന് പണം നൽകുന്നതിന് മുമ്പ് അംഗീകൃത translator ഉപയോഗിക്കുകയും കൃത്യമായ ആവശ്യകത പരിശോധിക്കുകയും ചെയ്യുക.",
+
+    section7Title: "7. MUP വഴി അപേക്ഷിക്കൽ",
+    stepsList: [
+      "നിങ്ങൾക്ക് ബാധകമായ നടപടിക്രമം പരിശോധിക്കുക.",
+      "ഒറിജിനൽ രേഖകൾ തയ്യാറാക്കുക.",
+      "ആവശ്യമായാൽ മെഡിക്കൽ പരിശോധന പൂർത്തിയാക്കുക.",
+      "ആവശ്യമായാൽ സാക്ഷ്യപ്പെടുത്തിയ Croatian translation നേടുക.",
+      "അപേക്ഷയും രേഖകളും ബന്ധപ്പെട്ട MUP ഓഫീസിൽ സമർപ്പിക്കുക."
+    ],
+    section7Warning: "ലൈസൻസ് നൽകിയ രാജ്യം, നിങ്ങളുടെ വ്യക്തിഗത സാഹചര്യം എന്നിവ അനുസരിച്ച് ആവശ്യകതകൾ വ്യത്യാസപ്പെടാം. പോകുന്നതിന് മുമ്പ് MUP-യിൽ നിന്ന് നിലവിലെ checklist സ്ഥിരീകരിക്കുക.",
+
+    section8Title: "8. ഇന്ത്യൻ ഡ്രൈവിംഗ് ലൈസൻസ്",
+    section8Text: "ഇന്ത്യൻ ഡ്രൈവിംഗ് ലൈസൻസ് ഉള്ളവർ exchange അല്ലെങ്കിൽ recognition നടപടികൾ ആരംഭിക്കുന്നതിന് മുമ്പ് നിലവിലെ Croatian ആവശ്യകതകൾ പരിശോധിക്കണം.",
+    indiaList: [
+      "ഒറിജിനൽ ഇന്ത്യൻ ഡ്രൈവിംഗ് ലൈസൻസ് സൂക്ഷിക്കുക.",
+      "അധിക verification ആവശ്യമാണോ പരിശോധിക്കുക.",
+      "Translation ആവശ്യകത പരിശോധിക്കുക.",
+      "ക്രൊയേഷ്യയിലെ താമസ രേഖകൾ തയ്യാറാക്കുക.",
+      "അപേക്ഷിക്കുന്നതിന് മുമ്പ് നിലവിലെ MUP നടപടിക്രമം സ്ഥിരീകരിക്കുക."
+    ],
+    indiaInfo: "ആവശ്യകതകൾ മാറാം. ഏറ്റവും പുതിയ നടപടിക്രമം ബന്ധപ്പെട്ട Croatian അധികാരികളിൽ നിന്ന് സ്ഥിരീകരിക്കുക.",
+
+    section9Title: "9. ഒഴിവാക്കേണ്ട സാധാരണ തെറ്റുകൾ",
+    mistakesList: [
+      "Social media-യിലെ പഴയ വിവരങ്ങളെ മാത്രം ആശ്രയിക്കരുത്.",
+      "Original ആവശ്യമായപ്പോൾ photocopy മാത്രം സമർപ്പിക്കരുത്.",
+      "എല്ലാ വിദേശ ലൈസൻസുകൾക്കും ഒരേ നടപടിക്രമമാണെന്ന് കരുതരുത്.",
+      "രേഖകൾ order ചെയ്യുന്നതിന് മുമ്പ് translation ആവശ്യകത പരിശോധിക്കുക.",
+      "പോകുന്നതിന് മുമ്പ് ശരിയായ MUP office സ്ഥിരീകരിക്കുക."
+    ],
+
+    officialTitle: "10. ഔദ്യോഗിക സ്രോതസ്സുകൾ",
+    officialText: "നിലവിലെ ആവശ്യകതകളും നടപടിക്രമങ്ങളും പരിശോധിക്കാൻ ഔദ്യോഗിക Croatian government websites ഉപയോഗിക്കുക.",
+    mupButton: "MUP Croatia →",
+    govButton: "gov.hr →",
+
+    disclaimerTitle: "11. പ്രധാന അറിയിപ്പ്",
+    disclaimerText: "CROPATH ക്രൊയേഷ്യയിലെ വിദേശികൾക്കായി പൊതുവായ വിവരങ്ങൾ നൽകുന്നു. ഇത് സർക്കാർ വെബ്സൈറ്റ് അല്ല. ഔദ്യോഗിക നിയമപരമായോ ഭരണപരമായോ ഉപദേശത്തിന് പകരമല്ല. നിലവിലെ ആവശ്യകതകൾ ബന്ധപ്പെട്ട Croatian അധികാരികളിൽ നിന്ന് സ്ഥിരീകരിക്കുക.",
+    footerTagline: "ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനും നിങ്ങളുടെ വഴികാട്ടി."
+  },
+
+  hi: {
+    badge: "🇭🇷 क्रोएशिया में विदेशियों के लिए व्यावहारिक जानकारी",
+    heroTitle: "क्रोएशिया में ड्राइविंग लाइसेंस",
+    heroText: "विदेशी ड्राइविंग लाइसेंस का उपयोग, लाइसेंस बदलना, मेडिकल जांच, अनुवाद और MUP के माध्यम से आवेदन की जानकारी।",
+    verified: "अंतिम सत्यापन: 7 अक्टूबर 2026",
+    backHome: "← होम पर वापस",
+
+    section1Title: "1. क्रोएशिया में विदेशी ड्राइविंग लाइसेंस",
+    section1Text: "लाइसेंस जारी करने वाले देश, क्रोएशिया में आपके निवास की स्थिति और लागू नियमों के अनुसार वैध विदेशी ड्राइविंग लाइसेंस से क्रोएशिया में वाहन चलाना संभव हो सकता है।",
+    section1Info: "लाइसेंस बदलने या किसी अन्य प्रक्रिया से पहले MUP Croatia से वर्तमान आवश्यकताओं की जांच करें।",
+
+    section2Title: "2. EU / EEA ड्राइविंग लाइसेंस",
+    section2Text: "EU और EEA देशों द्वारा जारी ड्राइविंग लाइसेंस सामान्यतः क्रोएशिया में मान्य होते हैं, लेकिन लागू EU नियम और वैधता शर्तें जांचें।",
+
+    section3Title: "3. गैर-EU ड्राइविंग लाइसेंस",
+    section3Text: "यदि आपका ड्राइविंग लाइसेंस EU/EEA के बाहर जारी हुआ है, तो अतिरिक्त आवश्यकताएं लागू हो सकती हैं।",
+    card1Title: "वैधता जांचें",
+    card1Text: "सुनिश्चित करें कि आपका मूल लाइसेंस वैध और स्पष्ट है।",
+    card2Title: "निवास स्थिति जांचें",
+    card2Text: "क्रोएशिया में आपकी निवास स्थिति प्रक्रिया को प्रभावित कर सकती है।",
+    card3Title: "अनुवाद",
+    card3Text: "प्रमाणित Croatian translation की आवश्यकता हो सकती है।",
+    card4Title: "मेडिकल आवश्यकताएं",
+    card4Text: "प्रक्रिया के अनुसार मेडिकल जांच आवश्यक हो सकती है।",
+
+    section4Title: "4. सामान्य दस्तावेज",
+    documentsList: [
+      "मूल ड्राइविंग लाइसेंस",
+      "पासपोर्ट या पहचान दस्तावेज",
+      "क्रोएशिया में निवास का प्रमाण",
+      "यदि आवश्यक हो तो फोटो",
+      "यदि आवश्यक हो तो मेडिकल प्रमाणपत्र",
+      "यदि आवश्यक हो तो प्रमाणित Croatian translation",
+      "MUP द्वारा मांगे गए अन्य दस्तावेज"
+    ],
+
+    section5Title: "5. मेडिकल जांच",
+    section5Text: "कुछ ड्राइविंग लाइसेंस प्रक्रियाओं में अधिकृत मेडिकल संस्थान में मेडिकल जांच आवश्यक होती है।",
+    section5Info: "जांच के लिए जाने से पहले आवश्यक दस्तावेज और पहचान के बारे में मेडिकल संस्थान से पूछें।",
+
+    section6Title: "6. Croatian Translation",
+    section6Text: "यदि आपका लाइसेंस या अन्य दस्तावेज सीधे स्वीकार नहीं किए जाते हैं, तो प्रमाणित Croatian translation आवश्यक हो सकता है।",
+    section6Text2: "अनुवाद के लिए भुगतान करने से पहले अधिकृत translator और सही आवश्यकता की पुष्टि करें।",
+
+    section7Title: "7. MUP के माध्यम से आवेदन",
+    stepsList: [
+      "लागू प्रक्रिया जांचें।",
+      "मूल दस्तावेज तैयार करें।",
+      "यदि आवश्यक हो तो मेडिकल जांच पूरी करें।",
+      "यदि आवश्यक हो तो प्रमाणित Croatian translation प्राप्त करें।",
+      "आवेदन और दस्तावेज संबंधित MUP कार्यालय में जमा करें।"
+    ],
+    section7Warning: "आवश्यकताएं लाइसेंस जारी करने वाले देश और आपकी व्यक्तिगत स्थिति के अनुसार अलग हो सकती हैं। जाने से पहले MUP से वर्तमान checklist की पुष्टि करें।",
+
+    section8Title: "8. भारतीय ड्राइविंग लाइसेंस",
+    section8Text: "भारतीय ड्राइविंग लाइसेंस धारकों को exchange या recognition प्रक्रिया शुरू करने से पहले वर्तमान Croatian requirements की जांच करनी चाहिए।",
+    indiaList: [
+      "मूल भारतीय ड्राइविंग लाइसेंस रखें।",
+      "अतिरिक्त verification आवश्यक है या नहीं जांचें।",
+      "Translation requirements जांचें।",
+      "क्रोएशिया के निवास दस्तावेज तैयार करें।",
+      "आवेदन से पहले वर्तमान MUP प्रक्रिया की पुष्टि करें।"
+    ],
+    indiaInfo: "आवश्यकताएं बदल सकती हैं। संबंधित Croatian authorities से नवीनतम प्रक्रिया की पुष्टि करें।",
+
+    section9Title: "9. आम गलतियों से बचें",
+    mistakesList: [
+      "केवल social media की पुरानी जानकारी पर भरोसा न करें।",
+      "जहां original जरूरी है वहां केवल photocopy न दें।",
+      "यह न मानें कि सभी विदेशी लाइसेंस की प्रक्रिया समान है।",
+      "दस्तावेज order करने से पहले translation requirements जांचें।",
+      "जाने से पहले सही MUP office की पुष्टि करें।"
+    ],
+
+    officialTitle: "10. आधिकारिक स्रोत",
+    officialText: "वर्तमान आवश्यकताओं और प्रक्रियाओं की पुष्टि के लिए आधिकारिक Croatian government websites का उपयोग करें।",
+    mupButton: "MUP Croatia →",
+    govButton: "gov.hr →",
+
+    disclaimerTitle: "11. महत्वपूर्ण सूचना",
+    disclaimerText: "CROPATH क्रोएशिया में विदेशियों के लिए सामान्य जानकारी प्रदान करता है। यह सरकारी वेबसाइट नहीं है और आधिकारिक कानूनी या प्रशासनिक सलाह का विकल्प नहीं है। वर्तमान आवश्यकताओं की पुष्टि संबंधित Croatian authority से करें।",
+    footerTagline: "क्रोएशिया में रहने और काम करने का आपका मार्ग।"
+  },
+
+  ne: {
+    badge: "🇭🇷 क्रोएसियामा विदेशीहरूका लागि व्यावहारिक जानकारी",
+    heroTitle: "क्रोएसियामा ड्राइभिङ लाइसेन्स",
+    heroText: "विदेशी ड्राइभिङ लाइसेन्स प्रयोग, लाइसेन्स परिवर्तन, मेडिकल जाँच, अनुवाद र MUP मार्फत आवेदनसम्बन्धी जानकारी।",
+    verified: "अन्तिम जाँच: ७ अक्टोबर २०२६",
+    backHome: "← गृहपृष्ठमा फर्कनुहोस्",
+
+    section1Title: "1. क्रोएसियामा विदेशी ड्राइभिङ लाइसेन्स",
+    section1Text: "लाइसेन्स जारी गर्ने देश, क्रोएसियामा तपाईंको बसोबास स्थिति र लागू नियमअनुसार वैध विदेशी ड्राइभिङ लाइसेन्स प्रयोग गर्न सकिन्छ।",
+    section1Info: "लाइसेन्स परिवर्तन वा अन्य प्रक्रिया अघि MUP Croatia बाट हालको आवश्यकताहरू जाँच गर्नुहोस्।",
+
+    section2Title: "2. EU / EEA ड्राइभिङ लाइसेन्स",
+    section2Text: "EU र EEA देशबाट जारी भएका ड्राइभिङ लाइसेन्सहरू सामान्यतया क्रोएसियामा मान्य हुन्छन्। लागू नियम र वैधता जाँच गर्नुहोस्।",
+
+    section3Title: "3. गैर-EU ड्राइभिङ लाइसेन्स",
+    section3Text: "EU/EEA बाहिर जारी गरिएको लाइसेन्समा थप आवश्यकताहरू लागू हुन सक्छन्।",
+    card1Title: "वैधता जाँच गर्नुहोस्",
+    card1Text: "मूल लाइसेन्स वैध र स्पष्ट छ कि छैन जाँच गर्नुहोस्।",
+    card2Title: "बसोबास जाँच गर्नुहोस्",
+    card2Text: "क्रोएसियामा तपाईंको बसोबास स्थितिले प्रक्रियालाई असर गर्न सक्छ।",
+    card3Title: "अनुवाद",
+    card3Text: "प्रमाणित Croatian translation आवश्यक हुन सक्छ।",
+    card4Title: "मेडिकल आवश्यकता",
+    card4Text: "प्रक्रियाअनुसार मेडिकल जाँच आवश्यक हुन सक्छ।",
+
+    section4Title: "4. सामान्य कागजातहरू",
+    documentsList: [
+      "मूल ड्राइभिङ लाइसेन्स",
+      "पासपोर्ट वा परिचयपत्र",
+      "क्रोएसियामा बसोबासको प्रमाण",
+      "आवश्यक भए फोटो",
+      "आवश्यक भए मेडिकल प्रमाणपत्र",
+      "आवश्यक भए प्रमाणित Croatian translation",
+      "MUP ले मागेका अन्य कागजात"
+    ],
+
+    section5Title: "5. मेडिकल जाँच",
+    section5Text: "केही ड्राइभिङ लाइसेन्स प्रक्रियामा अधिकृत मेडिकल संस्थामा जाँच आवश्यक हुन्छ।",
+    section5Info: "जाँचमा जानुअघि आवश्यक कागजातबारे मेडिकल संस्थासँग सोध्नुहोस्।",
+
+    section6Title: "6. Croatian Translation",
+    section6Text: "लाइसेन्स वा अन्य कागजात सिधै स्वीकार नभएमा प्रमाणित Croatian translation आवश्यक हुन सक्छ।",
+    section6Text2: "अनुवादको शुल्क तिर्नुअघि अधिकृत translator र आवश्यकताको पुष्टि गर्नुहोस्।",
+
+    section7Title: "7. MUP मार्फत आवेदन",
+    stepsList: [
+      "लागू हुने प्रक्रिया जाँच गर्नुहोस्।",
+      "मूल कागजात तयार गर्नुहोस्।",
+      "आवश्यक भए मेडिकल जाँच पूरा गर्नुहोस्।",
+      "आवश्यक भए प्रमाणित Croatian translation लिनुहोस्।",
+      "आवेदन र कागजात सम्बन्धित MUP कार्यालयमा बुझाउनुहोस्।"
+    ],
+    section7Warning: "आवश्यकताहरू लाइसेन्स जारी गर्ने देश र तपाईंको अवस्थाअनुसार फरक हुन सक्छन्। जानुअघि MUP सँग हालको checklist पुष्टि गर्नुहोस्।",
+
+    section8Title: "8. भारतीय ड्राइभिङ लाइसेन्स",
+    section8Text: "भारतीय ड्राइभिङ लाइसेन्स भएका व्यक्तिले प्रक्रिया सुरु गर्नुअघि हालका Croatian requirements जाँच गर्नुपर्छ।",
+    indiaList: [
+      "मूल भारतीय ड्राइभिङ लाइसेन्स राख्नुहोस्।",
+      "थप verification आवश्यक छ कि छैन जाँच गर्नुहोस्।",
+      "Translation requirements जाँच गर्नुहोस्।",
+      "क्रोएसियाको बसोबास कागजात तयार गर्नुहोस्।",
+      "आवेदन अघि हालको MUP प्रक्रिया पुष्टि गर्नुहोस्।"
+    ],
+    indiaInfo: "आवश्यकताहरू परिवर्तन हुन सक्छन्। सम्बन्धित Croatian authorities बाट नवीनतम प्रक्रिया पुष्टि गर्नुहोस्।",
+
+    section9Title: "9. सामान्य गल्तीहरूबाट बच्नुहोस्",
+    mistakesList: [
+      "Social media को पुरानो जानकारीमा मात्र भर नपर्नुहोस्।",
+      "Original आवश्यक हुँदा photocopy मात्र नदिनुहोस्।",
+      "सबै विदेशी लाइसेन्सको प्रक्रिया एउटै हो भनेर नमान्नुहोस्।",
+      "कागजात order गर्नु अघि translation requirements जाँच गर्नुहोस्।",
+      "जानुअघि सही MUP office पुष्टि गर्नुहोस्।"
+    ],
+
+    officialTitle: "10. आधिकारिक स्रोतहरू",
+    officialText: "हालका आवश्यकताहरू र प्रक्रियाहरू जाँच गर्न आधिकारिक Croatian government websites प्रयोग गर्नुहोस्।",
+    mupButton: "MUP Croatia →",
+    govButton: "gov.hr →",
+
+    disclaimerTitle: "11. महत्वपूर्ण सूचना",
+    disclaimerText: "CROPATH ले क्रोएसियामा विदेशीहरूका लागि सामान्य जानकारी प्रदान गर्छ। यो सरकारी वेबसाइट होइन। हालका आवश्यकताहरू सम्बन्धित Croatian authority बाट पुष्टि गर्नुहोस्।",
+    footerTagline: "क्रोएसियामा बस्ने र काम गर्ने तपाईंको मार्ग।"
+  },
+
+  ta: {
+    badge: "🇭🇷 குரோஷியாவில் வெளிநாட்டவர்களுக்கான நடைமுறை தகவல்கள்",
+    heroTitle: "குரோஷியாவில் ஓட்டுநர் உரிமம்",
+    heroText: "வெளிநாட்டு ஓட்டுநர் உரிமம் பயன்படுத்துதல், உரிமம் மாற்றுதல், மருத்துவ பரிசோதனை, மொழிபெயர்ப்பு மற்றும் MUP மூலம் விண்ணப்பிப்பது பற்றிய தகவல்கள்.",
+    verified: "கடைசியாக சரிபார்க்கப்பட்டது: 7 அக்டோபர் 2026",
+    backHome: "← முகப்புக்குத் திரும்பு",
+
+    section1Title: "1. குரோஷியாவில் வெளிநாட்டு ஓட்டுநர் உரிமம்",
+    section1Text: "உரிமம் வழங்கிய நாடு, குரோஷியாவில் உங்கள் வசிப்பிட நிலை மற்றும் நடைமுறையில் உள்ள விதிகளின் அடிப்படையில் செல்லுபடியாகும் வெளிநாட்டு ஓட்டுநர் உரிமத்துடன் வாகனம் ஓட்ட முடியும்.",
+    section1Info: "உரிமம் மாற்றுவதற்கு முன் MUP Croatia-விடம் தற்போதைய தேவைகளை சரிபார்க்கவும்.",
+
+    section2Title: "2. EU / EEA ஓட்டுநர் உரிமங்கள்",
+    section2Text: "EU மற்றும் EEA நாடுகளில் வழங்கப்பட்ட ஓட்டுநர் உரிமங்கள் பொதுவாக குரோஷியாவில் அங்கீகரிக்கப்படுகின்றன. பொருந்தும் விதிகளை சரிபார்க்கவும்.",
+
+    section3Title: "3. EU அல்லாத ஓட்டுநர் உரிமங்கள்",
+    section3Text: "EU/EEA க்கு வெளியே வழங்கப்பட்ட உரிமங்களுக்கு கூடுதல் தேவைகள் இருக்கலாம்.",
+    card1Title: "செல்லுபடியை சரிபார்க்கவும்",
+    card1Text: "உங்கள் அசல் உரிமம் செல்லுபடியாகவும் தெளிவாகவும் இருப்பதை உறுதிசெய்யவும்.",
+    card2Title: "வசிப்பிட நிலையை சரிபார்க்கவும்",
+    card2Text: "குரோஷியாவில் உங்கள் வசிப்பிட நிலை செயல்முறையை பாதிக்கலாம்.",
+    card3Title: "மொழிபெயர்ப்பு",
+    card3Text: "சான்றளிக்கப்பட்ட Croatian translation தேவைப்படலாம்.",
+    card4Title: "மருத்துவ தேவைகள்",
+    card4Text: "செயல்முறையைப் பொறுத்து மருத்துவ பரிசோதனை தேவைப்படலாம்.",
+
+    section4Title: "4. பொதுவான ஆவணங்கள்",
+    documentsList: [
+      "அசல் ஓட்டுநர் உரிமம்",
+      "பாஸ்போர்ட் அல்லது அடையாள ஆவணம்",
+      "குரோஷியாவில் வசிப்பதற்கான சான்று",
+      "தேவைப்பட்டால் புகைப்படம்",
+      "தேவைப்பட்டால் மருத்துவ சான்றிதழ்",
+      "தேவைப்பட்டால் சான்றளிக்கப்பட்ட Croatian translation",
+      "MUP கேட்கும் பிற ஆவணங்கள்"
+    ],
+
+    section5Title: "5. மருத்துவ பரிசோதனை",
+    section5Text: "சில ஓட்டுநர் உரிமம் தொடர்பான செயல்முறைகளில் அங்கீகரிக்கப்பட்ட மருத்துவ நிறுவனத்தில் பரிசோதனை தேவைப்படும்.",
+    section5Info: "பரிசோதனைக்கு முன் தேவையான ஆவணங்களை மருத்துவ நிறுவனத்திடம் கேளுங்கள்.",
+
+    section6Title: "6. Croatian Translation",
+    section6Text: "உங்கள் உரிமம் அல்லது ஆவணங்கள் நேரடியாக ஏற்றுக்கொள்ளப்படாவிட்டால் சான்றளிக்கப்பட்ட Croatian translation தேவைப்படலாம்.",
+    section6Text2: "மொழிபெயர்ப்புக்கு பணம் செலுத்துவதற்கு முன் தேவையை உறுதிசெய்யவும்.",
+
+    section7Title: "7. MUP மூலம் விண்ணப்பித்தல்",
+    stepsList: [
+      "பொருந்தும் செயல்முறையை சரிபார்க்கவும்.",
+      "அசல் ஆவணங்களை தயார் செய்யவும்.",
+      "தேவைப்பட்டால் மருத்துவ பரிசோதனையை முடிக்கவும்.",
+      "தேவைப்பட்டால் சான்றளிக்கப்பட்ட Croatian translation பெறவும்.",
+      "விண்ணப்பத்தை தொடர்புடைய MUP அலுவலகத்தில் சமர்ப்பிக்கவும்."
+    ],
+    section7Warning: "உரிமம் வழங்கிய நாடு மற்றும் உங்கள் சூழ்நிலையைப் பொறுத்து தேவைகள் மாறலாம். MUP-இல் தற்போதைய checklist-ஐ உறுதிசெய்யவும்.",
+
+    section8Title: "8. இந்திய ஓட்டுநர் உரிமம்",
+    section8Text: "இந்திய ஓட்டுநர் உரிமம் வைத்திருப்பவர்கள் செயல்முறையை தொடங்குவதற்கு முன் தற்போதைய Croatian requirements-ஐ சரிபார்க்க வேண்டும்.",
+    indiaList: [
+      "அசல் இந்திய ஓட்டுநர் உரிமத்தை வைத்திருக்கவும்.",
+      "கூடுதல் verification தேவையா என சரிபார்க்கவும்.",
+      "Translation requirements சரிபார்க்கவும்.",
+      "குரோஷிய வசிப்பிட ஆவணங்களை தயார் செய்யவும்.",
+      "விண்ணப்பத்திற்கு முன் MUP செயல்முறையை உறுதிசெய்யவும்."
+    ],
+    indiaInfo: "தேவைகள் மாறலாம். தொடர்புடைய Croatian authorities-யிடம் சமீபத்திய நடைமுறையை உறுதிசெய்யவும்.",
+
+    section9Title: "9. தவிர்க்க வேண்டிய பொதுவான தவறுகள்",
+    mistakesList: [
+      "Social media-வில் உள்ள பழைய தகவல்களை மட்டும் நம்ப வேண்டாம்.",
+      "Original தேவைப்படும் இடத்தில் photocopy மட்டும் கொடுக்க வேண்டாம்.",
+      "அனைத்து வெளிநாட்டு உரிமங்களுக்கும் ஒரே நடைமுறை என்று நினைக்க வேண்டாம்.",
+      "ஆவணங்களை order செய்வதற்கு முன் translation requirements சரிபார்க்கவும்.",
+      "செல்வதற்கு முன் சரியான MUP office-ஐ உறுதிசெய்யவும்."
+    ],
+
+    officialTitle: "10. அதிகாரப்பூர்வ ஆதாரங்கள்",
+    officialText: "தற்போதைய தேவைகள் மற்றும் செயல்முறைகளை சரிபார்க்க அதிகாரப்பூர்வ Croatian government websites பயன்படுத்தவும்.",
+    mupButton: "MUP Croatia →",
+    govButton: "gov.hr →",
+
+    disclaimerTitle: "11. முக்கிய அறிவிப்பு",
+    disclaimerText: "CROPATH குரோஷியாவில் உள்ள வெளிநாட்டவர்களுக்கு பொதுவான தகவல்களை வழங்குகிறது. இது அரசு இணையதளம் அல்ல. தற்போதைய தேவைகளை சம்பந்தப்பட்ட Croatian authority-யிடம் உறுதிசெய்யவும்.",
+    footerTagline: "குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் வழிகாட்டி."
+  },
+
+  te: {
+    badge: "🇭🇷 క్రొయేషియాలో విదేశీయుల కోసం ఉపయోగకరమైన సమాచారం",
+    heroTitle: "క్రొయేషియాలో డ్రైవింగ్ లైసెన్స్",
+    heroText: "విదేశీ డ్రైవింగ్ లైసెన్స్ ఉపయోగించడం, లైసెన్స్ మార్చడం, మెడికల్ పరీక్ష, అనువాదం మరియు MUP ద్వారా దరఖాస్తు గురించి సమాచారం.",
+    verified: "చివరిగా తనిఖీ చేసిన తేదీ: 7 అక్టోబర్ 2026",
+    backHome: "← హోమ్‌కు తిరిగి వెళ్ళండి",
+
+    section1Title: "1. క్రొయేషియాలో విదేశీ డ్రైవింగ్ లైసెన్స్",
+    section1Text: "లైసెన్స్ జారీ చేసిన దేశం, క్రొయేషియాలో మీ నివాస స్థితి మరియు వర్తించే నియమాల ఆధారంగా చెల్లుబాటు అయ్యే విదేశీ డ్రైవింగ్ లైసెన్స్‌తో డ్రైవ్ చేయవచ్చు.",
+    section1Info: "లైసెన్స్ మార్చే ముందు MUP Croatia వద్ద ప్రస్తుత అవసరాలను తనిఖీ చేయండి.",
+
+    section2Title: "2. EU / EEA డ్రైవింగ్ లైసెన్సులు",
+    section2Text: "EU మరియు EEA దేశాలు జారీ చేసిన డ్రైవింగ్ లైసెన్సులు సాధారణంగా క్రొయేషియాలో గుర్తించబడతాయి. వర్తించే నియమాలను తనిఖీ చేయండి.",
+
+    section3Title: "3. EU కాని డ్రైవింగ్ లైసెన్సులు",
+    section3Text: "EU/EEA వెలుపల జారీ చేసిన లైసెన్సులకు అదనపు అవసరాలు ఉండవచ్చు.",
+    card1Title: "చెల్లుబాటు తనిఖీ చేయండి",
+    card1Text: "మీ అసలు లైసెన్స్ చెల్లుబాటు అయ్యేలా మరియు స్పష్టంగా ఉందని నిర్ధారించండి.",
+    card2Title: "నివాస స్థితి తనిఖీ చేయండి",
+    card2Text: "క్రొయేషియాలో మీ నివాస స్థితి ప్రక్రియను ప్రభావితం చేయవచ్చు.",
+    card3Title: "అనువాదం",
+    card3Text: "ధృవీకరించబడిన Croatian translation అవసరం కావచ్చు.",
+    card4Title: "మెడికల్ అవసరాలు",
+    card4Text: "ప్రక్రియను బట్టి మెడికల్ పరీక్ష అవసరం కావచ్చు.",
+
+    section4Title: "4. సాధారణ పత్రాలు",
+    documentsList: [
+      "అసలు డ్రైవింగ్ లైసెన్స్",
+      "పాస్‌పోర్ట్ లేదా గుర్తింపు పత్రం",
+      "క్రొయేషియాలో నివాసానికి ఆధారం",
+      "అవసరమైతే ఫోటో",
+      "అవసరమైతే మెడికల్ సర్టిఫికేట్",
+      "అవసరమైతే ధృవీకరించబడిన Croatian translation",
+      "MUP కోరే ఇతర పత్రాలు"
+    ],
+
+    section5Title: "5. మెడికల్ పరీక్ష",
+    section5Text: "కొన్ని డ్రైవింగ్ లైసెన్స్ ప్రక్రియలకు అధీకృత మెడికల్ సంస్థలో పరీక్ష అవసరం.",
+    section5Info: "పరీక్షకు వెళ్లే ముందు అవసరమైన పత్రాల గురించి మెడికల్ సంస్థను అడగండి.",
+
+    section6Title: "6. Croatian Translation",
+    section6Text: "మీ లైసెన్స్ లేదా పత్రాలు నేరుగా అంగీకరించబడకపోతే ధృవీకరించబడిన Croatian translation అవసరం కావచ్చు.",
+    section6Text2: "అనువాదానికి చెల్లించే ముందు అవసరాన్ని నిర్ధారించండి.",
+
+    section7Title: "7. MUP ద్వారా దరఖాస్తు",
+    stepsList: [
+      "వర్తించే ప్రక్రియను తనిఖీ చేయండి.",
+      "అసలు పత్రాలను సిద్ధం చేయండి.",
+      "అవసరమైతే మెడికల్ పరీక్ష పూర్తి చేయండి.",
+      "అవసరమైతే ధృవీకరించబడిన Croatian translation పొందండి.",
+      "దరఖాస్తును సంబంధిత MUP కార్యాలయంలో సమర్పించండి."
+    ],
+    section7Warning: "లైసెన్స్ జారీ చేసిన దేశం మరియు మీ పరిస్థితిని బట్టి అవసరాలు మారవచ్చు. వెళ్లే ముందు MUP వద్ద checklist నిర్ధారించండి.",
+
+    section8Title: "8. భారతీయ డ్రైవింగ్ లైసెన్స్",
+    section8Text: "భారతీయ డ్రైవింగ్ లైసెన్స్ ఉన్నవారు ప్రక్రియ ప్రారంభించే ముందు ప్రస్తుత Croatian requirements తనిఖీ చేయాలి.",
+    indiaList: [
+      "అసలు భారతీయ డ్రైవింగ్ లైసెన్స్ ఉంచుకోండి.",
+      "అదనపు verification అవసరమా తనిఖీ చేయండి.",
+      "Translation requirements తనిఖీ చేయండి.",
+      "క్రొయేషియా నివాస పత్రాలు సిద్ధం చేయండి.",
+      "దరఖాస్తుకు ముందు MUP ప్రక్రియను నిర్ధారించండి."
+    ],
+    indiaInfo: "అవసరాలు మారవచ్చు. సంబంధిత Croatian authorities వద్ద తాజా ప్రక్రియను నిర్ధారించండి.",
+
+    section9Title: "9. సాధారణ తప్పులను నివారించండి",
+    mistakesList: [
+      "Social mediaలోని పాత సమాచారంపై మాత్రమే ఆధారపడవద్దు.",
+      "Original అవసరమైనప్పుడు photocopy మాత్రమే ఇవ్వవద్దు.",
+      "అన్ని విదేశీ లైసెన్సులకు ఒకే ప్రక్రియ అని అనుకోకండి.",
+      "పత్రాలు order చేయడానికి ముందు translation requirements తనిఖీ చేయండి.",
+      "వెళ్లే ముందు సరైన MUP office నిర్ధారించండి."
+    ],
+
+    officialTitle: "10. అధికారిక వనరులు",
+    officialText: "ప్రస్తుత అవసరాలు మరియు ప్రక్రియలను తనిఖీ చేయడానికి అధికారిక Croatian government websites ఉపయోగించండి.",
+    mupButton: "MUP Croatia →",
+    govButton: "gov.hr →",
+
+    disclaimerTitle: "11. ముఖ్యమైన సమాచారం",
+    disclaimerText: "CROPATH క్రొయేషియాలోని విదేశీయులకు సాధారణ సమాచారాన్ని అందిస్తుంది. ఇది ప్రభుత్వ వెబ్‌సైట్ కాదు. ప్రస్తుత అవసరాలను సంబంధిత Croatian authority వద్ద నిర్ధారించండి.",
+    footerTagline: "క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ మార్గం."
+  },
+
+  bn: {
+    badge: "🇭🇷 ক্রোয়েশিয়ায় বিদেশিদের জন্য ব্যবহারিক তথ্য",
+    heroTitle: "ক্রোয়েশিয়ায় ড্রাইভিং লাইসেন্স",
+    heroText: "বিদেশি ড্রাইভিং লাইসেন্স ব্যবহার, লাইসেন্স পরিবর্তন, মেডিকেল পরীক্ষা, অনুবাদ এবং MUP-এর মাধ্যমে আবেদন সম্পর্কে তথ্য।",
+    verified: "সর্বশেষ যাচাই: ৭ অক্টোবর ২০২৬",
+    backHome: "← হোমে ফিরে যান",
+
+    section1Title: "1. ক্রোয়েশিয়ায় বিদেশি ড্রাইভিং লাইসেন্স",
+    section1Text: "লাইসেন্স কোন দেশে ইস্যু হয়েছে, ক্রোয়েশিয়ায় আপনার বসবাসের অবস্থা এবং প্রযোজ্য নিয়মের ওপর নির্ভর করে বৈধ বিদেশি ড্রাইভিং লাইসেন্স ব্যবহার করা যেতে পারে।",
+    section1Info: "লাইসেন্স পরিবর্তন বা অন্য কোনো প্রক্রিয়ার আগে MUP Croatia থেকে বর্তমান প্রয়োজনীয়তা যাচাই করুন।",
+
+    section2Title: "2. EU / EEA ড্রাইভিং লাইসেন্স",
+    section2Text: "EU এবং EEA দেশগুলোর ড্রাইভিং লাইসেন্স সাধারণত ক্রোয়েশিয়ায় স্বীকৃত হয়। প্রযোজ্য নিয়ম যাচাই করুন।",
+
+    section3Title: "3. Non-EU ড্রাইভিং লাইসেন্স",
+    section3Text: "EU/EEA-এর বাইরে ইস্যু করা লাইসেন্সের জন্য অতিরিক্ত প্রয়োজনীয়তা থাকতে পারে।",
+    card1Title: "বৈধতা যাচাই করুন",
+    card1Text: "আপনার মূল লাইসেন্স বৈধ এবং পরিষ্কার কিনা নিশ্চিত করুন।",
+    card2Title: "বসবাসের অবস্থা যাচাই করুন",
+    card2Text: "ক্রোয়েশিয়ায় আপনার বসবাসের অবস্থা প্রক্রিয়াকে প্রভাবিত করতে পারে।",
+    card3Title: "অনুবাদ",
+    card3Text: "প্রত্যয়িত Croatian translation প্রয়োজন হতে পারে।",
+    card4Title: "মেডিকেল প্রয়োজনীয়তা",
+    card4Text: "প্রক্রিয়া অনুযায়ী মেডিকেল পরীক্ষা প্রয়োজন হতে পারে।",
+
+    section4Title: "4. সাধারণ নথি",
+    documentsList: [
+      "মূল ড্রাইভিং লাইসেন্স",
+      "পাসপোর্ট বা পরিচয়পত্র",
+      "ক্রোয়েশিয়ায় বসবাসের প্রমাণ",
+      "প্রয়োজন হলে ছবি",
+      "প্রয়োজন হলে মেডিকেল সার্টিফিকেট",
+      "প্রয়োজন হলে প্রত্যয়িত Croatian translation",
+      "MUP-এর চাওয়া অন্যান্য নথি"
+    ],
+
+    section5Title: "5. মেডিকেল পরীক্ষা",
+    section5Text: "কিছু ড্রাইভিং লাইসেন্স প্রক্রিয়ায় অনুমোদিত মেডিকেল প্রতিষ্ঠানে পরীক্ষা প্রয়োজন হয়।",
+    section5Info: "পরীক্ষায় যাওয়ার আগে প্রয়োজনীয় নথি সম্পর্কে মেডিকেল প্রতিষ্ঠানের সঙ্গে কথা বলুন।",
+
+    section6Title: "6. Croatian Translation",
+    section6Text: "আপনার লাইসেন্স বা নথি সরাসরি গ্রহণ না করলে প্রত্যয়িত Croatian translation প্রয়োজন হতে পারে।",
+    section6Text2: "অনুবাদের জন্য অর্থ দেওয়ার আগে সঠিক প্রয়োজনীয়তা নিশ্চিত করুন।",
+
+    section7Title: "7. MUP-এর মাধ্যমে আবেদন",
+    stepsList: [
+      "প্রযোজ্য প্রক্রিয়া যাচাই করুন।",
+      "মূল নথি প্রস্তুত করুন।",
+      "প্রয়োজন হলে মেডিকেল পরীক্ষা সম্পন্ন করুন।",
+      "প্রয়োজন হলে প্রত্যয়িত Croatian translation নিন।",
+      "সংশ্লিষ্ট MUP অফিসে আবেদন ও নথি জমা দিন।"
+    ],
+    section7Warning: "লাইসেন্স ইস্যু করা দেশ এবং আপনার পরিস্থিতি অনুযায়ী প্রয়োজনীয়তা পরিবর্তিত হতে পারে। যাওয়ার আগে MUP-এর বর্তমান checklist নিশ্চিত করুন।",
+
+    section8Title: "8. ভারতীয় ড্রাইভিং লাইসেন্স",
+    section8Text: "ভারতীয় ড্রাইভিং লাইসেন্সধারীদের exchange বা recognition প্রক্রিয়া শুরু করার আগে বর্তমান Croatian requirements যাচাই করা উচিত।",
+    indiaList: [
+      "মূল ভারতীয় ড্রাইভিং লাইসেন্স রাখুন।",
+      "অতিরিক্ত verification প্রয়োজন কিনা যাচাই করুন।",
+      "Translation requirements যাচাই করুন।",
+      "ক্রোয়েশিয়ার বসবাসের নথি প্রস্তুত করুন।",
+      "আবেদনের আগে বর্তমান MUP প্রক্রিয়া নিশ্চিত করুন।"
+    ],
+    indiaInfo: "প্রয়োজনীয়তা পরিবর্তিত হতে পারে। সংশ্লিষ্ট Croatian authorities-এর কাছ থেকে সর্বশেষ প্রক্রিয়া নিশ্চিত করুন।",
+
+    section9Title: "9. সাধারণ ভুল এড়িয়ে চলুন",
+    mistakesList: [
+      "শুধু social media-এর পুরনো তথ্যের ওপর নির্ভর করবেন না।",
+      "Original প্রয়োজন হলে শুধু photocopy দেবেন না।",
+      "সব বিদেশি লাইসেন্সের প্রক্রিয়া একই মনে করবেন না।",
+      "নথি order করার আগে translation requirements যাচাই করুন।",
+      "যাওয়ার আগে সঠিক MUP office নিশ্চিত করুন।"
+    ],
+
+    officialTitle: "10. সরকারি উৎস",
+    officialText: "বর্তমান প্রয়োজনীয়তা ও প্রক্রিয়া যাচাই করতে সরকারি Croatian government websites ব্যবহার করুন।",
+    mupButton: "MUP Croatia →",
+    govButton: "gov.hr →",
+
+    disclaimerTitle: "11. গুরুত্বপূর্ণ তথ্য",
+    disclaimerText: "CROPATH ক্রোয়েশিয়ায় বিদেশিদের জন্য সাধারণ তথ্য প্রদান করে। এটি সরকারি ওয়েবসাইট নয়। বর্তমান প্রয়োজনীয়তা সংশ্লিষ্ট Croatian authority-এর কাছ থেকে নিশ্চিত করুন।",
+    footerTagline: "ক্রোয়েশিয়ায় বসবাস ও কাজ করার আপনার পথ।"
+  },
+
+  ur: {
+    badge: "🇭🇷 کروشیا میں غیر ملکیوں کے لیے عملی معلومات",
+    heroTitle: "کروشیا میں ڈرائیونگ لائسنس",
+    heroText: "غیر ملکی ڈرائیونگ لائسنس کے استعمال، لائسنس تبدیل کرنے، میڈیکل معائنے، ترجمے اور MUP کے ذریعے درخواست کے بارے میں معلومات۔",
+    verified: "آخری تصدیق: 7 اکتوبر 2026",
+    backHome: "← ہوم پر واپس",
+
+    section1Title: "1. کروشیا میں غیر ملکی ڈرائیونگ لائسنس",
+    section1Text: "لائسنس جاری کرنے والے ملک، کروشیا میں آپ کی رہائش کی حیثیت اور موجودہ قوانین کے مطابق درست غیر ملکی ڈرائیونگ لائسنس استعمال کیا جا سکتا ہے۔",
+    section1Info: "لائسنس تبدیل کرنے یا کسی دوسرے طریقہ کار سے پہلے MUP Croatia سے موجودہ ضروریات کی تصدیق کریں۔",
+
+    section2Title: "2. EU / EEA ڈرائیونگ لائسنس",
+    section2Text: "EU اور EEA ممالک کے ڈرائیونگ لائسنس عام طور پر کروشیا میں تسلیم کیے جاتے ہیں۔ متعلقہ قوانین اور مدت کی تصدیق کریں۔",
+
+    section3Title: "3. غیر EU ڈرائیونگ لائسنس",
+    section3Text: "EU/EEA سے باہر جاری کیے گئے لائسنس کے لیے اضافی ضروریات ہو سکتی ہیں۔",
+    card1Title: "درستگی چیک کریں",
+    card1Text: "یقینی بنائیں کہ اصل لائسنس درست اور واضح ہے۔",
+    card2Title: "رہائش چیک کریں",
+    card2Text: "کروشیا میں آپ کی رہائش کی حیثیت طریقہ کار کو متاثر کر سکتی ہے۔",
+    card3Title: "ترجمہ",
+    card3Text: "مصدقہ Croatian translation درکار ہو سکتا ہے۔",
+    card4Title: "طبی ضروریات",
+    card4Text: "طریقہ کار کے مطابق میڈیکل معائنہ ضروری ہو سکتا ہے۔",
+
+    section4Title: "4. عام دستاویزات",
+    documentsList: [
+      "اصل ڈرائیونگ لائسنس",
+      "پاسپورٹ یا شناختی دستاویز",
+      "کروشیا میں رہائش کا ثبوت",
+      "اگر ضروری ہو تو تصویر",
+      "اگر ضروری ہو تو میڈیکل سرٹیفکیٹ",
+      "اگر ضروری ہو تو مصدقہ Croatian translation",
+      "MUP کی طرف سے مانگی گئی دیگر دستاویزات"
+    ],
+
+    section5Title: "5. میڈیکل معائنہ",
+    section5Text: "کچھ ڈرائیونگ لائسنس کے طریقہ کار میں مجاز طبی ادارے میں میڈیکل معائنہ ضروری ہوتا ہے۔",
+    section5Info: "معائنے سے پہلے ضروری دستاویزات کے بارے میں طبی ادارے سے پوچھیں۔",
+
+    section6Title: "6. Croatian Translation",
+    section6Text: "اگر آپ کا لائسنس یا دستاویزات براہ راست قبول نہ ہوں تو مصدقہ Croatian translation ضروری ہو سکتا ہے۔",
+    section6Text2: "ترجمے کی ادائیگی سے پہلے درست ضرورت کی تصدیق کریں۔",
+
+    section7Title: "7. MUP کے ذریعے درخواست",
+    stepsList: [
+      "متعلقہ طریقہ کار چیک کریں۔",
+      "اصل دستاویزات تیار کریں۔",
+      "اگر ضروری ہو تو میڈیکل معائنہ مکمل کریں۔",
+      "اگر ضروری ہو تو مصدقہ Croatian translation حاصل کریں۔",
+      "متعلقہ MUP دفتر میں درخواست اور دستاویزات جمع کریں۔"
+    ],
+    section7Warning: "ضروریات لائسنس جاری کرنے والے ملک اور آپ کی صورتحال کے مطابق مختلف ہو سکتی ہیں۔ جانے سے پہلے MUP سے موجودہ checklist کی تصدیق کریں۔",
+
+    section8Title: "8. بھارتی ڈرائیونگ لائسنس",
+    section8Text: "بھارتی ڈرائیونگ لائسنس رکھنے والوں کو exchange یا recognition شروع کرنے سے پہلے موجودہ Croatian requirements چیک کرنی چاہئیں۔",
+    indiaList: [
+      "اصل بھارتی ڈرائیونگ لائسنس رکھیں۔",
+      "اضافی verification کی ضرورت چیک کریں۔",
+      "Translation requirements چیک کریں۔",
+      "کروشیا کی رہائش کی دستاویزات تیار کریں۔",
+      "درخواست سے پہلے MUP کے موجودہ طریقہ کار کی تصدیق کریں۔"
+    ],
+    indiaInfo: "ضروریات تبدیل ہو سکتی ہیں۔ متعلقہ Croatian authorities سے تازہ ترین طریقہ کار کی تصدیق کریں۔",
+
+    section9Title: "9. عام غلطیوں سے بچیں",
+    mistakesList: [
+      "صرف social media کی پرانی معلومات پر انحصار نہ کریں۔",
+      "Original ضروری ہو تو صرف photocopy جمع نہ کریں۔",
+      "یہ نہ سمجھیں کہ تمام غیر ملکی لائسنس کا طریقہ ایک جیسا ہے۔",
+      "دستاویزات order کرنے سے پہلے translation requirements چیک کریں۔",
+      "جانے سے پہلے درست MUP office کی تصدیق کریں۔"
+    ],
+
+    officialTitle: "10. سرکاری ذرائع",
+    officialText: "موجودہ ضروریات اور طریقہ کار کی تصدیق کے لیے سرکاری Croatian government websites استعمال کریں۔",
+    mupButton: "MUP Croatia →",
+    govButton: "gov.hr →",
+
+    disclaimerTitle: "11. اہم اطلاع",
+    disclaimerText: "CROPATH کروشیا میں غیر ملکیوں کے لیے عمومی معلومات فراہم کرتا ہے۔ یہ سرکاری ویب سائٹ نہیں ہے۔ موجودہ ضروریات متعلقہ Croatian authority سے تصدیق کریں۔",
+    footerTagline: "کروشیا میں رہنے اور کام کرنے کا آپ کا راستہ۔"
+  },
+
+  hr: {
+    badge: "🇭🇷 Praktične informacije za strance",
+    heroTitle: "Vozačka dozvola u Hrvatskoj",
+    heroText: "Informacije o korištenju stranih vozačkih dozvola, zamjeni dozvole, liječničkom pregledu, prijevodu i postupku preko MUP-a.",
+    verified: "Zadnja provjera: 7. listopada 2026.",
+    backHome: "← Povratak na početnu",
+
+    section1Title: "1. Strana vozačka dozvola u Hrvatskoj",
+    section1Text: "Strani državljani mogu voziti u Hrvatskoj s važećom stranom vozačkom dozvolom, ovisno o državi izdavanja, statusu boravka i važećim hrvatskim pravilima.",
+    section1Info: "Prije zamjene dozvole ili drugog postupka provjerite važeće uvjete kod MUP-a Republike Hrvatske.",
+
+    section2Title: "2. EU / EGP vozačke dozvole",
+    section2Text: "Vozačke dozvole izdane u državama EU-a i EGP-a u pravilu se priznaju u Hrvatskoj, uz primjenu odgovarajućih pravila i uvjeta valjanosti.",
+
+    section3Title: "3. Vozačke dozvole izvan EU-a",
+    section3Text: "Ako je vaša vozačka dozvola izdana izvan EU/EGP-a, mogu se primjenjivati dodatni uvjeti.",
+    card1Title: "Provjerite valjanost",
+    card1Text: "Provjerite je li vaša originalna dozvola važeća i čitljiva.",
+    card2Title: "Provjerite boravak",
+    card2Text: "Vaš status boravka u Hrvatskoj može utjecati na postupak.",
+    card3Title: "Prijevod",
+    card3Text: "Može biti potreban ovjereni prijevod na hrvatski jezik.",
+    card4Title: "Liječnički pregled",
+    card4Text: "Ovisno o postupku može biti potreban liječnički pregled.",
+
+    section4Title: "4. Uobičajeni dokumenti",
+    documentsList: [
+      "Originalna vozačka dozvola",
+      "Putovnica ili identifikacijski dokument",
+      "Dokaz o boravku u Hrvatskoj",
+      "Fotografija, ako je potrebna",
+      "Liječnička potvrda, ako je potrebna",
+      "Ovjereni prijevod na hrvatski, ako je potreban",
+      "Ostali dokumenti koje zatraži MUP"
+    ],
+
+    section5Title: "5. Liječnički pregled",
+    section5Text: "Za neke postupke vezane uz vozačku dozvolu potreban je liječnički pregled u ovlaštenoj zdravstvenoj ustanovi.",
+    section5Info: "Prije pregleda provjerite koje dokumente i identifikaciju trebate ponijeti.",
+
+    section6Title: "6. Prijevod na hrvatski jezik",
+    section6Text: "Ako se vaša dozvola ili dokumenti ne mogu izravno prihvatiti, može biti potreban ovjereni prijevod na hrvatski jezik.",
+    section6Text2: "Prije plaćanja prijevoda provjerite točan zahtjev i koristite ovlaštenog prevoditelja.",
+
+    section7Title: "7. Podnošenje zahtjeva putem MUP-a",
+    stepsList: [
+      "Provjerite postupak koji se odnosi na vaš slučaj.",
+      "Pripremite originalne dokumente.",
+      "Obavite liječnički pregled ako je potreban.",
+      "Nabavite ovjereni prijevod ako je potreban.",
+      "Predajte zahtjev i dokumente nadležnoj policijskoj upravi/postaji."
+    ],
+    section7Warning: "Uvjeti se mogu razlikovati ovisno o državi izdavanja dozvole i vašoj situaciji. Prije dolaska provjerite aktualni popis dokumenata kod MUP-a.",
+
+    section8Title: "8. Indijska vozačka dozvola",
+    section8Text: "Osobe s indijskom vozačkom dozvolom trebaju provjeriti važeće hrvatske uvjete prije početka postupka zamjene ili priznavanja.",
+    indiaList: [
+      "Sačuvajte originalnu indijsku vozačku dozvolu.",
+      "Provjerite je li potrebna dodatna provjera.",
+      "Provjerite uvjete prijevoda.",
+      "Pripremite dokumente o boravku u Hrvatskoj.",
+      "Prije podnošenja zahtjeva potvrdite aktualni postupak MUP-a."
+    ],
+    indiaInfo: "Uvjeti se mogu mijenjati. Najnovije informacije uvijek provjerite kod nadležnih hrvatskih tijela.",
+
+    section9Title: "9. Uobičajene pogreške koje treba izbjegavati",
+    mistakesList: [
+      "Ne oslanjajte se samo na stare informacije s društvenih mreža.",
+      "Ne predajte samo kopiju ako je potreban original.",
+      "Ne pretpostavljajte da je postupak isti za sve strane dozvole.",
+      "Prije naručivanja prijevoda provjerite zahtjeve.",
+      "Prije dolaska provjerite nadležni MUP ured."
+    ],
+
+    officialTitle: "10. Službeni izvori",
+    officialText: "Za provjeru aktualnih uvjeta i postupaka koristite službene hrvatske državne web stranice.",
+    mupButton: "MUP Hrvatska →",
+    govButton: "gov.hr →",
+
+    disclaimerTitle: "11. Važna napomena",
+    disclaimerText: "CROPATH pruža opće informacije za strance u Hrvatskoj. Nije službena državna web stranica i ne zamjenjuje službene pravne ili administrativne savjete. Aktualne uvjete uvijek provjerite kod nadležnog hrvatskog tijela.",
+    footerTagline: "Vaš put do života i rada u Hrvatskoj."
+  }
+
+};
+
+
+function setText(id, value) {
+  const element = document.getElementById(id);
+
+  if (element) {
+    element.textContent = value;
+  }
+}
+
+
+function setList(id, values) {
+  const element = document.getElementById(id);
+
+  if (!element || !Array.isArray(values)) {
+    return;
+  }
+
+  element.innerHTML = "";
+
+  values.forEach(function(value) {
+    const li = document.createElement("li");
+    li.textContent = value;
+    element.appendChild(li);
+  });
+}
+
+
+function applyLanguage(language) {
+
+  if (!translations[language]) {
+    language = "en";
+  }
+
+  const t = translations[language];
+
+  document.documentElement.lang = language;
+
+  if (language === "ur") {
+    document.documentElement.dir = "rtl";
+  } else {
+    document.documentElement.dir = "ltr";
+  }
+
+  setText("badge", t.badge);
+  setText("heroTitle", t.heroTitle);
+  setText("heroText", t.heroText);
+  setText("verified", t.verified);
+  setText("backHome", t.backHome);
+
+  setText("section1Title", t.section1Title);
+  setText("section1Text", t.section1Text);
+  setText("section1Info", t.section1Info);
+
+  setText("section2Title", t.section2Title);
+  setText("section2Text", t.section2Text);
+
+  setText("section3Title", t.section3Title);
+  setText("section3Text", t.section3Text);
+
+  setText("card1Title", t.card1Title);
+  setText("card1Text", t.card1Text);
+
+  setText("card2Title", t.card2Title);
+  setText("card2Text", t.card2Text);
+
+  setText("card3Title", t.card3Title);
+  setText("card3Text", t.card3Text);
+
+  setText("card4Title", t.card4Title);
+  setText("card4Text", t.card4Text);
+
+  setText("section4Title", t.section4Title);
+  setList("documentsList", t.documentsList);
+
+  setText("section5Title", t.section5Title);
+  setText("section5Text", t.section5Text);
+  setText("section5Info", t.section5Info);
+
+  setText("section6Title", t.section6Title);
+  setText("section6Text", t.section6Text);
+  setText("section6Text2", t.section6Text2);
+
+  setText("section7Title", t.section7Title);
+  setList("stepsList", t.stepsList);
+  setText("section7Warning", t.section7Warning);
+
+  setText("section8Title", t.section8Title);
+  setText("section8Text", t.section8Text);
+  setList("indiaList", t.indiaList);
+  setText("indiaInfo", t.indiaInfo);
+
+  setText("section9Title", t.section9Title);
+  setList("mistakesList", t.mistakesList);
+
+  setText("officialTitle", t.officialTitle);
+  setText("officialText", t.officialText);
+  setText("mupButton", t.mupButton);
+  setText("govButton", t.govButton);
+
+  setText("disclaimerTitle", t.disclaimerTitle);
+  setText("disclaimerText", t.disclaimerText);
+
+  setText("footerTagline", t.footerTagline);
+
+  localStorage.setItem("cropath-language", language);
+
+  const selector = document.getElementById("languageSelect");
+
+  if (selector) {
+    selector.value = language;
+  }
+}
+
+
+const languageSelect = document.getElementById("languageSelect");
+
+languageSelect.addEventListener("change", function() {
+  applyLanguage(this.value);
+});
+
+
+const savedLanguage =
+  localStorage.getItem("cropath-language") || "en";
+
+applyLanguage(savedLanguage);
+
+</script>
+
+</body>
+</html>
