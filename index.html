@@ -172,82 +172,87 @@
       background: #1d4ed8;
     }
 
-    /* CONNECT SECTION */
+    /* =========================================
+       PREMIUM CONNECT SECTION
+       ========================================= */
 
     .connect-section {
-      margin-top: 50px;
-      background: white;
-      border-radius: 20px;
-      padding: 35px 25px;
+      margin-top: 42px;
+      background: linear-gradient(135deg, #ffffff, #f8fafc);
+      border-radius: 18px;
+      padding: 28px 22px;
       border: 1px solid #e2e8f0;
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.07);
       text-align: center;
     }
 
     .connect-section h2 {
       color: #0b1f3a;
-      font-size: 30px;
-      margin-bottom: 8px;
+      font-size: 27px;
+      margin-bottom: 6px;
     }
 
     .connect-section > p {
       color: #64748b;
-      margin-bottom: 28px;
-      font-size: 16px;
+      margin-bottom: 22px;
+      font-size: 14px;
     }
 
     .connect-logo {
-      width: 90px;
-      height: 90px;
-      margin: 0 auto 18px;
-      border-radius: 50%;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 12px;
+      border-radius: 14px;
       background: #f1f5f9;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 42px;
-      border: 2px solid #e2e8f0;
+      font-size: 27px;
+      border: 1px solid #e2e8f0;
     }
 
     .connect-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-      max-width: 900px;
+      gap: 10px;
+      max-width: 760px;
       margin: 0 auto;
     }
 
     .connect-card {
       text-decoration: none;
       color: #172033;
-      background: #f8fafc;
+      background: white;
       border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 20px 12px;
+      border-radius: 10px;
+      padding: 11px 8px;
+      height: 72px;
       transition: all 0.2s ease;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
-      min-height: 125px;
+      gap: 8px;
+      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
     }
 
     .connect-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+      transform: translateY(-2px);
+      box-shadow: 0 7px 16px rgba(15, 23, 42, 0.10);
     }
 
     .connect-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      min-width: 34px;
+      border-radius: 9px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      font-size: 25px;
-      font-weight: bold;
-      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 800;
+      margin: 0;
     }
 
     .whatsapp-icon {
@@ -267,27 +272,28 @@
     }
 
     .connect-card strong {
-      font-size: 15px;
+      font-size: 13px;
       color: #0b1f3a;
+      white-space: nowrap;
     }
 
     .join-button {
       display: inline-block;
-      margin-top: 28px;
-      padding: 14px 32px;
+      margin-top: 20px;
+      padding: 10px 22px;
       background: #25D366;
       color: white;
       text-decoration: none;
-      border-radius: 10px;
+      border-radius: 9px;
       font-weight: 800;
-      font-size: 17px;
-      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.25);
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.22);
       transition: all 0.2s ease;
     }
 
     .join-button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+      box-shadow: 0 7px 16px rgba(37, 211, 102, 0.30);
     }
 
     .info-box {
@@ -340,7 +346,12 @@
       border-right: 5px solid #2563eb;
     }
 
+    /* =========================================
+       MOBILE
+       ========================================= */
+
     @media (max-width: 700px) {
+
       .nav {
         flex-direction: column;
         align-items: stretch;
@@ -383,16 +394,38 @@
         min-height: auto;
       }
 
-      .connect-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .connect-section {
-        padding: 28px 15px;
+        padding: 24px 12px;
       }
 
       .connect-section h2 {
         font-size: 25px;
+      }
+
+      .connect-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+
+      .connect-card {
+        height: 65px;
+        padding: 8px 6px;
+      }
+
+      .connect-icon {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        font-size: 14px;
+      }
+
+      .connect-card strong {
+        font-size: 12px;
+      }
+
+      .join-button {
+        font-size: 13px;
+        padding: 10px 16px;
       }
     }
   </style>
@@ -402,7 +435,6 @@
 
 <header>
   <div class="nav">
-
     <div class="logo">
       MALAYALIS IN CROATIA
     </div>
@@ -420,12 +452,10 @@
         <option value="hr">🇭🇷 Hrvatski</option>
       </select>
     </div>
-
   </div>
 </header>
 
 <section class="hero">
-
   <div class="hero-content">
 
     <h1>MALAYALIS IN CROATIA</h1>
@@ -440,7 +470,6 @@
     </p>
 
   </div>
-
 </section>
 
 <main class="container">
@@ -459,171 +488,111 @@
 
   <div class="cards">
 
-    <!-- POLICE -->
     <div class="card">
       <div class="icon">👮</div>
-
-      <h3 id="policeTitle">
-        Police & Documents
-      </h3>
-
+      <h3 id="policeTitle">Police & Documents</h3>
       <p id="policeText">
         Police procedures, residence registration, certificates and important documents.
       </p>
-
       <a href="police.html" class="btn" id="policeBtn">
         Open Page →
       </a>
     </div>
 
-    <!-- GOVERNMENT -->
     <div class="card">
       <div class="icon">🏛️</div>
-
-      <h3 id="governmentTitle">
-        Government
-      </h3>
-
+      <h3 id="governmentTitle">Government</h3>
       <p id="governmentText">
         Croatian government services, e-Građani, tax and employment-related services.
       </p>
-
       <a href="government.html" class="btn" id="governmentBtn">
         Open Page →
       </a>
     </div>
 
-    <!-- DRIVING -->
     <div class="card">
       <div class="icon">🚗</div>
-
-      <h3 id="drivingTitle">
-        Driving
-      </h3>
-
+      <h3 id="drivingTitle">Driving</h3>
       <p id="drivingText">
         Driving licences, foreign licence rules, documents, medical checks and MUP procedures.
       </p>
-
       <a href="driving.html" class="btn" id="drivingBtn">
         Open Page →
       </a>
     </div>
 
-    <!-- WORK -->
     <div class="card">
       <div class="icon">💼</div>
-
-      <h3 id="workTitle">
-        Work
-      </h3>
-
+      <h3 id="workTitle">Work</h3>
       <p id="workText">
         Work permits, employment, contracts, workers' rights and useful employment information.
       </p>
-
       <a href="work.html" class="btn" id="workBtn">
         Open Page →
       </a>
     </div>
 
-    <!-- HEALTH -->
     <div class="card">
       <div class="icon">🏥</div>
-
-      <h3 id="healthTitle">
-        Health
-      </h3>
-
+      <h3 id="healthTitle">Health</h3>
       <p id="healthText">
         Health insurance, doctors, hospitals, emergency healthcare and important health information.
       </p>
-
       <a href="health.html" class="btn" id="healthBtn">
         Open Page →
       </a>
     </div>
 
-    <!-- HOUSING -->
     <div class="card">
       <div class="icon">🏠</div>
-
-      <h3 id="housingTitle">
-        Housing
-      </h3>
-
+      <h3 id="housingTitle">Housing</h3>
       <p id="housingText">
         Renting a home, contracts, deposits, registration and practical housing information.
       </p>
-
       <a href="housing.html" class="btn" id="housingBtn">
         Open Page →
       </a>
     </div>
 
-    <!-- BANK -->
     <div class="card">
       <div class="icon">🏦</div>
-
-      <h3 id="bankTitle">
-        Bank
-      </h3>
-
+      <h3 id="bankTitle">Bank</h3>
       <p id="bankText">
         Bank accounts, payments, cards, online banking and useful banking information.
       </p>
-
       <a href="bank.html" class="btn" id="bankBtn">
         Open Page →
       </a>
     </div>
 
-    <!-- FAMILY -->
     <div class="card">
       <div class="icon">👨‍👩‍👧‍👦</div>
-
-      <h3 id="familyTitle">
-        Family
-      </h3>
-
+      <h3 id="familyTitle">Family</h3>
       <p id="familyText">
         Family residence, children, school, family documents and everyday family services.
       </p>
-
       <a href="family.html" class="btn" id="familyBtn">
         Open Page →
       </a>
     </div>
 
-    <!-- EMERGENCY -->
     <div class="card">
       <div class="icon">🚨</div>
-
-      <h3 id="emergencyTitle">
-        Emergency
-      </h3>
-
+      <h3 id="emergencyTitle">Emergency</h3>
       <p id="emergencyText">
         Emergency numbers and what to do when you need urgent help in Croatia.
       </p>
-
       <a href="emergency.html" class="btn" id="emergencyBtn">
         Open Page →
       </a>
     </div>
 
-    <!-- CONTACTS -->
     <div class="card">
       <div class="icon">📞</div>
-
-      <h3 id="contactsTitle">
-        Useful Contacts
-      </h3>
-
+      <h3 id="contactsTitle">Useful Contacts</h3>
       <p id="contactsText">
         Important institutions, official websites, phone numbers and useful contacts.
       </p>
-
       <a href="contacts.html" class="btn" id="contactsBtn">
         Open Page →
       </a>
@@ -631,12 +600,10 @@
 
   </div>
 
-
-  <!-- CONNECT SECTION -->
+  <!-- PREMIUM CONNECT -->
 
   <section class="connect-section">
 
-    <!-- LOGO PLACEHOLDER -->
     <div class="connect-logo">
       🌍
     </div>
@@ -652,6 +619,7 @@
     <div class="connect-grid">
 
       <!-- WHATSAPP -->
+
       <a
         href="https://whatsapp.com/channel/0029VbDKLO4BVJkvHdxKjO1p"
         target="_blank"
@@ -667,8 +635,8 @@
         </strong>
       </a>
 
-
       <!-- EMAIL -->
+
       <a
         href="mailto:malayalisincroatia@gmail.com"
         class="connect-card"
@@ -682,8 +650,8 @@
         </strong>
       </a>
 
-
       <!-- WEBSITE -->
+
       <a
         href="https://sites.google.com/view/malayalisincroatia/home"
         target="_blank"
@@ -699,8 +667,8 @@
         </strong>
       </a>
 
-
       <!-- INSTAGRAM -->
+
       <a
         href="https://www.instagram.com/malayali_from_croatia?stkn=OHpxc2Fqejgwc2Jt&utm_source=qr"
         target="_blank"
@@ -718,7 +686,6 @@
 
     </div>
 
-
     <!-- JOIN BUTTON -->
 
     <a
@@ -732,7 +699,6 @@
     </a>
 
   </section>
-
 
   <!-- IMPORTANT -->
 
@@ -752,7 +718,6 @@
 
 </main>
 
-
 <footer>
 
   <p>
@@ -769,72 +734,45 @@
 
 </footer>
 
-
 <script>
 
 const translations = {
 
   en: {
-
     heroTitle: "Your Path to Living and Working in Croatia",
-
-    heroText:
-      "Simple and useful information for foreigners living, working and building their life in Croatia.",
-
+    heroText: "Simple and useful information for foreigners living, working and building their life in Croatia.",
     guideTitle: "Croatia Guide",
-
-    guideText:
-      "Choose a topic to find useful information, official links and practical guidance.",
+    guideText: "Choose a topic to find useful information, official links and practical guidance.",
 
     policeTitle: "Police & Documents",
-
-    policeText:
-      "Police procedures, residence registration, certificates and important documents.",
+    policeText: "Police procedures, residence registration, certificates and important documents.",
 
     governmentTitle: "Government",
-
-    governmentText:
-      "Croatian government services, e-Građani, tax and employment-related services.",
+    governmentText: "Croatian government services, e-Građani, tax and employment-related services.",
 
     drivingTitle: "Driving",
-
-    drivingText:
-      "Driving licences, foreign licence rules, documents, medical checks and MUP procedures.",
+    drivingText: "Driving licences, foreign licence rules, documents, medical checks and MUP procedures.",
 
     workTitle: "Work",
-
-    workText:
-      "Work permits, employment, contracts, workers' rights and useful employment information.",
+    workText: "Work permits, employment, contracts, workers' rights and useful employment information.",
 
     healthTitle: "Health",
-
-    healthText:
-      "Health insurance, doctors, hospitals, emergency healthcare and important health information.",
+    healthText: "Health insurance, doctors, hospitals, emergency healthcare and important health information.",
 
     housingTitle: "Housing",
-
-    housingText:
-      "Renting a home, contracts, deposits, registration and practical housing information.",
+    housingText: "Renting a home, contracts, deposits, registration and practical housing information.",
 
     bankTitle: "Bank",
-
-    bankText:
-      "Bank accounts, payments, cards, online banking and useful banking information.",
+    bankText: "Bank accounts, payments, cards, online banking and useful banking information.",
 
     familyTitle: "Family",
-
-    familyText:
-      "Family residence, children, school, family documents and everyday family services.",
+    familyText: "Family residence, children, school, family documents and everyday family services.",
 
     emergencyTitle: "Emergency",
-
-    emergencyText:
-      "Emergency numbers and what to do when you need urgent help in Croatia.",
+    emergencyText: "Emergency numbers and what to do when you need urgent help in Croatia.",
 
     contactsTitle: "Useful Contacts",
-
-    contactsText:
-      "Important institutions, official websites, phone numbers and useful contacts.",
+    contactsText: "Important institutions, official websites, phone numbers and useful contacts.",
 
     policeBtn: "Open Page →",
     governmentBtn: "Open Page →",
@@ -848,106 +786,55 @@ const translations = {
     contactsBtn: "Open Page →",
 
     connectTitle: "Join & Connect",
-
-    connectText:
-      "Follow MALAYALIS IN CROATIA and stay connected with our community.",
-
-    whatsappText: "WhatsApp Channel",
-
-    emailText: "Email Us",
-
+    connectText: "Follow MALAYALIS IN CROATIA and stay connected with our community.",
+    whatsappText: "WhatsApp",
+    emailText: "Email",
     websiteText: "Website",
-
     instagramText: "Instagram",
-
     joinButton: "📱 JOIN OUR WHATSAPP CHANNEL",
 
     infoTitle: "Important",
+    infoText: "MALAYALIS IN CROATIA is an independent information guide. Always check the latest requirements directly with the relevant Croatian authority before making important decisions.",
 
-    infoText:
-      "MALAYALIS IN CROATIA is an independent information guide. Always check the latest requirements directly with the relevant Croatian authority before making important decisions.",
-
-    footerTagline:
-      "Your Path to Living and Working in Croatia.",
-
-    verifiedText:
-      "Last verified: 7 October 2026"
+    footerTagline: "Your Path to Living and Working in Croatia.",
+    verifiedText: "Last verified: 7 October 2026"
   },
 
-
   ml: {
+    heroTitle: "ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനും നിങ്ങളുടെ വഴികാട്ടി",
+    heroText: "ക്രൊയേഷ്യയിൽ താമസിക്കുകയും ജോലി ചെയ്യുകയും ചെയ്യുന്ന വിദേശികൾക്കായി ലളിതവും ഉപകാരപ്രദവുമായ വിവരങ്ങൾ.",
+    guideTitle: "ക്രൊയേഷ്യ ഗൈഡ്",
+    guideText: "ആവശ്യമായ വിവരങ്ങളും ഔദ്യോഗിക ലിങ്കുകളും പ്രായോഗിക മാർഗനിർദ്ദേശങ്ങളും ലഭിക്കാൻ ഒരു വിഷയം തിരഞ്ഞെടുക്കുക.",
 
-    heroTitle:
-      "ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനും നിങ്ങളുടെ വഴികാട്ടി",
+    policeTitle: "പോലീസ് & രേഖകൾ",
+    policeText: "പോലീസ് നടപടികൾ, താമസ രജിസ്ട്രേഷൻ, സർട്ടിഫിക്കറ്റുകൾ, പ്രധാനപ്പെട്ട രേഖകൾ.",
 
-    heroText:
-      "ക്രൊയേഷ്യയിൽ താമസിക്കുകയും ജോലി ചെയ്യുകയും ചെയ്യുന്ന വിദേശികൾക്കായി ലളിതവും ഉപകാരപ്രദവുമായ വിവരങ്ങൾ.",
+    governmentTitle: "സർക്കാർ",
+    governmentText: "ക്രൊയേഷ്യൻ സർക്കാർ സേവനങ്ങൾ, e-Građani, നികുതി, തൊഴിൽ സംബന്ധമായ സേവനങ്ങൾ.",
 
-    guideTitle:
-      "ക്രൊയേഷ്യ ഗൈഡ്",
+    drivingTitle: "ഡ്രൈവിംഗ്",
+    drivingText: "ഡ്രൈവിംഗ് ലൈസൻസ്, വിദേശ ലൈസൻസ് നിയമങ്ങൾ, രേഖകൾ, മെഡിക്കൽ പരിശോധന, MUP നടപടികൾ.",
 
-    guideText:
-      "ആവശ്യമായ വിവരങ്ങളും ഔദ്യോഗിക ലിങ്കുകളും പ്രായോഗിക മാർഗനിർദ്ദേശങ്ങളും ലഭിക്കാൻ ഒരു വിഷയം തിരഞ്ഞെടുക്കുക.",
+    workTitle: "ജോലി",
+    workText: "വർക്ക് പെർമിറ്റ്, ജോലി, കരാർ, തൊഴിലാളികളുടെ അവകാശങ്ങൾ, തൊഴിൽ സംബന്ധമായ വിവരങ്ങൾ.",
 
-    policeTitle:
-      "പോലീസ് & രേഖകൾ",
+    healthTitle: "ആരോഗ്യം",
+    healthText: "ഹെൽത്ത് ഇൻഷുറൻസ്, ഡോക്ടർമാർ, ആശുപത്രികൾ, അടിയന്തര ആരോഗ്യ സേവനങ്ങൾ.",
 
-    policeText:
-      "പോലീസ് നടപടികൾ, താമസ രജിസ്ട്രേഷൻ, സർട്ടിഫിക്കറ്റുകൾ, പ്രധാനപ്പെട്ട രേഖകൾ.",
+    housingTitle: "താമസം",
+    housingText: "വീട് വാടകയ്ക്ക് എടുക്കൽ, കരാർ, ഡെപ്പോസിറ്റ്, രജിസ്ട്രേഷൻ, താമസ വിവരങ്ങൾ.",
 
-    governmentTitle:
-      "സർക്കാർ",
+    bankTitle: "ബാങ്ക്",
+    bankText: "ബാങ്ക് അക്കൗണ്ട്, പണമിടപാട്, കാർഡുകൾ, ഓൺലൈൻ ബാങ്കിംഗ്, ബാങ്കിംഗ് വിവരങ്ങൾ.",
 
-    governmentText:
-      "ക്രൊയേഷ്യൻ സർക്കാർ സേവനങ്ങൾ, e-Građani, നികുതി, തൊഴിൽ സംബന്ധമായ സേവനങ്ങൾ.",
+    familyTitle: "കുടുംബം",
+    familyText: "കുടുംബ താമസം, കുട്ടികൾ, സ്കൂൾ, കുടുംബ രേഖകൾ, ദൈനംദിന സേവനങ്ങൾ.",
 
-    drivingTitle:
-      "ഡ്രൈവിംഗ്",
+    emergencyTitle: "അടിയന്തര സഹായം",
+    emergencyText: "അടിയന്തര നമ്പറുകളും ക്രൊയേഷ്യയിൽ അടിയന്തര സഹായം ആവശ്യമുള്ളപ്പോൾ ചെയ്യേണ്ട കാര്യങ്ങളും.",
 
-    drivingText:
-      "ഡ്രൈവിംഗ് ലൈസൻസ്, വിദേശ ലൈസൻസ് നിയമങ്ങൾ, രേഖകൾ, മെഡിക്കൽ പരിശോധന, MUP നടപടികൾ.",
-
-    workTitle:
-      "ജോലി",
-
-    workText:
-      "വർക്ക് പെർമിറ്റ്, ജോലി, കരാർ, തൊഴിലാളികളുടെ അവകാശങ്ങൾ, തൊഴിൽ സംബന്ധമായ വിവരങ്ങൾ.",
-
-    healthTitle:
-      "ആരോഗ്യം",
-
-    healthText:
-      "ഹെൽത്ത് ഇൻഷുറൻസ്, ഡോക്ടർമാർ, ആശുപത്രികൾ, അടിയന്തര ആരോഗ്യ സേവനങ്ങൾ.",
-
-    housingTitle:
-      "താമസം",
-
-    housingText:
-      "വീട് വാടകയ്ക്ക് എടുക്കൽ, കരാർ, ഡെപ്പോസിറ്റ്, രജിസ്ട്രേഷൻ, താമസ വിവരങ്ങൾ.",
-
-    bankTitle:
-      "ബാങ്ക്",
-
-    bankText:
-      "ബാങ്ക് അക്കൗണ്ട്, പണമിടപാട്, കാർഡുകൾ, ഓൺലൈൻ ബാങ്കിംഗ്, ബാങ്കിംഗ് വിവരങ്ങൾ.",
-
-    familyTitle:
-      "കുടുംബം",
-
-    familyText:
-      "കുടുംബ താമസം, കുട്ടികൾ, സ്കൂൾ, കുടുംബ രേഖകൾ, ദൈനംദിന സേവനങ്ങൾ.",
-
-    emergencyTitle:
-      "അടിയന്തര സഹായം",
-
-    emergencyText:
-      "അടിയന്തര നമ്പറുകളും ക്രൊയേഷ്യയിൽ അടിയന്തര സഹായം ആവശ്യമുള്ളപ്പോൾ ചെയ്യേണ്ട കാര്യങ്ങളും.",
-
-    contactsTitle:
-      "ഉപകാരപ്രദമായ കോൺടാക്ടുകൾ",
-
-    contactsText:
-      "പ്രധാന സ്ഥാപനങ്ങൾ, ഔദ്യോഗിക വെബ്സൈറ്റുകൾ, ഫോൺ നമ്പറുകൾ, ഉപകാരപ്രദമായ കോൺടാക്ടുകൾ.",
+    contactsTitle: "ഉപകാരപ്രദമായ കോൺടാക്ടുകൾ",
+    contactsText: "പ്രധാന സ്ഥാപനങ്ങൾ, ഔദ്യോഗിക വെബ്സൈറ്റുകൾ, ഫോൺ നമ്പറുകൾ, ഉപകാരപ്രദമായ കോൺടാക്ടുകൾ.",
 
     policeBtn: "പേജ് തുറക്കുക →",
     governmentBtn: "പേജ് തുറക്കുക →",
@@ -961,107 +848,46 @@ const translations = {
     contactsBtn: "പേജ് തുറക്കുക →",
 
     connectTitle: "ചേരൂ & ബന്ധപ്പെടൂ",
-
-    connectText:
-      "MALAYALIS IN CROATIA-യുമായി ബന്ധപ്പെട്ടു നമ്മുടെ കമ്മ്യൂണിറ്റിയുടെ അപ്ഡേറ്റുകൾ അറിയൂ.",
-
-    whatsappText: "WhatsApp Channel",
-
-    emailText: "Email അയയ്ക്കുക",
-
+    connectText: "MALAYALIS IN CROATIA-യുമായി ബന്ധപ്പെട്ടു നമ്മുടെ കമ്മ്യൂണിറ്റിയുടെ അപ്ഡേറ്റുകൾ അറിയൂ.",
+    whatsappText: "WhatsApp",
+    emailText: "Email",
     websiteText: "Website",
-
     instagramText: "Instagram",
-
     joinButton: "📱 ഞങ്ങളുടെ WhatsApp Channel-ൽ ചേരൂ",
 
-    infoTitle:
-      "പ്രധാനപ്പെട്ടത്",
+    infoTitle: "പ്രധാനപ്പെട്ടത്",
+    infoText: "MALAYALIS IN CROATIA ഒരു സ്വതന്ത്ര വിവര ഗൈഡാണ്. പ്രധാനപ്പെട്ട തീരുമാനങ്ങൾ എടുക്കുന്നതിന് മുമ്പ് ബന്ധപ്പെട്ട ക്രൊയേഷ്യൻ അധികാരികളിൽ നിന്ന് ഏറ്റവും പുതിയ ആവശ്യകതകൾ പരിശോധിക്കുക.",
 
-    infoText:
-      "MALAYALIS IN CROATIA ഒരു സ്വതന്ത്ര വിവര ഗൈഡാണ്. പ്രധാനപ്പെട്ട തീരുമാനങ്ങൾ എടുക്കുന്നതിന് മുമ്പ് ബന്ധപ്പെട്ട ക്രൊയേഷ്യൻ അധികാരികളിൽ നിന്ന് ഏറ്റവും പുതിയ ആവശ്യകതകൾ പരിശോധിക്കുക.",
-
-    footerTagline:
-      "ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനും നിങ്ങളുടെ വഴികാട്ടി.",
-
-    verifiedText:
-      "അവസാനം പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026"
+    footerTagline: "ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനും നിങ്ങളുടെ വഴികാട്ടി.",
+    verifiedText: "അവസാനം പരിശോധിച്ചത്: 7 ഒക്ടോബർ 2026"
   },
 
-
   hi: {
+    heroTitle: "क्रोएशिया में रहने और काम करने के लिए आपका मार्गदर्शक",
+    heroText: "क्रोएशिया में रहने और काम करने वाले विदेशियों के लिए सरल और उपयोगी जानकारी.",
+    guideTitle: "क्रोएशिया गाइड",
+    guideText: "उपयोगी जानकारी, आधिकारिक लिंक और व्यावहारिक मार्गदर्शन के लिए एक विषय चुनें.",
 
-    heroTitle:
-      "क्रोएशिया में रहने और काम करने के लिए आपका मार्गदर्शक",
-
-    heroText:
-      "क्रोएशिया में रहने और काम करने वाले विदेशियों के लिए सरल और उपयोगी जानकारी।",
-
-    guideTitle:
-      "क्रोएशिया गाइड",
-
-    guideText:
-      "उपयोगी जानकारी, आधिकारिक लिंक और व्यावहारिक मार्गदर्शन के लिए एक विषय चुनें।",
-
-    policeTitle:
-      "पुलिस और दस्तावेज़",
-
-    policeText:
-      "पुलिस प्रक्रियाएं, निवास पंजीकरण, प्रमाणपत्र और महत्वपूर्ण दस्तावेज़।",
-
-    governmentTitle:
-      "सरकार",
-
-    governmentText:
-      "क्रोएशियाई सरकारी सेवाएं, e-Građani, टैक्स और रोजगार सेवाएं।",
-
-    drivingTitle:
-      "ड्राइविंग",
-
-    drivingText:
-      "ड्राइविंग लाइसेंस, विदेशी लाइसेंस नियम, दस्तावेज़, मेडिकल जांच और MUP प्रक्रियाएं।",
-
-    workTitle:
-      "काम",
-
-    workText:
-      "वर्क परमिट, रोजगार, अनुबंध, श्रमिक अधिकार और रोजगार संबंधी जानकारी।",
-
-    healthTitle:
-      "स्वास्थ्य",
-
-    healthText:
-      "स्वास्थ्य बीमा, डॉक्टर, अस्पताल और आपातकालीन स्वास्थ्य सेवाएं।",
-
-    housingTitle:
-      "आवास",
-
-    housingText:
-      "घर किराए पर लेना, अनुबंध, जमा राशि, पंजीकरण और आवास संबंधी जानकारी।",
-
-    bankTitle:
-      "बैंक",
-
-    bankText:
-      "बैंक खाते, भुगतान, कार्ड, ऑनलाइन बैंकिंग और बैंकिंग जानकारी।",
-
-    familyTitle:
-      "परिवार",
-
-    familyText:
-      "परिवार का निवास, बच्चे, स्कूल, परिवार के दस्तावेज़ और सेवाएं।",
-
-    emergencyTitle:
-      "आपातकाल",
-
-    emergencyText:
-      "आपातकालीन नंबर और क्रोएशिया में तुरंत सहायता की आवश्यकता होने पर क्या करें।",
-
-    contactsTitle:
-      "उपयोगी संपर्क",
-
-    contactsText:
-      "महत्वपूर्ण संस्थाएं, आधिकारिक वेबसाइट, फोन नंबर और उपयोगी संपर्क।",
+    policeTitle: "पुलिस और दस्तावेज़",
+    policeText: "पुलिस प्रक्रियाएं, निवास पंजीकरण, प्रमाणपत्र और महत्वपूर्ण दस्तावेज़.",
+    governmentTitle: "सरकार",
+    governmentText: "क्रोएशियाई सरकारी सेवाएं, e-Građani, टैक्स और रोजगार सेवाएं.",
+    drivingTitle: "ड्राइविंग",
+    drivingText: "ड्राइविंग लाइसेंस, विदेशी लाइसेंस नियम, दस्तावेज़, मेडिकल जांच और MUP प्रक्रियाएं.",
+    workTitle: "काम",
+    workText: "वर्क परमिट, रोजगार, अनुबंध, श्रमिक अधिकार और रोजगार संबंधी जानकारी.",
+    healthTitle: "स्वास्थ्य",
+    healthText: "स्वास्थ्य बीमा, डॉक्टर, अस्पताल और आपातकालीन स्वास्थ्य सेवाएं.",
+    housingTitle: "आवास",
+    housingText: "घर किराए पर लेना, अनुबंध, जमा राशि, पंजीकरण और आवास संबंधी जानकारी.",
+    bankTitle: "बैंक",
+    bankText: "बैंक खाते, भुगतान, कार्ड, ऑनलाइन बैंकिंग और बैंकिंग जानकारी.",
+    familyTitle: "परिवार",
+    familyText: "परिवार का निवास, बच्चे, स्कूल, परिवार के दस्तावेज़ और सेवाएं.",
+    emergencyTitle: "आपातकाल",
+    emergencyText: "आपातकालीन नंबर और क्रोएशिया में तुरंत सहायता की आवश्यकता होने पर क्या करें.",
+    contactsTitle: "उपयोगी संपर्क",
+    contactsText: "महत्वपूर्ण संस्थाएं, आधिकारिक वेबसाइट, फोन नंबर और उपयोगी संपर्क.",
 
     policeBtn: "पेज खोलें →",
     governmentBtn: "पेज खोलें →",
@@ -1074,114 +900,47 @@ const translations = {
     emergencyBtn: "पेज खोलें →",
     contactsBtn: "पेज खोलें →",
 
-    connectTitle:
-      "जुड़ें और संपर्क करें",
+    connectTitle: "जुड़ें और संपर्क करें",
+    connectText: "MALAYALIS IN CROATIA को फॉलो करें और हमारी कम्युनिटी से जुड़े रहें.",
+    whatsappText: "WhatsApp",
+    emailText: "Email",
+    websiteText: "Website",
+    instagramText: "Instagram",
+    joinButton: "📱 हमारे WhatsApp Channel से जुड़ें",
 
-    connectText:
-      "MALAYALIS IN CROATIA को फॉलो करें और हमारी कम्युनिटी से जुड़े रहें।",
+    infoTitle: "महत्वपूर्ण",
+    infoText: "MALAYALIS IN CROATIA एक स्वतंत्र जानकारी गाइड है। महत्वपूर्ण निर्णय लेने से पहले संबंधित क्रोएशियाई प्राधिकरण से नवीनतम आवश्यकताओं की जांच करें।",
 
-    whatsappText:
-      "WhatsApp Channel",
-
-    emailText:
-      "Email करें",
-
-    websiteText:
-      "Website",
-
-    instagramText:
-      "Instagram",
-
-    joinButton:
-      "📱 हमारे WhatsApp Channel से जुड़ें",
-
-    infoTitle:
-      "महत्वपूर्ण",
-
-    infoText:
-      "MALAYALIS IN CROATIA एक स्वतंत्र जानकारी गाइड है। महत्वपूर्ण निर्णय लेने से पहले संबंधित क्रोएशियाई प्राधिकरण से नवीनतम आवश्यकताओं की जांच करें।",
-
-    footerTagline:
-      "क्रोएशिया में रहने और काम करने के लिए आपका मार्गदर्शक।",
-
-    verifiedText:
-      "अंतिम सत्यापन: 7 अक्टूबर 2026"
+    footerTagline: "क्रोएशिया में रहने और काम करने के लिए आपका मार्गदर्शक.",
+    verifiedText: "अंतिम सत्यापन: 7 अक्टूबर 2026"
   },
 
-
   ne: {
+    heroTitle: "क्रोएसियामा बस्न र काम गर्न तपाईंको मार्गदर्शक",
+    heroText: "क्रोएसियामा बस्ने र काम गर्ने विदेशीहरूका लागि सरल र उपयोगी जानकारी.",
+    guideTitle: "क्रोएसिया गाइड",
+    guideText: "उपयोगी जानकारी, आधिकारिक लिङ्क र व्यावहारिक मार्गदर्शनका लागि विषय छान्नुहोस्.",
 
-    heroTitle:
-      "क्रोएसियामा बस्न र काम गर्न तपाईंको मार्गदर्शक",
-
-    heroText:
-      "क्रोएसियामा बस्ने र काम गर्ने विदेशीहरूका लागि सरल र उपयोगी जानकारी।",
-
-    guideTitle:
-      "क्रोएसिया गाइड",
-
-    guideText:
-      "उपयोगी जानकारी, आधिकारिक लिङ्क र व्यावहारिक मार्गदर्शनका लागि विषय छान्नुहोस्।",
-
-    policeTitle:
-      "प्रहरी र कागजात",
-
-    policeText:
-      "प्रहरी प्रक्रिया, बसोबास दर्ता, प्रमाणपत्र र महत्वपूर्ण कागजात।",
-
-    governmentTitle:
-      "सरकार",
-
-    governmentText:
-      "क्रोएसियाली सरकारी सेवा, e-Građani, कर र रोजगार सेवाहरू।",
-
-    drivingTitle:
-      "ड्राइभिङ",
-
-    drivingText:
-      "ड्राइभिङ लाइसेन्स, विदेशी लाइसेन्स नियम, कागजात र MUP प्रक्रिया।",
-
-    workTitle:
-      "काम",
-
-    workText:
-      "वर्क परमिट, रोजगार, सम्झौता, कामदार अधिकार र रोजगार जानकारी।",
-
-    healthTitle:
-      "स्वास्थ्य",
-
-    healthText:
-      "स्वास्थ्य बीमा, डाक्टर, अस्पताल र आपतकालीन स्वास्थ्य सेवा।",
-
-    housingTitle:
-      "आवास",
-
-    housingText:
-      "घर भाडा, सम्झौता, डिपोजिट, दर्ता र आवास सम्बन्धी जानकारी।",
-
-    bankTitle:
-      "बैंक",
-
-    bankText:
-      "बैंक खाता, भुक्तानी, कार्ड, अनलाइन बैंकिङ र बैंकिङ जानकारी।",
-
-    familyTitle:
-      "परिवार",
-
-    familyText:
-      "परिवारको बसोबास, बच्चा, विद्यालय, परिवारका कागजात र सेवाहरू।",
-
-    emergencyTitle:
-      "आपतकाल",
-
-    emergencyText:
-      "आपतकालीन नम्बर र क्रोएसियामा तुरुन्त सहायता चाहिँदा के गर्ने।",
-
-    contactsTitle:
-      "उपयोगी सम्पर्क",
-
-    contactsText:
-      "महत्वपूर्ण संस्था, आधिकारिक वेबसाइट, फोन नम्बर र उपयोगी सम्पर्क।",
+    policeTitle: "प्रहरी र कागजात",
+    policeText: "प्रहरी प्रक्रिया, बसोबास दर्ता, प्रमाणपत्र र महत्वपूर्ण कागजात.",
+    governmentTitle: "सरकार",
+    governmentText: "क्रोएसियाली सरकारी सेवा, e-Građani, कर र रोजगार सेवाहरू.",
+    drivingTitle: "ड्राइभिङ",
+    drivingText: "ड्राइभिङ लाइसेन्स, विदेशी लाइसेन्स नियम, कागजात र MUP प्रक्रिया.",
+    workTitle: "काम",
+    workText: "वर्क परमिट, रोजगार, सम्झौता, कामदार अधिकार र रोजगार जानकारी.",
+    healthTitle: "स्वास्थ्य",
+    healthText: "स्वास्थ्य बीमा, डाक्टर, अस्पताल र आपतकालीन स्वास्थ्य सेवा.",
+    housingTitle: "आवास",
+    housingText: "घर भाडा, सम्झौता, डिपोजिट, दर्ता र आवास सम्बन्धी जानकारी.",
+    bankTitle: "बैंक",
+    bankText: "बैंक खाता, भुक्तानी, कार्ड, अनलाइन बैंकिङ र बैंकिङ जानकारी.",
+    familyTitle: "परिवार",
+    familyText: "परिवारको बसोबास, बच्चा, विद्यालय, परिवारका कागजात र सेवाहरू.",
+    emergencyTitle: "आपतकाल",
+    emergencyText: "आपतकालीन नम्बर र क्रोएसियामा तुरुन्त सहायता चाहिँदा के गर्ने.",
+    contactsTitle: "उपयोगी सम्पर्क",
+    contactsText: "महत्वपूर्ण संस्था, आधिकारिक वेबसाइट, फोन नम्बर र उपयोगी सम्पर्क.",
 
     policeBtn: "पृष्ठ खोल्नुहोस् →",
     governmentBtn: "पृष्ठ खोल्नुहोस् →",
@@ -1194,114 +953,47 @@ const translations = {
     emergencyBtn: "पृष्ठ खोल्नुहोस् →",
     contactsBtn: "पृष्ठ खोल्नुहोस् →",
 
-    connectTitle:
-      "जोडिनुहोस् र सम्पर्क गर्नुहोस्",
+    connectTitle: "जोडिनुहोस् र सम्पर्क गर्नुहोस्",
+    connectText: "MALAYALIS IN CROATIA लाई फलो गर्नुहोस् र हाम्रो समुदायसँग जोडिनुहोस्.",
+    whatsappText: "WhatsApp",
+    emailText: "Email",
+    websiteText: "Website",
+    instagramText: "Instagram",
+    joinButton: "📱 हाम्रो WhatsApp Channel मा जोडिनुहोस्",
 
-    connectText:
-      "MALAYALIS IN CROATIA लाई फलो गर्नुहोस् र हाम्रो समुदायसँग जोडिनुहोस्।",
+    infoTitle: "महत्वपूर्ण",
+    infoText: "MALAYALIS IN CROATIA स्वतन्त्र जानकारी गाइड हो। महत्वपूर्ण निर्णय लिनुअघि सम्बन्धित क्रोएसियाली अधिकारीसँग नवीनतम आवश्यकताहरू जाँच गर्नुहोस्.",
 
-    whatsappText:
-      "WhatsApp Channel",
-
-    emailText:
-      "Email",
-
-    websiteText:
-      "Website",
-
-    instagramText:
-      "Instagram",
-
-    joinButton:
-      "📱 हाम्रो WhatsApp Channel मा जोडिनुहोस्",
-
-    infoTitle:
-      "महत्वपूर्ण",
-
-    infoText:
-      "MALAYALIS IN CROATIA स्वतन्त्र जानकारी गाइड हो। महत्वपूर्ण निर्णय लिनुअघि सम्बन्धित क्रोएसियाली अधिकारीसँग नवीनतम आवश्यकताहरू जाँच गर्नुहोस्।",
-
-    footerTagline:
-      "क्रोएसियामा बस्न र काम गर्न तपाईंको मार्गदर्शक।",
-
-    verifiedText:
-      "अन्तिम जाँच: ७ अक्टोबर २०२६"
+    footerTagline: "क्रोएसियामा बस्न र काम गर्न तपाईंको मार्गदर्शक.",
+    verifiedText: "अन्तिम जाँच: ७ अक्टोबर २०२६"
   },
 
-
   ta: {
+    heroTitle: "குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் வழிகாட்டி",
+    heroText: "குரோஷியாவில் வசிக்கும் மற்றும் வேலை செய்யும் வெளிநாட்டவர்களுக்கான எளிய மற்றும் பயனுள்ள தகவல்கள்.",
+    guideTitle: "குரோஷியா வழிகாட்டி",
+    guideText: "பயனுள்ள தகவல்கள், அதிகாரப்பூர்வ இணைப்புகள் மற்றும் நடைமுறை வழிகாட்டுதல்களைப் பெற ஒரு தலைப்பைத் தேர்ந்தெடுக்கவும்.",
 
-    heroTitle:
-      "குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் வழிகாட்டி",
-
-    heroText:
-      "குரோஷியாவில் வசிக்கும் மற்றும் வேலை செய்யும் வெளிநாட்டவர்களுக்கான எளிய மற்றும் பயனுள்ள தகவல்கள்.",
-
-    guideTitle:
-      "குரோஷியா வழிகாட்டி",
-
-    guideText:
-      "பயனுள்ள தகவல்கள், அதிகாரப்பூர்வ இணைப்புகள் மற்றும் நடைமுறை வழிகாட்டுதல்களைப் பெற ஒரு தலைப்பைத் தேர்ந்தெடுக்கவும்.",
-
-    policeTitle:
-      "காவல்துறை & ஆவணங்கள்",
-
-    policeText:
-      "காவல்துறை நடைமுறைகள், குடியிருப்பு பதிவு, சான்றிதழ்கள் மற்றும் முக்கிய ஆவணங்கள்.",
-
-    governmentTitle:
-      "அரசு",
-
-    governmentText:
-      "குரோஷிய அரசு சேவைகள், e-Građani, வரி மற்றும் வேலைவாய்ப்பு சேவைகள்.",
-
-    drivingTitle:
-      "வாகனம் ஓட்டுதல்",
-
-    drivingText:
-      "ஓட்டுநர் உரிமம், வெளிநாட்டு உரிம விதிகள், ஆவணங்கள் மற்றும் MUP நடைமுறைகள்.",
-
-    workTitle:
-      "வேலை",
-
-    workText:
-      "வேலை அனுமதி, வேலைவாய்ப்பு, ஒப்பந்தங்கள் மற்றும் தொழிலாளர் உரிமைகள்.",
-
-    healthTitle:
-      "சுகாதாரம்",
-
-    healthText:
-      "சுகாதார காப்பீடு, மருத்துவர்கள், மருத்துவமனைகள் மற்றும் அவசர சுகாதார சேவைகள்.",
-
-    housingTitle:
-      "வீடு",
-
-    housingText:
-      "வீடு வாடகை, ஒப்பந்தம், முன்பணம், பதிவு மற்றும் வீட்டு தகவல்கள்.",
-
-    bankTitle:
-      "வங்கி",
-
-    bankText:
-      "வங்கி கணக்குகள், பணப்பரிவர்த்தனை, கார்டுகள் மற்றும் ஆன்லைன் வங்கி.",
-
-    familyTitle:
-      "குடும்பம்",
-
-    familyText:
-      "குடும்ப குடியிருப்பு, குழந்தைகள், பள்ளி மற்றும் குடும்ப ஆவணங்கள்.",
-
-    emergencyTitle:
-      "அவசரம்",
-
-    emergencyText:
-      "அவசர எண்கள் மற்றும் உடனடி உதவி தேவைப்பட்டால் என்ன செய்ய வேண்டும்.",
-
-    contactsTitle:
-      "பயனுள்ள தொடர்புகள்",
-
-    contactsText:
-      "முக்கிய நிறுவனங்கள், அதிகாரப்பூர்வ இணையதளங்கள், தொலைபேசி எண்கள் மற்றும் தொடர்புகள்.",
+    policeTitle: "காவல்துறை & ஆவணங்கள்",
+    policeText: "காவல்துறை நடைமுறைகள், குடியிருப்பு பதிவு, சான்றிதழ்கள் மற்றும் முக்கிய ஆவணங்கள்.",
+    governmentTitle: "அரசு",
+    governmentText: "குரோஷிய அரசு சேவைகள், e-Građani, வரி மற்றும் வேலைவாய்ப்பு சேவைகள்.",
+    drivingTitle: "வாகனம் ஓட்டுதல்",
+    drivingText: "ஓட்டுநர் உரிமம், வெளிநாட்டு உரிம விதிகள், ஆவணங்கள் மற்றும் MUP நடைமுறைகள்.",
+    workTitle: "வேலை",
+    workText: "வேலை அனுமதி, வேலைவாய்ப்பு, ஒப்பந்தங்கள் மற்றும் தொழிலாளர் உரிமைகள்.",
+    healthTitle: "சுகாதாரம்",
+    healthText: "சுகாதார காப்பீடு, மருத்துவர்கள், மருத்துவமனைகள் மற்றும் அவசர சுகாதார சேவைகள்.",
+    housingTitle: "வீடு",
+    housingText: "வீடு வாடகை, ஒப்பந்தம், முன்பணம், பதிவு மற்றும் வீட்டு தகவல்கள்.",
+    bankTitle: "வங்கி",
+    bankText: "வங்கி கணக்குகள், பணப்பரிவர்த்தனை, கார்டுகள் மற்றும் ஆன்லைன் வங்கி.",
+    familyTitle: "குடும்பம்",
+    familyText: "குடும்ப குடியிருப்பு, குழந்தைகள், பள்ளி மற்றும் குடும்ப ஆவணங்கள்.",
+    emergencyTitle: "அவசரம்",
+    emergencyText: "அவசர எண்கள் மற்றும் உடனடி உதவி தேவைப்பட்டால் என்ன செய்ய வேண்டும்.",
+    contactsTitle: "பயனுள்ள தொடர்புகள்",
+    contactsText: "முக்கிய நிறுவனங்கள், அதிகாரப்பூர்வ இணையதளங்கள், தொலைபேசி எண்கள் மற்றும் தொடர்புகள்.",
 
     policeBtn: "பக்கத்தைத் திறக்கவும் →",
     governmentBtn: "பக்கத்தைத் திறக்கவும் →",
@@ -1314,114 +1006,47 @@ const translations = {
     emergencyBtn: "பக்கத்தைத் திறக்கவும் →",
     contactsBtn: "பக்கத்தைத் திறக்கவும் →",
 
-    connectTitle:
-      "இணைந்து தொடர்பில் இருங்கள்",
+    connectTitle: "இணைந்து தொடர்பில் இருங்கள்",
+    connectText: "MALAYALIS IN CROATIA-வை பின்தொடர்ந்து எங்கள் சமூகத்துடன் இணைந்திருங்கள்.",
+    whatsappText: "WhatsApp",
+    emailText: "Email",
+    websiteText: "Website",
+    instagramText: "Instagram",
+    joinButton: "📱 எங்கள் WhatsApp Channel-ல் சேருங்கள்",
 
-    connectText:
-      "MALAYALIS IN CROATIA-வை பின்தொடர்ந்து எங்கள் சமூகத்துடன் இணைந்திருங்கள்.",
+    infoTitle: "முக்கியம்",
+    infoText: "MALAYALIS IN CROATIA ஒரு சுயாதீன தகவல் வழிகாட்டி. முக்கிய முடிவுகளை எடுப்பதற்கு முன் சம்பந்தப்பட்ட குரோஷிய அதிகாரியிடம் சமீபத்திய தேவைகளைச் சரிபார்க்கவும்.",
 
-    whatsappText:
-      "WhatsApp Channel",
-
-    emailText:
-      "Email",
-
-    websiteText:
-      "Website",
-
-    instagramText:
-      "Instagram",
-
-    joinButton:
-      "📱 எங்கள் WhatsApp Channel-ல் சேருங்கள்",
-
-    infoTitle:
-      "முக்கியம்",
-
-    infoText:
-      "MALAYALIS IN CROATIA ஒரு சுயாதீன தகவல் வழிகாட்டி. முக்கிய முடிவுகளை எடுப்பதற்கு முன் சம்பந்தப்பட்ட குரோஷிய அதிகாரியிடம் சமீபத்திய தேவைகளைச் சரிபார்க்கவும்.",
-
-    footerTagline:
-      "குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் வழிகாட்டி.",
-
-    verifiedText:
-      "கடைசியாக சரிபார்க்கப்பட்டது: 7 அக்டோபர் 2026"
+    footerTagline: "குரோஷியாவில் வாழவும் வேலை செய்யவும் உங்கள் வழிகாட்டி.",
+    verifiedText: "கடைசியாக சரிபார்க்கப்பட்டது: 7 அக்டோபர் 2026"
   },
 
-
   te: {
+    heroTitle: "క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ మార్గదర్శి",
+    heroText: "క్రొయేషియాలో నివసించే మరియు పని చేసే విదేశీయుల కోసం సులభమైన మరియు ఉపయోగకరమైన సమాచారం.",
+    guideTitle: "క్రొయేషియా గైడ్",
+    guideText: "ఉపయోగకరమైన సమాచారం, అధికారిక లింకులు మరియు ఆచరణాత్మక మార్గదర్శకత్వం కోసం ఒక అంశాన్ని ఎంచుకోండి.",
 
-    heroTitle:
-      "క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ మార్గదర్శి",
-
-    heroText:
-      "క్రొయేషియాలో నివసించే మరియు పని చేసే విదేశీయుల కోసం సులభమైన మరియు ఉపయోగకరమైన సమాచారం.",
-
-    guideTitle:
-      "క్రొయేషియా గైడ్",
-
-    guideText:
-      "ఉపయోగకరమైన సమాచారం, అధికారిక లింకులు మరియు ఆచరణాత్మక మార్గదర్శకత్వం కోసం ఒక అంశాన్ని ఎంచుకోండి.",
-
-    policeTitle:
-      "పోలీస్ & పత్రాలు",
-
-    policeText:
-      "పోలీస్ విధానాలు, నివాస నమోదు, సర్టిఫికెట్లు మరియు ముఖ్యమైన పత్రాలు.",
-
-    governmentTitle:
-      "ప్రభుత్వం",
-
-    governmentText:
-      "క్రొయేషియన్ ప్రభుత్వ సేవలు, e-Građani, పన్ను మరియు ఉద్యోగ సేవలు.",
-
-    drivingTitle:
-      "డ్రైవింగ్",
-
-    drivingText:
-      "డ్రైవింగ్ లైసెన్స్, విదేశీ లైసెన్స్ నియమాలు, పత్రాలు మరియు MUP విధానాలు.",
-
-    workTitle:
-      "పని",
-
-    workText:
-      "వర్క్ పర్మిట్, ఉద్యోగం, ఒప్పందాలు మరియు కార్మికుల హక్కులు.",
-
-    healthTitle:
-      "ఆరోగ్యం",
-
-    healthText:
-      "ఆరోగ్య బీమా, డాక్టర్లు, ఆసుపత్రులు మరియు అత్యవసర ఆరోగ్య సేవలు.",
-
-    housingTitle:
-      "ఇల్లు",
-
-    housingText:
-      "ఇల్లు అద్దె, ఒప్పందాలు, డిపాజిట్, నమోదు మరియు గృహ సమాచారం.",
-
-    bankTitle:
-      "బ్యాంక్",
-
-    bankText:
-      "బ్యాంక్ ఖాతాలు, చెల్లింపులు, కార్డులు మరియు ఆన్‌లైన్ బ్యాంకింగ్.",
-
-    familyTitle:
-      "కుటుంబం",
-
-    familyText:
-      "కుటుంబ నివాసం, పిల్లలు, పాఠశాల, కుటుంబ పత్రాలు మరియు సేవలు.",
-
-    emergencyTitle:
-      "అత్యవసరం",
-
-    emergencyText:
-      "అత్యవసర నంబర్లు మరియు క్రొయేషియాలో తక్షణ సహాయం అవసరమైనప్పుడు ఏమి చేయాలి.",
-
-    contactsTitle:
-      "ఉపయోగకరమైన సంప్రదింపులు",
-
-    contactsText:
-      "ముఖ్యమైన సంస్థలు, అధికారిక వెబ్‌సైట్లు, ఫోన్ నంబర్లు మరియు ఉపయోగకరమైన సంప్రదింపులు.",
+    policeTitle: "పోలీస్ & పత్రాలు",
+    policeText: "పోలీస్ విధానాలు, నివాస నమోదు, సర్టిఫికెట్లు మరియు ముఖ్యమైన పత్రాలు.",
+    governmentTitle: "ప్రభుత్వం",
+    governmentText: "క్రొయేషియన్ ప్రభుత్వ సేవలు, e-Građani, పన్ను మరియు ఉద్యోగ సేవలు.",
+    drivingTitle: "డ్రైవింగ్",
+    drivingText: "డ్రైవింగ్ లైసెన్స్, విదేశీ లైసెన్స్ నియమాలు, పత్రాలు మరియు MUP విధానాలు.",
+    workTitle: "పని",
+    workText: "వర్క్ పర్మిట్, ఉద్యోగం, ఒప్పందాలు మరియు కార్మికుల హక్కులు.",
+    healthTitle: "ఆరోగ్యం",
+    healthText: "ఆరోగ్య బీమా, డాక్టర్లు, ఆసుపత్రులు మరియు అత్యవసర ఆరోగ్య సేవలు.",
+    housingTitle: "ఇల్లు",
+    housingText: "ఇల్లు అద్దె, ఒప్పందాలు, డిపాజిట్, నమోదు మరియు గృహ సమాచారం.",
+    bankTitle: "బ్యాంక్",
+    bankText: "బ్యాంక్ ఖాతాలు, చెల్లింపులు, కార్డులు మరియు ఆన్‌లైన్ బ్యాంకింగ్.",
+    familyTitle: "కుటుంబం",
+    familyText: "కుటుంబ నివాసం, పిల్లలు, పాఠశాల, కుటుంబ పత్రాలు మరియు సేవలు.",
+    emergencyTitle: "అత్యవసరం",
+    emergencyText: "అత్యవసర నంబర్లు మరియు క్రొయేషియాలో తక్షణ సహాయం అవసరమైనప్పుడు ఏమి చేయాలి.",
+    contactsTitle: "ఉపయోగకరమైన సంప్రదింపులు",
+    contactsText: "ముఖ్యమైన సంస్థలు, అధికారిక వెబ్‌సైట్లు, ఫోన్ నంబర్లు మరియు ఉపయోగకరమైన సంప్రదింపులు.",
 
     policeBtn: "పేజీ తెరవండి →",
     governmentBtn: "పేజీ తెరవండి →",
@@ -1434,114 +1059,47 @@ const translations = {
     emergencyBtn: "పేజీ తెరవండి →",
     contactsBtn: "పేజీ తెరవండి →",
 
-    connectTitle:
-      "చేరండి & కనెక్ట్ అవ్వండి",
+    connectTitle: "చేరండి & కనెక్ట్ అవ్వండి",
+    connectText: "MALAYALIS IN CROATIA ను ఫాలో అవుతూ మా కమ్యూనిటీతో కనెక్ట్ అవ్వండి.",
+    whatsappText: "WhatsApp",
+    emailText: "Email",
+    websiteText: "Website",
+    instagramText: "Instagram",
+    joinButton: "📱 మా WhatsApp Channel లో చేరండి",
 
-    connectText:
-      "MALAYALIS IN CROATIA ను ఫాలో అవుతూ మా కమ్యూనిటీతో కనెక్ట్ అవ్వండి.",
+    infoTitle: "ముఖ్యమైనది",
+    infoText: "MALAYALIS IN CROATIA ఒక స్వతంత్ర సమాచార గైడ్. ముఖ్యమైన నిర్ణయాలు తీసుకునే ముందు సంబంధిత క్రొయేషియన్ అధికారులతో తాజా అవసరాలను తనిఖీ చేయండి.",
 
-    whatsappText:
-      "WhatsApp Channel",
-
-    emailText:
-      "Email",
-
-    websiteText:
-      "Website",
-
-    instagramText:
-      "Instagram",
-
-    joinButton:
-      "📱 మా WhatsApp Channel లో చేరండి",
-
-    infoTitle:
-      "ముఖ్యమైనది",
-
-    infoText:
-      "MALAYALIS IN CROATIA ఒక స్వతంత్ర సమాచార గైడ్. ముఖ్యమైన నిర్ణయాలు తీసుకునే ముందు సంబంధిత క్రొయేషియన్ అధికారులతో తాజా అవసరాలను తనిఖీ చేయండి.",
-
-    footerTagline:
-      "క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ మార్గదర్శి.",
-
-    verifiedText:
-      "చివరిగా ధృవీకరించబడింది: 7 అక్టోబర్ 2026"
+    footerTagline: "క్రొయేషియాలో నివసించడానికి మరియు పని చేయడానికి మీ మార్గదర్శి.",
+    verifiedText: "చివరిగా ధృవీకరించబడింది: 7 అక్టోబర్ 2026"
   },
 
-
   bn: {
+    heroTitle: "ক্রোয়েশিয়ায় বসবাস ও কাজের জন্য আপনার গাইড",
+    heroText: "ক্রোয়েশিয়ায় বসবাস ও কাজ করা বিদেশিদের জন্য সহজ এবং দরকারী তথ্য.",
+    guideTitle: "ক্রোয়েশিয়া গাইড",
+    guideText: "দরকারী তথ্য, অফিসিয়াল লিংক এবং ব্যবহারিক নির্দেশনার জন্য একটি বিষয় নির্বাচন করুন.",
 
-    heroTitle:
-      "ক্রোয়েশিয়ায় বসবাস ও কাজের জন্য আপনার গাইড",
-
-    heroText:
-      "ক্রোয়েশিয়ায় বসবাস ও কাজ করা বিদেশিদের জন্য সহজ এবং দরকারী তথ্য।",
-
-    guideTitle:
-      "ক্রোয়েশিয়া গাইড",
-
-    guideText:
-      "দরকারী তথ্য, অফিসিয়াল লিংক এবং ব্যবহারিক নির্দেশনার জন্য একটি বিষয় নির্বাচন করুন।",
-
-    policeTitle:
-      "পুলিশ ও নথিপত্র",
-
-    policeText:
-      "পুলিশের প্রক্রিয়া, বসবাসের নিবন্ধন, সার্টিফিকেট এবং গুরুত্বপূর্ণ নথি।",
-
-    governmentTitle:
-      "সরকার",
-
-    governmentText:
-      "ক্রোয়েশিয়ান সরকারি পরিষেবা, e-Građani, কর এবং কর্মসংস্থান পরিষেবা।",
-
-    drivingTitle:
-      "ড্রাইভিং",
-
-    drivingText:
-      "ড্রাইভিং লাইসেন্স, বিদেশি লাইসেন্সের নিয়ম, নথি এবং MUP প্রক্রিয়া।",
-
-    workTitle:
-      "কাজ",
-
-    workText:
-      "ওয়ার্ক পারমিট, চাকরি, চুক্তি এবং শ্রমিকদের অধিকার।",
-
-    healthTitle:
-      "স্বাস্থ্য",
-
-    healthText:
-      "স্বাস্থ্য বীমা, ডাক্তার, হাসপাতাল এবং জরুরি স্বাস্থ্য পরিষেবা।",
-
-    housingTitle:
-      "বাসস্থান",
-
-    housingText:
-      "বাড়ি ভাড়া, চুক্তি, ডিপোজিট, নিবন্ধন এবং বাসস্থান সংক্রান্ত তথ্য।",
-
-    bankTitle:
-      "ব্যাংক",
-
-    bankText:
-      "ব্যাংক অ্যাকাউন্ট, পেমেন্ট, কার্ড এবং অনলাইন ব্যাংকিং।",
-
-    familyTitle:
-      "পরিবার",
-
-    familyText:
-      "পারিবারিক বাসস্থান, শিশু, স্কুল, পারিবারিক নথি এবং পরিষেবা।",
-
-    emergencyTitle:
-      "জরুরি অবস্থা",
-
-    emergencyText:
-      "জরুরি নম্বর এবং ক্রোয়েশিয়ায় জরুরি সাহায্য প্রয়োজন হলে কী করবেন।",
-
-    contactsTitle:
-      "দরকারী যোগাযোগ",
-
-    contactsText:
-      "গুরুত্বপূর্ণ প্রতিষ্ঠান, অফিসিয়াল ওয়েবসাইট, ফোন নম্বর এবং দরকারী যোগাযোগ।",
+    policeTitle: "পুলিশ ও নথিপত্র",
+    policeText: "পুলিশের প্রক্রিয়া, বসবাসের নিবন্ধন, সার্টিফিকেট এবং গুরুত্বপূর্ণ নথি.",
+    governmentTitle: "সরকার",
+    governmentText: "ক্রোয়েশিয়ান সরকারি পরিষেবা, e-Građani, কর এবং কর্মসংস্থান পরিষেবা.",
+    drivingTitle: "ড্রাইভিং",
+    drivingText: "ড্রাইভিং লাইসেন্স, বিদেশি লাইসেন্সের নিয়ম, নথি এবং MUP প্রক্রিয়া.",
+    workTitle: "কাজ",
+    workText: "ওয়ার্ক পারমিট, চাকরি, চুক্তি এবং শ্রমিকদের অধিকার.",
+    healthTitle: "স্বাস্থ্য",
+    healthText: "স্বাস্থ্য বীমা, ডাক্তার, হাসপাতাল এবং জরুরি স্বাস্থ্য পরিষেবা.",
+    housingTitle: "বাসস্থান",
+    housingText: "বাড়ি ভাড়া, চুক্তি, ডিপোজিট, নিবন্ধন এবং বাসস্থান সংক্রান্ত তথ্য.",
+    bankTitle: "ব্যাংক",
+    bankText: "ব্যাংক অ্যাকাউন্ট, পেমেন্ট, কার্ড এবং অনলাইন ব্যাংকিং.",
+    familyTitle: "পরিবার",
+    familyText: "পারিবারিক বাসস্থান, শিশু, স্কুল, পারিবারিক নথি এবং পরিষেবা.",
+    emergencyTitle: "জরুরি অবস্থা",
+    emergencyText: "জরুরি নম্বর এবং ক্রোয়েশিয়ায় জরুরি সাহায্য প্রয়োজন হলে কী করবেন.",
+    contactsTitle: "দরকারী যোগাযোগ",
+    contactsText: "গুরুত্বপূর্ণ প্রতিষ্ঠান, অফিসিয়াল ওয়েবসাইট, ফোন নম্বর এবং দরকারী যোগাযোগ.",
 
     policeBtn: "পৃষ্ঠা খুলুন →",
     governmentBtn: "পৃষ্ঠা খুলুন →",
@@ -1554,114 +1112,47 @@ const translations = {
     emergencyBtn: "পৃষ্ঠা খুলুন →",
     contactsBtn: "পৃষ্ঠা খুলুন →",
 
-    connectTitle:
-      "যোগ দিন ও যোগাযোগ রাখুন",
+    connectTitle: "যোগ দিন ও যোগাযোগ রাখুন",
+    connectText: "MALAYALIS IN CROATIA ফলো করুন এবং আমাদের কমিউনিটির সাথে যুক্ত থাকুন.",
+    whatsappText: "WhatsApp",
+    emailText: "Email",
+    websiteText: "Website",
+    instagramText: "Instagram",
+    joinButton: "📱 আমাদের WhatsApp Channel-এ যোগ দিন",
 
-    connectText:
-      "MALAYALIS IN CROATIA ফলো করুন এবং আমাদের কমিউনিটির সাথে যুক্ত থাকুন।",
+    infoTitle: "গুরুত্বপূর্ণ",
+    infoText: "MALAYALIS IN CROATIA একটি স্বাধীন তথ্য গাইড। গুরুত্বপূর্ণ সিদ্ধান্ত নেওয়ার আগে সংশ্লিষ্ট ক্রোয়েশিয়ান কর্তৃপক্ষের কাছ থেকে সর্বশেষ প্রয়োজনীয়তা যাচাই করুন।",
 
-    whatsappText:
-      "WhatsApp Channel",
-
-    emailText:
-      "Email",
-
-    websiteText:
-      "Website",
-
-    instagramText:
-      "Instagram",
-
-    joinButton:
-      "📱 আমাদের WhatsApp Channel-এ যোগ দিন",
-
-    infoTitle:
-      "গুরুত্বপূর্ণ",
-
-    infoText:
-      "MALAYALIS IN CROATIA একটি স্বাধীন তথ্য গাইড। গুরুত্বপূর্ণ সিদ্ধান্ত নেওয়ার আগে সংশ্লিষ্ট ক্রোয়েশিয়ান কর্তৃপক্ষের কাছ থেকে সর্বশেষ প্রয়োজনীয়তা যাচাই করুন।",
-
-    footerTagline:
-      "ক্রোয়েশিয়ায় বসবাস ও কাজের জন্য আপনার গাইড।",
-
-    verifiedText:
-      "শেষ যাচাই: ৭ অক্টোবর ২০২৬"
+    footerTagline: "ক্রোয়েশিয়ায় বসবাস ও কাজের জন্য আপনার গাইড.",
+    verifiedText: "শেষ যাচাই: ৭ অক্টোবর ২০২৬"
   },
 
-
   ur: {
+    heroTitle: "کروشیا میں رہنے اور کام کرنے کے لیے آپ کی رہنمائی",
+    heroText: "کروشیا میں رہنے اور کام کرنے والے غیر ملکیوں کے لیے آسان اور مفید معلومات.",
+    guideTitle: "کروشیا گائیڈ",
+    guideText: "مفید معلومات، سرکاری لنکس اور عملی رہنمائی کے لیے ایک موضوع منتخب کریں.",
 
-    heroTitle:
-      "کروشیا میں رہنے اور کام کرنے کے لیے آپ کی رہنمائی",
-
-    heroText:
-      "کروشیا میں رہنے اور کام کرنے والے غیر ملکیوں کے لیے آسان اور مفید معلومات۔",
-
-    guideTitle:
-      "کروشیا گائیڈ",
-
-    guideText:
-      "مفید معلومات، سرکاری لنکس اور عملی رہنمائی کے لیے ایک موضوع منتخب کریں۔",
-
-    policeTitle:
-      "پولیس اور دستاویزات",
-
-    policeText:
-      "پولیس کے طریقہ کار، رہائش کا اندراج، سرٹیفکیٹس اور اہم دستاویزات۔",
-
-    governmentTitle:
-      "حکومت",
-
-    governmentText:
-      "کروشیا کی سرکاری خدمات، e-Građani، ٹیکس اور روزگار کی خدمات۔",
-
-    drivingTitle:
-      "ڈرائیونگ",
-
-    drivingText:
-      "ڈرائیونگ لائسنس، غیر ملکی لائسنس کے قوانین، دستاویزات اور MUP کے طریقہ کار۔",
-
-    workTitle:
-      "کام",
-
-    workText:
-      "ورک پرمٹ، ملازمت، معاہدے اور کارکنوں کے حقوق۔",
-
-    healthTitle:
-      "صحت",
-
-    healthText:
-      "ہیلتھ انشورنس، ڈاکٹرز، ہسپتال اور ہنگامی صحت کی خدمات۔",
-
-    housingTitle:
-      "رہائش",
-
-    housingText:
-      "گھر کرائے پر لینا، معاہدے، ڈپازٹ، رجسٹریشن اور رہائش کی معلومات۔",
-
-    bankTitle:
-      "بینک",
-
-    bankText:
-      "بینک اکاؤنٹس، ادائیگیاں، کارڈز اور آن لائن بینکنگ۔",
-
-    familyTitle:
-      "خاندان",
-
-    familyText:
-      "خاندانی رہائش، بچے، اسکول، خاندانی دستاویزات اور خدمات۔",
-
-    emergencyTitle:
-      "ہنگامی صورتحال",
-
-    emergencyText:
-      "ہنگامی نمبر اور کروشیا میں فوری مدد کی ضرورت ہونے پر کیا کرنا ہے۔",
-
-    contactsTitle:
-      "مفید رابطے",
-
-    contactsText:
-      "اہم ادارے، سرکاری ویب سائٹس، فون نمبرز اور مفید رابطے۔",
+    policeTitle: "پولیس اور دستاویزات",
+    policeText: "پولیس کے طریقہ کار، رہائش کا اندراج، سرٹیفکیٹس اور اہم دستاویزات.",
+    governmentTitle: "حکومت",
+    governmentText: "کروشیا کی سرکاری خدمات، e-Građani، ٹیکس اور روزگار کی خدمات.",
+    drivingTitle: "ڈرائیونگ",
+    drivingText: "ڈرائیونگ لائسنس، غیر ملکی لائسنس کے قوانین، دستاویزات اور MUP کے طریقہ کار.",
+    workTitle: "کام",
+    workText: "ورک پرمٹ، ملازمت، معاہدے اور کارکنوں کے حقوق.",
+    healthTitle: "صحت",
+    healthText: "ہیلتھ انشورنس، ڈاکٹرز، ہسپتال اور ہنگامی صحت کی خدمات.",
+    housingTitle: "رہائش",
+    housingText: "گھر کرائے پر لینا، معاہدے، ڈپازٹ، رجسٹریشن اور رہائش کی معلومات.",
+    bankTitle: "بینک",
+    bankText: "بینک اکاؤنٹس، ادائیگیاں، کارڈز اور آن لائن بینکنگ.",
+    familyTitle: "خاندان",
+    familyText: "خاندانی رہائش، بچے، اسکول، خاندانی دستاویزات اور خدمات.",
+    emergencyTitle: "ہنگامی صورتحال",
+    emergencyText: "ہنگامی نمبر اور کروشیا میں فوری مدد کی ضرورت ہونے پر کیا کرنا ہے.",
+    contactsTitle: "مفید رابطے",
+    contactsText: "اہم ادارے، سرکاری ویب سائٹس، فون نمبرز اور مفید رابطے.",
 
     policeBtn: "صفحہ کھولیں ←",
     governmentBtn: "صفحہ کھولیں ←",
@@ -1674,114 +1165,56 @@ const translations = {
     emergencyBtn: "صفحہ کھولیں ←",
     contactsBtn: "صفحہ کھولیں ←",
 
-    connectTitle:
-      "شامل ہوں اور رابطے میں رہیں",
+    connectTitle: "شامل ہوں اور رابطے میں رہیں",
+    connectText: "MALAYALIS IN CROATIA کو فالو کریں اور ہماری کمیونٹی سے جڑے رہیں.",
+    whatsappText: "WhatsApp",
+    emailText: "Email",
+    websiteText: "Website",
+    instagramText: "Instagram",
+    joinButton: "📱 ہمارے WhatsApp Channel میں شامل ہوں",
 
-    connectText:
-      "MALAYALIS IN CROATIA کو فالو کریں اور ہماری کمیونٹی سے جڑے رہیں۔",
+    infoTitle: "اہم",
+    infoText: "MALAYALIS IN CROATIA ایک آزاد معلوماتی گائیڈ ہے۔ اہم فیصلے کرنے سے پہلے متعلقہ کروشین حکام سے تازہ ترین ضروریات کی تصدیق کریں۔",
 
-    whatsappText:
-      "WhatsApp Channel",
-
-    emailText:
-      "Email",
-
-    websiteText:
-      "Website",
-
-    instagramText:
-      "Instagram",
-
-    joinButton:
-      "📱 ہمارے WhatsApp Channel میں شامل ہوں",
-
-    infoTitle:
-      "اہم",
-
-    infoText:
-      "MALAYALIS IN CROATIA ایک آزاد معلوماتی گائیڈ ہے۔ اہم فیصلے کرنے سے پہلے متعلقہ کروشین حکام سے تازہ ترین ضروریات کی تصدیق کریں۔",
-
-    footerTagline:
-      "کروشیا میں رہنے اور کام کرنے کے لیے آپ کی رہنمائی۔",
-
-    verifiedText:
-      "آخری تصدیق: 7 اکتوبر 2026"
+    footerTagline: "کروشیا میں رہنے اور کام کرنے کے لیے آپ کی رہنمائی.",
+    verifiedText: "آخری تصدیق: 7 اکتوبر 2026"
   },
 
-
   hr: {
+    heroTitle: "Vaš vodič za život i rad u Hrvatskoj",
+    heroText: "Jednostavne i korisne informacije za strance koji žive, rade i grade svoj život u Hrvatskoj.",
+    guideTitle: "Vodič kroz Hrvatsku",
+    guideText: "Odaberite temu za korisne informacije, službene poveznice i praktične upute.",
 
-    heroTitle:
-      "Vaš vodič za život i rad u Hrvatskoj",
+    policeTitle: "Policija i dokumenti",
+    policeText: "Policijski postupci, prijava boravišta, potvrde i važni dokumenti.",
 
-    heroText:
-      "Jednostavne i korisne informacije za strance koji žive, rade i grade svoj život u Hrvatskoj.",
+    governmentTitle: "Državne službe",
+    governmentText: "Hrvatske državne službe, e-Građani, porezi i usluge povezane sa zapošljavanjem.",
 
-    guideTitle:
-      "Vodič kroz Hrvatsku",
+    drivingTitle: "Vožnja",
+    drivingText: "Vozačke dozvole, pravila za strane dozvole, dokumenti, liječnički pregled i MUP postupci.",
 
-    guideText:
-      "Odaberite temu za korisne informacije, službene poveznice i praktične upute.",
+    workTitle: "Posao",
+    workText: "Dozvole za rad, zaposlenje, ugovori, prava radnika i korisne informacije o radu.",
 
-    policeTitle:
-      "Policija i dokumenti",
+    healthTitle: "Zdravlje",
+    healthText: "Zdravstveno osiguranje, liječnici, bolnice i hitna zdravstvena pomoć.",
 
-    policeText:
-      "Policijski postupci, prijava boravišta, potvrde i važni dokumenti.",
+    housingTitle: "Stanovanje",
+    housingText: "Najam stana, ugovori, polog, prijava adrese i korisne informacije o stanovanju.",
 
-    governmentTitle:
-      "Državne službe",
+    bankTitle: "Banka",
+    bankText: "Bankovni računi, plaćanja, kartice, internetsko bankarstvo i korisne bankarske informacije.",
 
-    governmentText:
-      "Hrvatske državne službe, e-Građani, porezi i usluge povezane sa zapošljavanjem.",
+    familyTitle: "Obitelj",
+    familyText: "Boravak obitelji, djeca, škole, obiteljski dokumenti i svakodnevne usluge.",
 
-    drivingTitle:
-      "Vožnja",
+    emergencyTitle: "Hitne situacije",
+    emergencyText: "Brojevi za hitne slučajeve i što učiniti kada vam je potrebna hitna pomoć u Hrvatskoj.",
 
-    drivingText:
-      "Vozačke dozvole, pravila za strane dozvole, dokumenti, liječnički pregled i MUP postupci.",
-
-    workTitle:
-      "Posao",
-
-    workText:
-      "Dozvole za rad, zaposlenje, ugovori, prava radnika i korisne informacije o radu.",
-
-    healthTitle:
-      "Zdravlje",
-
-    healthText:
-      "Zdravstveno osiguranje, liječnici, bolnice i hitna zdravstvena pomoć.",
-
-    housingTitle:
-      "Stanovanje",
-
-    housingText:
-      "Najam stana, ugovori, polog, prijava adrese i korisne informacije o stanovanju.",
-
-    bankTitle:
-      "Banka",
-
-    bankText:
-      "Bankovni računi, plaćanja, kartice, internetsko bankarstvo i korisne bankarske informacije.",
-
-    familyTitle:
-      "Obitelj",
-
-    familyText:
-      "Boravak obitelji, djeca, škole, obiteljski dokumenti i svakodnevne usluge.",
-
-    emergencyTitle:
-      "Hitne situacije",
-
-    emergencyText:
-      "Brojevi za hitne slučajeve i što učiniti kada vam je potrebna hitna pomoć u Hrvatskoj.",
-
-    contactsTitle:
-      "Korisni kontakti",
-
-    contactsText:
-      "Važne institucije, službene web stranice, telefonski brojevi i korisni kontakti.",
+    contactsTitle: "Korisni kontakti",
+    contactsText: "Važne institucije, službene web stranice, telefonski brojevi i korisni kontakti.",
 
     policeBtn: "Otvori stranicu →",
     governmentBtn: "Otvori stranicu →",
@@ -1794,38 +1227,19 @@ const translations = {
     emergencyBtn: "Otvori stranicu →",
     contactsBtn: "Otvori stranicu →",
 
-    connectTitle:
-      "Pridružite se i povežite se",
+    connectTitle: "Pridružite se i povežite se",
+    connectText: "Pratite MALAYALIS IN CROATIA i ostanite povezani s našom zajednicom.",
+    whatsappText: "WhatsApp",
+    emailText: "Email",
+    websiteText: "Web stranica",
+    instagramText: "Instagram",
+    joinButton: "📱 PRIDRUŽITE SE NAŠEM WHATSAPP KANALU",
 
-    connectText:
-      "Pratite MALAYALIS IN CROATIA i ostanite povezani s našom zajednicom.",
+    infoTitle: "Važno",
+    infoText: "MALAYALIS IN CROATIA je neovisni informativni vodič. Prije donošenja važnih odluka uvijek provjerite najnovije zahtjeve kod nadležnog hrvatskog tijela.",
 
-    whatsappText:
-      "WhatsApp Channel",
-
-    emailText:
-      "Email",
-
-    websiteText:
-      "Web stranica",
-
-    instagramText:
-      "Instagram",
-
-    joinButton:
-      "📱 PRIDRUŽITE SE NAŠEM WHATSAPP KANALU",
-
-    infoTitle:
-      "Važno",
-
-    infoText:
-      "MALAYALIS IN CROATIA je neovisni informativni vodič. Prije donošenja važnih odluka uvijek provjerite najnovije zahtjeve kod nadležnog hrvatskog tijela.",
-
-    footerTagline:
-      "Vaš vodič za život i rad u Hrvatskoj.",
-
-    verifiedText:
-      "Zadnja provjera: 7. listopada 2026."
+    footerTagline: "Vaš vodič za život i rad u Hrvatskoj.",
+    verifiedText: "Zadnja provjera: 7. listopada 2026."
   }
 
 };
