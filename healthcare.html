@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CROPATH — Healthcare in Croatia</title>
+<title>MALAYALIS IN CROATIA — Healthcare in Croatia</title>
 
 <meta name="description" content="Healthcare information for foreigners in Croatia, including HZZO, doctors, hospitals, pharmacies and emergency medical help.">
 
@@ -69,6 +69,10 @@ header{
   padding:8px 14px;
   border-radius:8px;
   font-size:14px;
+}
+
+.back:hover{
+  background:rgba(255,255,255,.1);
 }
 
 .hero{
@@ -220,8 +224,11 @@ footer p{
   margin-bottom:8px;
 }
 
-@media(max-width:700px){
+footer strong{
+  color:white;
+}
 
+@media(max-width:700px){
   h1{
     font-size:32px;
   }
@@ -238,6 +245,10 @@ footer p{
     align-items:flex-start;
   }
 
+  .logo{
+    font-size:18px;
+  }
+
   .header-right{
     flex-direction:column;
     align-items:flex-end;
@@ -245,6 +256,7 @@ footer p{
 
   .language-select{
     width:100%;
+    min-width:150px;
   }
 }
 </style>
@@ -255,7 +267,7 @@ footer p{
 <header>
   <div class="header-inner">
 
-    <div class="logo">CROPATH</div>
+    <div class="logo">MALAYALIS IN CROATIA</div>
 
     <div class="header-right">
 
@@ -271,7 +283,6 @@ footer p{
         <option value="hr">Hrvatski</option>
       </select>
 
-      <!-- FIXED: local Home page -->
       <a class="back" href="index.html" id="backHome">
         ← Back to Home
       </a>
@@ -287,9 +298,7 @@ footer p{
       🇭🇷 Healthcare Information Guide
     </div>
 
-    <h1 id="pageTitle">
-      Healthcare in Croatia
-    </h1>
+    <h1 id="pageTitle">Healthcare in Croatia</h1>
 
     <p id="heroText">
       Practical information about healthcare, HZZO, doctors, hospitals,
@@ -330,7 +339,6 @@ for your individual situation.
 
 </section>
 
-
 <section class="card">
 
 <h2 id="s2title">💳 HZZO Health Insurance</h2>
@@ -356,7 +364,6 @@ healthcare services according to the applicable rules and conditions.
 
 </section>
 
-
 <section class="card">
 
 <h2 id="s3title">👨‍⚕️ Family Doctor / General Practitioner</h2>
@@ -381,7 +388,6 @@ first for routine medical problems and appointments.
 
 </section>
 
-
 <section class="card">
 
 <h2 id="s4title">🏨 Hospitals</h2>
@@ -397,10 +403,7 @@ documentation is required.
 </p>
 
 <div class="warning">
-<strong id="s4strong">
-Do not delay emergency care.
-</strong>
-
+<strong id="s4strong">Do not delay emergency care.</strong>
 <span id="s4warning">
 If the situation is serious or life-threatening, call the emergency
 medical service immediately.
@@ -408,7 +411,6 @@ medical service immediately.
 </div>
 
 </section>
-
 
 <section class="card">
 
@@ -431,7 +433,6 @@ according to Croatian rules.
 
 </section>
 
-
 <section class="card">
 
 <h2 id="s6title">🚨 Emergency Medical Help</h2>
@@ -441,18 +442,14 @@ according to Croatian rules.
 <p>
 <strong>
 112 —
-<span id="emergency112">
-General emergency number
-</span>
+<span id="emergency112">General emergency number</span>
 </strong>
 </p>
 
 <p>
 <strong>
 194 —
-<span id="emergency194">
-Emergency medical service
-</span>
+<span id="emergency194">Emergency medical service</span>
 </strong>
 </p>
 
@@ -464,7 +461,6 @@ medical help without delay.
 </div>
 
 </section>
-
 
 <section class="card">
 
@@ -480,7 +476,6 @@ medical help without delay.
 
 </section>
 
-
 <section class="card">
 
 <h2 id="s8title">🌍 Foreigners in Croatia</h2>
@@ -492,16 +487,11 @@ circumstances.
 </p>
 
 <div class="warning">
-
-<strong id="s8strong">
-Important:
-</strong>
-
+<strong id="s8strong">Important:</strong>
 <span id="s8warning">
 Do not assume that having a residence permit automatically means every
 healthcare service is free of charge.
 </span>
-
 </div>
 
 <p id="s8p2">
@@ -510,7 +500,6 @@ healthcare institution.
 </p>
 
 </section>
-
 
 <section class="card">
 
@@ -522,34 +511,23 @@ procedures, use the following Croatian government sources.
 </p>
 
 <div class="links">
-
-<a href="https://hzzo.hr/" target="_blank" rel="noopener">
-HZZO
-</a>
-
-<a href="https://gov.hr/" target="_blank" rel="noopener">
-gov.hr
-</a>
-
+<a href="https://hzzo.hr/" target="_blank" rel="noopener">HZZO</a>
+<a href="https://gov.hr/" target="_blank" rel="noopener">gov.hr</a>
 <a href="https://zdravlje.gov.hr/" target="_blank" rel="noopener">
-<span id="healthMinistry">
-Ministry of Health
-</span>
+<span id="healthMinistry">Ministry of Health</span>
 </a>
-
 </div>
 
 </section>
-
 
 <section class="card">
 
 <h2 id="s10title">⚠️ Important Disclaimer</h2>
 
 <p id="s10p1">
-CROPATH provides general information and practical guidance. It is not a
-government website and does not replace professional medical, legal,
-immigration or other professional advice.
+MALAYALIS IN CROATIA provides general information and practical guidance.
+It is not a government website and does not replace professional medical,
+legal, immigration or other professional advice.
 </p>
 
 <p id="s10p2">
@@ -561,33 +539,24 @@ sources or contact the competent authority for your individual situation.
 
 </main>
 
-
 <footer>
-
 <div class="footer-inner">
 
 <p>
-<strong>CROPATH</strong> —
-<span id="footerTitle">
-Your Path to Living and Working in Croatia
-</span>
+<strong>MALAYALIS IN CROATIA</strong> —
+<span id="footerTitle">Your Path to Living and Working in Croatia</span>
 </p>
 
 <p id="footerText">
 General information and practical guidance for foreigners in Croatia.
 </p>
 
-<p id="footerDate">
-Last verified: 7 October 2026
-</p>
+<p id="footerDate">Last verified: 7 October 2026</p>
 
 </div>
-
 </footer>
 
-
 <script>
-
 const translations = {
 
 en:{
@@ -644,7 +613,7 @@ s9title:"🔗 Official Sources",
 s9p:"For current healthcare rules, insurance information and official procedures, use the following Croatian government sources.",
 healthMinistry:"Ministry of Health",
 s10title:"⚠️ Important Disclaimer",
-s10p1:"CROPATH provides general information and practical guidance. It is not a government website and does not replace professional medical, legal, immigration or other professional advice.",
+s10p1:"MALAYALIS IN CROATIA provides general information and practical guidance. It is not a government website and does not replace professional medical, legal, immigration or other professional advice.",
 s10p2:"Healthcare requirements and procedures can change. Always check official sources or contact the competent authority for your individual situation.",
 footerTitle:"Your Path to Living and Working in Croatia",
 footerText:"General information and practical guidance for foreigners in Croatia.",
@@ -673,7 +642,7 @@ s2li4:"കവറേജിനെക്കുറിച്ച് സംശയമു
 s3title:"👨‍⚕️ കുടുംബ ഡോക്ടർ / ജനറൽ പ്രാക്ടീഷണർ",
 s3p1:"അടിയന്തരമല്ലാത്ത പല ആരോഗ്യ പ്രശ്നങ്ങൾക്കും ആദ്യം ബന്ധപ്പെടേണ്ടത് കുടുംബ ഡോക്ടറെയോ ജനറൽ പ്രാക്ടീഷണറെയോ ആയിരിക്കാം.",
 s3p2:"നിങ്ങൾക്ക് ലഭ്യമായ ആരോഗ്യ സേവനദാതാവ് നിങ്ങളുടെ രജിസ്ട്രേഷനും ഇൻഷുറൻസ് ക്രമീകരണങ്ങളും ആശ്രയിച്ചിരിക്കും.",
-s3strong:"ടിപ്പ്:",
+s3strong:"സൂചന:",
 s3info:"നിങ്ങൾ ഒരു കുടുംബ ഡോക്ടറുടെ അടുത്ത് രജിസ്റ്റർ ചെയ്തിട്ടുണ്ടെങ്കിൽ സാധാരണ ആരോഗ്യ പ്രശ്നങ്ങൾക്കും appointment-കൾക്കും ആദ്യം ഡോക്ടറുടെ ഓഫീസുമായി ബന്ധപ്പെടുക.",
 s4title:"🏨 ആശുപത്രികൾ",
 s4p1:"ആശുപത്രിയും വിഭാഗവും അനുസരിച്ച് specialist, diagnostic, emergency സേവനങ്ങൾ ലഭ്യമാണ്.",
@@ -705,7 +674,7 @@ s9title:"🔗 ഔദ്യോഗിക സ്രോതസ്സുകൾ",
 s9p:"നിലവിലെ ആരോഗ്യ നിയമങ്ങൾ, ഇൻഷുറൻസ് വിവരങ്ങൾ, ഔദ്യോഗിക നടപടിക്രമങ്ങൾ എന്നിവയ്ക്കായി Croatian government sources ഉപയോഗിക്കുക.",
 healthMinistry:"ആരോഗ്യ മന്ത്രാലയം",
 s10title:"⚠️ പ്രധാന അറിയിപ്പ്",
-s10p1:"CROPATH പൊതുവായ വിവരങ്ങളും പ്രായോഗിക മാർഗനിർദ്ദേശങ്ങളും നൽകുന്നു. ഇത് സർക്കാർ വെബ്സൈറ്റ് അല്ല, കൂടാതെ professional medical, legal, immigration അല്ലെങ്കിൽ മറ്റ് professional advice-ന് പകരമല്ല.",
+s10p1:"MALAYALIS IN CROATIA പൊതുവായ വിവരങ്ങളും പ്രായോഗിക മാർഗനിർദ്ദേശങ്ങളും നൽകുന്നു. ഇത് സർക്കാർ വെബ്സൈറ്റ് അല്ല, കൂടാതെ professional medical, legal, immigration അല്ലെങ്കിൽ മറ്റ് professional advice-ന് പകരമല്ല.",
 s10p2:"ആരോഗ്യ ആവശ്യങ്ങളും നടപടിക്രമങ്ങളും മാറാം. നിങ്ങളുടെ സാഹചര്യത്തിനായി ഔദ്യോഗിക സ്രോതസ്സുകൾ പരിശോധിക്കുക അല്ലെങ്കിൽ ബന്ധപ്പെട്ട അധികാരിയെ ബന്ധപ്പെടുക.",
 footerTitle:"ക്രൊയേഷ്യയിൽ ജീവിക്കാനും ജോലി ചെയ്യാനുമുള്ള നിങ്ങളുടെ വഴി",
 footerText:"ക്രൊയേഷ്യയിലെ വിദേശികൾക്കായുള്ള പൊതുവായ വിവരങ്ങളും പ്രായോഗിക മാർഗനിർദ്ദേശങ്ങളും.",
@@ -714,37 +683,23 @@ footerDate:"അവസാനം പരിശോധിച്ചത്: 7 ഒക്
 
 };
 
-/*
-  Other language content remains available through English fallback.
-  The shared language selection and saved language continue to work.
-*/
-
 function applyLanguage(language){
-
   const t = translations[language] || translations.en;
 
   Object.keys(t).forEach(function(id){
-
     const element = document.getElementById(id);
 
     if(element){
       element.textContent = t[id];
     }
-
   });
 
   document.documentElement.lang = language;
+  document.documentElement.dir = language === "ur" ? "rtl" : "ltr";
 
-  document.documentElement.dir =
-    language === "ur" ? "rtl" : "ltr";
+  localStorage.setItem("malayalis-in-croatia-language", language);
 
-  localStorage.setItem(
-    "cropath-language",
-    language
-  );
-
-  const selector =
-    document.getElementById("languageSelect");
+  const selector = document.getElementById("languageSelect");
 
   if(selector){
     selector.value = language;
@@ -752,18 +707,15 @@ function applyLanguage(language){
 }
 
 const savedLanguage =
-  localStorage.getItem("cropath-language") || "en";
+  localStorage.getItem("malayalis-in-croatia-language") || "en";
 
 applyLanguage(savedLanguage);
 
 document
   .getElementById("languageSelect")
   .addEventListener("change", function(){
-
     applyLanguage(this.value);
-
   });
-
 </script>
 
 </body>
