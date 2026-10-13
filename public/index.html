@@ -1,847 +1,249 @@
-﻿<!DOCTYPE html>
+﻿```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12345a">
 
-  <title>MALAYALIS IN CROATIA â€” Croatia Guide for Foreigners</title>
-
-  <meta
-    name="description"
-    content="MALAYALIS IN CROATIA â€” Your Path to Living and Working in Croatia."
-  >
+  <title>MALAYALIS IN CROATIA — Croatia Information Guide</title>
+  <meta name="description" content="A practical information guide for living, working and settling in Croatia. Available in multiple languages.">
 
   <style>
+    :root {
+      --navy: #12345a;
+      --blue: #1769aa;
+      --light: #f2f6fb;
+      --white: #ffffff;
+      --text: #203047;
+      --muted: #63748a;
+      --border: #dce5ef;
+      --gold: #f4bd50;
+    }
+
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --navy: #071a33;
-      --navy-2: #0d2b52;
-      --blue: #2563eb;
-      --blue-dark: #1d4ed8;
-      --purple: #6d5dfc;
-      --gold: #d4a72c;
-      --text: #172033;
-      --muted: #64748b;
-      --light: #f5f8fc;
-      --border: #e2e8f0;
-      --white: #ffffff;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.05), transparent 30%),
-        radial-gradient(circle at 90% 40%, rgba(109, 93, 252, 0.05), transparent 30%),
-        #f5f8fc;
+      margin: 0;
+      font-family: Arial, "Noto Sans Malayalam", sans-serif;
+      background: var(--light);
       color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
+      line-height: 1.65;
     }
 
-    /* =========================
-       HEADER
-       ========================= */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    header {
-      background:
-        linear-gradient(135deg, #06172d 0%, #0b2850 55%, #172f68 100%);
+    .topbar {
+      background: var(--navy);
       color: white;
-      padding: 13px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 8px 30px rgba(4, 18, 40, 0.22);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-    }
-
-    .nav {
-      max-width: 1200px;
-      margin: auto;
+      padding: 12px 5%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 12px;
     }
 
-    .brand-logo {
-      width: 48px;
-      height: 48px;
-      object-fit: contain;
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      padding: 5px;
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.20);
+    .brand {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .language {
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid #dce5ef;
+      background: white;
+      color: #12345a;
+      font-size: 14px;
+      max-width: 100%;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #12345a, #1769aa);
+      color: white;
+      text-align: center;
+      padding: 45px 20px 50px;
     }
 
     .logo {
-      font-size: 24px;
-      font-weight: 900;
-      letter-spacing: 1.2px;
-      line-height: 1.1;
-    }
-
-    .logo-sub {
-      display: block;
-      font-size: 10px;
-      letter-spacing: 2.2px;
-      color: #b9c9df;
-      margin-top: 4px;
-      font-weight: 600;
-    }
-
-    .language-box select {
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.18);
-      font-size: 14px;
-      cursor: pointer;
-      background: rgba(255,255,255,0.96);
-      color: #172033;
-      outline: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.12);
-    }
-
-    /* =========================
-       HERO
-       ========================= */
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.32), transparent 30%),
-        radial-gradient(circle at 85% 20%, rgba(109, 93, 252, 0.30), transparent 28%),
-        linear-gradient(135deg, #06172d 0%, #0b2a52 52%, #182d63 100%);
-      color: white;
-      padding: 92px 20px 100px;
-      text-align: center;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.08);
-      top: -230px;
-      right: -100px;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.06);
-      bottom: -220px;
-      left: -100px;
-    }
-
-    .hero-content {
-      max-width: 900px;
-      margin: auto;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-logo {
-      width: 92px;
-      height: 92px;
+      width: 105px;
+      height: 105px;
       object-fit: contain;
+      background: white;
+      border-radius: 20px;
       padding: 8px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.18);
-      box-shadow:
-        0 15px 45px rgba(0,0,0,0.25),
-        0 0 35px rgba(37,99,235,0.22);
-      margin-bottom: 22px;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      padding: 6px 14px;
-      border: 1px solid rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.08);
-      border-radius: 999px;
-      font-size: 12px;
-      letter-spacing: 1.5px;
-      color: #dce8ff;
-      margin-bottom: 18px;
-      backdrop-filter: blur(10px);
+      margin-bottom: 14px;
     }
 
     .hero h1 {
-      font-size: 56px;
-      margin-bottom: 14px;
-      letter-spacing: 2.5px;
-      font-weight: 900;
-      text-shadow: 0 8px 30px rgba(0,0,0,0.20);
+      margin: 5px 0;
+      font-size: clamp(25px, 5vw, 42px);
+      line-height: 1.25;
     }
 
     .hero h2 {
-      font-size: 26px;
-      font-weight: 500;
-      margin-bottom: 20px;
-      color: #e6edff;
+      color: var(--gold);
+      font-size: clamp(17px, 3vw, 23px);
+      margin: 10px 0;
     }
 
     .hero p {
-      max-width: 760px;
-      margin: auto;
-      font-size: 18px;
-      color: #d9e5f7;
-    }
-
-    /* =========================
-       MAIN
-       ========================= */
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 68px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 38px;
-    }
-
-    .section-kicker {
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 7px;
-    }
-
-    .section-title h2 {
-      font-size: 34px;
-      color: var(--navy);
-      margin-bottom: 8px;
-      font-weight: 900;
-    }
-
-    .section-title p {
-      color: var(--muted);
+      max-width: 720px;
+      margin: 15px auto 0;
       font-size: 16px;
     }
 
-    /* =========================
-       GUIDE CARDS
-       ========================= */
+    .container {
+      width: min(1120px, 92%);
+      margin: 30px auto;
+    }
 
-    .cards {
+    .section-heading {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      margin-bottom: 5px;
+      font-size: 27px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 0;
+    }
+
+    .notice {
+      background: white;
+      border-left: 5px solid var(--gold);
+      padding: 16px 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 12px #12345a0a;
+    }
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
     }
 
     .card {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(145deg, rgba(255,255,255,0.98), rgba(247,250,255,0.96));
-      border-radius: 18px;
-      padding: 25px;
-      border: 1px solid rgba(226,232,240,0.95);
-      box-shadow:
-        0 8px 25px rgba(15,23,42,0.055),
-        0 2px 5px rgba(15,23,42,0.03);
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-      display: flex;
-      flex-direction: column;
-      min-height: 220px;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: linear-gradient(
-        135deg,
-        rgba(37,99,235,0.07),
-        rgba(109,93,252,0.05)
-      );
-      top: -65px;
-      right: -45px;
-      transition: transform 0.3s ease;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 22px;
+      display: block;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 4px 15px #12345a08;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(37,99,235,0.22);
-      box-shadow:
-        0 18px 38px rgba(15,23,42,0.11),
-        0 5px 12px rgba(37,99,235,0.05);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px #12345a16;
     }
 
-    .card:hover::before {
-      transform: scale(1.25);
-    }
-
-    .icon {
-      position: relative;
-      z-index: 1;
-      width: 52px;
-      height: 52px;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background:
-        linear-gradient(135deg, #eef4ff, #f3efff);
-      border: 1px solid #e0e8f7;
-      font-size: 27px;
-      margin-bottom: 15px;
-      box-shadow: 0 5px 15px rgba(37,99,235,0.07);
+    .card .icon {
+      font-size: 32px;
+      display: block;
+      margin-bottom: 9px;
     }
 
     .card h3 {
-      position: relative;
-      z-index: 1;
-      font-size: 21px;
       color: var(--navy);
-      margin-bottom: 8px;
-      font-weight: 800;
+      margin: 0 0 8px;
+      font-size: 19px;
     }
 
     .card p {
-      position: relative;
-      z-index: 1;
-      color: #617087;
+      color: var(--muted);
       font-size: 14px;
-      flex-grow: 1;
-      margin-bottom: 19px;
+      margin: 0 0 12px;
     }
 
-    .btn {
-      position: relative;
-      z-index: 1;
-      display: inline-block;
-      text-decoration: none;
-      background:
-        linear-gradient(135deg, var(--blue), var(--purple));
-      color: white;
-      padding: 10px 16px;
-      border-radius: 9px;
-      font-weight: 800;
-      text-align: center;
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        filter 0.2s ease;
-      box-shadow: 0 5px 14px rgba(37,99,235,0.16);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.04);
-      box-shadow: 0 9px 20px rgba(37,99,235,0.24);
-    }
-
-    /* =========================
-       CONNECT SECTION
-       ========================= */
-
-    .connect-section {
-      position: relative;
-      overflow: hidden;
-      margin-top: 48px;
-      background:
-        radial-gradient(
-          circle at 10% 10%,
-          rgba(37,99,235,0.08),
-          transparent 28%
-        ),
-        radial-gradient(
-          circle at 90% 80%,
-          rgba(109,93,252,0.08),
-          transparent 30%
-        ),
-        linear-gradient(145deg, #ffffff, #f7f9fd);
-      border-radius: 20px;
-      padding: 32px 22px;
-      border: 1px solid #e1e8f2;
-      box-shadow:
-        0 12px 32px rgba(15,23,42,0.07),
-        0 2px 6px rgba(15,23,42,0.03);
-      text-align: center;
-    }
-
-    .connect-section::after {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      border: 1px solid rgba(37,99,235,0.07);
-      right: -80px;
-      top: -70px;
-    }
-
-    .connect-logo {
-      position: relative;
-      z-index: 2;
-      width: 62px;
-      height: 62px;
-      margin: 0 auto 13px;
-      border-radius: 16px;
-      background:
-        linear-gradient(145deg, #081d39, #173e72);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(37,99,235,0.20);
-      box-shadow:
-        0 8px 22px rgba(15,23,42,0.14),
-        0 0 25px rgba(37,99,235,0.08);
-      overflow: hidden;
-    }
-
-    .connect-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 7px;
-    }
-
-    .connect-section h2 {
-      position: relative;
-      z-index: 2;
-      color: var(--navy);
-      font-size: 27px;
-      margin-bottom: 5px;
-      font-weight: 900;
-    }
-
-    .connect-section > p {
-      position: relative;
-      z-index: 2;
-      color: #64748b;
-      margin-bottom: 20px;
+    .card .open {
+      color: var(--blue);
       font-size: 14px;
+      font-weight: 700;
     }
 
-    .connect-grid {
-      position: relative;
-      z-index: 2;
+    .emergency {
+      background: #fff0f0;
+      border: 1px solid #f3caca;
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .emergency h2 {
+      color: #a42121;
+      margin-top: 0;
+    }
+
+    .numbers {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      max-width: 800px;
-      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
     }
 
-    .connect-card {
-      text-decoration: none;
-      color: var(--text);
-      background: rgba(255,255,255,0.94);
-      border: 1px solid #e1e7ef;
+    .number {
+      background: white;
       border-radius: 10px;
-      padding: 10px;
-      height: 68px;
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 9px;
-      box-shadow: 0 3px 10px rgba(15,23,42,0.035);
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #f3caca;
     }
 
-    .connect-card:hover {
-      transform: translateY(-3px);
-      border-color: #ccd8e8;
-      box-shadow: 0 9px 20px rgba(15,23,42,0.09);
+    .number strong {
+      display: block;
+      color: #a42121;
+      font-size: 25px;
     }
-
-    .connect-icon {
-      width: 34px;
-      height: 34px;
-      min-width: 34px;
-      border-radius: 9px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 14px;
-      font-weight: 900;
-      margin: 0;
-    }
-
-    .whatsapp-icon {
-      background: linear-gradient(135deg, #20c763, #25d366);
-    }
-
-    .email-icon {
-      background: linear-gradient(135deg, #d93025, #ea4335);
-    }
-
-    .website-icon {
-      background: linear-gradient(135deg, #1d4ed8, #2563eb);
-    }
-
-    .instagram-icon {
-      background: linear-gradient(
-        135deg,
-        #833ab4,
-        #e1306c,
-        #f77737,
-        #fcaf45
-      );
-    }
-
-    .connect-card strong {
-      font-size: 13px;
-      color: var(--navy);
-      white-space: nowrap;
-    }
-
-    .join-button {
-      position: relative;
-      z-index: 2;
-      display: inline-block;
-      margin-top: 18px;
-      padding: 10px 21px;
-      background:
-        linear-gradient(135deg, #18b957, #25d366);
-      color: white;
-      text-decoration: none;
-      border-radius: 9px;
-      font-weight: 800;
-      font-size: 13px;
-      box-shadow:
-        0 6px 16px rgba(37,211,102,0.20);
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .join-button:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        0 10px 22px rgba(37,211,102,0.30);
-    }
-
-    /* =========================
-       IMPORTANT BOX
-       ========================= */
-
-    .info-box {
-      position: relative;
-      margin-top: 45px;
-      background:
-        linear-gradient(135deg, #eef5ff, #f4f0ff);
-      border: 1px solid #dce7f7;
-      border-left: 5px solid var(--blue);
-      padding: 23px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(15,23,42,0.04);
-    }
-
-    .info-box h3 {
-      color: var(--navy);
-      margin-bottom: 7px;
-      font-size: 18px;
-    }
-
-    .info-box p {
-      color: #475569;
-      font-size: 14px;
-    }
-
-    /* =========================
-       FOOTER
-       ========================= */
 
     footer {
-      position: relative;
-      overflow: hidden;
-      background:
-        radial-gradient(
-          circle at 50% -50%,
-          rgba(37,99,235,0.25),
-          transparent 45%
-        ),
-        linear-gradient(135deg, #06172d, #0b2850);
+      background: var(--navy);
       color: white;
       text-align: center;
-      padding: 38px 20px;
-      margin-top: 30px;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 25px 15px;
+      margin-top: 45px;
     }
 
     footer p {
       margin: 5px 0;
-      color: #dbe5f2;
     }
 
-    footer strong {
-      font-size: 18px;
-      letter-spacing: 1px;
-    }
-
-    .verified {
+    .disclaimer {
       font-size: 13px;
-      opacity: 0.75;
+      color: #d8e3ef;
+      max-width: 850px;
+      margin: 12px auto;
     }
 
-    /* =========================
-       FLOATING LOGO
-       ========================= */
-
-    .floating-logo {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      width: 58px;
-      height: 58px;
-      border-radius: 17px;
-      background:
-        linear-gradient(145deg, #081d39, #183f74);
-      border: 1px solid rgba(255,255,255,0.28);
-      box-shadow:
-        0 10px 28px rgba(4,18,40,0.28),
-        0 0 25px rgba(37,99,235,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 999;
-      cursor: pointer;
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-      animation: floatingLogo 3s ease-in-out infinite;
-    }
-
-    .floating-logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 6px;
-      border-radius: 16px;
-    }
-
-    .floating-logo:hover {
-      transform: translateY(-5px) scale(1.04);
-      box-shadow:
-        0 15px 35px rgba(4,18,40,0.32),
-        0 0 30px rgba(37,99,235,0.20);
-    }
-
-    @keyframes floatingLogo {
-      0%, 100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-4px);
-      }
-    }
-
-    /* =========================
-       RTL
-       ========================= */
-
-    [dir="rtl"] {
-      text-align: right;
-    }
-
-    [dir="rtl"] .section-title,
-    [dir="rtl"] footer,
-    [dir="rtl"] .connect-section {
-      text-align: center;
-    }
-
-    [dir="rtl"] .info-box {
-      border-left: none;
-      border-right: 5px solid var(--blue);
-    }
-
-    /* =========================
-       MOBILE
-       ========================= */
-
-    @media (max-width: 900px) {
-
-      .connect-grid {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 520px;
-      }
-    }
-
-    @media (max-width: 700px) {
-
-      header {
-        padding: 11px 14px;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
-        gap: 11px;
-      }
-
-      .brand {
+    @media (max-width: 520px) {
+      .topbar {
         justify-content: center;
-      }
-
-      .brand-logo {
-        width: 43px;
-        height: 43px;
-      }
-
-      .logo {
-        font-size: 20px;
-      }
-
-      .logo-sub {
-        font-size: 8px;
-      }
-
-      .language-box select {
-        width: 100%;
+        text-align: center;
       }
 
       .hero {
-        padding: 62px 18px 72px;
-      }
-
-      .hero-logo {
-        width: 76px;
-        height: 76px;
-        border-radius: 20px;
-      }
-
-      .hero h1 {
-        font-size: 37px;
-        letter-spacing: 1.4px;
-      }
-
-      .hero h2 {
-        font-size: 20px;
-      }
-
-      .hero p {
-        font-size: 15px;
+        padding: 32px 16px;
       }
 
       .container {
-        padding: 45px 15px;
-      }
-
-      .section-title h2 {
-        font-size: 29px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        width: 92%;
+        margin: 23px auto;
       }
 
       .card {
-        min-height: auto;
-        padding: 22px;
-      }
-
-      .card h3 {
-        font-size: 20px;
-      }
-
-      .connect-section {
-        padding: 26px 12px;
-        border-radius: 16px;
-      }
-
-      .connect-section h2 {
-        font-size: 24px;
-      }
-
-      .connect-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-      }
-
-      .connect-card {
-        height: 63px;
-        padding: 8px 6px;
-        gap: 7px;
-      }
-
-      .connect-icon {
-        width: 29px;
-        height: 29px;
-        min-width: 29px;
-        font-size: 12px;
-      }
-
-      .connect-card strong {
-        font-size: 11px;
-      }
-
-      .join-button {
-        width: 100%;
-        max-width: 310px;
-        font-size: 12px;
-        padding: 10px 12px;
-      }
-
-      .info-box {
-        padding: 19px;
-      }
-
-      .floating-logo {
-        right: 14px;
-        bottom: 14px;
-        width: 50px;
-        height: 50px;
-        border-radius: 14px;
-      }
-    }
-
-    @media (max-width: 420px) {
-
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      .connect-card strong {
-        font-size: 10px;
-      }
-
-      .connect-icon {
-        width: 27px;
-        height: 27px;
-        min-width: 27px;
+        padding: 18px;
       }
     }
   </style>
@@ -849,1436 +251,612 @@
 
 <body>
 
-  <!-- HEADER -->
+  <header class="topbar">
+    <div class="brand">MALAYALIS IN CROATIA</div>
 
-  <header>
-    <div class="nav">
-
-      <div class="brand">
-
-        <img
-          src="logo.png"
-          alt="MALAYALIS IN CROATIA Logo"
-          class="brand-logo"
-        >
-
-        <div>
-          <div class="logo">
-            MALAYALIS IN CROATIA
-          </div>
-
-          <span class="logo-sub">
-            CROATIA INFORMATION GUIDE
-          </span>
-        </div>
-
-      </div>
-
-      <div class="language-box">
-
-        <select
-          id="languageSelect"
-          onchange="changeLanguage(this.value)"
-        >
-          <option value="en">đź‡¬đź‡§ English</option>
-          <option value="ml">đź‡®đź‡ł ŕ´®ŕ´˛ŕ´Żŕ´ľŕ´łŕ´‚</option>
-          <option value="hi">đź‡®đź‡ł ŕ¤ąŕ¤żŕ¤¨ŕĄŤŕ¤¦ŕĄ€</option>
-          <option value="ne">đź‡łđź‡µ ŕ¤¨ŕĄ‡ŕ¤Şŕ¤ľŕ¤˛ŕĄ€</option>
-          <option value="ta">đź‡®đź‡ł ŕ®¤ŕ®®ŕ®żŕ®´ŕŻŤ</option>
-          <option value="te">đź‡®đź‡ł ŕ°¤ŕ±†ŕ°˛ŕ±ŕ°—ŕ±</option>
-          <option value="bn">đź‡§đź‡© ŕ¦¬ŕ¦ľŕ¦‚ŕ¦˛ŕ¦ľ</option>
-          <option value="ur">đź‡µđź‡° Ř§Ř±ŘŻŮ</option>
-          <option value="hr">đź‡­đź‡· Hrvatski</option>
-        </select>
-
-      </div>
-
-    </div>
+    <label>
+      <span id="language-label">Language:</span>
+      <select id="language" class="language" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="ml">മലയാളം</option>
+        <option value="hi">हिन्दी</option>
+        <option value="ne">नेपाली</option>
+        <option value="ta">தமிழ்</option>
+        <option value="te">తెలుగు</option>
+        <option value="bn">বাংলা</option>
+        <option value="ur">اردو</option>
+        <option value="hr">Hrvatski</option>
+      </select>
+    </label>
   </header>
 
-
-  <!-- HERO -->
-
   <section class="hero">
+    <img
+      class="logo"
+      src="logo.png"
+      alt="Malayalis in Croatia logo"
+      onerror="this.style.display='none'"
+    >
 
-    <div class="hero-content">
-
-      <img
-        src="logo.png"
-        alt="MALAYALIS IN CROATIA"
-        class="hero-logo"
-      >
-
-      <div class="hero-badge">
-        CROATIA â€˘ INFORMATION â€˘ COMMUNITY
-      </div>
-
-      <h1>
-        MALAYALIS IN CROATIA
-      </h1>
-
-      <h2 id="heroTitle">
-        Your Path to Living and Working in Croatia
-      </h2>
-
-      <p id="heroText">
-        Simple and useful information for foreigners living, working and building
-        their life in Croatia.
-      </p>
-
-    </div>
-
+    <h1>MALAYALIS IN CROATIA</h1>
+    <h2 id="subtitle">CROATIA INFORMATION GUIDE</h2>
+    <p id="hero-text">
+      Reliable practical information for living, working and settling in Croatia.
+      Choose your language and explore the guides below.
+    </p>
   </section>
-
-
-  <!-- MAIN -->
 
   <main class="container">
 
-    <div class="section-title">
-
-      <div class="section-kicker">
-        EXPLORE
+    <div class="notice">
+      <strong id="notice-title">Important information</strong>
+      <div id="notice-text">
+        This website is an independent information guide. Always verify official
+        requirements with the relevant Croatian authorities before taking action.
       </div>
-
-      <h2 id="guideTitle">
-        Croatia Guide
-      </h2>
-
-      <p id="guideText">
-        Choose a topic to find useful information, official links and practical guidance.
-      </p>
-
     </div>
 
-
-    <!-- GUIDE CARDS -->
-
-    <div class="cards">
-
-      <div class="card">
-
-        <div class="icon">đź‘®</div>
-
-        <h3 id="policeTitle">
-          Police & Documents
-        </h3>
-
-        <p id="policeText">
-          Police procedures, residence registration, certificates and important documents.
+    <section>
+      <div class="section-heading">
+        <h2 id="guides-title">Explore Our Guides</h2>
+        <p id="guides-description">
+          Useful information for everyday life in Croatia.
         </p>
+      </div>
 
-        <a
-          href="police.html"
-          class="btn"
-          id="policeBtn"
-        >
-          Open Page â†’
+      <div class="grid">
+
+        <a class="card" href="healthcare.html">
+          <span class="icon">🏥</span>
+          <h3 id="health-title">Healthcare</h3>
+          <p id="health-description">
+            Health insurance, doctors, hospitals and medical services.
+          </p>
+          <span class="open" id="open-health">Read guide →</span>
+        </a>
+
+        <a class="card" href="police.html">
+          <span class="icon">👮</span>
+          <h3 id="police-title">Police & Documents</h3>
+          <p id="police-description">
+            Residence matters, registrations and important documents.
+          </p>
+          <span class="open" id="open-police">Read guide →</span>
+        </a>
+
+        <a class="card" href="government.html">
+          <span class="icon">🏛️</span>
+          <h3 id="government-title">Government Services</h3>
+          <p id="government-description">
+            Official portals and public administration services.
+          </p>
+          <span class="open" id="open-government">Read guide →</span>
+        </a>
+
+        <a class="card" href="driving.html">
+          <span class="icon">🚗</span>
+          <h3 id="driving-title">Driving & Transport</h3>
+          <p id="driving-description">
+            Driving licences, road rules and transport information.
+          </p>
+          <span class="open" id="open-driving">Read guide →</span>
+        </a>
+
+        <a class="card" href="work.html">
+          <span class="icon">💼</span>
+          <h3 id="work-title">Work & Employment</h3>
+          <p id="work-description">
+            Employment information, contracts and useful resources.
+          </p>
+          <span class="open" id="open-work">Read guide →</span>
+        </a>
+
+        <a class="card" href="housing.html">
+          <span class="icon">🏠</span>
+          <h3 id="housing-title">Housing & Accommodation</h3>
+          <p id="housing-description">
+            Renting, accommodation and practical housing information.
+          </p>
+          <span class="open" id="open-housing">Read guide →</span>
+        </a>
+
+        <a class="card" href="bank.html">
+          <span class="icon">🏦</span>
+          <h3 id="bank-title">Banking & Finance</h3>
+          <p id="bank-description">
+            Bank accounts, payments and basic financial services.
+          </p>
+          <span class="open" id="open-bank">Read guide →</span>
+        </a>
+
+        <a class="card" href="family.html">
+          <span class="icon">👨‍👩‍👧</span>
+          <h3 id="family-title">Family & Daily Life</h3>
+          <p id="family-description">
+            Family-related information and everyday living.
+          </p>
+          <span class="open" id="open-family">Read guide →</span>
+        </a>
+
+        <a class="card" href="emergency.html">
+          <span class="icon">🚨</span>
+          <h3 id="emergency-title">Emergency Information</h3>
+          <p id="emergency-description">
+            Emergency services and important contact information.
+          </p>
+          <span class="open" id="open-emergency">Read guide →</span>
+        </a>
+
+        <a class="card" href="contacts.html">
+          <span class="icon">📞</span>
+          <h3 id="contacts-title">Useful Contacts</h3>
+          <p id="contacts-description">
+            Official websites and useful contact details.
+          </p>
+          <span class="open" id="open-contacts">Read guide →</span>
         </a>
 
       </div>
-
-
-      <div class="card">
-
-        <div class="icon">đźŹ›ď¸Ź</div>
-
-        <h3 id="governmentTitle">
-          Government
-        </h3>
-
-        <p id="governmentText">
-          Croatian government services, e-GraÄ‘ani, tax and employment-related services.
-        </p>
-
-        <a
-          href="government.html"
-          class="btn"
-          id="governmentBtn"
-        >
-          Open Page â†’
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">đźš—</div>
-
-        <h3 id="drivingTitle">
-          Driving
-        </h3>
-
-        <p id="drivingText">
-          Driving licences, foreign licence rules, documents, medical checks and MUP procedures.
-        </p>
-
-        <a
-          href="driving.html"
-          class="btn"
-          id="drivingBtn"
-        >
-          Open Page â†’
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">đź’Ľ</div>
-
-        <h3 id="workTitle">
-          Work
-        </h3>
-
-        <p id="workText">
-          Work permits, employment, contracts, workers' rights and useful employment information.
-        </p>
-
-        <a
-          href="work.html"
-          class="btn"
-          id="workBtn"
-        >
-          Open Page â†’
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">đźŹĄ</div>
-
-        <h3 id="healthTitle">
-          Health
-        </h3>
-
-        <p id="healthText">
-          Health insurance, doctors, hospitals, emergency healthcare and important health information.
-        </p>
-
-        <a
-          href="healthcare.html"
-          class="btn"
-          id="healthBtn"
-        >
-          Open Page â†’
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">đźŹ </div>
-
-        <h3 id="housingTitle">
-          Housing
-        </h3>
-
-        <p id="housingText">
-          Renting a home, contracts, deposits, registration and practical housing information.
-        </p>
-
-        <a
-          href="housing.html"
-          class="btn"
-          id="housingBtn"
-        >
-          Open Page â†’
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">đźŹ¦</div>
-
-        <h3 id="bankTitle">
-          Bank
-        </h3>
-
-        <p id="bankText">
-          Bank accounts, payments, cards, online banking and useful banking information.
-        </p>
-
-        <a
-          href="bank.html"
-          class="btn"
-          id="bankBtn"
-        >
-          Open Page â†’
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">đź‘¨â€Ťđź‘©â€Ťđź‘§â€Ťđź‘¦</div>
-
-        <h3 id="familyTitle">
-          Family
-        </h3>
-
-        <p id="familyText">
-          Family residence, children, school, family documents and everyday family services.
-        </p>
-
-        <a
-          href="family.html"
-          class="btn"
-          id="familyBtn"
-        >
-          Open Page â†’
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">đźš¨</div>
-
-        <h3 id="emergencyTitle">
-          Emergency
-        </h3>
-
-        <p id="emergencyText">
-          Emergency numbers and what to do when you need urgent help in Croatia.
-        </p>
-
-        <a
-          href="emergency.html"
-          class="btn"
-          id="emergencyBtn"
-        >
-          Open Page â†’
-        </a>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">đź“ž</div>
-
-        <h3 id="contactsTitle">
-          Useful Contacts
-        </h3>
-
-        <p id="contactsText">
-          Important institutions, official websites, phone numbers and useful contacts.
-        </p>
-
-        <a
-          href="contacts.html"
-          class="btn"
-          id="contactsBtn"
-        >
-          Open Page â†’
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- CONNECT -->
-
-    <section class="connect-section">
-
-      <div class="connect-logo">
-
-        <img
-          src="logo.png"
-          alt="MALAYALIS IN CROATIA Logo"
-        >
-
-      </div>
-
-      <h2 id="connectTitle">
-        Join & Connect
-      </h2>
-
-      <p id="connectText">
-        Follow MALAYALIS IN CROATIA and stay connected with our community.
-      </p>
-
-
-      <div class="connect-grid">
-
-        <!-- WHATSAPP -->
-
-        <a
-          href="https://whatsapp.com/channel/0029VbDKLO4BVJkvHdxKjO1p"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="connect-card"
-        >
-
-          <div class="connect-icon whatsapp-icon">
-            WA
-          </div>
-
-          <strong id="whatsappText">
-            WhatsApp
-          </strong>
-
-        </a>
-
-
-        <!-- EMAIL -->
-
-        <a
-          href="mailto:malayalisincroatia@gmail.com"
-          class="connect-card"
-        >
-
-          <div class="connect-icon email-icon">
-            @
-          </div>
-
-          <strong id="emailText">
-            Email
-          </strong>
-
-        </a>
-
-
-        <!-- WEBSITE -->
-
-        <a
-          href="https://sites.google.com/view/malayalisincroatia/home"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="connect-card"
-        >
-
-          <div class="connect-icon website-icon">
-            đźŚ
-          </div>
-
-          <strong id="websiteText">
-            Website
-          </strong>
-
-        </a>
-
-
-        <!-- INSTAGRAM -->
-
-        <a
-          href="https://www.instagram.com/malayali_from_croatia?stkn=OHpxc2Fqejgwc2Jt&utm_source=qr"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="connect-card"
-        >
-
-          <div class="connect-icon instagram-icon">
-            â—Ž
-          </div>
-
-          <strong id="instagramText">
-            Instagram
-          </strong>
-
-        </a>
-
-      </div>
-
-
-      <!-- WHATSAPP JOIN BUTTON -->
-
-      <a
-        href="https://whatsapp.com/channel/0029VbDKLO4BVJkvHdxKjO1p"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="join-button"
-        id="joinButton"
-      >
-        đź“± JOIN OUR WHATSAPP CHANNEL
-      </a>
-
     </section>
 
+    <section class="emergency">
+      <h2 id="emergency-heading">Emergency Numbers in Croatia</h2>
 
-    <!-- IMPORTANT -->
+      <div class="numbers">
+        <div class="number">
+          <strong>112</strong>
+          <span id="emergency-112">General emergency</span>
+        </div>
 
-    <div class="info-box">
+        <div class="number">
+          <strong>194</strong>
+          <span id="emergency-194">Emergency medical service</span>
+        </div>
 
-      <h3 id="infoTitle">
-        Important
-      </h3>
+        <div class="number">
+          <strong>192</strong>
+          <span id="emergency-192">Police</span>
+        </div>
 
-      <p id="infoText">
-        MALAYALIS IN CROATIA is an independent information guide.
-        Always check the latest requirements directly with the relevant
-        Croatian authority before making important decisions.
-      </p>
-
-    </div>
+        <div class="number">
+          <strong>193</strong>
+          <span id="emergency-193">Fire service</span>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-
-  <!-- FOOTER -->
-
   <footer>
+    <strong>MALAYALIS IN CROATIA</strong>
+    <p id="footer-subtitle">CROATIA INFORMATION GUIDE</p>
 
-    <p>
-      <strong>MALAYALIS IN CROATIA</strong>
+    <p class="disclaimer" id="disclaimer">
+      This is an independent information website and is not an official
+      Croatian government website. Information may change. Check official
+      sources for current requirements.
     </p>
 
-    <p id="footerTagline">
-      Your Path to Living and Working in Croatia.
-    </p>
-
-    <p class="verified" id="verifiedText">
-      Last verified: 7 October 2026
-    </p>
-
+    <p>© <span id="year"></span> MALAYALIS IN CROATIA</p>
   </footer>
 
-
-  <!-- FLOATING LOGO -->
-
-  <a
-    href="#"
-    class="floating-logo"
-    aria-label="Back to top"
-    title="Back to top"
-  >
-
-    <img
-      src="logo.png"
-      alt="MALAYALIS IN CROATIA"
-    >
-
-  </a>
-
-
   <script>
-
     const translations = {
-
       en: {
-        heroTitle: "Your Path to Living and Working in Croatia",
-        heroText: "Simple and useful information for foreigners living, working and building their life in Croatia.",
-        guideTitle: "Croatia Guide",
-        guideText: "Choose a topic to find useful information, official links and practical guidance.",
-
-        policeTitle: "Police & Documents",
-        policeText: "Police procedures, residence registration, certificates and important documents.",
-
-        governmentTitle: "Government",
-        governmentText: "Croatian government services, e-GraÄ‘ani, tax and employment-related services.",
-
-        drivingTitle: "Driving",
-        drivingText: "Driving licences, foreign licence rules, documents, medical checks and MUP procedures.",
-
-        workTitle: "Work",
-        workText: "Work permits, employment, contracts, workers' rights and useful employment information.",
-
-        healthTitle: "Health",
-        healthText: "Health insurance, doctors, hospitals, emergency healthcare and important health information.",
-
-        housingTitle: "Housing",
-        housingText: "Renting a home, contracts, deposits, registration and practical housing information.",
-
-        bankTitle: "Bank",
-        bankText: "Bank accounts, payments, cards, online banking and useful banking information.",
-
-        familyTitle: "Family",
-        familyText: "Family residence, children, school, family documents and everyday family services.",
-
-        emergencyTitle: "Emergency",
-        emergencyText: "Emergency numbers and what to do when you need urgent help in Croatia.",
-
-        contactsTitle: "Useful Contacts",
-        contactsText: "Important institutions, official websites, phone numbers and useful contacts.",
-
-        policeBtn: "Open Page â†’",
-        governmentBtn: "Open Page â†’",
-        drivingBtn: "Open Page â†’",
-        workBtn: "Open Page â†’",
-        healthBtn: "Open Page â†’",
-        housingBtn: "Open Page â†’",
-        bankBtn: "Open Page â†’",
-        familyBtn: "Open Page â†’",
-        emergencyBtn: "Open Page â†’",
-        contactsBtn: "Open Page â†’",
-
-        connectTitle: "Join & Connect",
-        connectText: "Follow MALAYALIS IN CROATIA and stay connected with our community.",
-
-        whatsappText: "WhatsApp",
-        emailText: "Email",
-        websiteText: "Website",
-        instagramText: "Instagram",
-
-        joinButton: "đź“± JOIN OUR WHATSAPP CHANNEL",
-
-        infoTitle: "Important",
-
-        infoText:
-          "MALAYALIS IN CROATIA is an independent information guide. Always check the latest requirements directly with the relevant Croatian authority before making important decisions.",
-
-        footerTagline:
-          "Your Path to Living and Working in Croatia.",
-
-        verifiedText:
-          "Last verified: 7 October 2026"
+        subtitle: "CROATIA INFORMATION GUIDE",
+        hero: "Reliable practical information for living, working and settling in Croatia. Choose your language and explore the guides below.",
+        noticeTitle: "Important information",
+        notice: "This website is an independent information guide. Always verify official requirements with the relevant Croatian authorities before taking action.",
+        guides: "Explore Our Guides",
+        guideDesc: "Useful information for everyday life in Croatia.",
+        language: "Language:",
+        health: "Healthcare",
+        healthDesc: "Health insurance, doctors, hospitals and medical services.",
+        police: "Police & Documents",
+        policeDesc: "Residence matters, registrations and important documents.",
+        government: "Government Services",
+        governmentDesc: "Official portals and public administration services.",
+        driving: "Driving & Transport",
+        drivingDesc: "Driving licences, road rules and transport information.",
+        work: "Work & Employment",
+        workDesc: "Employment information, contracts and useful resources.",
+        housing: "Housing & Accommodation",
+        housingDesc: "Renting, accommodation and practical housing information.",
+        bank: "Banking & Finance",
+        bankDesc: "Bank accounts, payments and basic financial services.",
+        family: "Family & Daily Life",
+        familyDesc: "Family-related information and everyday living.",
+        emergency: "Emergency Information",
+        emergencyDesc: "Emergency services and important contact information.",
+        contacts: "Useful Contacts",
+        contactsDesc: "Official websites and useful contact details.",
+        read: "Read guide →",
+        emergencyHeading: "Emergency Numbers in Croatia",
+        e112: "General emergency",
+        e194: "Emergency medical service",
+        e192: "Police",
+        e193: "Fire service",
+        disclaimer: "This is an independent information website and is not an official Croatian government website. Information may change. Check official sources for current requirements."
       },
-
 
       ml: {
-        heroTitle: "ŕ´•ŕµŤŕ´°ŕµŠŕ´Żŕµ‡ŕ´·ŕµŤŕ´Żŕ´Żŕ´żŕµ˝ ŕ´śŕµ€ŕ´µŕ´żŕ´•ŕµŤŕ´•ŕ´ľŕ´¨ŕµŕ´‚ ŕ´śŕµ‹ŕ´˛ŕ´ż ŕ´šŕµ†ŕ´ŻŕµŤŕ´Żŕ´ľŕ´¨ŕµŕ´‚ ŕ´¨ŕ´żŕ´™ŕµŤŕ´™ŕ´łŕµŕ´źŕµ† ŕ´µŕ´´ŕ´żŕ´•ŕ´ľŕ´źŕµŤŕ´źŕ´ż",
-
-        heroText:
-          "ŕ´•ŕµŤŕ´°ŕµŠŕ´Żŕµ‡ŕ´·ŕµŤŕ´Żŕ´Żŕ´żŕµ˝ ŕ´¤ŕ´ľŕ´®ŕ´¸ŕ´żŕ´•ŕµŤŕ´•ŕµŕ´•ŕ´Żŕµŕ´‚ ŕ´śŕµ‹ŕ´˛ŕ´ż ŕ´šŕµ†ŕ´ŻŕµŤŕ´Żŕµŕ´•ŕ´Żŕµŕ´‚ ŕ´šŕµ†ŕ´ŻŕµŤŕ´Żŕµŕ´¨ŕµŤŕ´¨ ŕ´µŕ´żŕ´¦ŕµ‡ŕ´¶ŕ´żŕ´•ŕµľŕ´•ŕµŤŕ´•ŕ´ľŕ´Żŕ´ż ŕ´˛ŕ´łŕ´żŕ´¤ŕ´µŕµŕ´‚ ŕ´‰ŕ´Şŕ´•ŕ´ľŕ´°ŕ´ŞŕµŤŕ´°ŕ´¦ŕ´µŕµŕ´®ŕ´ľŕ´Ż ŕ´µŕ´żŕ´µŕ´°ŕ´™ŕµŤŕ´™ŕµľ.",
-
-        guideTitle: "ŕ´•ŕµŤŕ´°ŕµŠŕ´Żŕµ‡ŕ´·ŕµŤŕ´Ż ŕ´—ŕµŕ´ˇŕµŤ",
-
-        guideText:
-          "ŕ´†ŕ´µŕ´¶ŕµŤŕ´Żŕ´®ŕ´ľŕ´Ż ŕ´µŕ´żŕ´µŕ´°ŕ´™ŕµŤŕ´™ŕ´łŕµŕ´‚ ŕ´”ŕ´¦ŕµŤŕ´Żŕµ‹ŕ´—ŕ´żŕ´• ŕ´˛ŕ´żŕ´™ŕµŤŕ´•ŕµŕ´•ŕ´łŕµŕ´‚ ŕ´ŞŕµŤŕ´°ŕ´ľŕ´Żŕµ‹ŕ´—ŕ´żŕ´• ŕ´®ŕ´ľŕµĽŕ´—ŕ´¨ŕ´żŕµĽŕ´¦ŕµŤŕ´¦ŕµ‡ŕ´¶ŕ´™ŕµŤŕ´™ŕ´łŕµŕ´‚ ŕ´˛ŕ´­ŕ´żŕ´•ŕµŤŕ´•ŕ´ľŕµ» ŕ´’ŕ´°ŕµ ŕ´µŕ´żŕ´·ŕ´Żŕ´‚ ŕ´¤ŕ´żŕ´°ŕ´žŕµŤŕ´žŕµ†ŕ´źŕµŕ´•ŕµŤŕ´•ŕµŕ´•.",
-
-        policeTitle: "ŕ´Şŕµ‹ŕ´˛ŕµ€ŕ´¸ŕµŤ & ŕ´°ŕµ‡ŕ´–ŕ´•ŕµľ",
-
-        policeText:
-          "ŕ´Şŕµ‹ŕ´˛ŕµ€ŕ´¸ŕµŤ ŕ´¨ŕ´źŕ´Şŕ´źŕ´żŕ´•ŕµľ, ŕ´¤ŕ´ľŕ´®ŕ´¸ ŕ´°ŕ´śŕ´żŕ´¸ŕµŤŕ´źŕµŤŕ´°ŕµ‡ŕ´·ŕµ», ŕ´¸ŕµĽŕ´źŕµŤŕ´źŕ´żŕ´«ŕ´żŕ´•ŕµŤŕ´•ŕ´±ŕµŤŕ´±ŕµŕ´•ŕµľ, ŕ´ŞŕµŤŕ´°ŕ´§ŕ´ľŕ´¨ŕ´ŞŕµŤŕ´Şŕµ†ŕ´źŕµŤŕ´ź ŕ´°ŕµ‡ŕ´–ŕ´•ŕµľ.",
-
-        governmentTitle: "ŕ´¸ŕµĽŕ´•ŕµŤŕ´•ŕ´ľŕµĽ",
-
-        governmentText:
-          "ŕ´•ŕµŤŕ´°ŕµŠŕ´Żŕµ‡ŕ´·ŕµŤŕ´Żŕµ» ŕ´¸ŕµĽŕ´•ŕµŤŕ´•ŕ´ľŕµĽ ŕ´¸ŕµ‡ŕ´µŕ´¨ŕ´™ŕµŤŕ´™ŕµľ, e-GraÄ‘ani, ŕ´¨ŕ´żŕ´•ŕµŕ´¤ŕ´ż, ŕ´¤ŕµŠŕ´´ŕ´żŕµ˝ ŕ´¸ŕ´‚ŕ´¬ŕ´¨ŕµŤŕ´§ŕ´®ŕ´ľŕ´Ż ŕ´¸ŕµ‡ŕ´µŕ´¨ŕ´™ŕµŤŕ´™ŕµľ.",
-
-        drivingTitle: "ŕ´ˇŕµŤŕ´°ŕµŕ´µŕ´żŕ´‚ŕ´—ŕµŤ",
-
-        drivingText:
-          "ŕ´ˇŕµŤŕ´°ŕµŕ´µŕ´żŕ´‚ŕ´—ŕµŤ ŕ´˛ŕµŕ´¸ŕµ»ŕ´¸ŕµŤ, ŕ´µŕ´żŕ´¦ŕµ‡ŕ´¶ ŕ´˛ŕµŕ´¸ŕµ»ŕ´¸ŕµŤ ŕ´¨ŕ´żŕ´Żŕ´®ŕ´™ŕµŤŕ´™ŕµľ, ŕ´°ŕµ‡ŕ´–ŕ´•ŕµľ, ŕ´®ŕµ†ŕ´ˇŕ´żŕ´•ŕµŤŕ´•ŕµ˝ ŕ´Şŕ´°ŕ´żŕ´¶ŕµ‹ŕ´§ŕ´¨, MUP ŕ´¨ŕ´źŕ´Şŕ´źŕ´żŕ´•ŕµľ.",
-
-        workTitle: "ŕ´śŕµ‹ŕ´˛ŕ´ż",
-
-        workText:
-          "ŕ´µŕµĽŕ´•ŕµŤŕ´•ŕµŤ ŕ´Şŕµ†ŕµĽŕ´®ŕ´żŕ´±ŕµŤŕ´±ŕµŤ, ŕ´śŕµ‹ŕ´˛ŕ´ż, ŕ´•ŕ´°ŕ´ľŕµĽ, ŕ´¤ŕµŠŕ´´ŕ´żŕ´˛ŕ´ľŕ´łŕ´żŕ´•ŕ´łŕµŕ´źŕµ† ŕ´…ŕ´µŕ´•ŕ´ľŕ´¶ŕ´™ŕµŤŕ´™ŕµľ, ŕ´¤ŕµŠŕ´´ŕ´żŕµ˝ ŕ´¸ŕ´‚ŕ´¬ŕ´¨ŕµŤŕ´§ŕ´®ŕ´ľŕ´Ż ŕ´µŕ´żŕ´µŕ´°ŕ´™ŕµŤŕ´™ŕµľ.",
-
-        healthTitle: "ŕ´†ŕ´°ŕµ‹ŕ´—ŕµŤŕ´Żŕ´‚",
-
-        healthText:
-          "ŕ´ąŕµ†ŕµ˝ŕ´¤ŕµŤŕ´¤ŕµŤ ŕ´‡ŕµ»ŕ´·ŕµŕ´±ŕµ»ŕ´¸ŕµŤ, ŕ´ˇŕµ‹ŕ´•ŕµŤŕ´źŕµĽŕ´®ŕ´ľŕµĽ, ŕ´†ŕ´¶ŕµŕ´Şŕ´¤ŕµŤŕ´°ŕ´żŕ´•ŕµľ, ŕ´…ŕ´źŕ´żŕ´Żŕ´¨ŕµŤŕ´¤ŕ´° ŕ´†ŕ´°ŕµ‹ŕ´—ŕµŤŕ´Ż ŕ´¸ŕµ‡ŕ´µŕ´¨ŕ´™ŕµŤŕ´™ŕµľ.",
-
-        housingTitle: "ŕ´¤ŕ´ľŕ´®ŕ´¸ŕ´‚",
-
-        housingText:
-          "ŕ´µŕµ€ŕ´źŕµŤ ŕ´µŕ´ľŕ´źŕ´•ŕ´ŻŕµŤŕ´•ŕµŤŕ´•ŕµŤ ŕ´Žŕ´źŕµŕ´•ŕµŤŕ´•ŕµ˝, ŕ´•ŕ´°ŕ´ľŕµĽ, ŕ´ˇŕµ†ŕ´ŞŕµŤŕ´Şŕµ‹ŕ´¸ŕ´żŕ´±ŕµŤŕ´±ŕµŤ, ŕ´°ŕ´śŕ´żŕ´¸ŕµŤŕ´źŕµŤŕ´°ŕµ‡ŕ´·ŕµ», ŕ´¤ŕ´ľŕ´®ŕ´¸ ŕ´µŕ´żŕ´µŕ´°ŕ´™ŕµŤŕ´™ŕµľ.",
-
-        bankTitle: "ŕ´¬ŕ´ľŕ´™ŕµŤŕ´•ŕµŤ",
-
-        bankText:
-          "ŕ´¬ŕ´ľŕ´™ŕµŤŕ´•ŕµŤ ŕ´…ŕ´•ŕµŤŕ´•ŕµ—ŕ´ŁŕµŤŕ´źŕµŤ, ŕ´Şŕ´Łŕ´®ŕ´żŕ´źŕ´Şŕ´ľŕ´źŕµŤ, ŕ´•ŕ´ľŕµĽŕ´ˇŕµŕ´•ŕµľ, ŕ´“ŕµşŕ´˛ŕµŕµ» ŕ´¬ŕ´ľŕ´™ŕµŤŕ´•ŕ´żŕ´‚ŕ´—ŕµŤ, ŕ´¬ŕ´ľŕ´™ŕµŤŕ´•ŕ´żŕ´‚ŕ´—ŕµŤ ŕ´µŕ´żŕ´µŕ´°ŕ´™ŕµŤŕ´™ŕµľ.",
-
-        familyTitle: "ŕ´•ŕµŕ´źŕµŕ´‚ŕ´¬ŕ´‚",
-
-        familyText:
-          "ŕ´•ŕµŕ´źŕµŕ´‚ŕ´¬ ŕ´¤ŕ´ľŕ´®ŕ´¸ŕ´‚, ŕ´•ŕµŕ´źŕµŤŕ´źŕ´żŕ´•ŕµľ, ŕ´¸ŕµŤŕ´•ŕµ‚ŕµľ, ŕ´•ŕµŕ´źŕµŕ´‚ŕ´¬ ŕ´°ŕµ‡ŕ´–ŕ´•ŕµľ, ŕ´¦ŕµŕ´¨ŕ´‚ŕ´¦ŕ´żŕ´¨ ŕ´¸ŕµ‡ŕ´µŕ´¨ŕ´™ŕµŤŕ´™ŕµľ.",
-
-        emergencyTitle: "ŕ´…ŕ´źŕ´żŕ´Żŕ´¨ŕµŤŕ´¤ŕ´° ŕ´¸ŕ´ąŕ´ľŕ´Żŕ´‚",
-
-        emergencyText:
-          "ŕ´…ŕ´źŕ´żŕ´Żŕ´¨ŕµŤŕ´¤ŕ´° ŕ´¨ŕ´®ŕµŤŕ´Şŕ´±ŕµŕ´•ŕ´łŕµŕ´‚ ŕ´•ŕµŤŕ´°ŕµŠŕ´Żŕµ‡ŕ´·ŕµŤŕ´Żŕ´Żŕ´żŕµ˝ ŕ´…ŕ´źŕ´żŕ´Żŕ´¨ŕµŤŕ´¤ŕ´° ŕ´¸ŕ´ąŕ´ľŕ´Żŕ´‚ ŕ´†ŕ´µŕ´¶ŕµŤŕ´Żŕ´®ŕµŕ´łŕµŤŕ´łŕ´ŞŕµŤŕ´Şŕµ‹ŕµľ ŕ´šŕµ†ŕ´ŻŕµŤŕ´Żŕµ‡ŕ´ŁŕµŤŕ´ź ŕ´•ŕ´ľŕ´°ŕµŤŕ´Żŕ´™ŕµŤŕ´™ŕ´łŕµŕ´‚.",
-
-        contactsTitle: "ŕ´‰ŕ´Şŕ´•ŕ´ľŕ´°ŕ´ŞŕµŤŕ´°ŕ´¦ŕ´®ŕ´ľŕ´Ż ŕ´•ŕµ‹ŕµşŕ´źŕ´ľŕ´•ŕµŤŕ´źŕµŕ´•ŕµľ",
-
-        contactsText:
-          "ŕ´ŞŕµŤŕ´°ŕ´§ŕ´ľŕ´¨ ŕ´¸ŕµŤŕ´Ąŕ´ľŕ´Şŕ´¨ŕ´™ŕµŤŕ´™ŕµľ, ŕ´”ŕ´¦ŕµŤŕ´Żŕµ‹ŕ´—ŕ´żŕ´• ŕ´µŕµ†ŕ´¬ŕµŤŕ´¸ŕµŕ´±ŕµŤŕ´±ŕµŕ´•ŕµľ, ŕ´«ŕµ‹ŕµş ŕ´¨ŕ´®ŕµŤŕ´Şŕ´±ŕµŕ´•ŕµľ, ŕ´‰ŕ´Şŕ´•ŕ´ľŕ´°ŕ´ŞŕµŤŕ´°ŕ´¦ŕ´®ŕ´ľŕ´Ż ŕ´•ŕµ‹ŕµşŕ´źŕ´ľŕ´•ŕµŤŕ´źŕµŕ´•ŕµľ.",
-
-        policeBtn: "ŕ´Şŕµ‡ŕ´śŕµŤ ŕ´¤ŕµŕ´±ŕ´•ŕµŤŕ´•ŕµŕ´• â†’",
-        governmentBtn: "ŕ´Şŕµ‡ŕ´śŕµŤ ŕ´¤ŕµŕ´±ŕ´•ŕµŤŕ´•ŕµŕ´• â†’",
-        drivingBtn: "ŕ´Şŕµ‡ŕ´śŕµŤ ŕ´¤ŕµŕ´±ŕ´•ŕµŤŕ´•ŕµŕ´• â†’",
-        workBtn: "ŕ´Şŕµ‡ŕ´śŕµŤ ŕ´¤ŕµŕ´±ŕ´•ŕµŤŕ´•ŕµŕ´• â†’",
-        healthBtn: "ŕ´Şŕµ‡ŕ´śŕµŤ ŕ´¤ŕµŕ´±ŕ´•ŕµŤŕ´•ŕµŕ´• â†’",
-        housingBtn: "ŕ´Şŕµ‡ŕ´śŕµŤ ŕ´¤ŕµŕ´±ŕ´•ŕµŤŕ´•ŕµŕ´• â†’",
-        bankBtn: "ŕ´Şŕµ‡ŕ´śŕµŤ ŕ´¤ŕµŕ´±ŕ´•ŕµŤŕ´•ŕµŕ´• â†’",
-        familyBtn: "ŕ´Şŕµ‡ŕ´śŕµŤ ŕ´¤ŕµŕ´±ŕ´•ŕµŤŕ´•ŕµŕ´• â†’",
-        emergencyBtn: "ŕ´Şŕµ‡ŕ´śŕµŤ ŕ´¤ŕµŕ´±ŕ´•ŕµŤŕ´•ŕµŕ´• â†’",
-        contactsBtn: "ŕ´Şŕµ‡ŕ´śŕµŤ ŕ´¤ŕµŕ´±ŕ´•ŕµŤŕ´•ŕµŕ´• â†’",
-
-        connectTitle: "ŕ´šŕµ‡ŕ´°ŕµ‚ & ŕ´¬ŕ´¨ŕµŤŕ´§ŕ´ŞŕµŤŕ´Şŕµ†ŕ´źŕµ‚",
-
-        connectText:
-          "MALAYALIS IN CROATIA-ŕ´Żŕµŕ´®ŕ´ľŕ´Żŕ´ż ŕ´¬ŕ´¨ŕµŤŕ´§ŕ´ŞŕµŤŕ´Şŕµ†ŕ´źŕµŤŕ´źŕµ ŕ´¨ŕ´®ŕµŤŕ´®ŕµŕ´źŕµ† ŕ´•ŕ´®ŕµŤŕ´®ŕµŤŕ´Żŕµ‚ŕ´Łŕ´żŕ´±ŕµŤŕ´±ŕ´żŕ´Żŕµŕ´źŕµ† ŕ´…ŕ´ŞŕµŤŕ´ˇŕµ‡ŕ´±ŕµŤŕ´±ŕµŕ´•ŕµľ ŕ´…ŕ´±ŕ´żŕ´Żŕµ‚.",
-
-        whatsappText: "WhatsApp",
-        emailText: "Email",
-        websiteText: "Website",
-        instagramText: "Instagram",
-
-        joinButton:
-          "đź“± ŕ´žŕ´™ŕµŤŕ´™ŕ´łŕµŕ´źŕµ† WhatsApp Channel-ŕµ˝ ŕ´šŕµ‡ŕ´°ŕµ‚",
-
-        infoTitle: "ŕ´ŞŕµŤŕ´°ŕ´§ŕ´ľŕ´¨ŕ´ŞŕµŤŕ´Şŕµ†ŕ´źŕµŤŕ´źŕ´¤ŕµŤ",
-
-        infoText:
-          "MALAYALIS IN CROATIA ŕ´’ŕ´°ŕµ ŕ´¸ŕµŤŕ´µŕ´¤ŕ´¨ŕµŤŕ´¤ŕµŤŕ´° ŕ´µŕ´żŕ´µŕ´° ŕ´—ŕµŕ´ˇŕ´ľŕ´ŁŕµŤ. ŕ´ŞŕµŤŕ´°ŕ´§ŕ´ľŕ´¨ŕ´ŞŕµŤŕ´Şŕµ†ŕ´źŕµŤŕ´ź ŕ´¤ŕµ€ŕ´°ŕµŕ´®ŕ´ľŕ´¨ŕ´™ŕµŤŕ´™ŕµľ ŕ´Žŕ´źŕµŕ´•ŕµŤŕ´•ŕµŕ´¨ŕµŤŕ´¨ŕ´¤ŕ´żŕ´¨ŕµŤ ŕ´®ŕµŕ´®ŕµŤŕ´ŞŕµŤ ŕ´¬ŕ´¨ŕµŤŕ´§ŕ´ŞŕµŤŕ´Şŕµ†ŕ´źŕµŤŕ´ź ŕ´•ŕµŤŕ´°ŕµŠŕ´Żŕµ‡ŕ´·ŕµŤŕ´Żŕµ» ŕ´…ŕ´§ŕ´żŕ´•ŕ´ľŕ´°ŕ´żŕ´•ŕ´łŕ´żŕµ˝ ŕ´¨ŕ´żŕ´¨ŕµŤŕ´¨ŕµŤ ŕ´Źŕ´±ŕµŤŕ´±ŕ´µŕµŕ´‚ ŕ´Şŕµŕ´¤ŕ´żŕ´Ż ŕ´†ŕ´µŕ´¶ŕµŤŕ´Żŕ´•ŕ´¤ŕ´•ŕµľ ŕ´Şŕ´°ŕ´żŕ´¶ŕµ‹ŕ´§ŕ´żŕ´•ŕµŤŕ´•ŕµŕ´•.",
-
-        footerTagline:
-          "ŕ´•ŕµŤŕ´°ŕµŠŕ´Żŕµ‡ŕ´·ŕµŤŕ´Żŕ´Żŕ´żŕµ˝ ŕ´śŕµ€ŕ´µŕ´żŕ´•ŕµŤŕ´•ŕ´ľŕ´¨ŕµŕ´‚ ŕ´śŕµ‹ŕ´˛ŕ´ż ŕ´šŕµ†ŕ´ŻŕµŤŕ´Żŕ´ľŕ´¨ŕµŕ´‚ ŕ´¨ŕ´żŕ´™ŕµŤŕ´™ŕ´łŕµŕ´źŕµ† ŕ´µŕ´´ŕ´żŕ´•ŕ´ľŕ´źŕµŤŕ´źŕ´ż.",
-
-        verifiedText:
-          "ŕ´…ŕ´µŕ´¸ŕ´ľŕ´¨ŕ´‚ ŕ´Şŕ´°ŕ´żŕ´¶ŕµ‹ŕ´§ŕ´żŕ´šŕµŤŕ´šŕ´¤ŕµŤ: 7 ŕ´’ŕ´•ŕµŤŕ´źŕµ‹ŕ´¬ŕµĽ 2026"
+        subtitle: "ക്രൊയേഷ്യ വിവര ഗൈഡ്",
+        hero: "ക്രൊയേഷ്യയിൽ താമസിക്കാനും ജോലി ചെയ്യാനും ജീവിതം ആരംഭിക്കാനും ആവശ്യമായ വിവരങ്ങൾ. നിങ്ങളുടെ ഭാഷ തിരഞ്ഞെടുത്ത് ഗൈഡുകൾ കാണുക.",
+        noticeTitle: "പ്രധാന അറിയിപ്പ്",
+        notice: "ഇത് ഒരു സ്വതന്ത്ര വിവര വെബ്സൈറ്റാണ്. നടപടികൾ സ്വീകരിക്കുന്നതിന് മുമ്പ് ബന്ധപ്പെട്ട ക്രൊയേഷ്യൻ ഔദ്യോഗിക വകുപ്പുകളിൽ നിന്ന് വിവരങ്ങൾ സ്ഥിരീകരിക്കുക.",
+        guides: "ഞങ്ങളുടെ ഗൈഡുകൾ",
+        guideDesc: "ക്രൊയേഷ്യയിലെ ദൈനംദിന ജീവിതത്തിന് ആവശ്യമായ വിവരങ്ങൾ.",
+        language: "ഭാഷ:",
+        health: "ആരോഗ്യ സേവനങ്ങൾ",
+        healthDesc: "ആരോഗ്യ ഇൻഷുറൻസ്, ഡോക്ടർമാർ, ആശുപത്രികൾ, ചികിത്സാ സേവനങ്ങൾ.",
+        police: "പോലീസും രേഖകളും",
+        policeDesc: "താമസാനുമതി, രജിസ്ട്രേഷൻ, പ്രധാന രേഖകൾ.",
+        government: "സർക്കാർ സേവനങ്ങൾ",
+        governmentDesc: "ഔദ്യോഗിക പോർട്ടലുകളും സർക്കാർ സേവനങ്ങളും.",
+        driving: "ഡ്രൈവിങ്ങും ഗതാഗതവും",
+        drivingDesc: "ഡ്രൈവിങ് ലൈസൻസ്, റോഡ് നിയമങ്ങൾ, ഗതാഗത വിവരങ്ങൾ.",
+        work: "ജോലിയും തൊഴിലും",
+        workDesc: "തൊഴിൽ വിവരങ്ങൾ, കരാറുകൾ, ഉപകാരപ്രദമായ വിഭവങ്ങൾ.",
+        housing: "വീടും താമസവും",
+        housingDesc: "വീട് വാടകയ്ക്ക് എടുക്കുന്നതും താമസവുമായി ബന്ധപ്പെട്ട വിവരങ്ങളും.",
+        bank: "ബാങ്കും സാമ്പത്തിക കാര്യങ്ങളും",
+        bankDesc: "ബാങ്ക് അക്കൗണ്ടുകൾ, പണമിടപാടുകൾ, അടിസ്ഥാന സാമ്പത്തിക സേവനങ്ങൾ.",
+        family: "കുടുംബവും ദൈനംദിന ജീവിതവും",
+        familyDesc: "കുടുംബവുമായി ബന്ധപ്പെട്ട വിവരങ്ങളും ദൈനംദിന ജീവിതവും.",
+        emergency: "അടിയന്തര വിവരങ്ങൾ",
+        emergencyDesc: "അടിയന്തര സേവനങ്ങളും പ്രധാന ബന്ധപ്പെടൽ വിവരങ്ങളും.",
+        contacts: "പ്രധാന ബന്ധപ്പെടൽ വിവരങ്ങൾ",
+        contactsDesc: "ഔദ്യോഗിക വെബ്സൈറ്റുകളും ആവശ്യമായ ബന്ധപ്പെടൽ വിവരങ്ങളും.",
+        read: "ഗൈഡ് കാണുക →",
+        emergencyHeading: "ക്രൊയേഷ്യയിലെ അടിയന്തര നമ്പറുകൾ",
+        e112: "പൊതുവായ അടിയന്തര സേവനം",
+        e194: "അടിയന്തര മെഡിക്കൽ സേവനം",
+        e192: "പോലീസ്",
+        e193: "അഗ്നിശമന സേന",
+        disclaimer: "ഇത് സ്വതന്ത്ര വിവര വെബ്സൈറ്റാണ്; ഔദ്യോഗിക ക്രൊയേഷ്യൻ സർക്കാർ വെബ്സൈറ്റ് അല്ല. വിവരങ്ങൾ മാറാം. നിലവിലെ ആവശ്യകതകൾ ഔദ്യോഗിക ഉറവിടങ്ങളിൽ പരിശോധിക്കുക."
       },
-
 
       hi: {
-        heroTitle: "ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¶ŕ¤żŕ¤Żŕ¤ľ ŕ¤®ŕĄ‡ŕ¤‚ ŕ¤°ŕ¤ąŕ¤¨ŕĄ‡ ŕ¤”ŕ¤° ŕ¤•ŕ¤ľŕ¤® ŕ¤•ŕ¤°ŕ¤¨ŕĄ‡ ŕ¤•ŕĄ‡ ŕ¤˛ŕ¤żŕ¤Ź ŕ¤†ŕ¤Şŕ¤•ŕ¤ľ ŕ¤®ŕ¤ľŕ¤°ŕĄŤŕ¤—ŕ¤¦ŕ¤°ŕĄŤŕ¤¶ŕ¤•",
-
-        heroText:
-          "ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¶ŕ¤żŕ¤Żŕ¤ľ ŕ¤®ŕĄ‡ŕ¤‚ ŕ¤°ŕ¤ąŕ¤¨ŕĄ‡ ŕ¤”ŕ¤° ŕ¤•ŕ¤ľŕ¤® ŕ¤•ŕ¤°ŕ¤¨ŕĄ‡ ŕ¤µŕ¤ľŕ¤˛ŕĄ‡ ŕ¤µŕ¤żŕ¤¦ŕĄ‡ŕ¤¶ŕ¤żŕ¤ŻŕĄ‹ŕ¤‚ ŕ¤•ŕĄ‡ ŕ¤˛ŕ¤żŕ¤Ź ŕ¤¸ŕ¤°ŕ¤˛ ŕ¤”ŕ¤° ŕ¤‰ŕ¤Şŕ¤ŻŕĄ‹ŕ¤—ŕĄ€ ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€.",
-
-        guideTitle: "ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¶ŕ¤żŕ¤Żŕ¤ľ ŕ¤—ŕ¤ľŕ¤‡ŕ¤ˇ",
-
-        guideText:
-          "ŕ¤‰ŕ¤Şŕ¤ŻŕĄ‹ŕ¤—ŕĄ€ ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€, ŕ¤†ŕ¤§ŕ¤żŕ¤•ŕ¤ľŕ¤°ŕ¤żŕ¤• ŕ¤˛ŕ¤żŕ¤‚ŕ¤• ŕ¤”ŕ¤° ŕ¤µŕĄŤŕ¤Żŕ¤ľŕ¤µŕ¤ąŕ¤ľŕ¤°ŕ¤żŕ¤• ŕ¤®ŕ¤ľŕ¤°ŕĄŤŕ¤—ŕ¤¦ŕ¤°ŕĄŤŕ¤¶ŕ¤¨ ŕ¤•ŕĄ‡ ŕ¤˛ŕ¤żŕ¤Ź ŕ¤Źŕ¤• ŕ¤µŕ¤żŕ¤·ŕ¤Ż ŕ¤šŕĄŕ¤¨ŕĄ‡ŕ¤‚.",
-
-        policeTitle: "ŕ¤ŞŕĄŕ¤˛ŕ¤żŕ¤¸ ŕ¤”ŕ¤° ŕ¤¦ŕ¤¸ŕĄŤŕ¤¤ŕ¤ľŕ¤µŕĄ‡ŕ¤śŕ¤Ľ",
-
-        policeText:
-          "ŕ¤ŞŕĄŕ¤˛ŕ¤żŕ¤¸ ŕ¤ŞŕĄŤŕ¤°ŕ¤•ŕĄŤŕ¤°ŕ¤żŕ¤Żŕ¤ľŕ¤Źŕ¤‚, ŕ¤¨ŕ¤żŕ¤µŕ¤ľŕ¤¸ ŕ¤Şŕ¤‚ŕ¤śŕĄ€ŕ¤•ŕ¤°ŕ¤Ł, ŕ¤ŞŕĄŤŕ¤°ŕ¤®ŕ¤ľŕ¤Łŕ¤Şŕ¤¤ŕĄŤŕ¤° ŕ¤”ŕ¤° ŕ¤®ŕ¤ąŕ¤¤ŕĄŤŕ¤µŕ¤ŞŕĄ‚ŕ¤°ŕĄŤŕ¤Ł ŕ¤¦ŕ¤¸ŕĄŤŕ¤¤ŕ¤ľŕ¤µŕĄ‡ŕ¤śŕ¤Ľ.",
-
-        governmentTitle: "ŕ¤¸ŕ¤°ŕ¤•ŕ¤ľŕ¤°",
-
-        governmentText:
-          "ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¶ŕ¤żŕ¤Żŕ¤ľŕ¤ ŕ¤¸ŕ¤°ŕ¤•ŕ¤ľŕ¤°ŕĄ€ ŕ¤¸ŕĄ‡ŕ¤µŕ¤ľŕ¤Źŕ¤‚, e-GraÄ‘ani, ŕ¤źŕĄŕ¤•ŕĄŤŕ¤¸ ŕ¤”ŕ¤° ŕ¤°ŕĄ‹ŕ¤śŕ¤—ŕ¤ľŕ¤° ŕ¤¸ŕĄ‡ŕ¤µŕ¤ľŕ¤Źŕ¤‚.",
-
-        drivingTitle: "ŕ¤ˇŕĄŤŕ¤°ŕ¤ľŕ¤‡ŕ¤µŕ¤żŕ¤‚ŕ¤—",
-
-        drivingText:
-          "ŕ¤ˇŕĄŤŕ¤°ŕ¤ľŕ¤‡ŕ¤µŕ¤żŕ¤‚ŕ¤— ŕ¤˛ŕ¤ľŕ¤‡ŕ¤¸ŕĄ‡ŕ¤‚ŕ¤¸, ŕ¤µŕ¤żŕ¤¦ŕĄ‡ŕ¤¶ŕĄ€ ŕ¤˛ŕ¤ľŕ¤‡ŕ¤¸ŕĄ‡ŕ¤‚ŕ¤¸ ŕ¤¨ŕ¤żŕ¤Żŕ¤®, ŕ¤¦ŕ¤¸ŕĄŤŕ¤¤ŕ¤ľŕ¤µŕĄ‡ŕ¤śŕ¤Ľ, ŕ¤®ŕĄ‡ŕ¤ˇŕ¤żŕ¤•ŕ¤˛ ŕ¤śŕ¤ľŕ¤‚ŕ¤š ŕ¤”ŕ¤° MUP ŕ¤ŞŕĄŤŕ¤°ŕ¤•ŕĄŤŕ¤°ŕ¤żŕ¤Żŕ¤ľŕ¤Źŕ¤‚.",
-
-        workTitle: "ŕ¤•ŕ¤ľŕ¤®",
-
-        workText:
-          "ŕ¤µŕ¤°ŕĄŤŕ¤• ŕ¤Şŕ¤°ŕ¤®ŕ¤żŕ¤ź, ŕ¤°ŕĄ‹ŕ¤śŕ¤—ŕ¤ľŕ¤°, ŕ¤…ŕ¤¨ŕĄŕ¤¬ŕ¤‚ŕ¤§, ŕ¤¶ŕĄŤŕ¤°ŕ¤®ŕ¤żŕ¤• ŕ¤…ŕ¤§ŕ¤żŕ¤•ŕ¤ľŕ¤° ŕ¤”ŕ¤° ŕ¤°ŕĄ‹ŕ¤śŕ¤—ŕ¤ľŕ¤° ŕ¤¸ŕ¤‚ŕ¤¬ŕ¤‚ŕ¤§ŕĄ€ ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€.",
-
-        healthTitle: "ŕ¤¸ŕĄŤŕ¤µŕ¤ľŕ¤¸ŕĄŤŕ¤ĄŕĄŤŕ¤Ż",
-
-        healthText:
-          "ŕ¤¸ŕĄŤŕ¤µŕ¤ľŕ¤¸ŕĄŤŕ¤ĄŕĄŤŕ¤Ż ŕ¤¬ŕĄ€ŕ¤®ŕ¤ľ, ŕ¤ˇŕĄ‰ŕ¤•ŕĄŤŕ¤źŕ¤°, ŕ¤…ŕ¤¸ŕĄŤŕ¤Şŕ¤¤ŕ¤ľŕ¤˛ ŕ¤”ŕ¤° ŕ¤†ŕ¤Şŕ¤ľŕ¤¤ŕ¤•ŕ¤ľŕ¤˛ŕĄ€ŕ¤¨ ŕ¤¸ŕĄŤŕ¤µŕ¤ľŕ¤¸ŕĄŤŕ¤ĄŕĄŤŕ¤Ż ŕ¤¸ŕĄ‡ŕ¤µŕ¤ľŕ¤Źŕ¤‚.",
-
-        housingTitle: "ŕ¤†ŕ¤µŕ¤ľŕ¤¸",
-
-        housingText:
-          "ŕ¤ŕ¤° ŕ¤•ŕ¤żŕ¤°ŕ¤ľŕ¤Ź ŕ¤Şŕ¤° ŕ¤˛ŕĄ‡ŕ¤¨ŕ¤ľ, ŕ¤…ŕ¤¨ŕĄŕ¤¬ŕ¤‚ŕ¤§, ŕ¤śŕ¤®ŕ¤ľ ŕ¤°ŕ¤ľŕ¤¶ŕ¤ż, ŕ¤Şŕ¤‚ŕ¤śŕĄ€ŕ¤•ŕ¤°ŕ¤Ł ŕ¤”ŕ¤° ŕ¤†ŕ¤µŕ¤ľŕ¤¸ ŕ¤¸ŕ¤‚ŕ¤¬ŕ¤‚ŕ¤§ŕĄ€ ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€.",
-
-        bankTitle: "ŕ¤¬ŕĄŕ¤‚ŕ¤•",
-
-        bankText:
-          "ŕ¤¬ŕĄŕ¤‚ŕ¤• ŕ¤–ŕ¤ľŕ¤¤ŕĄ‡, ŕ¤­ŕĄŕ¤—ŕ¤¤ŕ¤ľŕ¤¨, ŕ¤•ŕ¤ľŕ¤°ŕĄŤŕ¤ˇ, ŕ¤‘ŕ¤¨ŕ¤˛ŕ¤ľŕ¤‡ŕ¤¨ ŕ¤¬ŕĄŕ¤‚ŕ¤•ŕ¤żŕ¤‚ŕ¤— ŕ¤”ŕ¤° ŕ¤¬ŕĄŕ¤‚ŕ¤•ŕ¤żŕ¤‚ŕ¤— ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€.",
-
-        familyTitle: "ŕ¤Şŕ¤°ŕ¤żŕ¤µŕ¤ľŕ¤°",
-
-        familyText:
-          "ŕ¤Şŕ¤°ŕ¤żŕ¤µŕ¤ľŕ¤° ŕ¤•ŕ¤ľ ŕ¤¨ŕ¤żŕ¤µŕ¤ľŕ¤¸, ŕ¤¬ŕ¤šŕĄŤŕ¤šŕĄ‡, ŕ¤¸ŕĄŤŕ¤•ŕĄ‚ŕ¤˛, ŕ¤Şŕ¤°ŕ¤żŕ¤µŕ¤ľŕ¤° ŕ¤•ŕĄ‡ ŕ¤¦ŕ¤¸ŕĄŤŕ¤¤ŕ¤ľŕ¤µŕĄ‡ŕ¤śŕ¤Ľ ŕ¤”ŕ¤° ŕ¤¸ŕĄ‡ŕ¤µŕ¤ľŕ¤Źŕ¤‚.",
-
-        emergencyTitle: "ŕ¤†ŕ¤Şŕ¤ľŕ¤¤ŕ¤•ŕ¤ľŕ¤˛",
-
-        emergencyText:
-          "ŕ¤†ŕ¤Şŕ¤ľŕ¤¤ŕ¤•ŕ¤ľŕ¤˛ŕĄ€ŕ¤¨ ŕ¤¨ŕ¤‚ŕ¤¬ŕ¤° ŕ¤”ŕ¤° ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¶ŕ¤żŕ¤Żŕ¤ľ ŕ¤®ŕĄ‡ŕ¤‚ ŕ¤¤ŕĄŕ¤°ŕ¤‚ŕ¤¤ ŕ¤¸ŕ¤ąŕ¤ľŕ¤Żŕ¤¤ŕ¤ľ ŕ¤•ŕĄ€ ŕ¤†ŕ¤µŕ¤¶ŕĄŤŕ¤Żŕ¤•ŕ¤¤ŕ¤ľ ŕ¤ąŕĄ‹ŕ¤¨ŕĄ‡ ŕ¤Şŕ¤° ŕ¤•ŕĄŤŕ¤Żŕ¤ľ ŕ¤•ŕ¤°ŕĄ‡ŕ¤‚.",
-
-        contactsTitle: "ŕ¤‰ŕ¤Şŕ¤ŻŕĄ‹ŕ¤—ŕĄ€ ŕ¤¸ŕ¤‚ŕ¤Şŕ¤°ŕĄŤŕ¤•",
-
-        contactsText:
-          "ŕ¤®ŕ¤ąŕ¤¤ŕĄŤŕ¤µŕ¤ŞŕĄ‚ŕ¤°ŕĄŤŕ¤Ł ŕ¤¸ŕ¤‚ŕ¤¸ŕĄŤŕ¤Ąŕ¤ľŕ¤Źŕ¤‚, ŕ¤†ŕ¤§ŕ¤żŕ¤•ŕ¤ľŕ¤°ŕ¤żŕ¤• ŕ¤µŕĄ‡ŕ¤¬ŕ¤¸ŕ¤ľŕ¤‡ŕ¤ź, ŕ¤«ŕĄ‹ŕ¤¨ ŕ¤¨ŕ¤‚ŕ¤¬ŕ¤° ŕ¤”ŕ¤° ŕ¤‰ŕ¤Şŕ¤ŻŕĄ‹ŕ¤—ŕĄ€ ŕ¤¸ŕ¤‚ŕ¤Şŕ¤°ŕĄŤŕ¤•.",
-
-        policeBtn: "ŕ¤ŞŕĄ‡ŕ¤ś ŕ¤–ŕĄ‹ŕ¤˛ŕĄ‡ŕ¤‚ â†’",
-        governmentBtn: "ŕ¤ŞŕĄ‡ŕ¤ś ŕ¤–ŕĄ‹ŕ¤˛ŕĄ‡ŕ¤‚ â†’",
-        drivingBtn: "ŕ¤ŞŕĄ‡ŕ¤ś ŕ¤–ŕĄ‹ŕ¤˛ŕĄ‡ŕ¤‚ â†’",
-        workBtn: "ŕ¤ŞŕĄ‡ŕ¤ś ŕ¤–ŕĄ‹ŕ¤˛ŕĄ‡ŕ¤‚ â†’",
-        healthBtn: "ŕ¤ŞŕĄ‡ŕ¤ś ŕ¤–ŕĄ‹ŕ¤˛ŕĄ‡ŕ¤‚ â†’",
-        housingBtn: "ŕ¤ŞŕĄ‡ŕ¤ś ŕ¤–ŕĄ‹ŕ¤˛ŕĄ‡ŕ¤‚ â†’",
-        bankBtn: "ŕ¤ŞŕĄ‡ŕ¤ś ŕ¤–ŕĄ‹ŕ¤˛ŕĄ‡ŕ¤‚ â†’",
-        familyBtn: "ŕ¤ŞŕĄ‡ŕ¤ś ŕ¤–ŕĄ‹ŕ¤˛ŕĄ‡ŕ¤‚ â†’",
-        emergencyBtn: "ŕ¤ŞŕĄ‡ŕ¤ś ŕ¤–ŕĄ‹ŕ¤˛ŕĄ‡ŕ¤‚ â†’",
-        contactsBtn: "ŕ¤ŞŕĄ‡ŕ¤ś ŕ¤–ŕĄ‹ŕ¤˛ŕĄ‡ŕ¤‚ â†’",
-
-        connectTitle: "ŕ¤śŕĄŕ¤ˇŕ¤ĽŕĄ‡ŕ¤‚ ŕ¤”ŕ¤° ŕ¤¸ŕ¤‚ŕ¤Şŕ¤°ŕĄŤŕ¤• ŕ¤•ŕ¤°ŕĄ‡ŕ¤‚",
-
-        connectText:
-          "MALAYALIS IN CROATIA ŕ¤•ŕĄ‹ ŕ¤«ŕĄ‰ŕ¤˛ŕĄ‹ ŕ¤•ŕ¤°ŕĄ‡ŕ¤‚ ŕ¤”ŕ¤° ŕ¤ąŕ¤®ŕ¤ľŕ¤°ŕĄ€ ŕ¤•ŕ¤®ŕĄŤŕ¤ŻŕĄŕ¤¨ŕ¤żŕ¤źŕĄ€ ŕ¤¸ŕĄ‡ ŕ¤śŕĄŕ¤ˇŕ¤ĽŕĄ‡ ŕ¤°ŕ¤ąŕĄ‡ŕ¤‚.",
-
-        whatsappText: "WhatsApp",
-        emailText: "Email",
-        websiteText: "Website",
-        instagramText: "Instagram",
-
-        joinButton:
-          "đź“± ŕ¤ąŕ¤®ŕ¤ľŕ¤°ŕĄ‡ WhatsApp Channel ŕ¤¸ŕĄ‡ ŕ¤śŕĄŕ¤ˇŕ¤ĽŕĄ‡ŕ¤‚",
-
-        infoTitle: "ŕ¤®ŕ¤ąŕ¤¤ŕĄŤŕ¤µŕ¤ŞŕĄ‚ŕ¤°ŕĄŤŕ¤Ł",
-
-        infoText:
-          "MALAYALIS IN CROATIA ŕ¤Źŕ¤• ŕ¤¸ŕĄŤŕ¤µŕ¤¤ŕ¤‚ŕ¤¤ŕĄŤŕ¤° ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€ ŕ¤—ŕ¤ľŕ¤‡ŕ¤ˇ ŕ¤ąŕĄŕĄ¤ ŕ¤®ŕ¤ąŕ¤¤ŕĄŤŕ¤µŕ¤ŞŕĄ‚ŕ¤°ŕĄŤŕ¤Ł ŕ¤¨ŕ¤żŕ¤°ŕĄŤŕ¤Łŕ¤Ż ŕ¤˛ŕĄ‡ŕ¤¨ŕĄ‡ ŕ¤¸ŕĄ‡ ŕ¤Şŕ¤ąŕ¤˛ŕĄ‡ ŕ¤¸ŕ¤‚ŕ¤¬ŕ¤‚ŕ¤§ŕ¤żŕ¤¤ ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¶ŕ¤żŕ¤Żŕ¤ľŕ¤ ŕ¤ŞŕĄŤŕ¤°ŕ¤ľŕ¤§ŕ¤żŕ¤•ŕ¤°ŕ¤Ł ŕ¤¸ŕĄ‡ ŕ¤¨ŕ¤µŕĄ€ŕ¤¨ŕ¤¤ŕ¤® ŕ¤†ŕ¤µŕ¤¶ŕĄŤŕ¤Żŕ¤•ŕ¤¤ŕ¤ľŕ¤“ŕ¤‚ ŕ¤•ŕĄ€ ŕ¤śŕ¤ľŕ¤‚ŕ¤š ŕ¤•ŕ¤°ŕĄ‡ŕ¤‚ŕĄ¤",
-
-        footerTagline:
-          "ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¶ŕ¤żŕ¤Żŕ¤ľ ŕ¤®ŕĄ‡ŕ¤‚ ŕ¤°ŕ¤ąŕ¤¨ŕĄ‡ ŕ¤”ŕ¤° ŕ¤•ŕ¤ľŕ¤® ŕ¤•ŕ¤°ŕ¤¨ŕĄ‡ ŕ¤•ŕĄ‡ ŕ¤˛ŕ¤żŕ¤Ź ŕ¤†ŕ¤Şŕ¤•ŕ¤ľ ŕ¤®ŕ¤ľŕ¤°ŕĄŤŕ¤—ŕ¤¦ŕ¤°ŕĄŤŕ¤¶ŕ¤•.",
-
-        verifiedText:
-          "ŕ¤…ŕ¤‚ŕ¤¤ŕ¤żŕ¤® ŕ¤¸ŕ¤¤ŕĄŤŕ¤Żŕ¤ľŕ¤Şŕ¤¨: 7 ŕ¤…ŕ¤•ŕĄŤŕ¤źŕĄ‚ŕ¤¬ŕ¤° 2026"
+        subtitle: "क्रोएशिया सूचना गाइड",
+        hero: "क्रोएशिया में रहने, काम करने और बसने के लिए उपयोगी जानकारी। अपनी भाषा चुनें और नीचे दिए गए गाइड देखें।",
+        noticeTitle: "महत्वपूर्ण सूचना",
+        notice: "यह एक स्वतंत्र सूचना वेबसाइट है। कोई कदम उठाने से पहले संबंधित क्रोएशियाई अधिकारियों से आधिकारिक जानकारी की पुष्टि करें।",
+        guides: "हमारे गाइड देखें",
+        guideDesc: "क्रोएशिया में रोजमर्रा के जीवन के लिए उपयोगी जानकारी।",
+        language: "भाषा:",
+        health: "स्वास्थ्य सेवाएँ",
+        healthDesc: "स्वास्थ्य बीमा, डॉक्टर, अस्पताल और चिकित्सा सेवाएँ।",
+        police: "पुलिस और दस्तावेज़",
+        policeDesc: "निवास, पंजीकरण और महत्वपूर्ण दस्तावेज़।",
+        government: "सरकारी सेवाएँ",
+        governmentDesc: "आधिकारिक पोर्टल और सरकारी सेवाएँ।",
+        driving: "ड्राइविंग और परिवहन",
+        drivingDesc: "ड्राइविंग लाइसेंस, सड़क नियम और परिवहन जानकारी।",
+        work: "काम और रोजगार",
+        workDesc: "रोजगार, अनुबंध और उपयोगी संसाधन।",
+        housing: "आवास",
+        housingDesc: "किराये और रहने की व्यवस्था से जुड़ी जानकारी।",
+        bank: "बैंकिंग और वित्त",
+        bankDesc: "बैंक खाते, भुगतान और वित्तीय सेवाएँ।",
+        family: "परिवार और दैनिक जीवन",
+        familyDesc: "परिवार और रोजमर्रा के जीवन की जानकारी।",
+        emergency: "आपातकालीन जानकारी",
+        emergencyDesc: "आपातकालीन सेवाएँ और महत्वपूर्ण संपर्क।",
+        contacts: "उपयोगी संपर्क",
+        contactsDesc: "आधिकारिक वेबसाइट और संपर्क विवरण।",
+        read: "गाइड पढ़ें →",
+        emergencyHeading: "क्रोएशिया में आपातकालीन नंबर",
+        e112: "सामान्य आपातकाल",
+        e194: "आपातकालीन चिकित्सा सेवा",
+        e192: "पुलिस",
+        e193: "अग्निशमन सेवा",
+        disclaimer: "यह एक स्वतंत्र सूचना वेबसाइट है, आधिकारिक क्रोएशियाई सरकारी वेबसाइट नहीं। जानकारी बदल सकती है। वर्तमान आवश्यकताओं के लिए आधिकारिक स्रोत देखें।"
       },
-
 
       ne: {
-        heroTitle: "ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¸ŕ¤żŕ¤Żŕ¤ľŕ¤®ŕ¤ľ ŕ¤¬ŕ¤¸ŕĄŤŕ¤¨ ŕ¤° ŕ¤•ŕ¤ľŕ¤® ŕ¤—ŕ¤°ŕĄŤŕ¤¨ ŕ¤¤ŕ¤Şŕ¤ľŕ¤ŕ¤‚ŕ¤•ŕĄ‹ ŕ¤®ŕ¤ľŕ¤°ŕĄŤŕ¤—ŕ¤¦ŕ¤°ŕĄŤŕ¤¶ŕ¤•",
-
-        heroText:
-          "ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¸ŕ¤żŕ¤Żŕ¤ľŕ¤®ŕ¤ľ ŕ¤¬ŕ¤¸ŕĄŤŕ¤¨ŕĄ‡ ŕ¤° ŕ¤•ŕ¤ľŕ¤® ŕ¤—ŕ¤°ŕĄŤŕ¤¨ŕĄ‡ ŕ¤µŕ¤żŕ¤¦ŕĄ‡ŕ¤¶ŕĄ€ŕ¤ąŕ¤°ŕĄ‚ŕ¤•ŕ¤ľ ŕ¤˛ŕ¤ľŕ¤—ŕ¤ż ŕ¤¸ŕ¤°ŕ¤˛ ŕ¤° ŕ¤‰ŕ¤Şŕ¤ŻŕĄ‹ŕ¤—ŕĄ€ ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€.",
-
-        guideTitle: "ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¸ŕ¤żŕ¤Żŕ¤ľ ŕ¤—ŕ¤ľŕ¤‡ŕ¤ˇ",
-
-        guideText:
-          "ŕ¤‰ŕ¤Şŕ¤ŻŕĄ‹ŕ¤—ŕĄ€ ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€, ŕ¤†ŕ¤§ŕ¤żŕ¤•ŕ¤ľŕ¤°ŕ¤żŕ¤• ŕ¤˛ŕ¤żŕ¤™ŕĄŤŕ¤• ŕ¤° ŕ¤µŕĄŤŕ¤Żŕ¤ľŕ¤µŕ¤ąŕ¤ľŕ¤°ŕ¤żŕ¤• ŕ¤®ŕ¤ľŕ¤°ŕĄŤŕ¤—ŕ¤¦ŕ¤°ŕĄŤŕ¤¶ŕ¤¨ŕ¤•ŕ¤ľ ŕ¤˛ŕ¤ľŕ¤—ŕ¤ż ŕ¤µŕ¤żŕ¤·ŕ¤Ż ŕ¤›ŕ¤ľŕ¤¨ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ.",
-
-        policeTitle: "ŕ¤ŞŕĄŤŕ¤°ŕ¤ąŕ¤°ŕĄ€ ŕ¤° ŕ¤•ŕ¤ľŕ¤—ŕ¤śŕ¤ľŕ¤¤",
-
-        policeText:
-          "ŕ¤ŞŕĄŤŕ¤°ŕ¤ąŕ¤°ŕĄ€ ŕ¤ŞŕĄŤŕ¤°ŕ¤•ŕĄŤŕ¤°ŕ¤żŕ¤Żŕ¤ľ, ŕ¤¬ŕ¤¸ŕĄ‹ŕ¤¬ŕ¤ľŕ¤¸ ŕ¤¦ŕ¤°ŕĄŤŕ¤¤ŕ¤ľ, ŕ¤ŞŕĄŤŕ¤°ŕ¤®ŕ¤ľŕ¤Łŕ¤Şŕ¤¤ŕĄŤŕ¤° ŕ¤° ŕ¤®ŕ¤ąŕ¤¤ŕĄŤŕ¤µŕ¤ŞŕĄ‚ŕ¤°ŕĄŤŕ¤Ł ŕ¤•ŕ¤ľŕ¤—ŕ¤śŕ¤ľŕ¤¤.",
-
-        governmentTitle: "ŕ¤¸ŕ¤°ŕ¤•ŕ¤ľŕ¤°",
-
-        governmentText:
-          "ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¸ŕ¤żŕ¤Żŕ¤ľŕ¤˛ŕĄ€ ŕ¤¸ŕ¤°ŕ¤•ŕ¤ľŕ¤°ŕĄ€ ŕ¤¸ŕĄ‡ŕ¤µŕ¤ľ, e-GraÄ‘ani, ŕ¤•ŕ¤° ŕ¤° ŕ¤°ŕĄ‹ŕ¤śŕ¤—ŕ¤ľŕ¤° ŕ¤¸ŕĄ‡ŕ¤µŕ¤ľŕ¤ąŕ¤°ŕĄ‚.",
-
-        drivingTitle: "ŕ¤ˇŕĄŤŕ¤°ŕ¤ľŕ¤‡ŕ¤­ŕ¤żŕ¤™",
-
-        drivingText:
-          "ŕ¤ˇŕĄŤŕ¤°ŕ¤ľŕ¤‡ŕ¤­ŕ¤żŕ¤™ ŕ¤˛ŕ¤ľŕ¤‡ŕ¤¸ŕĄ‡ŕ¤¨ŕĄŤŕ¤¸, ŕ¤µŕ¤żŕ¤¦ŕĄ‡ŕ¤¶ŕĄ€ ŕ¤˛ŕ¤ľŕ¤‡ŕ¤¸ŕĄ‡ŕ¤¨ŕĄŤŕ¤¸ ŕ¤¨ŕ¤żŕ¤Żŕ¤®, ŕ¤•ŕ¤ľŕ¤—ŕ¤śŕ¤ľŕ¤¤ ŕ¤° MUP ŕ¤ŞŕĄŤŕ¤°ŕ¤•ŕĄŤŕ¤°ŕ¤żŕ¤Żŕ¤ľ.",
-
-        workTitle: "ŕ¤•ŕ¤ľŕ¤®",
-
-        workText:
-          "ŕ¤µŕ¤°ŕĄŤŕ¤• ŕ¤Şŕ¤°ŕ¤®ŕ¤żŕ¤ź, ŕ¤°ŕĄ‹ŕ¤śŕ¤—ŕ¤ľŕ¤°, ŕ¤¸ŕ¤®ŕĄŤŕ¤ťŕĄŚŕ¤¤ŕ¤ľ, ŕ¤•ŕ¤ľŕ¤®ŕ¤¦ŕ¤ľŕ¤° ŕ¤…ŕ¤§ŕ¤żŕ¤•ŕ¤ľŕ¤° ŕ¤° ŕ¤°ŕĄ‹ŕ¤śŕ¤—ŕ¤ľŕ¤° ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€.",
-
-        healthTitle: "ŕ¤¸ŕĄŤŕ¤µŕ¤ľŕ¤¸ŕĄŤŕ¤ĄŕĄŤŕ¤Ż",
-
-        healthText:
-          "ŕ¤¸ŕĄŤŕ¤µŕ¤ľŕ¤¸ŕĄŤŕ¤ĄŕĄŤŕ¤Ż ŕ¤¬ŕĄ€ŕ¤®ŕ¤ľ, ŕ¤ˇŕ¤ľŕ¤•ŕĄŤŕ¤źŕ¤°, ŕ¤…ŕ¤¸ŕĄŤŕ¤Şŕ¤¤ŕ¤ľŕ¤˛ ŕ¤° ŕ¤†ŕ¤Şŕ¤¤ŕ¤•ŕ¤ľŕ¤˛ŕĄ€ŕ¤¨ ŕ¤¸ŕĄŤŕ¤µŕ¤ľŕ¤¸ŕĄŤŕ¤ĄŕĄŤŕ¤Ż ŕ¤¸ŕĄ‡ŕ¤µŕ¤ľ.",
-
-        housingTitle: "ŕ¤†ŕ¤µŕ¤ľŕ¤¸",
-
-        housingText:
-          "ŕ¤ŕ¤° ŕ¤­ŕ¤ľŕ¤ˇŕ¤ľ, ŕ¤¸ŕ¤®ŕĄŤŕ¤ťŕĄŚŕ¤¤ŕ¤ľ, ŕ¤ˇŕ¤żŕ¤ŞŕĄ‹ŕ¤śŕ¤żŕ¤ź, ŕ¤¦ŕ¤°ŕĄŤŕ¤¤ŕ¤ľ ŕ¤° ŕ¤†ŕ¤µŕ¤ľŕ¤¸ ŕ¤¸ŕ¤®ŕĄŤŕ¤¬ŕ¤¨ŕĄŤŕ¤§ŕĄ€ ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€.",
-
-        bankTitle: "ŕ¤¬ŕĄŕ¤‚ŕ¤•",
-
-        bankText:
-          "ŕ¤¬ŕĄŕ¤‚ŕ¤• ŕ¤–ŕ¤ľŕ¤¤ŕ¤ľ, ŕ¤­ŕĄŕ¤•ŕĄŤŕ¤¤ŕ¤ľŕ¤¨ŕĄ€, ŕ¤•ŕ¤ľŕ¤°ŕĄŤŕ¤ˇ, ŕ¤…ŕ¤¨ŕ¤˛ŕ¤ľŕ¤‡ŕ¤¨ ŕ¤¬ŕĄŕ¤‚ŕ¤•ŕ¤żŕ¤™ ŕ¤° ŕ¤¬ŕĄŕ¤‚ŕ¤•ŕ¤żŕ¤™ ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€.",
-
-        familyTitle: "ŕ¤Şŕ¤°ŕ¤żŕ¤µŕ¤ľŕ¤°",
-
-        familyText:
-          "ŕ¤Şŕ¤°ŕ¤żŕ¤µŕ¤ľŕ¤°ŕ¤•ŕĄ‹ ŕ¤¬ŕ¤¸ŕĄ‹ŕ¤¬ŕ¤ľŕ¤¸, ŕ¤¬ŕ¤šŕĄŤŕ¤šŕ¤ľ, ŕ¤µŕ¤żŕ¤¦ŕĄŤŕ¤Żŕ¤ľŕ¤˛ŕ¤Ż, ŕ¤Şŕ¤°ŕ¤żŕ¤µŕ¤ľŕ¤°ŕ¤•ŕ¤ľ ŕ¤•ŕ¤ľŕ¤—ŕ¤śŕ¤ľŕ¤¤ ŕ¤° ŕ¤¸ŕĄ‡ŕ¤µŕ¤ľŕ¤ąŕ¤°ŕĄ‚.",
-
-        emergencyTitle: "ŕ¤†ŕ¤Şŕ¤¤ŕ¤•ŕ¤ľŕ¤˛",
-
-        emergencyText:
-          "ŕ¤†ŕ¤Şŕ¤¤ŕ¤•ŕ¤ľŕ¤˛ŕĄ€ŕ¤¨ ŕ¤¨ŕ¤®ŕĄŤŕ¤¬ŕ¤° ŕ¤° ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¸ŕ¤żŕ¤Żŕ¤ľŕ¤®ŕ¤ľ ŕ¤¤ŕĄŕ¤°ŕĄŕ¤¨ŕĄŤŕ¤¤ ŕ¤¸ŕ¤ąŕ¤ľŕ¤Żŕ¤¤ŕ¤ľ ŕ¤šŕ¤ľŕ¤ąŕ¤żŕ¤ŕ¤¦ŕ¤ľ ŕ¤•ŕĄ‡ ŕ¤—ŕ¤°ŕĄŤŕ¤¨ŕĄ‡.",
-
-        contactsTitle: "ŕ¤‰ŕ¤Şŕ¤ŻŕĄ‹ŕ¤—ŕĄ€ ŕ¤¸ŕ¤®ŕĄŤŕ¤Şŕ¤°ŕĄŤŕ¤•",
-
-        contactsText:
-          "ŕ¤®ŕ¤ąŕ¤¤ŕĄŤŕ¤µŕ¤ŞŕĄ‚ŕ¤°ŕĄŤŕ¤Ł ŕ¤¸ŕ¤‚ŕ¤¸ŕĄŤŕ¤Ąŕ¤ľ, ŕ¤†ŕ¤§ŕ¤żŕ¤•ŕ¤ľŕ¤°ŕ¤żŕ¤• ŕ¤µŕĄ‡ŕ¤¬ŕ¤¸ŕ¤ľŕ¤‡ŕ¤ź, ŕ¤«ŕĄ‹ŕ¤¨ ŕ¤¨ŕ¤®ŕĄŤŕ¤¬ŕ¤° ŕ¤° ŕ¤‰ŕ¤Şŕ¤ŻŕĄ‹ŕ¤—ŕĄ€ ŕ¤¸ŕ¤®ŕĄŤŕ¤Şŕ¤°ŕĄŤŕ¤•.",
-
-        policeBtn: "ŕ¤ŞŕĄŕ¤·ŕĄŤŕ¤  ŕ¤–ŕĄ‹ŕ¤˛ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ â†’",
-        governmentBtn: "ŕ¤ŞŕĄŕ¤·ŕĄŤŕ¤  ŕ¤–ŕĄ‹ŕ¤˛ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ â†’",
-        drivingBtn: "ŕ¤ŞŕĄŕ¤·ŕĄŤŕ¤  ŕ¤–ŕĄ‹ŕ¤˛ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ â†’",
-        workBtn: "ŕ¤ŞŕĄŕ¤·ŕĄŤŕ¤  ŕ¤–ŕĄ‹ŕ¤˛ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ â†’",
-        healthBtn: "ŕ¤ŞŕĄŕ¤·ŕĄŤŕ¤  ŕ¤–ŕĄ‹ŕ¤˛ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ â†’",
-        housingBtn: "ŕ¤ŞŕĄŕ¤·ŕĄŤŕ¤  ŕ¤–ŕĄ‹ŕ¤˛ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ â†’",
-        bankBtn: "ŕ¤ŞŕĄŕ¤·ŕĄŤŕ¤  ŕ¤–ŕĄ‹ŕ¤˛ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ â†’",
-        familyBtn: "ŕ¤ŞŕĄŕ¤·ŕĄŤŕ¤  ŕ¤–ŕĄ‹ŕ¤˛ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ â†’",
-        emergencyBtn: "ŕ¤ŞŕĄŕ¤·ŕĄŤŕ¤  ŕ¤–ŕĄ‹ŕ¤˛ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ â†’",
-        contactsBtn: "ŕ¤ŞŕĄŕ¤·ŕĄŤŕ¤  ŕ¤–ŕĄ‹ŕ¤˛ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ â†’",
-
-        connectTitle: "ŕ¤śŕĄ‹ŕ¤ˇŕ¤żŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ ŕ¤° ŕ¤¸ŕ¤®ŕĄŤŕ¤Şŕ¤°ŕĄŤŕ¤• ŕ¤—ŕ¤°ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ",
-
-        connectText:
-          "MALAYALIS IN CROATIA ŕ¤˛ŕ¤ľŕ¤ ŕ¤«ŕ¤˛ŕĄ‹ ŕ¤—ŕ¤°ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ ŕ¤° ŕ¤ąŕ¤ľŕ¤®ŕĄŤŕ¤°ŕĄ‹ ŕ¤¸ŕ¤®ŕĄŕ¤¦ŕ¤ľŕ¤Żŕ¤¸ŕ¤ŕ¤— ŕ¤śŕĄ‹ŕ¤ˇŕ¤żŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ.",
-
-        whatsappText: "WhatsApp",
-        emailText: "Email",
-        websiteText: "Website",
-        instagramText: "Instagram",
-
-        joinButton:
-          "đź“± ŕ¤ąŕ¤ľŕ¤®ŕĄŤŕ¤°ŕĄ‹ WhatsApp Channel ŕ¤®ŕ¤ľ ŕ¤śŕĄ‹ŕ¤ˇŕ¤żŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ",
-
-        infoTitle: "ŕ¤®ŕ¤ąŕ¤¤ŕĄŤŕ¤µŕ¤ŞŕĄ‚ŕ¤°ŕĄŤŕ¤Ł",
-
-        infoText:
-          "MALAYALIS IN CROATIA ŕ¤¸ŕĄŤŕ¤µŕ¤¤ŕ¤¨ŕĄŤŕ¤¤ŕĄŤŕ¤° ŕ¤śŕ¤ľŕ¤¨ŕ¤•ŕ¤ľŕ¤°ŕĄ€ ŕ¤—ŕ¤ľŕ¤‡ŕ¤ˇ ŕ¤ąŕĄ‹ŕĄ¤ ŕ¤®ŕ¤ąŕ¤¤ŕĄŤŕ¤µŕ¤ŞŕĄ‚ŕ¤°ŕĄŤŕ¤Ł ŕ¤¨ŕ¤żŕ¤°ŕĄŤŕ¤Łŕ¤Ż ŕ¤˛ŕ¤żŕ¤¨ŕĄŕ¤…ŕ¤ŕ¤ż ŕ¤¸ŕ¤®ŕĄŤŕ¤¬ŕ¤¨ŕĄŤŕ¤§ŕ¤żŕ¤¤ ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¸ŕ¤żŕ¤Żŕ¤ľŕ¤˛ŕĄ€ ŕ¤…ŕ¤§ŕ¤żŕ¤•ŕ¤ľŕ¤°ŕĄ€ŕ¤¸ŕ¤ŕ¤— ŕ¤¨ŕ¤µŕĄ€ŕ¤¨ŕ¤¤ŕ¤® ŕ¤†ŕ¤µŕ¤¶ŕĄŤŕ¤Żŕ¤•ŕ¤¤ŕ¤ľŕ¤ąŕ¤°ŕĄ‚ ŕ¤śŕ¤ľŕ¤ŕ¤š ŕ¤—ŕ¤°ŕĄŤŕ¤¨ŕĄŕ¤ąŕĄ‹ŕ¤¸ŕĄŤ.",
-
-        footerTagline:
-          "ŕ¤•ŕĄŤŕ¤°ŕĄ‹ŕ¤Źŕ¤¸ŕ¤żŕ¤Żŕ¤ľŕ¤®ŕ¤ľ ŕ¤¬ŕ¤¸ŕĄŤŕ¤¨ ŕ¤° ŕ¤•ŕ¤ľŕ¤® ŕ¤—ŕ¤°ŕĄŤŕ¤¨ ŕ¤¤ŕ¤Şŕ¤ľŕ¤ŕ¤‚ŕ¤•ŕĄ‹ ŕ¤®ŕ¤ľŕ¤°ŕĄŤŕ¤—ŕ¤¦ŕ¤°ŕĄŤŕ¤¶ŕ¤•.",
-
-        verifiedText:
-          "ŕ¤…ŕ¤¨ŕĄŤŕ¤¤ŕ¤żŕ¤® ŕ¤śŕ¤ľŕ¤ŕ¤š: ŕĄ­ ŕ¤…ŕ¤•ŕĄŤŕ¤źŕĄ‹ŕ¤¬ŕ¤° ŕĄ¨ŕĄ¦ŕĄ¨ŕĄ¬"
+        subtitle: "क्रोएसिया जानकारी गाइड",
+        hero: "क्रोएसियामा बस्न, काम गर्न र जीवन सुरु गर्न उपयोगी जानकारी। आफ्नो भाषा छानेर तलका गाइड हेर्नुहोस्।",
+        noticeTitle: "महत्त्वपूर्ण सूचना",
+        notice: "यो स्वतन्त्र जानकारी वेबसाइट हो। कुनै कदम चाल्नुअघि सम्बन्धित क्रोएसियाली निकायबाट आधिकारिक जानकारी पुष्टि गर्नुहोस्।",
+        guides: "हाम्रा गाइडहरू",
+        guideDesc: "क्रोएसियाको दैनिक जीवनका लागि उपयोगी जानकारी।",
+        language: "भाषा:",
+        health: "स्वास्थ्य सेवा",
+        healthDesc: "स्वास्थ्य बीमा, डाक्टर, अस्पताल र चिकित्सा सेवा।",
+        police: "प्रहरी र कागजात",
+        policeDesc: "बसोबास, दर्ता र महत्त्वपूर्ण कागजात।",
+        government: "सरकारी सेवा",
+        governmentDesc: "आधिकारिक पोर्टल र सार्वजनिक सेवाहरू।",
+        driving: "सवारी र यातायात",
+        drivingDesc: "सवारी चालक अनुमतिपत्र, सडक नियम र यातायात।",
+        work: "काम र रोजगारी",
+        workDesc: "रोजगारी, सम्झौता र उपयोगी स्रोतहरू।",
+        housing: "घर र आवास",
+        housingDesc: "घर भाडा र आवाससम्बन्धी जानकारी।",
+        bank: "बैंकिङ र वित्त",
+        bankDesc: "बैंक खाता, भुक्तानी र वित्तीय सेवाहरू।",
+        family: "परिवार र दैनिक जीवन",
+        familyDesc: "परिवार र दैनिक जीवनसम्बन्धी जानकारी।",
+        emergency: "आपतकालीन जानकारी",
+        emergencyDesc: "आपतकालीन सेवा र महत्त्वपूर्ण सम्पर्क।",
+        contacts: "उपयोगी सम्पर्क",
+        contactsDesc: "आधिकारिक वेबसाइट र सम्पर्क विवरण।",
+        read: "गाइड हेर्नुहोस् →",
+        emergencyHeading: "क्रोएसियाका आपतकालीन नम्बरहरू",
+        e112: "सामान्य आपतकाल",
+        e194: "आपतकालीन चिकित्सा सेवा",
+        e192: "प्रहरी",
+        e193: "दमकल सेवा",
+        disclaimer: "यो स्वतन्त्र जानकारी वेबसाइट हो, आधिकारिक क्रोएसियाली सरकारी वेबसाइट होइन। जानकारी परिवर्तन हुन सक्छ। हालका आवश्यकताका लागि आधिकारिक स्रोत हेर्नुहोस्।"
       },
-
 
       ta: {
-        heroTitle: "ŕ®•ŕŻŕ®°ŕŻ‹ŕ®·ŕ®żŕ®Żŕ®ľŕ®µŕ®żŕ®˛ŕŻŤ ŕ®µŕ®ľŕ®´ŕ®µŕŻŕ®®ŕŻŤ ŕ®µŕŻ‡ŕ®˛ŕŻ ŕ®šŕŻ†ŕ®ŻŕŻŤŕ®Żŕ®µŕŻŕ®®ŕŻŤ ŕ®‰ŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ ŕ®µŕ®´ŕ®żŕ®•ŕ®ľŕ®źŕŻŤŕ®źŕ®ż",
-
-        heroText:
-          "ŕ®•ŕŻŕ®°ŕŻ‹ŕ®·ŕ®żŕ®Żŕ®ľŕ®µŕ®żŕ®˛ŕŻŤ ŕ®µŕ®šŕ®żŕ®•ŕŻŤŕ®•ŕŻŕ®®ŕŻŤ ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®µŕŻ‡ŕ®˛ŕŻ ŕ®šŕŻ†ŕ®ŻŕŻŤŕ®ŻŕŻŕ®®ŕŻŤ ŕ®µŕŻ†ŕ®łŕ®żŕ®¨ŕ®ľŕ®źŕŻŤŕ®źŕ®µŕ®°ŕŻŤŕ®•ŕ®łŕŻŕ®•ŕŻŤŕ®•ŕ®ľŕ®© ŕ®Žŕ®łŕ®żŕ®Ż ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®Şŕ®Żŕ®©ŕŻŕ®łŕŻŤŕ®ł ŕ®¤ŕ®•ŕ®µŕ®˛ŕŻŤŕ®•ŕ®łŕŻŤ.",
-
-        guideTitle: "ŕ®•ŕŻŕ®°ŕŻ‹ŕ®·ŕ®żŕ®Żŕ®ľ ŕ®µŕ®´ŕ®żŕ®•ŕ®ľŕ®źŕŻŤŕ®źŕ®ż",
-
-        guideText:
-          "ŕ®Şŕ®Żŕ®©ŕŻŕ®łŕŻŤŕ®ł ŕ®¤ŕ®•ŕ®µŕ®˛ŕŻŤŕ®•ŕ®łŕŻŤ, ŕ®…ŕ®¤ŕ®żŕ®•ŕ®ľŕ®°ŕ®ŞŕŻŤŕ®ŞŕŻ‚ŕ®°ŕŻŤŕ®µ ŕ®‡ŕ®ŁŕŻŕ®ŞŕŻŤŕ®ŞŕŻŕ®•ŕ®łŕŻŤ ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®¨ŕ®źŕŻŕ®®ŕŻŕ®±ŕŻ ŕ®µŕ®´ŕ®żŕ®•ŕ®ľŕ®źŕŻŤŕ®źŕŻŕ®¤ŕ®˛ŕŻŤŕ®•ŕ®łŕŻŕ®ŞŕŻŤ ŕ®ŞŕŻ†ŕ®± ŕ®’ŕ®°ŕŻ ŕ®¤ŕ®˛ŕŻŕ®ŞŕŻŤŕ®ŞŕŻŕ®¤ŕŻŤ ŕ®¤ŕŻ‡ŕ®°ŕŻŤŕ®¨ŕŻŤŕ®¤ŕŻ†ŕ®źŕŻŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ.",
-
-        policeTitle: "ŕ®•ŕ®ľŕ®µŕ®˛ŕŻŤŕ®¤ŕŻŕ®±ŕŻ & ŕ®†ŕ®µŕ®Łŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ",
-
-        policeText:
-          "ŕ®•ŕ®ľŕ®µŕ®˛ŕŻŤŕ®¤ŕŻŕ®±ŕŻ ŕ®¨ŕ®źŕŻŕ®®ŕŻŕ®±ŕŻŕ®•ŕ®łŕŻŤ, ŕ®•ŕŻŕ®źŕ®żŕ®Żŕ®żŕ®°ŕŻŕ®ŞŕŻŤŕ®ŞŕŻ ŕ®Şŕ®¤ŕ®żŕ®µŕŻ, ŕ®šŕ®ľŕ®©ŕŻŤŕ®±ŕ®żŕ®¤ŕ®´ŕŻŤŕ®•ŕ®łŕŻŤ ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®®ŕŻŕ®•ŕŻŤŕ®•ŕ®żŕ®Ż ŕ®†ŕ®µŕ®Łŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ.",
-
-        governmentTitle: "ŕ®…ŕ®°ŕ®šŕŻ",
-
-        governmentText:
-          "ŕ®•ŕŻŕ®°ŕŻ‹ŕ®·ŕ®żŕ®Ż ŕ®…ŕ®°ŕ®šŕŻ ŕ®šŕŻ‡ŕ®µŕŻŕ®•ŕ®łŕŻŤ, e-GraÄ‘ani, ŕ®µŕ®°ŕ®ż ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®µŕŻ‡ŕ®˛ŕŻŕ®µŕ®ľŕ®ŻŕŻŤŕ®ŞŕŻŤŕ®ŞŕŻ ŕ®šŕŻ‡ŕ®µŕŻŕ®•ŕ®łŕŻŤ.",
-
-        drivingTitle: "ŕ®µŕ®ľŕ®•ŕ®©ŕ®®ŕŻŤ ŕ®“ŕ®źŕŻŤŕ®źŕŻŕ®¤ŕ®˛ŕŻŤ",
-
-        drivingText:
-          "ŕ®“ŕ®źŕŻŤŕ®źŕŻŕ®¨ŕ®°ŕŻŤ ŕ®‰ŕ®°ŕ®żŕ®®ŕ®®ŕŻŤ, ŕ®µŕŻ†ŕ®łŕ®żŕ®¨ŕ®ľŕ®źŕŻŤŕ®źŕŻ ŕ®‰ŕ®°ŕ®żŕ®® ŕ®µŕ®żŕ®¤ŕ®żŕ®•ŕ®łŕŻŤ, ŕ®†ŕ®µŕ®Łŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ MUP ŕ®¨ŕ®źŕŻŕ®®ŕŻŕ®±ŕŻŕ®•ŕ®łŕŻŤ.",
-
-        workTitle: "ŕ®µŕŻ‡ŕ®˛ŕŻ",
-
-        workText:
-          "ŕ®µŕŻ‡ŕ®˛ŕŻ ŕ®…ŕ®©ŕŻŕ®®ŕ®¤ŕ®ż, ŕ®µŕŻ‡ŕ®˛ŕŻŕ®µŕ®ľŕ®ŻŕŻŤŕ®ŞŕŻŤŕ®ŞŕŻ, ŕ®’ŕ®ŞŕŻŤŕ®Şŕ®¨ŕŻŤŕ®¤ŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®¤ŕŻŠŕ®´ŕ®żŕ®˛ŕ®ľŕ®łŕ®°ŕŻŤ ŕ®‰ŕ®°ŕ®żŕ®®ŕŻŕ®•ŕ®łŕŻŤ.",
-
-        healthTitle: "ŕ®šŕŻŕ®•ŕ®ľŕ®¤ŕ®ľŕ®°ŕ®®ŕŻŤ",
-
-        healthText:
-          "ŕ®šŕŻŕ®•ŕ®ľŕ®¤ŕ®ľŕ®° ŕ®•ŕ®ľŕ®ŞŕŻŤŕ®ŞŕŻ€ŕ®źŕŻ, ŕ®®ŕ®°ŕŻŕ®¤ŕŻŤŕ®¤ŕŻŕ®µŕ®°ŕŻŤŕ®•ŕ®łŕŻŤ, ŕ®®ŕ®°ŕŻŕ®¤ŕŻŤŕ®¤ŕŻŕ®µŕ®®ŕ®©ŕŻŕ®•ŕ®łŕŻŤ ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®…ŕ®µŕ®šŕ®° ŕ®šŕŻŕ®•ŕ®ľŕ®¤ŕ®ľŕ®° ŕ®šŕŻ‡ŕ®µŕŻŕ®•ŕ®łŕŻŤ.",
-
-        housingTitle: "ŕ®µŕŻ€ŕ®źŕŻ",
-
-        housingText:
-          "ŕ®µŕŻ€ŕ®źŕŻ ŕ®µŕ®ľŕ®źŕ®•ŕŻ, ŕ®’ŕ®ŞŕŻŤŕ®Şŕ®¨ŕŻŤŕ®¤ŕ®®ŕŻŤ, ŕ®®ŕŻŕ®©ŕŻŤŕ®Şŕ®Łŕ®®ŕŻŤ, ŕ®Şŕ®¤ŕ®żŕ®µŕŻ ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®µŕŻ€ŕ®źŕŻŤŕ®źŕŻ ŕ®¤ŕ®•ŕ®µŕ®˛ŕŻŤŕ®•ŕ®łŕŻŤ.",
-
-        bankTitle: "ŕ®µŕ®™ŕŻŤŕ®•ŕ®ż",
-
-        bankText:
-          "ŕ®µŕ®™ŕŻŤŕ®•ŕ®ż ŕ®•ŕ®Łŕ®•ŕŻŤŕ®•ŕŻŕ®•ŕ®łŕŻŤ, ŕ®Şŕ®Łŕ®ŞŕŻŤŕ®Şŕ®°ŕ®żŕ®µŕ®°ŕŻŤŕ®¤ŕŻŤŕ®¤ŕ®©ŕŻ, ŕ®•ŕ®ľŕ®°ŕŻŤŕ®źŕŻŕ®•ŕ®łŕŻŤ ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®†ŕ®©ŕŻŤŕ®˛ŕŻŕ®©ŕŻŤ ŕ®µŕ®™ŕŻŤŕ®•ŕ®ż.",
-
-        familyTitle: "ŕ®•ŕŻŕ®źŕŻŕ®®ŕŻŤŕ®Şŕ®®ŕŻŤ",
-
-        familyText:
-          "ŕ®•ŕŻŕ®źŕŻŕ®®ŕŻŤŕ®Ş ŕ®•ŕŻŕ®źŕ®żŕ®Żŕ®żŕ®°ŕŻŕ®ŞŕŻŤŕ®ŞŕŻ, ŕ®•ŕŻŕ®´ŕ®¨ŕŻŤŕ®¤ŕŻŕ®•ŕ®łŕŻŤ, ŕ®Şŕ®łŕŻŤŕ®łŕ®ż ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®•ŕŻŕ®źŕŻŕ®®ŕŻŤŕ®Ş ŕ®†ŕ®µŕ®Łŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ.",
-
-        emergencyTitle: "ŕ®…ŕ®µŕ®šŕ®°ŕ®®ŕŻŤ",
-
-        emergencyText:
-          "ŕ®…ŕ®µŕ®šŕ®° ŕ®Žŕ®ŁŕŻŤŕ®•ŕ®łŕŻŤ ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®‰ŕ®źŕ®©ŕ®źŕ®ż ŕ®‰ŕ®¤ŕ®µŕ®ż ŕ®¤ŕŻ‡ŕ®µŕŻŕ®ŞŕŻŤŕ®Şŕ®źŕŻŤŕ®źŕ®ľŕ®˛ŕŻŤ ŕ®Žŕ®©ŕŻŤŕ®© ŕ®šŕŻ†ŕ®ŻŕŻŤŕ®Ż ŕ®µŕŻ‡ŕ®ŁŕŻŤŕ®źŕŻŕ®®ŕŻŤ.",
-
-        contactsTitle: "ŕ®Şŕ®Żŕ®©ŕŻŕ®łŕŻŤŕ®ł ŕ®¤ŕŻŠŕ®źŕ®°ŕŻŤŕ®ŞŕŻŕ®•ŕ®łŕŻŤ",
-
-        contactsText:
-          "ŕ®®ŕŻŕ®•ŕŻŤŕ®•ŕ®żŕ®Ż ŕ®¨ŕ®żŕ®±ŕŻŕ®µŕ®©ŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ, ŕ®…ŕ®¤ŕ®żŕ®•ŕ®ľŕ®°ŕ®ŞŕŻŤŕ®ŞŕŻ‚ŕ®°ŕŻŤŕ®µ ŕ®‡ŕ®ŁŕŻŕ®Żŕ®¤ŕ®łŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ, ŕ®¤ŕŻŠŕ®˛ŕŻŕ®ŞŕŻ‡ŕ®šŕ®ż ŕ®Žŕ®ŁŕŻŤŕ®•ŕ®łŕŻŤ ŕ®®ŕ®±ŕŻŤŕ®±ŕŻŕ®®ŕŻŤ ŕ®¤ŕŻŠŕ®źŕ®°ŕŻŤŕ®ŞŕŻŕ®•ŕ®łŕŻŤ.",
-
-        policeBtn: "ŕ®Şŕ®•ŕŻŤŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®¤ŕŻŤ ŕ®¤ŕ®żŕ®±ŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ â†’",
-        governmentBtn: "ŕ®Şŕ®•ŕŻŤŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®¤ŕŻŤ ŕ®¤ŕ®żŕ®±ŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ â†’",
-        drivingBtn: "ŕ®Şŕ®•ŕŻŤŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®¤ŕŻŤ ŕ®¤ŕ®żŕ®±ŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ â†’",
-        workBtn: "ŕ®Şŕ®•ŕŻŤŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®¤ŕŻŤ ŕ®¤ŕ®żŕ®±ŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ â†’",
-        healthBtn: "ŕ®Şŕ®•ŕŻŤŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®¤ŕŻŤ ŕ®¤ŕ®żŕ®±ŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ â†’",
-        housingBtn: "ŕ®Şŕ®•ŕŻŤŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®¤ŕŻŤ ŕ®¤ŕ®żŕ®±ŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ â†’",
-        bankBtn: "ŕ®Şŕ®•ŕŻŤŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®¤ŕŻŤ ŕ®¤ŕ®żŕ®±ŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ â†’",
-        familyBtn: "ŕ®Şŕ®•ŕŻŤŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®¤ŕŻŤ ŕ®¤ŕ®żŕ®±ŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ â†’",
-        emergencyBtn: "ŕ®Şŕ®•ŕŻŤŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®¤ŕŻŤ ŕ®¤ŕ®żŕ®±ŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ â†’",
-        contactsBtn: "ŕ®Şŕ®•ŕŻŤŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®¤ŕŻŤ ŕ®¤ŕ®żŕ®±ŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ â†’",
-
-        connectTitle: "ŕ®‡ŕ®ŁŕŻŕ®¨ŕŻŤŕ®¤ŕŻ ŕ®¤ŕŻŠŕ®źŕ®°ŕŻŤŕ®Şŕ®żŕ®˛ŕŻŤ ŕ®‡ŕ®°ŕŻŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ",
-
-        connectText:
-          "MALAYALIS IN CROATIA-ŕ®µŕŻ ŕ®Şŕ®żŕ®©ŕŻŤŕ®¤ŕŻŠŕ®źŕ®°ŕŻŤŕ®¨ŕŻŤŕ®¤ŕŻ ŕ®Žŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ ŕ®šŕ®®ŕŻ‚ŕ®•ŕ®¤ŕŻŤŕ®¤ŕŻŕ®źŕ®©ŕŻŤ ŕ®‡ŕ®ŁŕŻŕ®¨ŕŻŤŕ®¤ŕ®żŕ®°ŕŻŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ.",
-
-        whatsappText: "WhatsApp",
-        emailText: "Email",
-        websiteText: "Website",
-        instagramText: "Instagram",
-
-        joinButton:
-          "đź“± ŕ®Žŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ WhatsApp Channel-ŕ®˛ŕŻŤ ŕ®šŕŻ‡ŕ®°ŕŻŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ",
-
-        infoTitle: "ŕ®®ŕŻŕ®•ŕŻŤŕ®•ŕ®żŕ®Żŕ®®ŕŻŤ",
-
-        infoText:
-          "MALAYALIS IN CROATIA ŕ®’ŕ®°ŕŻ ŕ®šŕŻŕ®Żŕ®ľŕ®¤ŕŻ€ŕ®© ŕ®¤ŕ®•ŕ®µŕ®˛ŕŻŤ ŕ®µŕ®´ŕ®żŕ®•ŕ®ľŕ®źŕŻŤŕ®źŕ®ż. ŕ®®ŕŻŕ®•ŕŻŤŕ®•ŕ®żŕ®Ż ŕ®®ŕŻŕ®źŕ®żŕ®µŕŻŕ®•ŕ®łŕŻ ŕ®Žŕ®źŕŻŕ®ŞŕŻŤŕ®Şŕ®¤ŕ®±ŕŻŤŕ®•ŕŻ ŕ®®ŕŻŕ®©ŕŻŤ ŕ®šŕ®®ŕŻŤŕ®Şŕ®¨ŕŻŤŕ®¤ŕ®ŞŕŻŤŕ®Şŕ®źŕŻŤŕ®ź ŕ®•ŕŻŕ®°ŕŻ‹ŕ®·ŕ®żŕ®Ż ŕ®…ŕ®¤ŕ®żŕ®•ŕ®ľŕ®°ŕ®żŕ®Żŕ®żŕ®źŕ®®ŕŻŤ ŕ®šŕ®®ŕŻ€ŕ®Şŕ®¤ŕŻŤŕ®¤ŕ®żŕ®Ż ŕ®¤ŕŻ‡ŕ®µŕŻŕ®•ŕ®łŕŻŕ®šŕŻŤ ŕ®šŕ®°ŕ®żŕ®Şŕ®ľŕ®°ŕŻŤŕ®•ŕŻŤŕ®•ŕ®µŕŻŕ®®ŕŻŤ.",
-
-        footerTagline:
-          "ŕ®•ŕŻŕ®°ŕŻ‹ŕ®·ŕ®żŕ®Żŕ®ľŕ®µŕ®żŕ®˛ŕŻŤ ŕ®µŕ®ľŕ®´ŕ®µŕŻŕ®®ŕŻŤ ŕ®µŕŻ‡ŕ®˛ŕŻ ŕ®šŕŻ†ŕ®ŻŕŻŤŕ®Żŕ®µŕŻŕ®®ŕŻŤ ŕ®‰ŕ®™ŕŻŤŕ®•ŕ®łŕŻŤ ŕ®µŕ®´ŕ®żŕ®•ŕ®ľŕ®źŕŻŤŕ®źŕ®ż.",
-
-        verifiedText:
-          "ŕ®•ŕ®źŕŻŕ®šŕ®żŕ®Żŕ®ľŕ®• ŕ®šŕ®°ŕ®żŕ®Şŕ®ľŕ®°ŕŻŤŕ®•ŕŻŤŕ®•ŕ®ŞŕŻŤŕ®Şŕ®źŕŻŤŕ®źŕ®¤ŕŻ: 7 ŕ®…ŕ®•ŕŻŤŕ®źŕŻ‹ŕ®Şŕ®°ŕŻŤ 2026"
+        subtitle: "குரோஷியா தகவல் வழிகாட்டி",
+        hero: "குரோஷியாவில் வாழவும் வேலை செய்யவும் குடியேறவும் தேவையான தகவல்கள். உங்கள் மொழியைத் தேர்ந்தெடுத்து வழிகாட்டிகளைப் பாருங்கள்.",
+        noticeTitle: "முக்கிய அறிவிப்பு",
+        notice: "இது ஒரு சுயாதீன தகவல் இணையதளம். நடவடிக்கை எடுப்பதற்கு முன் சம்பந்தப்பட்ட குரோஷிய அதிகாரிகளிடம் தகவலை உறுதிப்படுத்தவும்.",
+        guides: "எங்கள் வழிகாட்டிகள்",
+        guideDesc: "குரோஷியாவின் அன்றாட வாழ்க்கைக்கான பயனுள்ள தகவல்கள்.",
+        language: "மொழி:",
+        health: "சுகாதார சேவைகள்",
+        healthDesc: "மருத்துவக் காப்பீடு, மருத்துவர்கள், மருத்துவமனைகள் மற்றும் சிகிச்சைகள்.",
+        police: "காவல்துறை மற்றும் ஆவணங்கள்",
+        policeDesc: "குடியிருப்பு, பதிவு மற்றும் முக்கிய ஆவணங்கள்.",
+        government: "அரசு சேவைகள்",
+        governmentDesc: "அதிகாரப்பூர்வ இணையதளங்கள் மற்றும் அரசு சேவைகள்.",
+        driving: "வாகனம் மற்றும் போக்குவரத்து",
+        drivingDesc: "ஓட்டுநர் உரிமம், சாலை விதிகள் மற்றும் போக்குவரத்து.",
+        work: "வேலை மற்றும் வேலைவாய்ப்பு",
+        workDesc: "வேலைவாய்ப்பு, ஒப்பந்தங்கள் மற்றும் பயனுள்ள வளங்கள்.",
+        housing: "வீடு மற்றும் தங்குமிடம்",
+        housingDesc: "வாடகை வீடு மற்றும் தங்குமிடம் தொடர்பான தகவல்கள்.",
+        bank: "வங்கி மற்றும் நிதி",
+        bankDesc: "வங்கிக் கணக்குகள், பணப்பரிவர்த்தனைகள் மற்றும் நிதிச் சேவைகள்.",
+        family: "குடும்பம் மற்றும் அன்றாட வாழ்க்கை",
+        familyDesc: "குடும்பம் மற்றும் அன்றாட வாழ்க்கை தொடர்பான தகவல்கள்.",
+        emergency: "அவசரத் தகவல்கள்",
+        emergencyDesc: "அவசர சேவைகள் மற்றும் முக்கிய தொடர்புகள்.",
+        contacts: "பயனுள்ள தொடர்புகள்",
+        contactsDesc: "அதிகாரப்பூர்வ இணையதளங்கள் மற்றும் தொடர்பு விவரங்கள்.",
+        read: "வழிகாட்டியைப் பார்க்கவும் →",
+        emergencyHeading: "குரோஷியாவின் அவசர எண்கள்",
+        e112: "பொது அவசரம்",
+        e194: "அவசர மருத்துவ சேவை",
+        e192: "காவல்துறை",
+        e193: "தீயணைப்புச் சேவை",
+        disclaimer: "இது சுயாதீன தகவல் இணையதளம்; அதிகாரப்பூர்வ குரோஷிய அரசு இணையதளம் அல்ல. தகவல்கள் மாறலாம். தற்போதைய தேவைகளுக்கு அதிகாரப்பூர்வ ஆதாரங்களைப் பார்க்கவும்."
       },
-
 
       te: {
-        heroTitle: "ŕ°•ŕ±Ťŕ°°ŕ±Šŕ°Żŕ±‡ŕ°·ŕ°żŕ°Żŕ°ľŕ°˛ŕ±‹ ŕ°¨ŕ°żŕ°µŕ°¸ŕ°żŕ°‚ŕ°šŕ°ˇŕ°ľŕ°¨ŕ°żŕ°•ŕ°ż ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°Şŕ°¨ŕ°ż ŕ°šŕ±‡ŕ°Żŕ°ˇŕ°ľŕ°¨ŕ°żŕ°•ŕ°ż ŕ°®ŕ±€ ŕ°®ŕ°ľŕ°°ŕ±Ťŕ°—ŕ°¦ŕ°°ŕ±Ťŕ°¶ŕ°ż",
-
-        heroText:
-          "ŕ°•ŕ±Ťŕ°°ŕ±Šŕ°Żŕ±‡ŕ°·ŕ°żŕ°Żŕ°ľŕ°˛ŕ±‹ ŕ°¨ŕ°żŕ°µŕ°¸ŕ°żŕ°‚ŕ°šŕ±‡ ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°Şŕ°¨ŕ°ż ŕ°šŕ±‡ŕ°¸ŕ±‡ ŕ°µŕ°żŕ°¦ŕ±‡ŕ°¶ŕ±€ŕ°Żŕ±ŕ°˛ ŕ°•ŕ±‹ŕ°¸ŕ°‚ ŕ°¸ŕ±ŕ°˛ŕ°­ŕ°®ŕ±ŕ°¨ ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°‰ŕ°Şŕ°Żŕ±‹ŕ°—ŕ°•ŕ°°ŕ°®ŕ±ŕ°¨ ŕ°¸ŕ°®ŕ°ľŕ°šŕ°ľŕ°°ŕ°‚.",
-
-        guideTitle: "ŕ°•ŕ±Ťŕ°°ŕ±Šŕ°Żŕ±‡ŕ°·ŕ°żŕ°Żŕ°ľ ŕ°—ŕ±ŕ°ˇŕ±Ť",
-
-        guideText:
-          "ŕ°‰ŕ°Şŕ°Żŕ±‹ŕ°—ŕ°•ŕ°°ŕ°®ŕ±ŕ°¨ ŕ°¸ŕ°®ŕ°ľŕ°šŕ°ľŕ°°ŕ°‚, ŕ°…ŕ°§ŕ°żŕ°•ŕ°ľŕ°°ŕ°żŕ°• ŕ°˛ŕ°żŕ°‚ŕ°•ŕ±ŕ°˛ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°†ŕ°šŕ°°ŕ°Łŕ°ľŕ°¤ŕ±Ťŕ°®ŕ°• ŕ°®ŕ°ľŕ°°ŕ±Ťŕ°—ŕ°¦ŕ°°ŕ±Ťŕ°¶ŕ°•ŕ°¤ŕ±Ťŕ°µŕ°‚ ŕ°•ŕ±‹ŕ°¸ŕ°‚ ŕ°’ŕ°• ŕ°…ŕ°‚ŕ°¶ŕ°ľŕ°¨ŕ±Ťŕ°¨ŕ°ż ŕ°Žŕ°‚ŕ°šŕ±ŕ°•ŕ±‹ŕ°‚ŕ°ˇŕ°ż.",
-
-        policeTitle: "ŕ°Şŕ±‹ŕ°˛ŕ±€ŕ°¸ŕ±Ť & ŕ°Şŕ°¤ŕ±Ťŕ°°ŕ°ľŕ°˛ŕ±",
-
-        policeText:
-          "ŕ°Şŕ±‹ŕ°˛ŕ±€ŕ°¸ŕ±Ť ŕ°µŕ°żŕ°§ŕ°ľŕ°¨ŕ°ľŕ°˛ŕ±, ŕ°¨ŕ°żŕ°µŕ°ľŕ°¸ ŕ°¨ŕ°®ŕ±‹ŕ°¦ŕ±, ŕ°¸ŕ°°ŕ±Ťŕ°źŕ°żŕ°«ŕ°żŕ°•ŕ±†ŕ°źŕ±Ťŕ°˛ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°®ŕ±ŕ°–ŕ±Ťŕ°Żŕ°®ŕ±ŕ°¨ ŕ°Şŕ°¤ŕ±Ťŕ°°ŕ°ľŕ°˛ŕ±.",
-
-        governmentTitle: "ŕ°Şŕ±Ťŕ°°ŕ°­ŕ±ŕ°¤ŕ±Ťŕ°µŕ°‚",
-
-        governmentText:
-          "ŕ°•ŕ±Ťŕ°°ŕ±Šŕ°Żŕ±‡ŕ°·ŕ°żŕ°Żŕ°¨ŕ±Ť ŕ°Şŕ±Ťŕ°°ŕ°­ŕ±ŕ°¤ŕ±Ťŕ°µ ŕ°¸ŕ±‡ŕ°µŕ°˛ŕ±, e-GraÄ‘ani, ŕ°Şŕ°¨ŕ±Ťŕ°¨ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°‰ŕ°¦ŕ±Ťŕ°Żŕ±‹ŕ°— ŕ°¸ŕ±‡ŕ°µŕ°˛ŕ±.",
-
-        drivingTitle: "ŕ°ˇŕ±Ťŕ°°ŕ±ŕ°µŕ°żŕ°‚ŕ°—ŕ±Ť",
-
-        drivingText:
-          "ŕ°ˇŕ±Ťŕ°°ŕ±ŕ°µŕ°żŕ°‚ŕ°—ŕ±Ť ŕ°˛ŕ±ŕ°¸ŕ±†ŕ°¨ŕ±Ťŕ°¸ŕ±Ť, ŕ°µŕ°żŕ°¦ŕ±‡ŕ°¶ŕ±€ ŕ°˛ŕ±ŕ°¸ŕ±†ŕ°¨ŕ±Ťŕ°¸ŕ±Ť ŕ°¨ŕ°żŕ°Żŕ°®ŕ°ľŕ°˛ŕ±, ŕ°Şŕ°¤ŕ±Ťŕ°°ŕ°ľŕ°˛ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± MUP ŕ°µŕ°żŕ°§ŕ°ľŕ°¨ŕ°ľŕ°˛ŕ±.",
-
-        workTitle: "ŕ°Şŕ°¨ŕ°ż",
-
-        workText:
-          "ŕ°µŕ°°ŕ±Ťŕ°•ŕ±Ť ŕ°Şŕ°°ŕ±Ťŕ°®ŕ°żŕ°źŕ±Ť, ŕ°‰ŕ°¦ŕ±Ťŕ°Żŕ±‹ŕ°—ŕ°‚, ŕ°’ŕ°Şŕ±Ťŕ°Şŕ°‚ŕ°¦ŕ°ľŕ°˛ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°•ŕ°ľŕ°°ŕ±Ťŕ°®ŕ°żŕ°•ŕ±ŕ°˛ ŕ°ąŕ°•ŕ±Ťŕ°•ŕ±ŕ°˛ŕ±.",
-
-        healthTitle: "ŕ°†ŕ°°ŕ±‹ŕ°—ŕ±Ťŕ°Żŕ°‚",
-
-        healthText:
-          "ŕ°†ŕ°°ŕ±‹ŕ°—ŕ±Ťŕ°Ż ŕ°¬ŕ±€ŕ°®ŕ°ľ, ŕ°ˇŕ°ľŕ°•ŕ±Ťŕ°źŕ°°ŕ±Ťŕ°˛ŕ±, ŕ°†ŕ°¸ŕ±ŕ°Şŕ°¤ŕ±Ťŕ°°ŕ±ŕ°˛ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°…ŕ°¤ŕ±Ťŕ°Żŕ°µŕ°¸ŕ°° ŕ°†ŕ°°ŕ±‹ŕ°—ŕ±Ťŕ°Ż ŕ°¸ŕ±‡ŕ°µŕ°˛ŕ±.",
-
-        housingTitle: "ŕ°‡ŕ°˛ŕ±Ťŕ°˛ŕ±",
-
-        housingText:
-          "ŕ°‡ŕ°˛ŕ±Ťŕ°˛ŕ± ŕ°…ŕ°¦ŕ±Ťŕ°¦ŕ±†, ŕ°’ŕ°Şŕ±Ťŕ°Şŕ°‚ŕ°¦ŕ°ľŕ°˛ŕ±, ŕ°ˇŕ°żŕ°Şŕ°ľŕ°śŕ°żŕ°źŕ±Ť, ŕ°¨ŕ°®ŕ±‹ŕ°¦ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°—ŕ±ŕ°ą ŕ°¸ŕ°®ŕ°ľŕ°šŕ°ľŕ°°ŕ°‚.",
-
-        bankTitle: "ŕ°¬ŕ±Ťŕ°Żŕ°ľŕ°‚ŕ°•ŕ±Ť",
-
-        bankText:
-          "ŕ°¬ŕ±Ťŕ°Żŕ°ľŕ°‚ŕ°•ŕ±Ť ŕ°–ŕ°ľŕ°¤ŕ°ľŕ°˛ŕ±, ŕ°šŕ±†ŕ°˛ŕ±Ťŕ°˛ŕ°żŕ°‚ŕ°Şŕ±ŕ°˛ŕ±, ŕ°•ŕ°ľŕ°°ŕ±Ťŕ°ˇŕ±ŕ°˛ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°†ŕ°¨ŕ±Ťâ€Śŕ°˛ŕ±ŕ°¨ŕ±Ť ŕ°¬ŕ±Ťŕ°Żŕ°ľŕ°‚ŕ°•ŕ°żŕ°‚ŕ°—ŕ±Ť.",
-
-        familyTitle: "ŕ°•ŕ±ŕ°źŕ±ŕ°‚ŕ°¬ŕ°‚",
-
-        familyText:
-          "ŕ°•ŕ±ŕ°źŕ±ŕ°‚ŕ°¬ ŕ°¨ŕ°żŕ°µŕ°ľŕ°¸ŕ°‚, ŕ°Şŕ°żŕ°˛ŕ±Ťŕ°˛ŕ°˛ŕ±, ŕ°Şŕ°ľŕ° ŕ°¶ŕ°ľŕ°˛, ŕ°•ŕ±ŕ°źŕ±ŕ°‚ŕ°¬ ŕ°Şŕ°¤ŕ±Ťŕ°°ŕ°ľŕ°˛ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°¸ŕ±‡ŕ°µŕ°˛ŕ±.",
-
-        emergencyTitle: "ŕ°…ŕ°¤ŕ±Ťŕ°Żŕ°µŕ°¸ŕ°°ŕ°‚",
-
-        emergencyText:
-          "ŕ°…ŕ°¤ŕ±Ťŕ°Żŕ°µŕ°¸ŕ°° ŕ°¨ŕ°‚ŕ°¬ŕ°°ŕ±Ťŕ°˛ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°•ŕ±Ťŕ°°ŕ±Šŕ°Żŕ±‡ŕ°·ŕ°żŕ°Żŕ°ľŕ°˛ŕ±‹ ŕ°¤ŕ°•ŕ±Ťŕ°·ŕ°Ł ŕ°¸ŕ°ąŕ°ľŕ°Żŕ°‚ ŕ°…ŕ°µŕ°¸ŕ°°ŕ°®ŕ±ŕ°¨ŕ°Şŕ±Ťŕ°Şŕ±ŕ°ˇŕ± ŕ°Źŕ°®ŕ°ż ŕ°šŕ±‡ŕ°Żŕ°ľŕ°˛ŕ°ż.",
-
-        contactsTitle: "ŕ°‰ŕ°Şŕ°Żŕ±‹ŕ°—ŕ°•ŕ°°ŕ°®ŕ±ŕ°¨ ŕ°¸ŕ°‚ŕ°Şŕ±Ťŕ°°ŕ°¦ŕ°żŕ°‚ŕ°Şŕ±ŕ°˛ŕ±",
-
-        contactsText:
-          "ŕ°®ŕ±ŕ°–ŕ±Ťŕ°Żŕ°®ŕ±ŕ°¨ ŕ°¸ŕ°‚ŕ°¸ŕ±Ťŕ°Ąŕ°˛ŕ±, ŕ°…ŕ°§ŕ°żŕ°•ŕ°ľŕ°°ŕ°żŕ°• ŕ°µŕ±†ŕ°¬ŕ±Ťâ€Śŕ°¸ŕ±ŕ°źŕ±Ťŕ°˛ŕ±, ŕ°«ŕ±‹ŕ°¨ŕ±Ť ŕ°¨ŕ°‚ŕ°¬ŕ°°ŕ±Ťŕ°˛ŕ± ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°‰ŕ°Şŕ°Żŕ±‹ŕ°—ŕ°•ŕ°°ŕ°®ŕ±ŕ°¨ ŕ°¸ŕ°‚ŕ°Şŕ±Ťŕ°°ŕ°¦ŕ°żŕ°‚ŕ°Şŕ±ŕ°˛ŕ±.",
-
-        policeBtn: "ŕ°Şŕ±‡ŕ°śŕ±€ ŕ°¤ŕ±†ŕ°°ŕ°µŕ°‚ŕ°ˇŕ°ż â†’",
-        governmentBtn: "ŕ°Şŕ±‡ŕ°śŕ±€ ŕ°¤ŕ±†ŕ°°ŕ°µŕ°‚ŕ°ˇŕ°ż â†’",
-        drivingBtn: "ŕ°Şŕ±‡ŕ°śŕ±€ ŕ°¤ŕ±†ŕ°°ŕ°µŕ°‚ŕ°ˇŕ°ż â†’",
-        workBtn: "ŕ°Şŕ±‡ŕ°śŕ±€ ŕ°¤ŕ±†ŕ°°ŕ°µŕ°‚ŕ°ˇŕ°ż â†’",
-        healthBtn: "ŕ°Şŕ±‡ŕ°śŕ±€ ŕ°¤ŕ±†ŕ°°ŕ°µŕ°‚ŕ°ˇŕ°ż â†’",
-        housingBtn: "ŕ°Şŕ±‡ŕ°śŕ±€ ŕ°¤ŕ±†ŕ°°ŕ°µŕ°‚ŕ°ˇŕ°ż â†’",
-        bankBtn: "ŕ°Şŕ±‡ŕ°śŕ±€ ŕ°¤ŕ±†ŕ°°ŕ°µŕ°‚ŕ°ˇŕ°ż â†’",
-        familyBtn: "ŕ°Şŕ±‡ŕ°śŕ±€ ŕ°¤ŕ±†ŕ°°ŕ°µŕ°‚ŕ°ˇŕ°ż â†’",
-        emergencyBtn: "ŕ°Şŕ±‡ŕ°śŕ±€ ŕ°¤ŕ±†ŕ°°ŕ°µŕ°‚ŕ°ˇŕ°ż â†’",
-        contactsBtn: "ŕ°Şŕ±‡ŕ°śŕ±€ ŕ°¤ŕ±†ŕ°°ŕ°µŕ°‚ŕ°ˇŕ°ż â†’",
-
-        connectTitle: "ŕ°šŕ±‡ŕ°°ŕ°‚ŕ°ˇŕ°ż & ŕ°•ŕ°¨ŕ±†ŕ°•ŕ±Ťŕ°źŕ±Ť ŕ°…ŕ°µŕ±Ťŕ°µŕ°‚ŕ°ˇŕ°ż",
-
-        connectText:
-          "MALAYALIS IN CROATIA ŕ°¨ŕ± ŕ°«ŕ°ľŕ°˛ŕ±‹ ŕ°…ŕ°µŕ±ŕ°¤ŕ±‚ ŕ°®ŕ°ľ ŕ°•ŕ°®ŕ±Ťŕ°Żŕ±‚ŕ°¨ŕ°żŕ°źŕ±€ŕ°¤ŕ±‹ ŕ°•ŕ°¨ŕ±†ŕ°•ŕ±Ťŕ°źŕ±Ť ŕ°…ŕ°µŕ±Ťŕ°µŕ°‚ŕ°ˇŕ°ż.",
-
-        whatsappText: "WhatsApp",
-        emailText: "Email",
-        websiteText: "Website",
-        instagramText: "Instagram",
-
-        joinButton:
-          "đź“± ŕ°®ŕ°ľ WhatsApp Channel ŕ°˛ŕ±‹ ŕ°šŕ±‡ŕ°°ŕ°‚ŕ°ˇŕ°ż",
-
-        infoTitle: "ŕ°®ŕ±ŕ°–ŕ±Ťŕ°Żŕ°®ŕ±ŕ°¨ŕ°¦ŕ°ż",
-
-        infoText:
-          "MALAYALIS IN CROATIA ŕ°’ŕ°• ŕ°¸ŕ±Ťŕ°µŕ°¤ŕ°‚ŕ°¤ŕ±Ťŕ°° ŕ°¸ŕ°®ŕ°ľŕ°šŕ°ľŕ°° ŕ°—ŕ±ŕ°ˇŕ±Ť. ŕ°®ŕ±ŕ°–ŕ±Ťŕ°Żŕ°®ŕ±ŕ°¨ ŕ°¨ŕ°żŕ°°ŕ±Ťŕ°Łŕ°Żŕ°ľŕ°˛ŕ± ŕ°¤ŕ±€ŕ°¸ŕ±ŕ°•ŕ±ŕ°¨ŕ±‡ ŕ°®ŕ±ŕ°‚ŕ°¦ŕ± ŕ°¸ŕ°‚ŕ°¬ŕ°‚ŕ°§ŕ°żŕ°¤ ŕ°•ŕ±Ťŕ°°ŕ±Šŕ°Żŕ±‡ŕ°·ŕ°żŕ°Żŕ°¨ŕ±Ť ŕ°…ŕ°§ŕ°żŕ°•ŕ°ľŕ°°ŕ±ŕ°˛ŕ°¤ŕ±‹ ŕ°¤ŕ°ľŕ°śŕ°ľ ŕ°…ŕ°µŕ°¸ŕ°°ŕ°ľŕ°˛ŕ°¨ŕ± ŕ°¤ŕ°¨ŕ°żŕ°–ŕ±€ ŕ°šŕ±‡ŕ°Żŕ°‚ŕ°ˇŕ°ż.",
-
-        footerTagline:
-          "ŕ°•ŕ±Ťŕ°°ŕ±Šŕ´Żŕµ‡ŕ´·ŕ°żŕ°Żŕ°ľŕ°˛ŕ±‹ ŕ°¨ŕ°żŕ°µŕ°¸ŕ°żŕ°‚ŕ°šŕ°ˇŕ°ľŕ°¨ŕ°żŕ°•ŕ°ż ŕ°®ŕ°°ŕ°żŕ°Żŕ± ŕ°Şŕ°¨ŕ°ż ŕ°šŕ±‡ŕ°Żŕ°ˇŕ°ľŕ°¨ŕ°żŕ°•ŕ°ż ŕ°®ŕ±€ ŕ°®ŕ°ľŕ°°ŕ±Ťŕ°—ŕ°¦ŕ°°ŕ±Ťŕ°¶ŕ°ż.",
-
-        verifiedText:
-          "ŕ°šŕ°żŕ°µŕ°°ŕ°żŕ°—ŕ°ľ ŕ°§ŕ±ŕ°µŕ±€ŕ°•ŕ°°ŕ°żŕ°‚ŕ°šŕ°¬ŕ°ˇŕ°żŕ°‚ŕ°¦ŕ°ż: 7 ŕ°…ŕ°•ŕ±Ťŕ°źŕ±‹ŕ°¬ŕ°°ŕ±Ť 2026"
+        subtitle: "క్రొయేషియా సమాచార మార్గదర్శి",
+        hero: "క్రొయేషియాలో నివసించడానికి, పని చేయడానికి మరియు స్థిరపడడానికి ఉపయోగకరమైన సమాచారం. మీ భాషను ఎంచుకుని గైడ్‌లను చూడండి.",
+        noticeTitle: "ముఖ్యమైన సమాచారం",
+        notice: "ఇది స్వతంత్ర సమాచార వెబ్‌సైట్. ఏ చర్య తీసుకునే ముందు సంబంధిత క్రొయేషియా అధికారుల వద్ద అధికారిక సమాచారాన్ని నిర్ధారించుకోండి.",
+        guides: "మా గైడ్‌లు",
+        guideDesc: "క్రొయేషియాలో రోజువారీ జీవితానికి ఉపయోగకరమైన సమాచారం.",
+        language: "భాష:",
+        health: "ఆరోగ్య సేవలు",
+        healthDesc: "ఆరోగ్య బీమా, వైద్యులు, ఆసుపత్రులు మరియు వైద్య సేవలు.",
+        police: "పోలీసులు మరియు పత్రాలు",
+        policeDesc: "నివాసం, నమోదు మరియు ముఖ్యమైన పత్రాలు.",
+        government: "ప్రభుత్వ సేవలు",
+        governmentDesc: "అధికారిక పోర్టల్‌లు మరియు ప్రభుత్వ సేవలు.",
+        driving: "డ్రైవింగ్ మరియు రవాణా",
+        drivingDesc: "డ్రైవింగ్ లైసెన్స్, రహదారి నియమాలు మరియు రవాణా సమాచారం.",
+        work: "పని మరియు ఉద్యోగాలు",
+        workDesc: "ఉద్యోగాలు, ఒప్పందాలు మరియు ఉపయోగకరమైన వనరులు.",
+        housing: "ఇల్లు మరియు వసతి",
+        housingDesc: "ఇంటి అద్దె మరియు వసతికి సంబంధించిన సమాచారం.",
+        bank: "బ్యాంకింగ్ మరియు ఆర్థిక సేవలు",
+        bankDesc: "బ్యాంకు ఖాతాలు, చెల్లింపులు మరియు ఆర్థిక సేవలు.",
+        family: "కుటుంబం మరియు రోజువారీ జీవితం",
+        familyDesc: "కుటుంబం మరియు రోజువారీ జీవితానికి సంబంధించిన సమాచారం.",
+        emergency: "అత్యవసర సమాచారం",
+        emergencyDesc: "అత్యవసర సేవలు మరియు ముఖ్యమైన సంప్రదింపులు.",
+        contacts: "ఉపయోగకరమైన సంప్రదింపులు",
+        contactsDesc: "అధికారిక వెబ్‌సైట్‌లు మరియు సంప్రదింపు వివరాలు.",
+        read: "గైడ్ చూడండి →",
+        emergencyHeading: "క్రొయేషియాలో అత్యవసర నంబర్లు",
+        e112: "సాధారణ అత్యవసరం",
+        e194: "అత్యవసర వైద్య సేవ",
+        e192: "పోలీసులు",
+        e193: "అగ్నిమాపక సేవ",
+        disclaimer: "ఇది స్వతంత్ర సమాచార వెబ్‌సైట్; అధికారిక క్రొయేషియా ప్రభుత్వ వెబ్‌సైట్ కాదు. సమాచారం మారవచ్చు. ప్రస్తుత అవసరాల కోసం అధికారిక వనరులను చూడండి."
       },
-
 
       bn: {
-        heroTitle: "ŕ¦•ŕ§Ťŕ¦°ŕ§‹ŕ¦Żŕ¦Ľŕ§‡ŕ¦¶ŕ¦żŕ¦Żŕ¦Ľŕ¦ľŕ¦Żŕ¦Ľ ŕ¦¬ŕ¦¸ŕ¦¬ŕ¦ľŕ¦¸ ŕ¦“ ŕ¦•ŕ¦ľŕ¦śŕ§‡ŕ¦° ŕ¦śŕ¦¨ŕ§Ťŕ¦Ż ŕ¦†ŕ¦Şŕ¦¨ŕ¦ľŕ¦° ŕ¦—ŕ¦ľŕ¦‡ŕ¦ˇ",
-
-        heroText:
-          "ŕ¦•ŕ§Ťŕ¦°ŕ§‹ŕ¦Żŕ¦Ľŕ§‡ŕ¦¶ŕ¦żŕ¦Żŕ¦Ľŕ¦ľŕ¦Żŕ¦Ľ ŕ¦¬ŕ¦¸ŕ¦¬ŕ¦ľŕ¦¸ ŕ¦“ ŕ¦•ŕ¦ľŕ¦ś ŕ¦•ŕ¦°ŕ¦ľ ŕ¦¬ŕ¦żŕ¦¦ŕ§‡ŕ¦¶ŕ¦żŕ¦¦ŕ§‡ŕ¦° ŕ¦śŕ¦¨ŕ§Ťŕ¦Ż ŕ¦¸ŕ¦ąŕ¦ś ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦¦ŕ¦°ŕ¦•ŕ¦ľŕ¦°ŕ§€ ŕ¦¤ŕ¦Ąŕ§Ťŕ¦Ż.",
-
-        guideTitle: "ŕ¦•ŕ§Ťŕ¦°ŕ§‹ŕ¦Żŕ¦Ľŕ§‡ŕ¦¶ŕ¦żŕ¦Żŕ¦Ľŕ¦ľ ŕ¦—ŕ¦ľŕ¦‡ŕ¦ˇ",
-
-        guideText:
-          "ŕ¦¦ŕ¦°ŕ¦•ŕ¦ľŕ¦°ŕ§€ ŕ¦¤ŕ¦Ąŕ§Ťŕ¦Ż, ŕ¦…ŕ¦«ŕ¦żŕ¦¸ŕ¦żŕ¦Żŕ¦Ľŕ¦ľŕ¦˛ ŕ¦˛ŕ¦żŕ¦‚ŕ¦• ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦¬ŕ§Ťŕ¦Żŕ¦¬ŕ¦ąŕ¦ľŕ¦°ŕ¦żŕ¦• ŕ¦¨ŕ¦żŕ¦°ŕ§Ťŕ¦¦ŕ§‡ŕ¦¶ŕ¦¨ŕ¦ľŕ¦° ŕ¦śŕ¦¨ŕ§Ťŕ¦Ż ŕ¦Źŕ¦•ŕ¦źŕ¦ż ŕ¦¬ŕ¦żŕ¦·ŕ¦Żŕ¦Ľ ŕ¦¨ŕ¦żŕ¦°ŕ§Ťŕ¦¬ŕ¦ľŕ¦šŕ¦¨ ŕ¦•ŕ¦°ŕ§ŕ¦¨.",
-
-        policeTitle: "ŕ¦Şŕ§ŕ¦˛ŕ¦żŕ¦¶ ŕ¦“ ŕ¦¨ŕ¦Ąŕ¦żŕ¦Şŕ¦¤ŕ§Ťŕ¦°",
-
-        policeText:
-          "ŕ¦Şŕ§ŕ¦˛ŕ¦żŕ¦¶ŕ§‡ŕ¦° ŕ¦Şŕ§Ťŕ¦°ŕ¦•ŕ§Ťŕ¦°ŕ¦żŕ¦Żŕ¦Ľŕ¦ľ, ŕ¦¬ŕ¦¸ŕ¦¬ŕ¦ľŕ¦¸ŕ§‡ŕ¦° ŕ¦¨ŕ¦żŕ¦¬ŕ¦¨ŕ§Ťŕ¦§ŕ¦¨, ŕ¦¸ŕ¦ľŕ¦°ŕ§Ťŕ¦źŕ¦żŕ¦«ŕ¦żŕ¦•ŕ§‡ŕ¦ź ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦—ŕ§ŕ¦°ŕ§ŕ¦¤ŕ§Ťŕ¦¬ŕ¦Şŕ§‚ŕ¦°ŕ§Ťŕ¦Ł ŕ¦¨ŕ¦Ąŕ¦ż.",
-
-        governmentTitle: "ŕ¦¸ŕ¦°ŕ¦•ŕ¦ľŕ¦°",
-
-        governmentText:
-          "ŕ¦•ŕ§Ťŕ¦°ŕ§‹ŕ¦Żŕ¦Ľŕ§‡ŕ¦¶ŕ¦żŕ¦Żŕ¦Ľŕ¦ľŕ¦¨ ŕ¦¸ŕ¦°ŕ¦•ŕ¦ľŕ¦°ŕ¦ż ŕ¦Şŕ¦°ŕ¦żŕ¦·ŕ§‡ŕ¦¬ŕ¦ľ, e-GraÄ‘ani, ŕ¦•ŕ¦° ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦•ŕ¦°ŕ§Ťŕ¦®ŕ¦¸ŕ¦‚ŕ¦¸ŕ§Ťŕ¦Ąŕ¦ľŕ¦¨ ŕ¦Şŕ¦°ŕ¦żŕ¦·ŕ§‡ŕ¦¬ŕ¦ľ.",
-
-        drivingTitle: "ŕ¦ˇŕ§Ťŕ¦°ŕ¦ľŕ¦‡ŕ¦­ŕ¦żŕ¦‚",
-
-        drivingText:
-          "ŕ¦ˇŕ§Ťŕ¦°ŕ¦ľŕ¦‡ŕ¦­ŕ¦żŕ¦‚ ŕ¦˛ŕ¦ľŕ¦‡ŕ¦¸ŕ§‡ŕ¦¨ŕ§Ťŕ¦¸, ŕ¦¬ŕ¦żŕ¦¦ŕ§‡ŕ¦¶ŕ¦ż ŕ¦˛ŕ¦ľŕ¦‡ŕ¦¸ŕ§‡ŕ¦¨ŕ§Ťŕ¦¸ŕ§‡ŕ¦° ŕ¦¨ŕ¦żŕ¦Żŕ¦Ľŕ¦®, ŕ¦¨ŕ¦Ąŕ¦ż ŕ¦Źŕ¦¬ŕ¦‚ MUP ŕ¦Şŕ§Ťŕ¦°ŕ¦•ŕ§Ťŕ¦°ŕ¦żŕ¦Żŕ¦Ľŕ¦ľ.",
-
-        workTitle: "ŕ¦•ŕ¦ľŕ¦ś",
-
-        workText:
-          "ŕ¦“ŕ¦Żŕ¦Ľŕ¦ľŕ¦°ŕ§Ťŕ¦• ŕ¦Şŕ¦ľŕ¦°ŕ¦®ŕ¦żŕ¦ź, ŕ¦šŕ¦ľŕ¦•ŕ¦°ŕ¦ż, ŕ¦šŕ§ŕ¦•ŕ§Ťŕ¦¤ŕ¦ż ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦¶ŕ§Ťŕ¦°ŕ¦®ŕ¦żŕ¦•ŕ¦¦ŕ§‡ŕ¦° ŕ¦…ŕ¦§ŕ¦żŕ¦•ŕ¦ľŕ¦°.",
-
-        healthTitle: "ŕ¦¸ŕ§Ťŕ¦¬ŕ¦ľŕ¦¸ŕ§Ťŕ¦Ąŕ§Ťŕ¦Ż",
-
-        healthText:
-          "ŕ¦¸ŕ§Ťŕ¦¬ŕ¦ľŕ¦¸ŕ§Ťŕ¦Ąŕ§Ťŕ¦Ż ŕ¦¬ŕ§€ŕ¦®ŕ¦ľ, ŕ¦ˇŕ¦ľŕ¦•ŕ§Ťŕ¦¤ŕ¦ľŕ¦°, ŕ¦ąŕ¦ľŕ¦¸ŕ¦Şŕ¦ľŕ¦¤ŕ¦ľŕ¦˛ ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦śŕ¦°ŕ§ŕ¦°ŕ¦ż ŕ¦¸ŕ§Ťŕ¦¬ŕ¦ľŕ¦¸ŕ§Ťŕ¦Ąŕ§Ťŕ¦Ż ŕ¦Şŕ¦°ŕ¦żŕ¦·ŕ§‡ŕ¦¬ŕ¦ľ.",
-
-        housingTitle: "ŕ¦¬ŕ¦ľŕ¦¸ŕ¦¸ŕ§Ťŕ¦Ąŕ¦ľŕ¦¨",
-
-        housingText:
-          "ŕ¦¬ŕ¦ľŕ¦ˇŕ¦Ľŕ¦ż ŕ¦­ŕ¦ľŕ¦ˇŕ¦Ľŕ¦ľ, ŕ¦šŕ§ŕ¦•ŕ§Ťŕ¦¤ŕ¦ż, ŕ¦ˇŕ¦żŕ¦Şŕ§‹ŕ¦śŕ¦żŕ¦ź, ŕ¦¨ŕ¦żŕ¦¬ŕ¦¨ŕ§Ťŕ¦§ŕ¦¨ ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦¬ŕ¦ľŕ¦¸ŕ¦¸ŕ§Ťŕ¦Ąŕ¦ľŕ¦¨ ŕ¦¸ŕ¦‚ŕ¦•ŕ§Ťŕ¦°ŕ¦ľŕ¦¨ŕ§Ťŕ¦¤ ŕ¦¤ŕ¦Ąŕ§Ťŕ¦Ż.",
-
-        bankTitle: "ŕ¦¬ŕ§Ťŕ¦Żŕ¦ľŕ¦‚ŕ¦•",
-
-        bankText:
-          "ŕ¦¬ŕ§Ťŕ¦Żŕ¦ľŕ¦‚ŕ¦• ŕ¦…ŕ§Ťŕ¦Żŕ¦ľŕ¦•ŕ¦ľŕ¦‰ŕ¦¨ŕ§Ťŕ¦ź, ŕ¦Şŕ§‡ŕ¦®ŕ§‡ŕ¦¨ŕ§Ťŕ¦ź, ŕ¦•ŕ¦ľŕ¦°ŕ§Ťŕ¦ˇ ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦…ŕ¦¨ŕ¦˛ŕ¦ľŕ¦‡ŕ¦¨ ŕ¦¬ŕ§Ťŕ¦Żŕ¦ľŕ¦‚ŕ¦•ŕ¦żŕ¦‚.",
-
-        familyTitle: "ŕ¦Şŕ¦°ŕ¦żŕ¦¬ŕ¦ľŕ¦°",
-
-        familyText:
-          "ŕ¦Şŕ¦ľŕ¦°ŕ¦żŕ¦¬ŕ¦ľŕ¦°ŕ¦żŕ¦• ŕ¦¬ŕ¦ľŕ¦¸ŕ¦¸ŕ§Ťŕ¦Ąŕ¦ľŕ¦¨, ŕ¦¶ŕ¦żŕ¦¶ŕ§, ŕ¦¸ŕ§Ťŕ¦•ŕ§ŕ¦˛, ŕ¦Şŕ¦ľŕ¦°ŕ¦żŕ¦¬ŕ¦ľŕ¦°ŕ¦żŕ¦• ŕ¦¨ŕ¦Ąŕ¦ż ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦Şŕ¦°ŕ¦żŕ¦·ŕ§‡ŕ¦¬ŕ¦ľ.",
-
-        emergencyTitle: "ŕ¦śŕ¦°ŕ§ŕ¦°ŕ¦ż ŕ¦…ŕ¦¬ŕ¦¸ŕ§Ťŕ¦Ąŕ¦ľ",
-
-        emergencyText:
-          "ŕ¦śŕ¦°ŕ§ŕ¦°ŕ¦ż ŕ¦¨ŕ¦®ŕ§Ťŕ¦¬ŕ¦° ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦•ŕ§Ťŕ¦°ŕ§‹ŕ¦Żŕ¦Ľŕ§‡ŕ¦¶ŕ¦żŕ¦Żŕ¦Ľŕ¦ľŕ¦Żŕ¦Ľ ŕ¦śŕ¦°ŕ§ŕ¦°ŕ¦ż ŕ¦¸ŕ¦ľŕ¦ąŕ¦ľŕ¦Żŕ§Ťŕ¦Ż ŕ¦Şŕ§Ťŕ¦°ŕ¦Żŕ¦Ľŕ§‹ŕ¦śŕ¦¨ ŕ¦ąŕ¦˛ŕ§‡ ŕ¦•ŕ§€ ŕ¦•ŕ¦°ŕ¦¬ŕ§‡ŕ¦¨.",
-
-        contactsTitle: "ŕ¦¦ŕ¦°ŕ¦•ŕ¦ľŕ¦°ŕ§€ ŕ¦Żŕ§‹ŕ¦—ŕ¦ľŕ¦Żŕ§‹ŕ¦—",
-
-        contactsText:
-          "ŕ¦—ŕ§ŕ¦°ŕ§ŕ¦¤ŕ§Ťŕ¦¬ŕ¦Şŕ§‚ŕ¦°ŕ§Ťŕ¦Ł ŕ¦Şŕ§Ťŕ¦°ŕ¦¤ŕ¦żŕ¦·ŕ§Ťŕ¦ ŕ¦ľŕ¦¨, ŕ¦…ŕ¦«ŕ¦żŕ¦¸ŕ¦żŕ¦Żŕ¦Ľŕ¦ľŕ¦˛ ŕ¦“ŕ¦Żŕ¦Ľŕ§‡ŕ¦¬ŕ¦¸ŕ¦ľŕ¦‡ŕ¦ź, ŕ¦«ŕ§‹ŕ¦¨ ŕ¦¨ŕ¦®ŕ§Ťŕ¦¬ŕ¦° ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦¦ŕ¦°ŕ¦•ŕ¦ľŕ¦°ŕ§€ ŕ¦Żŕ§‹ŕ¦—ŕ¦ľŕ¦Żŕ§‹ŕ¦—.",
-
-        policeBtn: "ŕ¦Şŕ§ŕ¦·ŕ§Ťŕ¦ ŕ¦ľ ŕ¦–ŕ§ŕ¦˛ŕ§ŕ¦¨ â†’",
-        governmentBtn: "ŕ¦Şŕ§ŕ¦·ŕ§Ťŕ¦ ŕ¦ľ ŕ¦–ŕ§ŕ¦˛ŕ§ŕ¦¨ â†’",
-        drivingBtn: "ŕ¦Şŕ§ŕ¦·ŕ§Ťŕ¦ ŕ¦ľ ŕ¦–ŕ§ŕ¦˛ŕ§ŕ¦¨ â†’",
-        workBtn: "ŕ¦Şŕ§ŕ¦·ŕ§Ťŕ¦ ŕ¦ľ ŕ¦–ŕ§ŕ¦˛ŕ§ŕ¦¨ â†’",
-        healthBtn: "ŕ¦Şŕ§ŕ¦·ŕ§Ťŕ¦ ŕ¦ľ ŕ¦–ŕ§ŕ¦˛ŕ§ŕ¦¨ â†’",
-        housingBtn: "ŕ¦Şŕ§ŕ¦·ŕ§Ťŕ¦ ŕ¦ľ ŕ¦–ŕ§ŕ¦˛ŕ§ŕ¦¨ â†’",
-        bankBtn: "ŕ¦Şŕ§ŕ¦·ŕ§Ťŕ¦ ŕ¦ľ ŕ¦–ŕ§ŕ¦˛ŕ§ŕ¦¨ â†’",
-        familyBtn: "ŕ¦Şŕ§ŕ¦·ŕ§Ťŕ¦ ŕ¦ľ ŕ¦–ŕ§ŕ¦˛ŕ§ŕ¦¨ â†’",
-        emergencyBtn: "ŕ¦Şŕ§ŕ¦·ŕ§Ťŕ¦ ŕ¦ľ ŕ¦–ŕ§ŕ¦˛ŕ§ŕ¦¨ â†’",
-        contactsBtn: "ŕ¦Şŕ§ŕ¦·ŕ§Ťŕ¦ ŕ¦ľ ŕ¦–ŕ§ŕ¦˛ŕ§ŕ¦¨ â†’",
-
-        connectTitle: "ŕ¦Żŕ§‹ŕ¦— ŕ¦¦ŕ¦żŕ¦¨ ŕ¦“ ŕ¦Żŕ§‹ŕ¦—ŕ¦ľŕ¦Żŕ§‹ŕ¦— ŕ¦°ŕ¦ľŕ¦–ŕ§ŕ¦¨",
-
-        connectText:
-          "MALAYALIS IN CROATIA ŕ¦«ŕ¦˛ŕ§‹ ŕ¦•ŕ¦°ŕ§ŕ¦¨ ŕ¦Źŕ¦¬ŕ¦‚ ŕ¦†ŕ¦®ŕ¦ľŕ¦¦ŕ§‡ŕ¦° ŕ¦•ŕ¦®ŕ¦żŕ¦‰ŕ¦¨ŕ¦żŕ¦źŕ¦żŕ¦° ŕ¦¸ŕ¦ľŕ¦Ąŕ§‡ ŕ¦Żŕ§ŕ¦•ŕ§Ťŕ¦¤ ŕ¦Ąŕ¦ľŕ¦•ŕ§ŕ¦¨.",
-
-        whatsappText: "WhatsApp",
-        emailText: "Email",
-        websiteText: "Website",
-        instagramText: "Instagram",
-
-        joinButton:
-          "đź“± ŕ¦†ŕ¦®ŕ¦ľŕ¦¦ŕ§‡ŕ¦° WhatsApp Channel-ŕ¦Ź ŕ¦Żŕ§‹ŕ¦— ŕ¦¦ŕ¦żŕ¦¨",
-
-        infoTitle: "ŕ¦—ŕ§ŕ¦°ŕ§ŕ¦¤ŕ§Ťŕ¦¬ŕ¦Şŕ§‚ŕ¦°ŕ§Ťŕ¦Ł",
-
-        infoText:
-          "MALAYALIS IN CROATIA ŕ¦Źŕ¦•ŕ¦źŕ¦ż ŕ¦¸ŕ§Ťŕ¦¬ŕ¦ľŕ¦§ŕ§€ŕ¦¨ ŕ¦¤ŕ¦Ąŕ§Ťŕ¦Ż ŕ¦—ŕ¦ľŕ¦‡ŕ¦ˇŕĄ¤ ŕ¦—ŕ§ŕ¦°ŕ§ŕ¦¤ŕ§Ťŕ¦¬ŕ¦Şŕ§‚ŕ¦°ŕ§Ťŕ¦Ł ŕ¦¸ŕ¦żŕ¦¦ŕ§Ťŕ¦§ŕ¦ľŕ¦¨ŕ§Ťŕ¦¤ ŕ¦¨ŕ§‡ŕ¦“ŕ¦Żŕ¦Ľŕ¦ľŕ¦° ŕ¦†ŕ¦—ŕ§‡ ŕ¦¸ŕ¦‚ŕ¦¶ŕ§Ťŕ¦˛ŕ¦żŕ¦·ŕ§Ťŕ¦ź ŕ¦•ŕ§Ťŕ¦°ŕ§‹ŕ¦Żŕ¦Ľŕ§‡ŕ¦¶ŕ¦żŕ¦Żŕ¦Ľŕ¦ľŕ¦¨ ŕ¦•ŕ¦°ŕ§Ťŕ¦¤ŕ§ŕ¦Şŕ¦•ŕ§Ťŕ¦·ŕ§‡ŕ¦° ŕ¦•ŕ¦ľŕ¦› ŕ¦Ąŕ§‡ŕ¦•ŕ§‡ ŕ¦¸ŕ¦°ŕ§Ťŕ¦¬ŕ¦¶ŕ§‡ŕ¦· ŕ¦Şŕ§Ťŕ¦°ŕ¦Żŕ¦Ľŕ§‹ŕ¦śŕ¦¨ŕ§€ŕ¦Żŕ¦Ľŕ¦¤ŕ¦ľ ŕ¦Żŕ¦ľŕ¦šŕ¦ľŕ¦‡ ŕ¦•ŕ¦°ŕ§ŕ¦¨ŕĄ¤",
-
-        footerTagline:
-          "ŕ¦•ŕ§Ťŕ¦°ŕ§‹ŕ¦Żŕ¦Ľŕ§‡ŕ¦¶ŕ¦żŕ¦Żŕ¦Ľŕ¦ľŕ¦Żŕ¦Ľ ŕ¦¬ŕ¦¸ŕ¦¬ŕ¦ľŕ¦¸ ŕ¦“ ŕ¦•ŕ¦ľŕ¦śŕ§‡ŕ¦° ŕ¦śŕ¦¨ŕ§Ťŕ¦Ż ŕ¦†ŕ¦Şŕ¦¨ŕ¦ľŕ¦° ŕ¦—ŕ¦ľŕ¦‡ŕ¦ˇ.",
-
-        verifiedText:
-          "ŕ¦¶ŕ§‡ŕ¦· ŕ¦Żŕ¦ľŕ¦šŕ¦ľŕ¦‡: ŕ§­ ŕ¦…ŕ¦•ŕ§Ťŕ¦źŕ§‹ŕ¦¬ŕ¦° ŕ§¨ŕ§¦ŕ§¨ŕ§¬"
+        subtitle: "ক্রোয়েশিয়া তথ্য নির্দেশিকা",
+        hero: "ক্রোয়েশিয়ায় বসবাস, কাজ এবং স্থায়ী হওয়ার জন্য প্রয়োজনীয় তথ্য। ভাষা নির্বাচন করে নিচের নির্দেশিকাগুলি দেখুন।",
+        noticeTitle: "গুরুত্বপূর্ণ তথ্য",
+        notice: "এটি একটি স্বাধীন তথ্যভিত্তিক ওয়েবসাইট। কোনো পদক্ষেপ নেওয়ার আগে সংশ্লিষ্ট ক্রোয়েশীয় কর্তৃপক্ষের কাছ থেকে তথ্য নিশ্চিত করুন।",
+        guides: "আমাদের নির্দেশিকা",
+        guideDesc: "ক্রোয়েশিয়ার দৈনন্দিন জীবনের জন্য দরকারি তথ্য।",
+        language: "ভাষা:",
+        health: "স্বাস্থ্যসেবা",
+        healthDesc: "স্বাস্থ্যবিমা, ডাক্তার, হাসপাতাল এবং চিকিৎসাসেবা।",
+        police: "পুলিশ ও নথিপত্র",
+        policeDesc: "বাসস্থান, নিবন্ধন এবং গুরুত্বপূর্ণ নথি।",
+        government: "সরকারি পরিষেবা",
+        governmentDesc: "সরকারি পোর্টাল এবং প্রশাসনিক পরিষেবা।",
+        driving: "গাড়ি চালানো ও পরিবহন",
+        drivingDesc: "ড্রাইভিং লাইসেন্স, সড়ক নিয়ম এবং পরিবহন তথ্য।",
+        work: "কাজ ও চাকরি",
+        workDesc: "চাকরি, চুক্তি এবং দরকারি সম্পদ।",
+        housing: "বাড়ি ও বাসস্থান",
+        housingDesc: "বাড়ি ভাড়া এবং বাসস্থান সম্পর্কিত তথ্য।",
+        bank: "ব্যাংকিং ও অর্থ",
+        bankDesc: "ব্যাংক অ্যাকাউন্ট, অর্থপ্রদান এবং আর্থিক পরিষেবা।",
+        family: "পরিবার ও দৈনন্দিন জীবন",
+        familyDesc: "পরিবার এবং দৈনন্দিন জীবন সম্পর্কিত তথ্য।",
+        emergency: "জরুরি তথ্য",
+        emergencyDesc: "জরুরি পরিষেবা এবং গুরুত্বপূর্ণ যোগাযোগ।",
+        contacts: "দরকারি যোগাযোগ",
+        contactsDesc: "সরকারি ওয়েবসাইট এবং যোগাযোগের তথ্য।",
+        read: "নির্দেশিকা দেখুন →",
+        emergencyHeading: "ক্রোয়েশিয়ার জরুরি নম্বর",
+        e112: "সাধারণ জরুরি পরিষেবা",
+        e194: "জরুরি চিকিৎসা পরিষেবা",
+        e192: "পুলিশ",
+        e193: "দমকল পরিষেবা",
+        disclaimer: "এটি একটি স্বাধীন তথ্যভিত্তিক ওয়েবসাইট, সরকারি ক্রোয়েশীয় ওয়েবসাইট নয়। তথ্য পরিবর্তিত হতে পারে। বর্তমান নিয়মের জন্য সরকারি সূত্র দেখুন।"
       },
-
 
       ur: {
-        heroTitle: "Ú©Ř±ŮŘ´ŰŚŘ§ Ů…ŰŚÚş Ř±ŰŮ†Ű’ Ř§ŮŘ± Ú©Ř§Ů… Ú©Ř±Ů†Ű’ Ú©Ű’ Ů„ŰŚŰ’ Ř˘Ůľ Ú©ŰŚ Ř±ŰŮ†Ů…Ř§Ř¦ŰŚ",
-
-        heroText:
-          "Ú©Ř±ŮŘ´ŰŚŘ§ Ů…ŰŚÚş Ř±ŰŮ†Ű’ Ř§ŮŘ± Ú©Ř§Ů… Ú©Ř±Ů†Ű’ ŮŘ§Ů„Ű’ ŘşŰŚŘ± Ů…Ů„Ú©ŰŚŮÚş Ú©Ű’ Ů„ŰŚŰ’ Ř˘ŘłŘ§Ů† Ř§ŮŘ± Ů…ŮŰŚŘŻ Ů…ŘąŮ„ŮŮ…Ř§ŘŞ.",
-
-        guideTitle: "Ú©Ř±ŮŘ´ŰŚŘ§ ÚŻŘ§Ř¦ŰŚÚ",
-
-        guideText:
-          "Ů…ŮŰŚŘŻ Ů…ŘąŮ„ŮŮ…Ř§ŘŞŘŚ ŘłŘ±Ú©Ř§Ř±ŰŚ Ů„Ů†Ú©Řł Ř§ŮŘ± ŘąŮ…Ů„ŰŚ Ř±ŰŮ†Ů…Ř§Ř¦ŰŚ Ú©Ű’ Ů„ŰŚŰ’ Ř§ŰŚÚ© Ů…ŮŘ¶ŮŘą Ů…Ů†ŘŞŘ®Ř¨ Ú©Ř±ŰŚÚş.",
-
-        policeTitle: "ŮľŮŮ„ŰŚŘł Ř§ŮŘ± ŘŻŘłŘŞŘ§ŮŰŚŘ˛Ř§ŘŞ",
-
-        policeText:
-          "ŮľŮŮ„ŰŚŘł Ú©Ű’ Ř·Ř±ŰŚŮ‚Ű Ú©Ř§Ř±ŘŚ Ř±ŰŘ§Ř¦Ř´ Ú©Ř§ Ř§Ů†ŘŻŘ±Ř§Ř¬ŘŚ ŘłŘ±ŮąŰŚŮÚ©ŰŚŮąŘł Ř§ŮŘ± Ř§ŰŮ… ŘŻŘłŘŞŘ§ŮŰŚŘ˛Ř§ŘŞ.",
-
-        governmentTitle: "Ř­Ú©ŮŮ…ŘŞ",
-
-        governmentText:
-          "Ú©Ř±ŮŘ´ŰŚŘ§ Ú©ŰŚ ŘłŘ±Ú©Ř§Ř±ŰŚ Ř®ŘŻŮ…Ř§ŘŞŘŚ e-GraÄ‘aniŘŚ ŮąŰŚÚ©Řł Ř§ŮŘ± Ř±ŮŘ˛ÚŻŘ§Ř± Ú©ŰŚ Ř®ŘŻŮ…Ř§ŘŞ.",
-
-        drivingTitle: "ÚŘ±Ř§Ř¦ŰŚŮŮ†ÚŻ",
-
-        drivingText:
-          "ÚŘ±Ř§Ř¦ŰŚŮŮ†ÚŻ Ů„Ř§Ř¦ŘłŮ†ŘłŘŚ ŘşŰŚŘ± Ů…Ů„Ú©ŰŚ Ů„Ř§Ř¦ŘłŮ†Řł Ú©Ű’ Ů‚ŮŘ§Ů†ŰŚŮ†ŘŚ ŘŻŘłŘŞŘ§ŮŰŚŘ˛Ř§ŘŞ Ř§ŮŘ± MUP Ú©Ű’ Ř·Ř±ŰŚŮ‚Ű Ú©Ř§Ř±.",
-
-        workTitle: "Ú©Ř§Ů…",
-
-        workText:
-          "ŮŘ±Ú© ŮľŘ±Ů…ŮąŘŚ Ů…Ů„Ř§Ř˛Ů…ŘŞŘŚ Ů…ŘąŘ§ŰŘŻŰ’ Ř§ŮŘ± Ú©Ř§Ř±Ú©Ů†ŮÚş Ú©Ű’ Ř­Ů‚ŮŮ‚.",
-
-        healthTitle: "ŘµŘ­ŘŞ",
-
-        healthText:
-          "ŰŰŚŮ„ŘŞÚľ Ř§Ů†Ř´ŮŘ±Ů†ŘłŘŚ ÚŘ§Ú©ŮąŘ±Ř˛ŘŚ ŰŘłŮľŘŞŘ§Ů„ Ř§ŮŘ± ŰŮ†ÚŻŘ§Ů…ŰŚ ŘµŘ­ŘŞ Ú©ŰŚ Ř®ŘŻŮ…Ř§ŘŞ.",
-
-        housingTitle: "Ř±ŰŘ§Ř¦Ř´",
-
-        housingText:
-          "ÚŻÚľŘ± Ú©Ř±Ř§Ř¦Ű’ ŮľŘ± Ů„ŰŚŮ†Ř§ŘŚ Ů…ŘąŘ§ŰŘŻŰ’ŘŚ ÚŮľŘ§Ř˛ŮąŘŚ Ř±Ř¬ŘłŮąŘ±ŰŚŘ´Ů† Ř§ŮŘ± Ř±ŰŘ§Ř¦Ř´ Ú©ŰŚ Ů…ŘąŮ„ŮŮ…Ř§ŘŞ.",
-
-        bankTitle: "Ř¨ŰŚŮ†Ú©",
-
-        bankText:
-          "Ř¨ŰŚŮ†Ú© Ř§Ú©Ř§Ř¤Ů†ŮąŘłŘŚ Ř§ŘŻŘ§Ř¦ŰŚÚŻŰŚŘ§ÚşŘŚ Ú©Ř§Ř±ÚŘ˛ Ř§ŮŘ± Ř˘Ů† Ů„Ř§Ř¦Ů† Ř¨ŰŚŮ†Ú©Ů†ÚŻ.",
-
-        familyTitle: "Ř®Ř§Ů†ŘŻŘ§Ů†",
-
-        familyText:
-          "Ř®Ř§Ů†ŘŻŘ§Ů†ŰŚ Ř±ŰŘ§Ř¦Ř´ŘŚ Ř¨Ú†Ű’ŘŚ Ř§ŘłÚ©ŮŮ„ŘŚ Ř®Ř§Ů†ŘŻŘ§Ů†ŰŚ ŘŻŘłŘŞŘ§ŮŰŚŘ˛Ř§ŘŞ Ř§ŮŘ± Ř®ŘŻŮ…Ř§ŘŞ.",
-
-        emergencyTitle: "ŰŮ†ÚŻŘ§Ů…ŰŚ ŘµŮŘ±ŘŞŘ­Ř§Ů„",
-
-        emergencyText:
-          "ŰŮ†ÚŻŘ§Ů…ŰŚ Ů†Ů…Ř¨Ř± Ř§ŮŘ± Ú©Ř±ŮŘ´ŰŚŘ§ Ů…ŰŚÚş ŮŮŘ±ŰŚ Ů…ŘŻŘŻ Ú©ŰŚ Ř¶Ř±ŮŘ±ŘŞ ŰŮŮ†Ű’ ŮľŘ± Ú©ŰŚŘ§ Ú©Ř±Ů†Ř§ ŰŰ’.",
-
-        contactsTitle: "Ů…ŮŰŚŘŻ Ř±Ř§Ř¨Ř·Ű’",
-
-        contactsText:
-          "Ř§ŰŮ… Ř§ŘŻŘ§Ř±Ű’ŘŚ ŘłŘ±Ú©Ř§Ř±ŰŚ ŮŰŚŘ¨ ŘłŘ§Ř¦ŮąŘłŘŚ ŮŮŮ† Ů†Ů…Ř¨Ř±Ř˛ Ř§ŮŘ± Ů…ŮŰŚŘŻ Ř±Ř§Ř¨Ř·Ű’.",
-
-        policeBtn: "ŘµŮŘ­Ű Ú©ÚľŮŮ„ŰŚÚş â†",
-        governmentBtn: "ŘµŮŘ­Ű Ú©ÚľŮŮ„ŰŚÚş â†",
-        drivingBtn: "ŘµŮŘ­Ű Ú©ÚľŮŮ„ŰŚÚş â†",
-        workBtn: "ŘµŮŘ­Ű Ú©ÚľŮŮ„ŰŚÚş â†",
-        healthBtn: "ŘµŮŘ­Ű Ú©ÚľŮŮ„ŰŚÚş â†",
-        housingBtn: "ŘµŮŘ­Ű Ú©ÚľŮŮ„ŰŚÚş â†",
-        bankBtn: "ŘµŮŘ­Ű Ú©ÚľŮŮ„ŰŚÚş â†",
-        familyBtn: "ŘµŮŘ­Ű Ú©ÚľŮŮ„ŰŚÚş â†",
-        emergencyBtn: "ŘµŮŘ­Ű Ú©ÚľŮŮ„ŰŚÚş â†",
-        contactsBtn: "ŘµŮŘ­Ű Ú©ÚľŮŮ„ŰŚÚş â†",
-
-        connectTitle: "Ř´Ř§Ů…Ů„ ŰŮÚş Ř§ŮŘ± Ř±Ř§Ř¨Ř·Ű’ Ů…ŰŚÚş Ř±ŰŰŚÚş",
-
-        connectText:
-          "MALAYALIS IN CROATIA Ú©Ů ŮŘ§Ů„Ů Ú©Ř±ŰŚÚş Ř§ŮŘ± ŰŮ…Ř§Ř±ŰŚ Ú©Ů…ŰŚŮŮ†ŮąŰŚ ŘłŰ’ Ř¬Ú‘Ű’ Ř±ŰŰŚÚş.",
-
-        whatsappText: "WhatsApp",
-        emailText: "Email",
-        websiteText: "Website",
-        instagramText: "Instagram",
-
-        joinButton:
-          "đź“± ŰŮ…Ř§Ř±Ű’ WhatsApp Channel Ů…ŰŚÚş Ř´Ř§Ů…Ů„ ŰŮÚş",
-
-        infoTitle: "Ř§ŰŮ…",
-
-        infoText:
-          "MALAYALIS IN CROATIA Ř§ŰŚÚ© Ř˘Ř˛Ř§ŘŻ Ů…ŘąŮ„ŮŮ…Ř§ŘŞŰŚ ÚŻŘ§Ř¦ŰŚÚ ŰŰ’Ű” Ř§ŰŮ… ŮŰŚŘµŮ„Ű’ Ú©Ř±Ů†Ű’ ŘłŰ’ ŮľŰŮ„Ű’ Ů…ŘŞŘąŮ„Ů‚Ű Ú©Ř±ŮŘ´ŰŚŮ† Ř­Ú©Ř§Ů… ŘłŰ’ ŘŞŘ§Ř˛Ű ŘŞŘ±ŰŚŮ† Ř¶Ř±ŮŘ±ŰŚŘ§ŘŞ Ú©ŰŚ ŘŞŘµŘŻŰŚŮ‚ Ú©Ř±ŰŚÚşŰ”",
-
-        footerTagline:
-          "Ú©Ř±ŮŘ´ŰŚŘ§ Ů…ŰŚÚş Ř±ŰŮ†Ű’ Ř§ŮŘ± Ú©Ř§Ů… Ú©Ř±Ů†Ű’ Ú©Ű’ Ů„ŰŚŰ’ Ř˘Ůľ Ú©ŰŚ Ř±ŰŮ†Ů…Ř§Ř¦ŰŚ.",
-
-        verifiedText:
-          "Ř˘Ř®Ř±ŰŚ ŘŞŘµŘŻŰŚŮ‚: 7 Ř§Ú©ŘŞŮŘ¨Ř± 2026"
+        subtitle: "کروشیا معلوماتی رہنما",
+        hero: "کروشیا میں رہنے، کام کرنے اور آباد ہونے کے لیے مفید معلومات۔ اپنی زبان منتخب کریں اور نیچے دی گئی رہنمائی دیکھیں۔",
+        noticeTitle: "اہم معلومات",
+        notice: "یہ ایک آزاد معلوماتی ویب سائٹ ہے۔ کوئی قدم اٹھانے سے پہلے متعلقہ کروشیائی حکام سے سرکاری معلومات کی تصدیق کریں۔",
+        guides: "ہماری رہنمائی",
+        guideDesc: "کروشیا میں روزمرہ زندگی کے لیے مفید معلومات۔",
+        language: "زبان:",
+        health: "صحت کی خدمات",
+        healthDesc: "صحت کا بیمہ، ڈاکٹر، اسپتال اور طبی خدمات۔",
+        police: "پولیس اور دستاویزات",
+        policeDesc: "رہائش، رجسٹریشن اور اہم دستاویزات۔",
+        government: "سرکاری خدمات",
+        governmentDesc: "سرکاری پورٹل اور عوامی انتظامی خدمات۔",
+        driving: "ڈرائیونگ اور ٹرانسپورٹ",
+        drivingDesc: "ڈرائیونگ لائسنس، سڑک کے قوانین اور ٹرانسپورٹ کی معلومات۔",
+        work: "کام اور روزگار",
+        workDesc: "روزگار، معاہدے اور مفید وسائل۔",
+        housing: "رہائش اور گھر",
+        housingDesc: "گھر کرائے پر لینے اور رہائش سے متعلق معلومات۔",
+        bank: "بینکنگ اور مالیات",
+        bankDesc: "بینک اکاؤنٹس، ادائیگیاں اور مالی خدمات۔",
+        family: "خاندان اور روزمرہ زندگی",
+        familyDesc: "خاندان اور روزمرہ زندگی سے متعلق معلومات۔",
+        emergency: "ہنگامی معلومات",
+        emergencyDesc: "ہنگامی خدمات اور اہم رابطے۔",
+        contacts: "مفید رابطے",
+        contactsDesc: "سرکاری ویب سائٹس اور رابطے کی تفصیلات۔",
+        read: "رہنما دیکھیں ←",
+        emergencyHeading: "کروشیا کے ہنگامی نمبر",
+        e112: "عمومی ہنگامی مدد",
+        e194: "ہنگامی طبی خدمت",
+        e192: "پولیس",
+        e193: "فائر سروس",
+        disclaimer: "یہ ایک آزاد معلوماتی ویب سائٹ ہے، سرکاری کروشیائی حکومتی ویب سائٹ نہیں۔ معلومات تبدیل ہو سکتی ہیں۔ موجودہ تقاضوں کے لیے سرکاری ذرائع دیکھیں۔"
       },
 
-
       hr: {
-        heroTitle: "VaĹˇ vodiÄŤ za Ĺľivot i rad u Hrvatskoj",
-
-        heroText:
-          "Jednostavne i korisne informacije za strance koji Ĺľive, rade i grade svoj Ĺľivot u Hrvatskoj.",
-
-        guideTitle: "VodiÄŤ kroz Hrvatsku",
-
-        guideText:
-          "Odaberite temu za korisne informacije, sluĹľbene poveznice i praktiÄŤne upute.",
-
-        policeTitle: "Policija i dokumenti",
-
-        policeText:
-          "Policijski postupci, prijava boraviĹˇta, potvrde i vaĹľni dokumenti.",
-
-        governmentTitle: "DrĹľavne sluĹľbe",
-
-        governmentText:
-          "Hrvatske drĹľavne sluĹľbe, e-GraÄ‘ani, porezi i usluge povezane sa zapoĹˇljavanjem.",
-
-        drivingTitle: "VoĹľnja",
-
-        drivingText:
-          "VozaÄŤke dozvole, pravila za strane dozvole, dokumenti, lijeÄŤniÄŤki pregled i MUP postupci.",
-
-        workTitle: "Posao",
-
-        workText:
-          "Dozvole za rad, zaposlenje, ugovori, prava radnika i korisne informacije o radu.",
-
-        healthTitle: "Zdravlje",
-
-        healthText:
-          "Zdravstveno osiguranje, lijeÄŤnici, bolnice i hitna zdravstvena pomoÄ‡.",
-
-        housingTitle: "Stanovanje",
-
-        housingText:
-          "Najam stana, ugovori, polog, prijava adrese i korisne informacije o stanovanju.",
-
-        bankTitle: "Banka",
-
-        bankText:
-          "Bankovni raÄŤuni, plaÄ‡anja, kartice, internetsko bankarstvo i korisne bankarske informacije.",
-
-        familyTitle: "Obitelj",
-
-        familyText:
-          "Boravak obitelji, djeca, Ĺˇkole, obiteljski dokumenti i svakodnevne usluge.",
-
-        emergencyTitle: "Hitne situacije",
-
-        emergencyText:
-          "Brojevi za hitne sluÄŤajeve i Ĺˇto uÄŤiniti kada vam je potrebna hitna pomoÄ‡ u Hrvatskoj.",
-
-        contactsTitle: "Korisni kontakti",
-
-        contactsText:
-          "VaĹľne institucije, sluĹľbene web stranice, telefonski brojevi i korisni kontakti.",
-
-        policeBtn: "Otvori stranicu â†’",
-        governmentBtn: "Otvori stranicu â†’",
-        drivingBtn: "Otvori stranicu â†’",
-        workBtn: "Otvori stranicu â†’",
-        healthBtn: "Otvori stranicu â†’",
-        housingBtn: "Otvori stranicu â†’",
-        bankBtn: "Otvori stranicu â†’",
-        familyBtn: "Otvori stranicu â†’",
-        emergencyBtn: "Otvori stranicu â†’",
-        contactsBtn: "Otvori stranicu â†’",
-
-        connectTitle: "PridruĹľite se i poveĹľite se",
-
-        connectText:
-          "Pratite MALAYALIS IN CROATIA i ostanite povezani s naĹˇom zajednicom.",
-
-        whatsappText: "WhatsApp",
-        emailText: "Email",
-        websiteText: "Web stranica",
-        instagramText: "Instagram",
-
-        joinButton:
-          "đź“± PRIDRUĹ˝ITE SE NAĹ EM WHATSAPP KANALU",
-
-        infoTitle: "VaĹľno",
-
-        infoText:
-          "MALAYALIS IN CROATIA je neovisni informativni vodiÄŤ. Prije donoĹˇenja vaĹľnih odluka uvijek provjerite najnovije zahtjeve kod nadleĹľnog hrvatskog tijela.",
-
-        footerTagline:
-          "VaĹˇ vodiÄŤ za Ĺľivot i rad u Hrvatskoj.",
-
-        verifiedText:
-          "Zadnja provjera: 7. listopada 2026."
+        subtitle: "VODIČ ZA INFORMACIJE O HRVATSKOJ",
+        hero: "Praktične informacije za život, rad i preseljenje u Hrvatsku. Odaberite jezik i pregledajte vodiče u nastavku.",
+        noticeTitle: "Važna obavijest",
+        notice: "Ova je stranica neovisni informativni vodič. Prije poduzimanja bilo kakvih radnji provjerite službene informacije kod nadležnih hrvatskih tijela.",
+        guides: "Pregledajte naše vodiče",
+        guideDesc: "Korisne informacije za svakodnevni život u Hrvatskoj.",
+        language: "Jezik:",
+        health: "Zdravstvena skrb",
+        healthDesc: "Zdravstveno osiguranje, liječnici, bolnice i medicinske usluge.",
+        police: "Policija i dokumenti",
+        policeDesc: "Boravak, prijave i važni dokumenti.",
+        government: "Državne usluge",
+        governmentDesc: "Službeni portali i usluge javne uprave.",
+        driving: "Vožnja i prijevoz",
+        drivingDesc: "Vozačke dozvole, prometna pravila i informacije o prijevozu.",
+        work: "Rad i zapošljavanje",
+        workDesc: "Informacije o zapošljavanju, ugovorima i korisnim izvorima.",
+        housing: "Stanovanje i smještaj",
+        housingDesc: "Najam stanova i informacije o smještaju.",
+        bank: "Bankarstvo i financije",
+        bankDesc: "Bankovni računi, plaćanja i osnovne financijske usluge.",
+        family: "Obitelj i svakodnevni život",
+        familyDesc: "Informacije o obitelji i svakodnevnom životu.",
+        emergency: "Hitne informacije",
+        emergencyDesc: "Hitne službe i važni kontakti.",
+        contacts: "Korisni kontakti",
+        contactsDesc: "Službene internetske stranice i kontaktni podaci.",
+        read: "Otvori vodič →",
+        emergencyHeading: "Brojevi hitnih službi u Hrvatskoj",
+        e112: "Opći hitni broj",
+        e194: "Hitna medicinska služba",
+        e192: "Policija",
+        e193: "Vatrogasci",
+        disclaimer: "Ovo je neovisna informativna stranica, a ne službena internetska stranica hrvatske vlade. Informacije se mogu promijeniti. Za aktualne uvjete provjerite službene izvore."
       }
-
     };
 
+    const fields = {
+      subtitle: "subtitle",
+      hero: "hero-text",
+      noticeTitle: "notice-title",
+      notice: "notice-text",
+      guides: "guides-title",
+      guideDesc: "guides-description",
+      language: "language-label",
+      health: "health-title",
+      healthDesc: "health-description",
+      police: "police-title",
+      policeDesc: "police-description",
+      government: "government-title",
+      governmentDesc: "government-description",
+      driving: "driving-title",
+      drivingDesc: "driving-description",
+      work: "work-title",
+      workDesc: "work-description",
+      housing: "housing-title",
+      housingDesc: "housing-description",
+      bank: "bank-title",
+      bankDesc: "bank-description",
+      family: "family-title",
+      familyDesc: "family-description",
+      emergency: "emergency-title",
+      emergencyDesc: "emergency-description",
+      contacts: "contacts-title",
+      contactsDesc: "contacts-description",
+      emergencyHeading: "emergency-heading",
+      e112: "emergency-112",
+      e194: "emergency-194",
+      e192: "emergency-192",
+      e193: "emergency-193",
+      disclaimer: "disclaimer"
+    };
 
-    function changeLanguage(language) {
+    function applyLanguage(language) {
+      const data = translations[language] || translations.en;
 
-      const t = translations[language];
-
-      if (!t) return;
-
-      Object.keys(t).forEach(function(key) {
-
-        const element = document.getElementById(key);
-
-        if (element) {
-          element.textContent = t[key];
+      Object.entries(fields).forEach(([key, id]) => {
+        const element = document.getElementById(id);
+        if (element && data[key] !== undefined) {
+          element.textContent = data[key];
         }
+      });
 
+      [
+        "health", "police", "government", "driving", "work",
+        "housing", "bank", "family", "emergency", "contacts"
+      ].forEach(key => {
+        const element = document.getElementById("open-" + key);
+        if (element) element.textContent = data.read;
       });
 
       document.documentElement.lang = language;
+      document.documentElement.dir = language === "ur" ? "rtl" : "ltr";
+      document.getElementById("language").value = language;
 
-      if (language === "ur") {
-        document.documentElement.dir = "rtl";
-      } else {
-        document.documentElement.dir = "ltr";
+      try {
+        localStorage.setItem("cropath-language", language);
+      } catch (error) {
+        // Language selection still works if browser storage is unavailable.
       }
-
-      localStorage.setItem(
-        "cropath-language",
-        language
-      );
-
-      document.getElementById(
-        "languageSelect"
-      ).value = language;
     }
 
+    document.getElementById("language").addEventListener("change", function () {
+      applyLanguage(this.value);
+    });
 
-    const savedLanguage =
-      localStorage.getItem("cropath-language") || "en";
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    changeLanguage(savedLanguage);
+    let savedLanguage = "en";
+    try {
+      savedLanguage = localStorage.getItem("cropath-language") || "en";
+    } catch (error) {
+      savedLanguage = "en";
+    }
 
-
-    /* FLOATING LOGO â†’ TOP */
-
-    document
-      .querySelector(".floating-logo")
-      .addEventListener("click", function(event) {
-
-        event.preventDefault();
-
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth"
-        });
-
-      });
-
+    applyLanguage(translations[savedLanguage] ? savedLanguage : "en");
   </script>
 
 </body>
 </html>
+```
